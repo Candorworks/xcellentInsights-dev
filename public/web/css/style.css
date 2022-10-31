@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+ul li {
+   list-style: none;
+}
+
+ul li a {
+   text-decoration: none;
+   font-size: 18px !important;
+}
+
+a:hover,
+.active {
+   color: #002c60 !important;
+}
+
+.header-wrapper {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 9999;
+
+}
+
+/* for about dropdown */
+.career-team-dropdown {
+   display: none;
+   position: absolute;
+}
+
+.career-team-dropdown-show {
+   display: block;
+}
+
+/* for header search */
+.form-group {
+   display: flex;
+}
+
+.header-search-bar {
+   position: relative;
+}
+
+.header-search-bar form input {
+   border-radius: 50px;
+   font-size: 14px;
+   padding: 6px 15px;
+   margin: 0;
+   border: 1px solid black;
+}
+
+.header-search-bar form button {
+   border: 1px solid black;
+   border-left: none;
+   padding: 4px 20px;
+   font-size: 16px;
+   height: 35px;
+   position: absolute;
+   right: 0;
+   color: #fff;
+   background-color: #002c60;
+   border-radius: 0px 20px 20px 0px;
+}
+
+.nav-link {
+   color: #ffffff;
+}
+
+/******************************************************* footer *********************************************/
+.footer-wrapper {
+   background-color: #212121;
+   color: #fff;
+   min-width: 100%;
+}
+
+a {
+   color: #fff;
+}
+
+.footer-widget-links li {
+   margin-bottom: 0.5rem;
+}
+
+.footer-widget-links li a {
+   transition: all 0.3s ease;
+}
+
+.footer-widget-links li a:hover {
+   color: #263074;
+   padding-left: 5px;
+}
+
+.footer-widget-links li a span {
+   padding-left: 6px;
+   font-size: 16px;
+}
+
+.footer-widget-links li a::before {
+   content: ">";
+   font-weight: bolder;
+}
+
+.address-widget i {
+   font-size: 1.2rem !important;
+}
+
+.widget-title {
+   position: relative;
+   margin-bottom: 2rem;
+}
+
+.widget-title::after {
+   content: "";
+   background-color: #263074;
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   right: 0;
+   height: 2.5px;
+   width: 50px;
+}
+
+.footer-email {
+   text-decoration: none;
+}
+
+.footer-social li {
+   display: inline;
+   float: right;
+   margin-right: 6px;
+}
+
+.footer-social li a {
+
+   font-size: 15px;
+}
+
+.footer-social li a,
+.address-widget i {
+   background: #ffffff;
+   color: #002c60;
+   display: inline-block;
+   border-radius: 3px;
+   width: 30px;
+   height: 30px;
+   text-align: center;
+}
+
+.footer-social li a:hover {
+   background: #002c60;
+   color: #ffffff !important;
+}
+
+.footer-social li a i,
+.address-widget i {
+   padding-top: 5px;
+}
+
+.footer-bottom {
+   border-top: 2px solid #263074;
+}
+
+.footer-newsletter {
+   background-color: #002c60;
+}
+
+.newsletter-form button {
+   background: #cdcdcd;
+   border-radius: 0 50px 50px 0;
+   color: #002c60;
+   position: absolute;
+   font-size: 16px;
+   font-weight: 600;
+}
+
+.newsletter-form input {
+   border-radius: 50px 0 0 50px;
+   color: #363636;
+   min-width: 420px;
+}
+
+.newsletter-form button,
+.newsletter-form input {
+
+   outline: none;
+   border: none;
+   padding: 12px 30px;
+}
+
+/* ********************************* Contact Us Page ********************************/
+.breadcrums-container {
+   background-size: cover;
+}
+
+.schedule-call-heading {
+   border-bottom: 1px dashed #002c60;
+}
+
+.schedule-call-wrapper,
+.cotact-form-wrapper {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+}
+
+#contact-us-form input,
+#contact-us-form select,
+#contact-us-form textarea {
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   background-color: #e6e7ee;
+}
+
+.submit-btn {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   border-radius: 35px;
+}
+
+.submit-btn:hover {
+   background-color: #263074;
+   color: white;
+}
+
+.icon-shape {
+   width: 6.5rem;
+   height: 6.5rem;
+   text-align: center;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+}
+
+.icon-shape span {
+   font-size: 2rem;
+}
