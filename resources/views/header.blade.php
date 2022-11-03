@@ -1,14 +1,15 @@
-<nav class="row navbar navbar-expand transparent ">
+<nav class="row navbar navbar-expand transparent px-3" id="sticky-header">
          <div class="col-lg-2">
             <div class="logo-container">
                <a href="{{ route('home')}}">
-                  <img src="{{ asset('web/images/logo.png') }}" alt="logo" width="120">
+                  <img src="{{ asset('web/images/logo-white.png') }}" alt="logo" class="transparent-icon" width="120">
+                  <img src="{{ asset('web/images/logo.png') }}" alt="logo" class="normal-icon" width="120">
                </a>
              </div>
          </div>
          <div class="col-lg-8 ">
             <div class="nav-item-container">
-               <ul class="navbar-nav text-center">
+               <ul class="navbar-nav text-center justify-content-center">
                   <li class="nav-item">
                      <a class="nav-link {{(Request::is('/*')) ? 'active' : ''}}" href="{{ route("home") }}">Home</a>
                   </li>
@@ -38,9 +39,9 @@
                   <li class="nav-item">
                      <a class="nav-link {{(Request::is('blog*')) ? 'active' : ''}}" href="{{ route("blog") }}">Blogs</a>
                   </li>
-                  <li class="nav-item">
+                  {{-- <li class="nav-item">
                      <a class="nav-link {{(Request::is('news*')) ? 'active' : ''}}" href="{{ route("news") }}">News</a>
-                  </li>
+                  </li> --}}
                </ul>
              </div>
          </div>

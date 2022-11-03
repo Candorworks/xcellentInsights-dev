@@ -1,10 +1,10 @@
 @extends("index")
 
 @section("content")
-   <div class="breadcrums-container py-5" style="background-image:url({{asset('web/images/breadcrums/contact-us.jpg')}});">
-    <div class="container py-5">
-        <div class="text-center py-3">
-            <h1 class="breadcrumbs-title white-color mb-4 fw-bold">Contact Us</h1>
+   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellent-insights/public/web/images/breadcrums/contact-us.jpg);">
+    <div class="container pt-5">
+        <div class="text-center mt-3">
+            <h3 class="breadcrumbs-title  fw-bold text-white">Contact Us</h3>
         </div>
     </div>
    </div>
@@ -13,7 +13,7 @@
          <div class="row">
             <div class="col-lg-12">
                <div class="schedule-call-heading">
-                  <h3>SCHEDULE A FREE CONSULTATION</h3>
+                  <h3 class="fw-bold">SCHEDULE A FREE CONSULTATION</h3>
                </div>
             </div>
          </div>
@@ -54,8 +54,8 @@
          </div>
       </div>
       <div class="cotact-form-wrapper p-4  mt-5">
-         <div class="pb-4">
-            <h2>Get In Touch Today</h2>
+         <div class="pb-4 get-in-touch-heading">
+            <h2 class="fw-bold">Get In Touch Today</h2>
          </div>
          <form id="contact-us-form" class="contact-form" method="post" action="">
             @csrf
@@ -106,18 +106,36 @@
                      </div>
                </div>
             </div>
-            <div class="row mt-4">
-               <div class="col-lg-12 text-right">
+            <div class="row form-group align-items-center">
+               <div class="col-lg-6 ">
+                  <div class="row">
+                     <div class="col">
+                        <p>Are you Human?</p>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-2">
+                        <label id="speakWithAnalystValidationText"></label>
+                     </div>
+                     <div class="col-lg-4">
+                        <input type="tel" class="textbox form-control shadow-inset" id="speakWithAnalystValidation" name="captchainput" placeholder="Ans" />
+                        <div class="text-danger" id="fail" style="display: none!important;">Validation failed</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6 text-right">
                   <div class="justify-content-end form-group">
                      <button type="submit" class="btn submit-btn">Submit Now</button>
                   </div>
                </div>
+               {{-- <div class="col-lg-12 text-right">
+               </div> --}}
             </div>
          </form>
       </div>
       <div class="contact-info-wrapper mt-5">
          <div class="row">
-            <h2 class="text-center pb-3" style="font-weight: lighter;">Contact Information</h2>
+            <h2 class="text-center pb-3 contact-info-heading" style="font-weight: lighter;">Contact Information</h2>
             <div class="col-lg-3 text-center">
                 <div class="icon-box mb-4">
                     <div class="icon-shape rounded-circle mb-4">
@@ -162,4 +180,8 @@
         </div>
       </div>
    </div>
-@endsection
+   @endsection
+   @section('script')
+   <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+   <script src="{{url('/web/js/numericaptcha.js')}}"></script>
+   @endsection

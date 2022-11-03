@@ -20,6 +20,7 @@
       @include('newsletter')
       @include('footer')
    </div>
-<script src="{{asset('/web/js/script.js')}}"></script>
 </body>
+<script src="{{asset('/web/js/script.js')}}"></script>
+@yield('script')
 </html>
