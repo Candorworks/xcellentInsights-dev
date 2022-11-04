@@ -124,8 +124,8 @@
                   </div>
                </div>
                <div class="col-lg-6 text-right">
-                  <div class="justify-content-end form-group">
-                     <button type="submit" class="btn submit-btn">Submit Now</button>
+                  <div class="justify-content-end form-group contact-form">
+                     <button type="submit" class="btn">Submit Now</button>
                   </div>
                </div>
                {{-- <div class="col-lg-12 text-right">
@@ -178,6 +178,15 @@
                 </div>
             </div>
         </div>
+      </div>
+      <div class="maps-wrapper">
+         <div class="row">
+            <div class="col">
+               <div class="p-4 mb-5 location-iframe rounded">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.170181753315!2d73.76966751489346!3d18.56636478738232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x765fc8a2f4c295ab!2sXcellent%20Insights%20LLP!5e0!3m2!1sen!2sin!4v1644659344119!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+         </div>
       </div>
    </div>
    @endsection

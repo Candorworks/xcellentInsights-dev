@@ -263,12 +263,12 @@ a {
    background-color: #e6e7ee;
 }
 
-.submit-btn {
+.contact-form button {
    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
    border-radius: 35px;
 }
 
-.submit-btn:hover {
+.contact-form button:hover {
    background-color: #263074;
    color: white;
 }
@@ -289,6 +289,10 @@ a {
 
 #speakWithAnalystValidation {
    margin: -10px 0 0 -37px;
+}
+
+.location-iframe {
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
 }
 
 
@@ -483,4 +487,211 @@ a {
 .see-how {
    color: #fff;
    background-color: #002c60 !important;
+}
+
+.partner-submit-btn button {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   border-radius: 35px;
+   background-color: #002c60;
+   color: #e6e7ee;
+   outline: none;
+}
+
+.partner-with-us-form,
+.partner-contact-text {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   transition: all 0.2s ease;
+}
+
+.partner-contact-text {
+   background-color: #002c60;
+   color: white;
+   text-align: center;
+}
+
+.partner-icon img {
+   width: 90px;
+}
+
+.form-fields {
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   background-color: #e6e7ee;
+}
+
+/********************************************************* career page *********************************/
+.we-are-hiring {
+   background-color: #002c60;
+   display: inline-block;
+   padding: 24px 40px 24px 20px;
+   color: #fff;
+   min-width: 50px;
+   position: relative;
+}
+
+.we-are-hiring::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: -67px;
+   width: 43%;
+   height: 100%;
+   background: #002c60;
+   transform: skew(-32deg);
+}
+
+.we-are-hiring-content i::before {
+   width: 70px;
+}
+
+.opening-heading {
+   border: none !important;
+   color: #002c60;
+   background-color: #e6e7ee;
+   padding: 15px;
+}
+
+.opening-desc {
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   transition: all 0.2s ease;
+   padding: 15px;
+}
+
+.join-our-team-heading {
+   border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.input-field-career {
+   font-size: 14px;
+   margin-top: 16px;
+   padding: .375rem .75rem;
+   color: #212529;
+   border-radius: .25rem;
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   background-color: #e6e7ee;
+}
+
+.custom-file {
+   position: relative;
+}
+
+.custom-file-input {
+   position: relative;
+   margin: 0;
+   opacity: 0;
+}
+
+.custom-file-label {
+   color: #44476a;
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   background-color: #e6e7ee;
+}
+
+.custom-file-label::after {
+   content: "Browse";
+   height: 100%;
+   background-color: #002c60;
+   color: #ecf0f3;
+   position: absolute;
+   top: 0;
+   right: 0;
+   display: block;
+   padding: 0.3em 1rem 0.6rem 0.75rem;
+   border-radius: 0rem .25rem .25rem 0rem;
+}
+
+.file-types {
+   font-size: 14px;
+   margin-top: 15px;
+   color: red;
+   text-align: center;
+}
+
+.career-submit-btn {
+   background-color: #e6e7ee;
+   color: #002c60;
+
+}
+
+.career-submit-btn:hover {
+
+   background: #263074 !important;
+   color: white !important;
+}
+
+/************************************************************ about us page ************************************/
+.about-us-content-heading p,
+.about-us-vision p {
+   font-size: 1.25rem;
+   font-weight: 300 !important;
+}
+
+.about-us-vision-img {
+   border-radius: 63% 37% 30% 70%/50% 45% 55% 50%;
+}
+
+.vision-img-container {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+}
+
+.vision-content {
+   border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.accordion {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   transition: all 0.2s ease;
+}
+
+.panel {
+   padding: 0;
+   background-color: white;
+   display: none;
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.2s ease-out;
+}
+
+.panel-content {
+   padding: 17px;
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   transition: all 0.2s ease;
+}
+
+.accordion-btn {
+   background-color: #eee;
+   color: #363636;
+   font-weight: bold;
+   padding: 18px;
+   width: 100%;
+   text-align: left;
+   border: none;
+   transition: 0.4s;
+   margin-bottom: 2px;
+}
+
+.accordion-active {
+   color: #002c60;
+   font-weight: bold;
+}
+
+/* .accordion-btn:active {
+   color: #002c60;
+} */
+
+
+.accordion-btn:before {
+   content: "\f054";
+   font-family: FontAwesome;
+   color: #363636;
+   font-weight: bold;
+   float: left;
+   margin-right: 15px;
+}
+
+.accordian-active:before {
+   content: "\f078";
 }
