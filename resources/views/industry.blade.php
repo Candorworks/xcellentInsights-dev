@@ -8,4 +8,32 @@
         </div>
     </div>
    </div>
+   <div class="all-verticals-container mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+            <div class="col-lg-3 vertical-card"></div>
+        </div>
+    </div>
+   </div>
 @endsection

@@ -43,29 +43,29 @@ const contentTopSelling = document.querySelector(
 const contentLatestReport = document.querySelector(".latest-reports-wrapper");
 
 verticals.addEventListener("click", () => {
-    if (contentVertical.style.display === "none") {
+    if (contentVertical.style.display === "block") {
+        contentVertical.style.display = "none";
+    } else {
         contentVertical.style.display = "block";
         contentLatestReport.style.display = "none";
         contentTopSelling.style.display = "none";
-    } else {
-        contentVertical.style.display = "none";
     }
 });
 latestReport.addEventListener("click", () => {
-    if (contentLatestReport.style.display === "none") {
+    if (contentLatestReport.style.display === "block") {
+        contentLatestReport.style.display = "none";
+    } else {
         contentLatestReport.style.display = "block";
         contentVertical.style.display = "none";
         contentTopSelling.style.display = "none";
-    } else {
-        contentLatestReport.style.display = "none";
     }
 });
 topSellingReports.addEventListener("click", () => {
-    if (contentTopSelling.style.display === "none") {
+    if (contentTopSelling.style.display === "block") {
+        contentTopSelling.style.display = "none";
+    } else {
         contentTopSelling.style.display = "block";
         contentVertical.style.display = "none";
         contentLatestReport.style.display = "none";
-    } else {
-        contentTopSelling.style.display = "none";
     }
 });

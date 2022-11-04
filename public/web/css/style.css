@@ -7,6 +7,10 @@
    font-family: 'Roboto', sans-serif;
 }
 
+.container {
+   max-width: 1200px !important;
+}
+
 ul li {
    list-style: none;
 }
@@ -16,8 +20,8 @@ ul li a {
    font-size: 18px !important;
 }
 
-a:hover,
-.active {
+.nav-item a:hover,
+.nav-item .active {
    color: #0057bd !important;
 }
 
@@ -343,7 +347,7 @@ a {
 
 .customer-testimonials {
    background-color: #002c60;
-   height: 70vh;
+   /* height: 70vh; */
 }
 
 .icon-box i {
@@ -383,18 +387,100 @@ a {
    padding: 6px 10px;
 }
 
+.browse-all-btn a {
+   color: #002c60;
+   font-weight: 600;
+}
+
 .browse-all-btn:hover {
    background-color: #263074;
    color: white;
 }
 
-.browse-all-btn button {
-   color: #002c60;
-   font-weight: 600;
-}
 
 .industry-vertical-wrapper,
 .top-selling-reports-wrapper,
 .latest-reports-wrapper {
    display: none;
+}
+
+.services-card {
+   min-width: 22rem;
+   margin-bottom: 30px;
+   padding: 1.5rem 1rem;
+   background-color: #e6e7ee;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   text-align: center;
+}
+
+.services-card:hover {
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   transition: all 0.2s ease;
+   cursor: pointer;
+}
+
+.services-card .row {
+   justify-content: center;
+}
+
+.strategy-box i {
+   font-size: 25px;
+   color: #012c5f;
+   background-color: rgb(1 44 95 / 10%);
+   border-radius: 50px;
+   padding: 26px;
+   width: 80px;
+   height: 80px;
+   border: 1px solid #fff;
+}
+
+.strategy-box {
+   display: inline-block;
+   border-radius: 50px;
+   border: 6px solid rgb(1 44 95 / 10%);
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   transition: all 0.2s ease;
+}
+
+.verticals-heading h5 {
+   margin: 1rem 0rem;
+   color: #002c60;
+   font-weight: 600;
+}
+
+/* *************************************  Industry Vertical page  ***********************************/
+.vertical-card {
+   background-image: url("../images/industry/1650880205.webp");
+   background-size: cover;
+   height: 12rem;
+   width: 18rem;
+   margin-bottom: 15px;
+}
+
+.all-verticals-container .container .row {
+   justify-content: space-between;
+}
+
+/********************************** Partner with us *************************************************/
+.partner-icon-box img {
+   max-width: 70px;
+}
+
+.partner-card {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   transition: all 0.2s ease;
+   padding-bottom: 2rem;
+   width: 17.5rem;
+}
+
+.partner-subheading h5 {
+   color: #002c60;
+   font-weight: 600;
+}
+
+.see-how {
+   color: #fff;
+   background-color: #002c60 !important;
 }

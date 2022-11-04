@@ -28,7 +28,7 @@
       </div>
    </div>
 </div>
-<div class="welcome-section mt-4">
+<div class="welcome-section my-4">
    <div class="container">
       <div class="row">
          <div class="col welcome-heading text-center mb-5" style="color: #002c60;">
@@ -198,7 +198,277 @@
             </div>
             <div class="col-lg-2">
                <div class="browse-all-btn">
-                  <button class="btn" href="">Browse All Verticals</button>
+                  <a class="btn" href="{{ route("industry") }}">Browse All Verticals</a>
+               </div>
+            </div>
+         </div>
+
+         {{-- content of this section --}}
+
+         <div class="services-content-wrapper mt-5">
+            <div class="row justify-content-between">
+               <div class="col-lg-3 services-card">
+                  <div class="automobile">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fas fa-car-side" aria-hidden="true"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Automobile & Transportation</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 services-card">
+                  <div class="chemicals">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-flask-vial shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Chemicals & Materials</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 services-card">
+                  <div class="consumer-goods">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fas fa-luggage-cart shadow-soft" aria-hidden="true"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Consumer Goods</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row justify-content-between">
+               <div class="col-lg-3 services-card">
+                  <div class="emergy-power">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                             <i class="fa-solid fa-charging-station shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Energy & Power</h5>
+                        </div>
+                     </div>
+                  </div></div>
+               <div class="col-lg-3 services-card">
+                  <div class="microchip">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                             <i class="fa-solid fa-microchip shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Electronics & Semiconductor</h5>
+                        </div>
+                     </div>
+                  </div></div>
+               <div class="col-lg-3 services-card">
+                  <div class="food">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-utensils shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Food & Beverages</h5>
+                        </div>
+                     </div>
+                  </div></div>
+            </div>
+            <div class="row justify-content-between">
+               <div class="col-lg-3 services-card">
+                  <div class="machinery">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-screwdriver-wrench shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Machinery & Equipment</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 services-card">
+                  <div class="pharma">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                             <i class="fa-solid fa-hospital shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Pharma & Healthcare</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 services-card">
+                  <div class="service">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-laptop-code shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Service & Software</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row justify-content-between">
+               <div class="col-lg-3 services-card">
+                  <div class="other">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-ellipsis shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Other</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 services-card">
+                  <div class="packaging">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-boxes-packing shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Packaging</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 services-card">
+                  <div class="communication">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-tower-cell shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>IT and Communication</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row justify-content-between">
+               <div class="col-lg-3 services-card">
+                  <div class="tech">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fas fa-robot shadow-soft" aria-hidden="true"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Technology</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 services-card">
+                  <div class="medical">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-syringe fa-solid fa-stethoscope shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Medical Devices & Consumables</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 services-card">
+                  <div class="agriculture">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-tractor shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Agriculture</h5>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row justify-content-between">
+               <div class="col-lg-3 services-card">
+                  <div class="medical">
+                     <div class="row">
+                        <div class="icon-box-verticals">
+                           <span class="strategy-box">
+                              <i class="fa-solid fa-hospital-user shadow-soft"></i>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="verticals-heading">
+                           <h5>Medical Care</h5>
+                        </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -213,7 +483,7 @@
             </div>
             <div class="col-lg-2">
                <div class="browse-all-btn">
-                  <button class="btn" href="">Browse All Reports</button>
+                  <a class="btn" href="">Browse All Reports</a>
                </div>
             </div>
          </div>
@@ -228,10 +498,12 @@
             </div>
             <div class="col-lg-2">
                <div class="browse-all-btn">
-                  <button class="btn" href="">Browse All Reports</button>
+                  <a class="btn" href="">Browse All Reports</a>
                </div>
             </div>
          </div>
+
+         
       </div>
    </div>
 </div>
