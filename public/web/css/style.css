@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
 * {
    margin: 0;
@@ -11,11 +11,11 @@
    max-width: 1200px !important;
 }
 
-ul li {
+.nav-item-container>ul li {
    list-style: none;
 }
 
-ul li a {
+.nav-item-container>ul li a {
    text-decoration: none;
    font-size: 18px !important;
 }
@@ -123,10 +123,13 @@ a {
 
 .footer-widget-links li {
    margin-bottom: 0.5rem;
+   list-style: none;
 }
 
 .footer-widget-links li a {
    transition: all 0.3s ease;
+   text-decoration: none;
+
 }
 
 .footer-widget-links li a:hover {
@@ -232,14 +235,16 @@ a {
 }
 
 /* ********************************* Contact Us Page ********************************/
-.title {
-   font-weight: bold;
+
+.contact-info-heading {
+   font-weight: 400;
 }
 
 .content-part h5,
 .schedule-call-heading,
 .contact-info-heading,
-.get-in-touch-heading {
+.get-in-touch-heading,
+.icon-box-title {
    color: #002c60;
 }
 
@@ -678,11 +683,6 @@ a {
    font-weight: bold;
 }
 
-/* .accordion-btn:active {
-   color: #002c60;
-} */
-
-
 .accordion-btn:before {
    content: "\f054";
    font-family: FontAwesome;
@@ -694,4 +694,144 @@ a {
 
 .accordian-active:before {
    content: "\f078";
+}
+
+.about-parallex {
+   padding: 30px 0px;
+   background-image: url("../images/about/bg12.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top center;
+   background-attachment: fixed;
+}
+
+.parallex-icon-box i {
+   font-size: 40px;
+   margin-bottom: 20px;
+}
+
+.why-choose-us-icons-wrapper {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   transition: all 0.2s ease;
+}
+
+.why-choose-us-icon-box {
+   margin-bottom: 15px;
+   width: 6.5rem;
+   height: 6.5rem;
+   text-align: center;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   border-radius: 50%;
+}
+
+.why-choose-us-icon-box>h4 {
+   color: #002c60;
+}
+
+.why-choose-us-icon-box>* {
+   width: 50px;
+}
+
+
+
+/*************************************************** FAQ Page  **********************************/
+
+.accordion-btn-faq {
+   font-size: 18px;
+   font-weight: 600;
+   color: #1c1b1b;
+   padding: 15px 25px;
+   margin-top: 20px;
+   background: transparent;
+   border: none;
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   transition: all 0.2s ease;
+   text-align: left;
+   display: flex;
+   align-items: center;
+}
+
+.accordion-btn-faq:before {
+   content: "\f061";
+   font-family: FontAwesome;
+   color: #363636;
+   font-weight: bold;
+   float: left;
+   margin-right: 15px;
+   font-size: 1.6rem;
+   color: #002c60;
+}
+
+
+.panel-faq {
+   background: transparent;
+   font-weight: 400;
+   color: #363636;
+   padding: 15px 40px 41px 20px;
+   border: none;
+   display: none;
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   transition: all 1s ease;
+}
+
+.panel-faq-content {
+   transition: all 1s ease;
+}
+
+.individual-links h6::before {
+   content: "\f105";
+   font-family: FontAwesome;
+   color: #363636;
+   font-weight: bold;
+   float: left;
+   margin-right: 5px;
+}
+
+.faq-sidebar {
+   padding: 40px 30px;
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   transition: all 0.2s ease;
+}
+
+.sidebar-heading {
+   position: relative;
+}
+
+.sidebar-heading::after {
+   content: "";
+   position: absolute;
+   border: 0;
+   width: 50px;
+   height: 2px;
+   background: #002c60;
+}
+
+.individual-links {
+   margin-bottom: 17px;
+}
+
+.individual-links h6 a {
+   color: black;
+   text-decoration: none;
+}
+
+
+/************************************************************* Team Page **************************************/
+.team-apply-now-btn>button {
+   border-radius: 35px;
+   color: #002c60;
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   padding: 6px 20px;
+   font-size: 16px;
+   background-color: white;
+   border: none;
+   font-weight: 500;
+}
+
+.team-apply-now-btn>button:hover {
+   color: white;
+   background-color: #263074;
 }

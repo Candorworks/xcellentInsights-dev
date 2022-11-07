@@ -71,11 +71,11 @@ function myFunction() {
 // });
 
 // accordion about us page
-const acc = document.querySelectorAll(".accordion-btn");
+const accordion = document.querySelectorAll(".accordion-btn");
 var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
+for (i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener("click", function () {
         /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
         this.classList.toggle("accordion-active");
@@ -95,9 +95,38 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-// for (i; i < acc.length; i++) {
-//     acc[i].addEventListener("click", function () {
+// for (i; i < accordion.length; i++) {
+//     accordion[i].addEventListener("click", function () {
 //         this.classList.toggle("accordion-active");
 //         const panel = this.nextElementSibling;
 //     });
 // }
+
+// accordion faq page
+
+const accordionFAQ = document.querySelectorAll(".accordion-btn-faq");
+var iFAQ;
+
+for (iFAQ = 0; iFAQ < accordionFAQ.length; iFAQ++) {
+    accordionFAQ[iFAQ].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+        this.classList.toggle("accordion-active-faq");
+
+        /* Toggle between hiding and showing the active panel */
+        const panel = this.nextElementSibling;
+        const panelPrev = this.previousElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+            // panelPrev.style.display = "none";
+        } else {
+            panel.style.display = "block";
+            panelPrev.style.display = "none";
+        }
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
