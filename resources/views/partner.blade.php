@@ -1,10 +1,10 @@
 @extends("index")
 
 @section("content")
-   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellent-insights/public/web/images/breadcrums/contact-us.jpg);">
+   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
     <div class="container pt-5">
         <div class="text-center mt-3">
-            <h3 class="breadcrumbs-title  fw-bold text-white">Ready to Become a Partner</h3>
+            <h3 class="breadcrumbs-title text-white">Ready to Become a Partner</h3>
         </div>
     </div>
    </div>   
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="heading-partner-with-us">
-                    <h3 style="color: #002c60;" class="fw-semibold">Why Partner with Xcellent Insights?</h3>
+                    <h3 style="color: #002c60;">Why Partner with Xcellent Insights?</h3>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -25,7 +25,7 @@
         <div class="row my-3">
             <div class="col">
                 <div class="benefits-of-joining-heading">
-                    <h4 style="color: #002c60; font-weight: 600;" >Benefits of Joining the Partner Program</h4>
+                    <h4 style="color: #002c60;" >Benefits of Joining the Partner Program</h4>
                 </div>
             </div>
         </div>

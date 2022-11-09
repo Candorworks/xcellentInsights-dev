@@ -8,10 +8,7 @@ dropdownMenuParent.addEventListener("mouseout", () => {
     dropdownMenuChild.classList.remove("career-team-dropdown-show");
 });
 
-// sticky header
-window.onscroll = function () {
-    myFunction();
-};
+// sticky header and scroll to top
 
 var header = document.getElementById("sticky-header");
 var transparentMenuIcon = document.querySelector(".transparent-icon");
@@ -19,7 +16,13 @@ var normalMenuIcon = document.querySelector(".normal-icon");
 
 var sticky = header.offsetTop;
 
-function myFunction() {
+window.onscroll = function () {
+    stickyHeader();
+    scrollToTop();
+};
+
+function stickyHeader() {
+    console.log("hello");
     if (window.pageYOffset > sticky) {
         header.classList.add("sticky", "header-wrapper-sticky");
         transparentMenuIcon.style.display = "none";
@@ -28,6 +31,22 @@ function myFunction() {
         header.classList.remove("sticky", "header-wrapper-sticky");
         transparentMenuIcon.style.display = "block";
         normalMenuIcon.style.display = "none";
+    }
+}
+const scrollTopIcon = document.querySelector(".scrollUp");
+
+function scrollToTop() {
+    if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+    ) {
+        scrollTopIcon.style.opacity = "1";
+        scrollTopIcon.addEventListener("click", () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    } else {
+        scrollTopIcon.style.opacity = "0";
     }
 }
 

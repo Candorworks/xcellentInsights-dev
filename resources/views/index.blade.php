@@ -20,6 +20,12 @@
       @include('newsletter')
       @include('footer')
    </div>
+   <div class="scrollUp">
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+   </div>
+   <div class="get-in-touch">
+      <a href="#">Get in Touch</a>
+   </div>
 </body>
 <script src="{{asset('/web/js/script.js')}}"></script>
 @yield('script')

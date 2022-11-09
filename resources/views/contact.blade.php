@@ -1,7 +1,7 @@
 @extends("index")
 
 @section("content")
-   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellent-insights/public/web/images/breadcrums/contact-us.jpg);">
+   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
     <div class="container pt-5">
         <div class="text-center mt-3">
             <h3 class="breadcrumbs-title  text-white">Contact Us</h3>
@@ -60,17 +60,17 @@
          <form id="contact-us-form" class="contact-form" method="post" action="">
             @csrf
             <div class="row mb-3">
-               <div class="col-md-4">
+               <div class="col-lg-4">
                      <div class="form-group">
                         <input type="text" class="form-control shadow-inset" name="name" placeholder="Full Name" required="">
                      </div>
                </div>
-               <div class="col-md-4">
+               <div class="col-lg-4">
                      <div class="form-group mb-0">
                         <input type="email" class="form-control shadow-inset" name="email" placeholder=" E-mail" required="">
                      </div>
                </div>
-               <div class="col-md-4">
+               <div class="col-lg-4">
                      <div class="form-group mb-0">
                         <select name="country" class="form-control shadow-inset" required>
                            <option disabled selected>Select country</option>
@@ -83,24 +83,24 @@
                </div>
             </div>
             <div class="row mb-3">
-               <div class="col-md-4">
+               <div class="col-lg-4">
                      <div class="form-group mb-0">
                         <input type="text" class="form-control shadow-inset" maxlength="12" onkeypress="return isNumber(event)" name="number" placeholder="Contact Number" required="">
                      </div>
                </div>
-               <div class="col-md-4">
+               <div class="col-lg-4">
                      <div class="form-group mb-0">
                         <input type="text" class="form-control shadow-inset" name="job_title" placeholder=" Job Title" required="">
                      </div>
                </div>
-               <div class="col-md-4">
+               <div class="col-lg-4">
                      <div class="form-group mb-0">
                         <input type="text" class="form-control shadow-inset" name="company" placeholder="Company Name" required="">
                      </div>
                </div>
             </div>
             <div class="row mb-3">
-               <div class="col-md-12">
+               <div class="col-lg-12">
                      <div class="form-group mb-0">
                         <textarea name="description" class="form-control shadow-inset" placeholder="Your Message" required=""></textarea>
                      </div>
@@ -163,6 +163,7 @@
                         <span class="fas fa-headphones-alt"></span>
                     </div>
                     <h4 class="icon-box-title">Call</h4>
+                    <p>IN: +91 7447700091</p>
                     <p>US: +1 408 627 7717</p>
                     <p>UK: +44 208 638 6439</p>
                 </div>

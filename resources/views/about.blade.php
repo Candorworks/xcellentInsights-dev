@@ -1,7 +1,7 @@
 @extends("index")
 
 @section("content")
-   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellent-insights/public/web/images/breadcrums/contact-us.jpg);">
+   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
     <div class="container pt-5">
         <div class="text-center mt-3">
             <h3 class="breadcrumbs-title text-white">About Us</h3>
@@ -157,7 +157,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="why-choose-us-container text-center mt-4">
+            <div class="why-choose-us-container text-center mt-5">
                 <h2 class="why-choose-us-heading fw-normal" style="color: #002c60">Why Choose Us?</h2>
             </div>
             <div class="row mt-4 why-choose-us-icons-wrapper p-5">

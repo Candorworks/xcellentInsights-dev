@@ -58,7 +58,10 @@ Route::get('/career', function () {
 Route::get('/team', function () {
     return view('team');
 })->name('team');
-
+// MODAL FORM
+Route::get('/get-in-touch', function () {
+    return view('modalContactForm');
+})->name('get-in-touch');
 
 
 // PRIVACY

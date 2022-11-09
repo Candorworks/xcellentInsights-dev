@@ -1,7 +1,7 @@
 @extends("index")
 
 @section("content")
-   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellent-insights/public/web/images/breadcrums/contact-us.jpg);">
+   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
     <div class="container pt-5">
         <div class="text-center mt-3">
             <h3 class="breadcrumbs-title  fw-bold text-white">Careers</h3>
@@ -21,27 +21,27 @@
                <div class="row">
                   <div class="openings pb-3 pe-3 ps-0 pt-0">
                      <div class="opening-heading">
-                        <h6 class="mb-0 fw-bold">DM - Executive</h6>
+                        <h6 class="mb-0 fw-semibold">DM - Executive</h6>
                      </div>
                      <div class="opening-desc">
                         <div class="row mb-3">
-                           <div class="col-lg-6 fw-bold">Location:</div>
+                           <div class="col-lg-6 fw-semibold">Location:</div>
                            <div class="col-lg-6">Pune</div>
                         </div>
                         <div class="row mb-3">
-                           <div class="col-lg-6 fw-bold">No of position:</div>
+                           <div class="col-lg-6 fw-semibold">No of position:</div>
                            <div class="col-lg-6">1</div>
                         </div>
                         <div class="row mb-3">
-                           <div class="col-lg-6 fw-bold">Experience required:</div>
+                           <div class="col-lg-6 fw-semibold">Experience required:</div>
                            <div class="col-lg-6">1-2 years</div>
                         </div>
                         <div class="row mb-3">
-                           <div class="col-lg-6 fw-bold">Roles & Responsibilities:</div>
+                           <div class="col-lg-6 fw-semibold">Roles & Responsibilities:</div>
                            <div class="col-lg-6">DM</div>
                         </div>
                         <div class="row">
-                           <div class="col-lg-6 fw-bold">What we are looking for in you:</div>
+                           <div class="col-lg-6 fw-semibold">What we are looking for in you:</div>
                            <div class="col-lg-6">DM</div>
                         </div>
                      </div>
@@ -50,7 +50,7 @@
             </div>
             <div class="col-lg-6">
                <div class="join-our-team-heading pb-3">
-                  <h2 class="fw-bold" style="color: #002c60;">Join Our Team</h2>
+                  <h2 style="color: #002c60;">Join Our Team</h2>
                </div>
                <div class="join-our-team-desc mt-3">
                   <p>
