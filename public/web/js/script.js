@@ -130,3 +130,27 @@ for (iFAQ = 0; iFAQ < accordionFAQ.length; iFAQ++) {
         }
     });
 }
+
+// accordion team page
+const accordionTeam = document.querySelectorAll(".about-btn");
+var i;
+for (i = 0; i < accordionTeam.length; i++) {
+    accordionTeam[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+        // this.classList.toggle("panel-content-team");
+
+        /* Toggle between hiding and showing the active panel */
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}

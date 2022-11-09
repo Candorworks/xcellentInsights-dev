@@ -30,6 +30,10 @@ Route::get('/contact', function () {
 Route::get('/blog', function () {
     return view('blog');
 })->name('blog');
+// INDIVIDUAL BLOG
+Route::get('/blog/hi', function () {
+    return view('singleBlog');
+})->name('individual-blog');
 // NEWS
 Route::get('/news', function () {
     return view('news');

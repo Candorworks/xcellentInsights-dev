@@ -13,18 +13,47 @@
          <div class="row">
             <div class="col-lg-6">
                <div class="team-heading">
-                  <h2>Our Professionals</h2>
-                  <p>Xcellent Insights represents an intellectually empowered and rationally driven team of focused individuals, striving to work progressively.</p>
+                  <h2 class="team-heading-underline">Our Professionals</h2>
                </div>
+               <p>Xcellent Insights represents an intellectually empowered and rationally driven team of focused individuals, striving to work progressively.</p>
             </div>
             <div class="col-lg-6">
                <div class="team-heading">
-                  <h2>Join Us</h2>
-                  <p>Market Research Future with Xcellent Insights</p>
-                  <div class="team-apply-now-btn">
-                     <button class="mt-2" href="https://www.xcellentinsights.com/careers">Apply Now
-                     </button>
+                  <h2 class="team-heading-underline">Join Us</h2>
+               </div>
+               <p>Market Research Future with Xcellent Insights</p>
+               <div class="team-apply-now-btn">
+                  <button class="mt-2" href="https://www.xcellentinsights.com/careers">Apply Now
+                  </button>
+               </div>
+            </div>
+         </div>
+         <div class="row justify-content-center mt-5">
+            <div class="col-lg-4">
+               <div class="team-member-card text-center px-3 py-5">
+                  <div class="member-icon-box text-center">
+                     <img class="img-fluid" src="{{asset("web/images/team/img1.png")}}" alt="">
                   </div>
+                 <h4>Vipin Unni</h4>
+                 <h6>Co-Founder & Director</h6>
+                 <div class="member-about-btn">
+                  <button class="about-btn">About Me</button>
+                  <div class="panel-content-team">An insight is nothing without an action. Our top client reports offer actionable insights that encourage you to take timely decisions. Xcellent Insights is a leading reseller in the corporate world where insights are gathered through a large pool of market resources to present in an organized manner. </div>
+                 </div>
+               </div>
+               
+            </div>
+            <div class="col-lg-4 offset-1">
+               <div class="team-member-card text-center px-3 py-5">
+                 <div class="member-icon-box">
+                   <img class="img-fluid" src="{{asset("web/images/team/img2.png")}}" alt="">
+                 </div>
+                 <h4>Atul G</h4>
+                 <h6>Digital Marketing Manager</h6>
+                 <div class="member-about-btn">
+                  <button class="about-btn">About Me</button>
+                  <div class="panel-content-team">An insight is nothing without an action. Our top client reports offer actionable insights that encourage you to take timely decisions. Xcellent Insights is a leading reseller in the corporate world where insights are gathered through a large pool of market resources to present in an organized manner. </div>
+                 </div>
                </div>
             </div>
          </div>

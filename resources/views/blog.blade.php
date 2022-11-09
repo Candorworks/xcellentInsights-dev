@@ -8,4 +8,28 @@
         </div>
     </div>
    </div>
+   <div class="blog-content mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="blog-img-box">
+                    <img class="img-fluid" src="{{asset("web/images/blog/1.jpg")}}" alt="">
+                </div>
+                <div class="blog-desc-box px-4 py-3">
+                    <h6>Pharma & Healthcare</h6>
+                    <p>Gluten Free Biscuits Companies Helping Patients with Celiac and Gluten Sensitivity To Enjoy Their Favorite Biscuit Flavors with Gluten Alternatives</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog-img-box">
+                    <img class="img-fluid" src="{{asset("web/images/blog/2.jpg")}}" alt="">
+                </div>
+                <div class="blog-desc-box px-4 py-3">
+                    <h6>Pharma & Healthcare</h6>
+                    <p>Benefits and Harmful Effects of Marijuana: A Recreational and Medical Drug</p>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
 @endsection

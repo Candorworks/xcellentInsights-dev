@@ -835,3 +835,95 @@ a {
    color: white;
    background-color: #263074;
 }
+
+.team-heading {
+   position: relative;
+   margin: 15px 0px;
+}
+
+.team-heading-underline::after {
+   content: "";
+   background-color: #263074;
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   right: 0;
+   height: 2px;
+   width: 50px;
+}
+
+.team-member-card {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+}
+
+.team-member-card h4,
+.team-member-card h6 {
+   color: #002c60;
+   margin: 15px 0px;
+}
+
+.member-icon-box {
+   display: inline-block;
+   width: 10rem;
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   border-radius: 50%;
+   padding: 1rem;
+}
+
+.member-icon-box img {
+   border-radius: 50%;
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+}
+
+.about-btn {
+   width: 100%;
+   color: #002c60;
+   background-color: #e6e7ee;
+   border: none;
+   padding: 1rem 1.5rem;
+   border-radius: 10px;
+   text-align: left;
+   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+}
+
+.about-btn:hover {
+   color: #002c60;
+   background-color: #e6e7ee;
+}
+
+.about-btn::after {
+   content: "\f078";
+   font-family: FontAwesome;
+   font-weight: bold;
+   float: right;
+   margin-right: 5px;
+}
+
+.panel-content-team {
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+   transition: all 0.2s ease;
+   padding: 15px;
+   margin-top: -10px;
+}
+
+.panel-content-team {
+   display: none;
+}
+
+/****************************************** Blog Pge  *********************************/
+.blog-desc-box {
+   color: #002c60;
+   height: 170px;
+   border: 2px solid #f0f0f0;
+   border-top: none;
+}
+
+/**************************************** Indivisual Blog page **************************/
+.blog-content-container {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+}
+
+.blog-content-container:hover {
+   box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+}
