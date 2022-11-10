@@ -152,6 +152,15 @@
    color: #494949;
 }
 
+/********************************* Chatbot*************************/
+.zsiq_floatmain {
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   background-color: red;
+}
+
+
 /******************************************************* footer *********************************************/
 .footer-wrapper {
    background-color: #212121;
@@ -399,7 +408,59 @@ a {
 
 .customer-testimonials {
    background-color: #002c60;
-   /* height: 70vh; */
+}
+
+.individual-testimonial {
+   color: white;
+}
+
+.testimonial-content-part {
+   background: rgb(255 255 255 / 5%);
+   padding: 30px 35px 35px;
+   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+   border-radius: 4px;
+   position: relative;
+   margin-bottom: 28px;
+}
+
+.testimonial-content-part::after {
+   top: 100%;
+   left: 13%;
+   border: solid transparent;
+   content: " ";
+   position: absolute;
+   border-top-color: rgba(49, 69, 98, 0.47);
+   border-width: 12px;
+}
+
+.testimonial-desc {
+   font-size: 17px;
+   line-height: 30.5px;
+}
+
+.icon-part i {
+   font-size: 35px;
+}
+
+.posted-by {
+   margin-left: 20px;
+}
+
+.owl-dots .owl-dot {
+   margin: 0px 5px;
+   box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.25);
+}
+
+.owl-dots .owl-dot.active span {
+   background: #f6f6f9 !important;
+   width: 40px !important;
+   opacity: 1;
+}
+
+.owl-dots .owl-dot span {
+   width: 25px !important;
+   margin: 0px !important;
+   opacity: 0.5;
 }
 
 .icon-box i {
@@ -465,12 +526,17 @@ a {
    transition: all 0.3s ease;
    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
    text-align: center;
+   text-decoration: none;
 }
 
 .services-card:hover {
    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
    transition: all 0.2s ease;
    cursor: pointer;
+}
+
+.services-card a {
+   text-decoration: none;
 }
 
 .services-card .row {
@@ -500,6 +566,34 @@ a {
    margin: 1rem 0rem;
    color: #002c60;
    font-weight: 600;
+}
+
+.rs-count {
+   color: #002c60;
+}
+
+.mil-20::after {
+   content: " M";
+   font-size: 40px;
+}
+
+.clientele-title {
+   background-color: rgba(0, 0, 0, .03);
+   border-bottom: 1px solid rgba(0, 0, 0, .125);
+   border-top: 1px solid rgba(0, 0, 0, .125);
+}
+
+.clientele .client-logos {
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+}
+
+.owl-carousel .owl-item img {
+   width: 90px !important;
+}
+
+.owl-stage {
+   display: flex;
+   align-items: center;
 }
 
 /* *************************************  Industry Vertical page  ***********************************/

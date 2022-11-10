@@ -48,7 +48,7 @@
             <div class="row mt-3">
                <div class="col-lg-4 report-milestone">
                   <div class="row">
-                     <h1 class="fw-bold">20 M</h1>
+                     <h1 class="fw-bold rs-count mil-20">20</h1>
                   </div>
                   <div class="row">
                      <p style="letter-spacing: 2px; font-weight: 600" >REPORTS</p>
@@ -63,7 +63,7 @@
             <div class="row mt-3">
                <div class="col-lg-4 verticals-milestone">
                   <div class="row">
-                     <h1 class="fw-bold">100</h1>
+                     <h1 class="fw-bold rs-count">100</h1>
                   </div>
                   <div class="row">
                      <p style="letter-spacing: 2px; font-weight: 600" >VERTICALS & SUB VERTICALS</p>
@@ -138,8 +138,66 @@
    </div>
 </div>
 <div class="customer-testimonials p-4">
-   <div class="customer-testimonial-heading text-white text-center">
+   <div class="customer-testimonial-heading text-white text-center mb-4 ">
       <h3>Customer Testimonials</h3>
+   </div>
+   <div class="container owl-carousel owl-theme" id="testi">
+      <div class="individual-testimonial">
+         <div class="testimonial-content-part">
+            <div class="icon-part">
+               <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="testimonial-desc">Our organization was interested in learning more about the market trends for chemicals domain. We contacted Xcellent Insights and the results did not disappoint. We got our queries resolved with better insights from the market perspective. Besides, their market intelligence is amicable and worth relying. We would not hesitate to connect again.</p>
+         </div>
+         <div class="posted-by">
+            <div class="user">
+               <h5 class="name">Vice President</h5>
+               <span class="designation"> Food & Beverages Company</span>
+            </div>
+         </div>
+      </div>
+      <div class="individual-testimonial">
+         <div class="testimonial-content-part">
+            <div class="icon-part">
+               <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="testimonial-desc">Xcellent insights has been proactive and diligent with our queries. Their expertise in the market research industry is one that everyone should look for. Their end-to-end involvement has been instrumental in achieving the key objectives to amplify our business goals.</p>
+         </div>
+         <div class="posted-by">
+            <div class="user">
+               <h5 class="name">Vice President, Marketing</h5>
+               <span class="designation"> Leading Chemicals & Materials Company</span>
+            </div>
+         </div>
+      </div>
+      <div class="individual-testimonial">
+         <div class="testimonial-content-part">
+            <div class="icon-part">
+               <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="testimonial-desc">Their service was great and I got all my queries answered in no time. I got a better report full of information I was looking for. It really helped me understand the market scenario and the driving forces.</p>
+         </div>
+         <div class="posted-by">
+            <div class="user">
+              <h5 class="name">Director of Research & development</h5>
+                        <span class="designation">Electronics & Semiconductors Company</span>
+            </div>
+         </div>
+      </div>
+      <div class="individual-testimonial">
+         <div class="testimonial-content-part">
+            <div class="icon-part">
+               <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="testimonial-desc">I am happy to share my experience with Mona. She was patient and showed a better understanding to the details of my query. In fact, she did an excellent job than expected. We carried out a project with her and turned out to be pretty well in terms of gaining the benefits.</p>
+         </div>
+         <div class="posted-by">
+            <div class="user">
+                <h5 class="name">Product Manager</h5>
+                        <span class="designation">Heavy Machinery & Equipment</span>
+            </div>
+         </div>
+      </div>
    </div>
 </div>
 <div class="services mt-4">
@@ -208,119 +266,141 @@
          <div class="services-content-wrapper mt-5">
             <div class="row justify-content-between">
                <div class="col-lg-3 services-card">
-                  <div class="automobile">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fas fa-car-side" aria-hidden="true"></i>
-                           </span>
+                  <a href="">
+                     <div class="automobile">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fas fa-car-side" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Automobile & Transportation</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Automobile & Transportation</h5>
-                        </div>
-                     </div>
-                  </div>
+                  </a>
                </div>
                <div class="col-lg-3 services-card">
-                  <div class="chemicals">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-flask-vial shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="chemicals">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-flask-vial shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Chemicals & Materials</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Chemicals & Materials</h5>
-                        </div>
-                     </div>
-                  </div>
+                  </a>
                </div>
                <div class="col-lg-3 services-card">
-                  <div class="consumer-goods">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fas fa-luggage-cart shadow-soft" aria-hidden="true"></i>
-                           </span>
+                  <a href="">
+                     <div class="consumer-goods">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fas fa-luggage-cart shadow-soft" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Consumer Goods</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Consumer Goods</h5>
-                        </div>
-                     </div>
-                  </div>
+                  </a>
+                  
                </div>
             </div>
             <div class="row justify-content-between">
                <div class="col-lg-3 services-card">
-                  <div class="emergy-power">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                             <i class="fa-solid fa-charging-station shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="energy-power">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                              <i class="fa-solid fa-charging-station shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Energy & Power</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Energy & Power</h5>
-                        </div>
-                     </div>
-                  </div></div>
+                  </a>
+               </div>
                <div class="col-lg-3 services-card">
-                  <div class="microchip">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                             <i class="fa-solid fa-microchip shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="microchip">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                              <i class="fa-solid fa-microchip shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Electronics & Semiconductor</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Electronics & Semiconductor</h5>
-                        </div>
-                     </div>
-                  </div></div>
+                  </a>
+                  
+               </div>
                <div class="col-lg-3 services-card">
-                  <div class="food">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-utensils shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="food">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-utensils shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Food & Beverages</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Food & Beverages</h5>
-                        </div>
-                     </div>
-                  </div></div>
+                  </a>
+                  
+               </div>
             </div>
             <div class="row justify-content-between">
                <div class="col-lg-3 services-card">
-                  <div class="machinery">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-screwdriver-wrench shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="machinery">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-screwdriver-wrench shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Machinery & Equipment</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Machinery & Equipment</h5>
-                        </div>
-                     </div>
-                  </div>
+                  </a>
+                  
                </div>
                <div class="col-lg-3 services-card">
+                  <a href=""></a>
                   <div class="pharma">
                      <div class="row">
                         <div class="icon-box-verticals">
@@ -337,138 +417,162 @@
                   </div>
                </div>
                <div class="col-lg-3 services-card">
-                  <div class="service">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-laptop-code shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="service">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-laptop-code shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Service & Software</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Service & Software</h5>
-                        </div>
-                     </div>
-                  </div>
+                  </a>
+                  
                </div>
             </div>
             <div class="row justify-content-between">
                <div class="col-lg-3 services-card">
-                  <div class="other">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-ellipsis shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="other">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-ellipsis shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Other</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Other</h5>
-                        </div>
-                     </div>
-                  </div>
+                  </a>
+                  
                </div>
                <div class="col-lg-3 services-card">
-                  <div class="packaging">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-boxes-packing shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="packaging">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-boxes-packing shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Packaging</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Packaging</h5>
-                        </div>
-                     </div>
-                  </div>
+                  </a>
+                  
                </div>
                <div class="col-lg-3 services-card">
-                  <div class="communication">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-tower-cell shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="communication">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-tower-cell shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>IT and Communication</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>IT and Communication</h5>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row justify-content-between">
-               <div class="col-lg-3 services-card">
-                  <div class="tech">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fas fa-robot shadow-soft" aria-hidden="true"></i>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Technology</h5>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 services-card">
-                  <div class="medical">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-syringe fa-solid fa-stethoscope shadow-soft"></i>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Medical Devices & Consumables</h5>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 services-card">
-                  <div class="agriculture">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-tractor shadow-soft"></i>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Agriculture</h5>
-                        </div>
-                     </div>
-                  </div>
+                  </a>
+                  
                </div>
             </div>
             <div class="row justify-content-between">
                <div class="col-lg-3 services-card">
-                  <div class="medical">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                              <i class="fa-solid fa-hospital-user shadow-soft"></i>
-                           </span>
+                  <a href="">
+                     <div class="tech">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fas fa-robot shadow-soft" aria-hidden="true"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Technology</h5>
+                           </div>
                         </div>
                      </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Medical Care</h5>
+                  </a>
+                  
+               </div>
+               <div class="col-lg-3 services-card">
+                  <a href="">
+                     <div class="medical">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-syringe fa-solid fa-stethoscope shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Medical Devices & Consumables</h5>
+                           </div>
                         </div>
                      </div>
-                  </div>
+                  </a>
+                  
+               </div>
+               <div class="col-lg-3 services-card">
+                  <a href="">
+                     <div class="agriculture">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-tractor shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Agriculture</h5>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  
+               </div>
+            </div>
+            <div class="row justify-content-between">
+               <div class="col-lg-3 services-card">
+                  <a href="">
+                     <div class="medical">
+                        <div class="row">
+                           <div class="icon-box-verticals">
+                              <span class="strategy-box">
+                                 <i class="fa-solid fa-hospital-user shadow-soft"></i>
+                              </span>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="verticals-heading">
+                              <h5>Medical Care</h5>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+                  
                </div>
             </div>
          </div>
@@ -507,4 +611,78 @@
       </div>
    </div>
 </div>
+<div class="clientele mt-4">
+   <div class="container client-logos">
+      <div class="row">
+         <div class="col clientele-title text-center py-3">
+            <h3 style="color: #002c60">Our Clientele</h3>
+         </div>
+         <div class="col py-4 owl-carousel owl-theme" id="client-logo-carousel">
+            <img src="{{asset("web/images/home/client-logos/ABB2.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/BASF.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/Bosch.png")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/Dow-1.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/Emerson.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/Fiserv.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/Fujitsu2.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/Harman.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/HP.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/Intel.webp")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/kaneka.png")}}" alt="">
+            <img src="{{asset("web/images/home/client-logos/LG.webp")}}" alt="">
+         </div>
+      </div>
+   </div>
+</div>
+   @section('script')
+
+   {{-- testimonials --}}
+      <script src="{{asset('/web/js/homePageToggle.js')}}"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <script>
+         $(document).ready(function () {
+         $('#testi').owlCarousel({
+            items: 2,
+            margin: 30
+            })
+         });
+      </script>
+      {{-- counter --}}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+      <script>
+         $(document).ready(function () {
+            var counter = $('.rs-count');
+            if(counter.length) {  
+               $('.rs-count').counterUp({
+                  delay: 30,
+                  time: 1000
+               });
+            }
+         } )
+      </script>
+      <script>
+         $(document).ready(function() {
+            $('#client-logo-carousel').owlCarousel({
+            loop: true,
+            items: 5,
+            autoplay: true,
+            slideTransition: 'linear',
+            autoplaySpeed: 5000,
+            center: true,
+            dots: false,
+            autoplayHoverPause: true,
+            });
+
+            $('#client-logo-carousel').trigger('play.owl.autoplay',[2000]);
+
+            function setSpeed(){
+               $('#client-logo-carousel').trigger('play.owl.autoplay',[5000]);
+            }
+            setTimeout(setSpeed, 0);
+         });
+      </script>
+   @endsection
 @endsection
