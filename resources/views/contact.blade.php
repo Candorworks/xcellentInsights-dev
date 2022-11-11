@@ -112,24 +112,22 @@
                      <div class="col">
                         <p>Are you Human?</p>
                      </div>
-                  </div>
-                  <div class="row">
+                  </div> 
+                  <div class="row align-items-center">
                      <div class="col-lg-2">
-                        <label id="speakWithAnalystValidationText"></label>
+                        <label class="speakWithAnalystValidationText"></label>
                      </div>
                      <div class="col-lg-4">
-                        <input type="tel" class="textbox form-control shadow-inset" id="speakWithAnalystValidation" name="captchainput" placeholder="Ans" />
-                        <div class="text-danger" id="fail" style="display: none!important;">Validation failed</div>
+                        <input type="tel" class="textbox form-control shadow-inset speakWithAnalystValidation" name="captchainput" placeholder="Ans" style="margin-left: -40px;" />
+                        <div class="text-danger fail" style="display: none!important; ">Validation failed</div>
                      </div>
                   </div>
                </div>
                <div class="col-lg-6 text-right">
                   <div class="justify-content-end form-group contact-form">
-                     <button type="submit" class="btn">Submit Now</button>
+                     <button type="submit" class="btn speakWithAnalystSubmitBtn">Submit Now</button>
                   </div>
                </div>
-               {{-- <div class="col-lg-12 text-right">
-               </div> --}}
             </div>
          </form>
       </div>

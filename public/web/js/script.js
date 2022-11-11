@@ -13,12 +13,16 @@ dropdownMenuParent.addEventListener("mouseout", () => {
 var header = document.getElementById("sticky-header");
 var transparentMenuIcon = document.querySelector(".transparent-icon");
 var normalMenuIcon = document.querySelector(".normal-icon");
+var headerSearchBox = document.querySelector(".header-search-bar-input");
+var headerSearchBoxBtn = document.querySelector(".header-search-bar-btn");
 
 var sticky = header.offsetTop;
 
 window.onscroll = function () {
     stickyHeader();
     scrollToTop();
+    // headerSearchBox.style.border = "1px solid #002c60";
+    // headerSearchBoxBtn.style.border = "1px solid #002c60";
 };
 
 function stickyHeader() {
@@ -134,4 +138,24 @@ for (i = 0; i < accordionTeam.length; i++) {
     });
 }
 
-//
+//modal form
+
+var modal = document.querySelector(".modal");
+var modelTrigger = document.querySelector(".get-in-touch");
+var getInTouch = document.querySelector(".modal-title");
+var modalCloseBtn = document.querySelector(".modalCloseBtn");
+
+modelTrigger.addEventListener("click", () => {
+    modal.style.display = "block";
+    console.log(getInTouch);
+    getInTouch.innerHTML = "Get In Touch";
+});
+modalCloseBtn.onclick = function () {
+    modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};

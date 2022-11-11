@@ -684,5 +684,6 @@
             setTimeout(setSpeed, 0);
          });
       </script>
+      
    @endsection
 @endsection

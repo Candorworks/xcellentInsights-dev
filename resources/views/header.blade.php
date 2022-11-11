@@ -49,8 +49,8 @@
             <div class="header-search-bar">
                <form method="get" action="{{ route('report') }}">
                   <div class="form-group">
-                     <input class="form-control" name="search" placeholder="Search Here..." type="text" >
-                     <button type="submit"><i class="fas fa-search"></i></button>
+                     <input class="form-control header-search-bar-input" name="search" placeholder="Search Here..." type="text" >
+                     <button type="submit header-search-bar-btn"><i class="fas fa-search"></i></button>
                   </div>   
                </form>
             </div>
