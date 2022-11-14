@@ -147,7 +147,6 @@ var modalCloseBtn = document.querySelector(".modalCloseBtn");
 
 modelTrigger.addEventListener("click", () => {
     modal.style.display = "block";
-    console.log(getInTouch);
     getInTouch.innerHTML = "Get In Touch";
 });
 modalCloseBtn.onclick = function () {
