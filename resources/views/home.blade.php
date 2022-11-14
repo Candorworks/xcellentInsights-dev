@@ -1,689 +1,705 @@
-@extends("index")
-@section("content")
-<div class="hero-section">
-   <video  class="video-fluid img-fluid" autoplay loop muted>
-      <source src="{{ asset('web/videos/slide-02.mp4')}}" type="video/mp4">
-   </video>
-   <div class="text-section">
-      <div class="container">
-         <div class="row">
-            <div class="col">
-               <h1 class="title text-white"><span style="opacity: 0.8; background-color: black;">Industry’s best reports at your<br>fingertips</span></h1>
-               <!-- <div class="carousel-caption-2"> -->
-               <h4 class="text-white  my-4" style="opacity: 0.8; background-color: black; width: fit-content;">We've got you covered</h4>
-               <!-- </div> -->
-               <form class="subscribe-form mb-4 pe-5" method="get" action="">
-                  <div class="form-group">   
-                     <input class="" type="text" autocomplete="off" name="search" placeholder=" Looking for Reports..." autofocus/>
-                     <button type="submit"><i class="fas fa-search"></i> </button>
-                  </div>
-                  <!--  Search -->
-               </form>
-               <div class="btn-part">
-                  <a class="btn get-quote" href="">Get Quote</a>
-                  <a class="btn view-report ms-md-2" href="">View Reports</a>
-               </div>
+@extends('index')
+@section('content')
+    <div class="hero-section">
+        <video class="video-fluid img-fluid" autoplay loop muted>
+            <source src="{{ asset('web/videos/slide-02.mp4') }}" type="video/mp4">
+        </video>
+        <div class="text-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="title text-white"><span style="opacity: 0.8; background-color: black;">Industry’s best
+                                reports at your<br>fingertips</span></h1>
+                        <!-- <div class="carousel-caption-2"> -->
+                        <h4 class="text-white  my-4" style="opacity: 0.8; background-color: black; width: fit-content;">
+                            We've got you covered</h4>
+                        <!-- </div> -->
+                        <form class="subscribe-form mb-4 pe-5" method="get" action="">
+                            <div class="form-group">
+                                <input class="" type="text" autocomplete="off" name="search"
+                                    placeholder=" Looking for Reports..." autofocus />
+                                <button type="submit"><i class="fas fa-search"></i> </button>
+                            </div>
+                            <!--  Search -->
+                        </form>
+                        <div class="btn-part">
+                            <a class="btn get-quote" href="">Get Quote</a>
+                            <a class="btn view-report ms-md-2" href="">View Reports</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="welcome-section my-4">
-   <div class="container">
-      <div class="row">
-         <div class="col welcome-heading text-center mb-5" style="color: #002c60;">
-            <h5>Welcome to Xcellent Insights</h5>
-            <h2>We are the leading report aggregators</h2>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-lg-6">
+        </div>
+    </div>
+    <div class="welcome-section my-4">
+        <div class="container">
             <div class="row">
-               <div class="col">
-                  <p>
-                     Our belief is mutual satisfaction as we practice best research methods to satisfy your queries and proceed ahead with the report purchase. At Excellent Insights, we strive to offer our clients the best of our services through market research studies that largely benefits them. We emphasize on assisting the clients to enhance their market position and create potential opportunities for their business.
-                  </p>
-               </div>
+                <div class="col welcome-heading text-center mb-5" style="color: #002c60;">
+                    <h5>Welcome to Xcellent Insights</h5>
+                    <h2>We are the leading report aggregators</h2>
+                </div>
             </div>
-            <div class="row mt-3">
-               <div class="col-lg-4 report-milestone">
-                  <div class="row">
-                     <h1 class="fw-bold rs-count mil-20">20</h1>
-                  </div>
-                  <div class="row">
-                     <p style="letter-spacing: 2px; font-weight: 600" >REPORTS</p>
-                  </div>
-               </div>
-               <div class="col-lg-8">
-                  <p>
-                     Quality-driven research reports with incisive insights enabling you to make better business decisions
-                  </p>
-               </div>
-            </div>
-            <div class="row mt-3">
-               <div class="col-lg-4 verticals-milestone">
-                  <div class="row">
-                     <h1 class="fw-bold rs-count">100</h1>
-                  </div>
-                  <div class="row">
-                     <p style="letter-spacing: 2px; font-weight: 600" >VERTICALS & SUB VERTICALS</p>
-                  </div>
-               </div>
-               <div class="col-lg-8">
-                  <p>
-                     Be assured about our consulting services as we understand that every client comes with different needs.
-                  </p>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-6">
             <div class="row">
-               <div class="col-lg-6">
-                  <div class="row">
-                     <div class="col-lg-2">
-                        <div class="icon-box">
-                           <i class="fas fa-hand-holding-usd"></i>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Our belief is mutual satisfaction as we practice best research methods to satisfy your
+                                queries and proceed ahead with the report purchase. At Excellent Insights, we strive to
+                                offer our clients the best of our services through market research studies that largely
+                                benefits them. We emphasize on assisting the clients to enhance their market position and
+                                create potential opportunities for their business.
+                            </p>
                         </div>
-                     </div>
-                     <div class="col-lg-10 ps-4">
-                        <h5 style="color: #333;"><b>Accessibility</b></h5>
-                        <p >We offer our clients the best of our service and encourage their participation with us in getting them what they want. Client satisfaction is our top priority</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6">
-                  <div class="row">
-                     <div class="col-lg-2">
-                        <div class="icon-box">
-                           <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-4 report-milestone">
+                            <div class="row">
+                                <h1 class="fw-bold rs-count mil-20">20</h1>
+                            </div>
+                            <div class="row">
+                                <p style="letter-spacing: 2px; font-weight: 600">REPORTS</p>
+                            </div>
                         </div>
-                     </div>
-                     <div class="col-lg-10 ps-4">
-                        <h5 style="color: #333;"><b>Repository</b></h5>
-                        <p>Our repository contains a large database of fact-based reports. Not finding what you want please get in touch and let us know. We'd be happy to assist you on your queries.</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row mt-5">
-               <div class="col-lg-6">
-                  <div class="row">
-                     <div class="col-lg-2 mr-2">
-                        <div class="icon-box">
-                           <i class="fas fa-user-tie"></i>
+                        <div class="col-lg-8">
+                            <p>
+                                Quality-driven research reports with incisive insights enabling you to make better business
+                                decisions
+                            </p>
                         </div>
-                     </div>
-                     <div class="col-lg-10 ps-4">
-                        <h5 style="color: #333;"><b>Better Customization</b></h5>
-                        <p>You can avail customization before purchasing a report.</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-6">
-                  <div class="row">
-                     <div class="col-lg-2 mr-2">
-                        <div class="icon-box">
-                           <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-4 verticals-milestone">
+                            <div class="row">
+                                <h1 class="fw-bold rs-count">100</h1>
+                            </div>
+                            <div class="row">
+                                <p style="letter-spacing: 2px; font-weight: 600">VERTICALS & SUB VERTICALS</p>
+                            </div>
                         </div>
-                     </div>
-                     <div class="col-lg-10 ps-4">
-                        <h5 style="color: #333;"><b>Client Satisfaction</b></h5>
-                        <p>We pledge to provide the best service in the information industry.</p>
-                     </div>
-                  </div>
-               </div>
+                        <div class="col-lg-8">
+                            <p>
+                                Be assured about our consulting services as we understand that every client comes with
+                                different needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="icon-box">
+                                        <i class="fas fa-hand-holding-usd"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 ps-4">
+                                    <h5 style="color: #333;"><b>Accessibility</b></h5>
+                                    <p>We offer our clients the best of our service and encourage their participation with
+                                        us in getting them what they want. Client satisfaction is our top priority</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="icon-box">
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 ps-4">
+                                    <h5 style="color: #333;"><b>Repository</b></h5>
+                                    <p>Our repository contains a large database of fact-based reports. Not finding what you
+                                        want please get in touch and let us know. We'd be happy to assist you on your
+                                        queries.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2 mr-2">
+                                    <div class="icon-box">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 ps-4">
+                                    <h5 style="color: #333;"><b>Better Customization</b></h5>
+                                    <p>You can avail customization before purchasing a report.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2 mr-2">
+                                    <div class="icon-box">
+                                        <i class="fas fa-mouse-pointer"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 ps-4">
+                                    <h5 style="color: #333;"><b>Client Satisfaction</b></h5>
+                                    <p>We pledge to provide the best service in the information industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="customer-testimonials p-4">
-   <div class="customer-testimonial-heading text-white text-center mb-4 ">
-      <h3>Customer Testimonials</h3>
-   </div>
-   <div class="container owl-carousel owl-theme" id="testi">
-      <div class="individual-testimonial">
-         <div class="testimonial-content-part">
-            <div class="icon-part">
-               <i class="fa fa-quote-left"></i>
+        </div>
+    </div>
+    <div class="customer-testimonials p-4">
+        <div class="customer-testimonial-heading text-white text-center mb-4 ">
+            <h3>Customer Testimonials</h3>
+        </div>
+        <div class="container owl-carousel owl-theme" id="testi">
+            <div class="individual-testimonial">
+                <div class="testimonial-content-part">
+                    <div class="icon-part">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-desc">Our organization was interested in learning more about the market trends for
+                        chemicals domain. We contacted Xcellent Insights and the results did not disappoint. We got our
+                        queries resolved with better insights from the market perspective. Besides, their market
+                        intelligence is amicable and worth relying. We would not hesitate to connect again.</p>
+                </div>
+                <div class="posted-by">
+                    <div class="user">
+                        <h5 class="name">Vice President</h5>
+                        <span class="designation"> Food & Beverages Company</span>
+                    </div>
+                </div>
             </div>
-            <p class="testimonial-desc">Our organization was interested in learning more about the market trends for chemicals domain. We contacted Xcellent Insights and the results did not disappoint. We got our queries resolved with better insights from the market perspective. Besides, their market intelligence is amicable and worth relying. We would not hesitate to connect again.</p>
-         </div>
-         <div class="posted-by">
-            <div class="user">
-               <h5 class="name">Vice President</h5>
-               <span class="designation"> Food & Beverages Company</span>
+            <div class="individual-testimonial">
+                <div class="testimonial-content-part">
+                    <div class="icon-part">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-desc">Xcellent insights has been proactive and diligent with our queries. Their
+                        expertise in the market research industry is one that everyone should look for. Their end-to-end
+                        involvement has been instrumental in achieving the key objectives to amplify our business goals.</p>
+                </div>
+                <div class="posted-by">
+                    <div class="user">
+                        <h5 class="name">Vice President, Marketing</h5>
+                        <span class="designation"> Leading Chemicals & Materials Company</span>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="individual-testimonial">
-         <div class="testimonial-content-part">
-            <div class="icon-part">
-               <i class="fa fa-quote-left"></i>
-            </div>
-            <p class="testimonial-desc">Xcellent insights has been proactive and diligent with our queries. Their expertise in the market research industry is one that everyone should look for. Their end-to-end involvement has been instrumental in achieving the key objectives to amplify our business goals.</p>
-         </div>
-         <div class="posted-by">
-            <div class="user">
-               <h5 class="name">Vice President, Marketing</h5>
-               <span class="designation"> Leading Chemicals & Materials Company</span>
-            </div>
-         </div>
-      </div>
-      <div class="individual-testimonial">
-         <div class="testimonial-content-part">
-            <div class="icon-part">
-               <i class="fa fa-quote-left"></i>
-            </div>
-            <p class="testimonial-desc">Their service was great and I got all my queries answered in no time. I got a better report full of information I was looking for. It really helped me understand the market scenario and the driving forces.</p>
-         </div>
-         <div class="posted-by">
-            <div class="user">
-              <h5 class="name">Director of Research & development</h5>
+            <div class="individual-testimonial">
+                <div class="testimonial-content-part">
+                    <div class="icon-part">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-desc">Their service was great and I got all my queries answered in no time. I got
+                        a better report full of information I was looking for. It really helped me understand the market
+                        scenario and the driving forces.</p>
+                </div>
+                <div class="posted-by">
+                    <div class="user">
+                        <h5 class="name">Director of Research & development</h5>
                         <span class="designation">Electronics & Semiconductors Company</span>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="individual-testimonial">
-         <div class="testimonial-content-part">
-            <div class="icon-part">
-               <i class="fa fa-quote-left"></i>
-            </div>
-            <p class="testimonial-desc">I am happy to share my experience with Mona. She was patient and showed a better understanding to the details of my query. In fact, she did an excellent job than expected. We carried out a project with her and turned out to be pretty well in terms of gaining the benefits.</p>
-         </div>
-         <div class="posted-by">
-            <div class="user">
-                <h5 class="name">Product Manager</h5>
+            <div class="individual-testimonial">
+                <div class="testimonial-content-part">
+                    <div class="icon-part">
+                        <i class="fa fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-desc">I am happy to share my experience with Mona. She was patient and showed a
+                        better understanding to the details of my query. In fact, she did an excellent job than expected. We
+                        carried out a project with her and turned out to be pretty well in terms of gaining the benefits.
+                    </p>
+                </div>
+                <div class="posted-by">
+                    <div class="user">
+                        <h5 class="name">Product Manager</h5>
                         <span class="designation">Heavy Machinery & Equipment</span>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="services mt-4">
-   <div class="container">
-      <div class="row">
-         <div class="col-lg-4">
-            <div class="services-wrap top-selling-reports text-center">
-               <div class="row">
-                  <div class="icon-box-services col">
-                     <img class="light" src="{{ asset('web/icons/services1.png') }}" alt="">
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="services-title ">
-                     <h6>Top Selling Reports</h6>
-                  </div>
-               </div>
+        </div>
+    </div>
+    <div class="services mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="services-wrap top-selling-reports text-center">
+                        <div class="row">
+                            <div class="icon-box-services col">
+                                <img class="light" src="{{ asset('web/icons/services1.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="services-title ">
+                                <h6>Top Selling Reports</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="services-wrap latest-report text-center">
+                        <div class="row">
+                            <div class="icon-box-services col">
+                                <img class="light" src="{{ asset('web/icons/services2.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="services-title ">
+                                <h6>Explore Latest Reports</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="services-wrap verticals text-center">
+                        <div class="row">
+                            <div class="icon-box-services col">
+                                <img class="light" src="{{ asset('web/icons/services3.png') }}" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="services-title ">
+                                <h6>Verticals</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class="col-lg-4">
-            <div class="services-wrap latest-report text-center">
-               <div class="row">
-                  <div class="icon-box-services col">
-                     <img class="light" src="{{ asset('web/icons/services2.png') }}" alt="">
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="services-title ">
-                     <h6>Explore Latest Reports</h6>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="col-lg-4">
-            <div class="services-wrap verticals text-center">
-               <div class="row">
-                  <div class="icon-box-services col">
-                     <img class="light" src="{{ asset('web/icons/services3.png') }}" alt="">
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="services-title ">
-                     <h6>Verticals</h6>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="industry-vertical-wrapper mt-5">
-         <div class="row">
-            <div class="col-lg-10">
-               <div class="industry-vertical-title" style="color: #002c60">
-                  <span class="fw-semibold">Industry Reports</span>
-                  <h2 class="fw-bold" >Industry Verticals</h2>
-               </div>
-            </div>
-            <div class="col-lg-2">
-               <div class="browse-all-btn">
-                  <a class="btn" href="{{ route("industry") }}">Browse All Verticals</a>
-               </div>
-            </div>
-         </div>
+            <div class="industry-vertical-wrapper mt-5">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="industry-vertical-title" style="color: #002c60">
+                            <span class="fw-semibold">Industry Reports</span>
+                            <h2 class="fw-bold">Industry Verticals</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="browse-all-btn">
+                            <a class="btn" href="{{ route('industry') }}">Browse All Verticals</a>
+                        </div>
+                    </div>
+                </div>
 
-         {{-- content of this section --}}
+                {{-- content of this section --}}
 
-         <div class="services-content-wrapper mt-5">
-            <div class="row justify-content-between">
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="automobile">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fas fa-car-side" aria-hidden="true"></i>
-                              </span>
-                           </div>
+                <div class="services-content-wrapper mt-5">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="automobile">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fas fa-car-side" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Automobile & Transportation</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Automobile & Transportation</h5>
-                           </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="chemicals">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-flask-vial shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Chemicals & Materials</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="chemicals">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-flask-vial shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Chemicals & Materials</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="consumer-goods">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fas fa-luggage-cart shadow-soft" aria-hidden="true"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Consumer Goods</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-            </div>
-            <div class="row justify-content-between">
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="energy-power">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                              <i class="fa-solid fa-charging-station shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Energy & Power</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="microchip">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                              <i class="fa-solid fa-microchip shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Electronics & Semiconductor</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="food">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-utensils shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Food & Beverages</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-            </div>
-            <div class="row justify-content-between">
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="machinery">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-screwdriver-wrench shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Machinery & Equipment</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href=""></a>
-                  <div class="pharma">
-                     <div class="row">
-                        <div class="icon-box-verticals">
-                           <span class="strategy-box">
-                             <i class="fa-solid fa-hospital shadow-soft"></i>
-                           </span>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="verticals-heading">
-                           <h5>Pharma & Healthcare</h5>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="service">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-laptop-code shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Service & Software</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-            </div>
-            <div class="row justify-content-between">
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="other">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-ellipsis shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Other</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="packaging">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-boxes-packing shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Packaging</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="communication">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-tower-cell shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>IT and Communication</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-            </div>
-            <div class="row justify-content-between">
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="tech">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fas fa-robot shadow-soft" aria-hidden="true"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Technology</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="medical">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-syringe fa-solid fa-stethoscope shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Medical Devices & Consumables</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="agriculture">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-tractor shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Agriculture</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-            </div>
-            <div class="row justify-content-between">
-               <div class="col-lg-3 services-card">
-                  <a href="">
-                     <div class="medical">
-                        <div class="row">
-                           <div class="icon-box-verticals">
-                              <span class="strategy-box">
-                                 <i class="fa-solid fa-hospital-user shadow-soft"></i>
-                              </span>
-                           </div>
-                        </div>
-                        <div class="row">
-                           <div class="verticals-heading">
-                              <h5>Medical Care</h5>
-                           </div>
-                        </div>
-                     </div>
-                  </a>
-                  
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="latest-reports-wrapper mt-5">
-         <div class="row">
-            <div class="col-lg-10">
-               <div class="latest-report-title" style="color: #002c60">
-                  <span class="fw-semibold">Industry Reports</span>
-                  <h2 class="fw-bold" >Latest Reports</h2>
-               </div>
-            </div>
-            <div class="col-lg-2">
-               <div class="browse-all-btn">
-                  <a class="btn" href="">Browse All Reports</a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="top-selling-reports-wrapper mt-5">
-         <div class="row">
-            <div class="col-lg-10">
-               <div class="top-selling-report-title" style="color: #002c60">
-                  <span class="fw-semibold">Industry Reports</span>
-                  <h2 class="fw-bold" >Top Selling Reports</h2>
-               </div>
-            </div>
-            <div class="col-lg-2">
-               <div class="browse-all-btn">
-                  <a class="btn" href="">Browse All Reports</a>
-               </div>
-            </div>
-         </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="consumer-goods">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fas fa-luggage-cart shadow-soft" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Consumer Goods</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
 
-         
-      </div>
-   </div>
-</div>
-<div class="clientele mt-4">
-   <div class="container client-logos">
-      <div class="row">
-         <div class="col clientele-title text-center py-3">
-            <h3 style="color: #002c60">Our Clientele</h3>
-         </div>
-         <div class="col py-4 owl-carousel owl-theme" id="client-logo-carousel">
-            <img src="{{asset("web/images/home/client-logos/ABB2.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/BASF.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/Bosch.png")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/Dow-1.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/Emerson.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/Fiserv.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/Fujitsu2.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/Harman.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/HP.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/Intel.webp")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/kaneka.png")}}" alt="">
-            <img src="{{asset("web/images/home/client-logos/LG.webp")}}" alt="">
-         </div>
-      </div>
-   </div>
-</div>
-   @section('script')
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="energy-power">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-charging-station shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Energy & Power</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="microchip">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-microchip shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Electronics & Semiconductor</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
 
-   {{-- testimonials --}}
-      <script src="{{asset('/web/js/homePageToggle.js')}}"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-      <script>
-         $(document).ready(function () {
-         $('#testi').owlCarousel({
-            items: 2,
-            margin: 30
+                        </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="food">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-utensils shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Food & Beverages</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="machinery">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-screwdriver-wrench shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Machinery & Equipment</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="col-lg-3 services-card">
+                            <a href=""></a>
+                            <div class="pharma">
+                                <div class="row">
+                                    <div class="icon-box-verticals">
+                                        <span class="strategy-box">
+                                            <i class="fa-solid fa-hospital shadow-soft"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="verticals-heading">
+                                        <h5>Pharma & Healthcare</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="service">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-laptop-code shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Service & Software</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="other">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-ellipsis shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Other</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="packaging">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-boxes-packing shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Packaging</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="communication">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-tower-cell shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>IT and Communication</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="tech">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fas fa-robot shadow-soft" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Technology</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="medical">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-syringe fa-solid fa-stethoscope shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Medical Devices & Consumables</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="agriculture">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-tractor shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Agriculture</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-lg-3 services-card">
+                            <a href="">
+                                <div class="medical">
+                                    <div class="row">
+                                        <div class="icon-box-verticals">
+                                            <span class="strategy-box">
+                                                <i class="fa-solid fa-hospital-user shadow-soft"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="verticals-heading">
+                                            <h5>Medical Care</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="latest-reports-wrapper mt-5">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="latest-report-title" style="color: #002c60">
+                            <span class="fw-semibold">Industry Reports</span>
+                            <h2 class="fw-bold">Latest Reports</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="browse-all-btn">
+                            <a class="btn" href="">Browse All Reports</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="top-selling-reports-wrapper mt-5">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="top-selling-report-title" style="color: #002c60">
+                            <span class="fw-semibold">Industry Reports</span>
+                            <h2 class="fw-bold">Top Selling Reports</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="browse-all-btn">
+                            <a class="btn" href="">Browse All Reports</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clientele mt-4">
+        <div class="container ">
+            <div class="row">
+                <div class="col">
+                    <div class="card client-logos">
+                        <div class="card-header text-center">
+                            <h4 class="m-0">Our Clientele</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="owl-carousel owl-theme" id="client-logo-carousel">
+                                <img src="{{ asset('web/images/home/client-logos/ABB2.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/BASF.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/Bosch.png') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/Dow-1.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/Emerson.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/Fiserv.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/Fujitsu2.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/Harman.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/HP.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/LG.webp') }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section('script')
+    {{-- testimonials --}}
+    <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#testi').owlCarousel({
+                items: 2,
+                margin: 30
             })
-         });
-      </script>
-      {{-- counter --}}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+        });
+    </script>
+    {{-- counter --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
-      <script>
-         $(document).ready(function () {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
             var counter = $('.rs-count');
-            if(counter.length) {  
-               $('.rs-count').counterUp({
-                  delay: 30,
-                  time: 1000
-               });
+            if (counter.length) {
+                $('.rs-count').counterUp({
+                    delay: 30,
+                    time: 1000
+                });
             }
-         } )
-      </script>
-      <script>
-         $(document).ready(function() {
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
             $('#client-logo-carousel').owlCarousel({
-            loop: true,
-            items: 5,
-            autoplay: true,
-            slideTransition: 'linear',
-            autoplaySpeed: 5000,
-            center: true,
-            dots: false,
-            autoplayHoverPause: true,
+                loop: true,
+                items: 5,
+                autoplay: true,
+                slideTransition: 'linear',
+                autoplaySpeed: 5000,
+                center: true,
+                dots: false,
+                autoplayHoverPause: true,
             });
 
-            $('#client-logo-carousel').trigger('play.owl.autoplay',[2000]);
+            $('#client-logo-carousel').trigger('play.owl.autoplay', [2000]);
 
-            function setSpeed(){
-               $('#client-logo-carousel').trigger('play.owl.autoplay',[5000]);
+            function setSpeed() {
+                $('#client-logo-carousel').trigger('play.owl.autoplay', [5000]);
             }
             setTimeout(setSpeed, 0);
-         });
-      </script>
-      
-   @endsection
+        });
+    </script>
+@endsection
 @endsection

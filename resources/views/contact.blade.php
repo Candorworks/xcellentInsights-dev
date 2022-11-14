@@ -109,7 +109,7 @@
             <div class="row form-group align-items-center">
                <div class="col-lg-6 ">
                   <div class="row">
-                     <div class="col">
+                     <div class="col"> x
                         <p>Are you Human?</p>
                      </div>
                   </div> 
