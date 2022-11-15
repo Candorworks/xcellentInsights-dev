@@ -1,4 +1,4 @@
-@extends("index")
+@extends("web.include.index")
 
 @section("content")
    <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
@@ -17,7 +17,7 @@
                   
                   <div class="blog-bg px-3 py-4 m-0" style="background-image: linear-gradient(45deg, rgb(60 59 64 / 34%), rgb(8 83 156 / 51%)),url(https://www.xcellentinsights.com/web/images/blog/1.jpg); ">
                      
-                        <p class="blog-badge mb-3">Food &amp; Beverages</p>
+                        <p class="blog-badge mb-3">Food & Beverages</p>
                         <h3 class="mb-3 text-light"> Gluten Free Biscuits Companies Helping Patients with Celiac and Gluten Sensitivity To Enjoy Their Favorite Biscuit Flavors with Gluten Alternatives</h3>
                         <div class="text-light pt-2">
                               <i class="fa fa-user fa-2xs" aria-hidden="true"></i>
