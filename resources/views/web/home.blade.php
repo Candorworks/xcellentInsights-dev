@@ -392,12 +392,13 @@
             var counter = $('.rs-count');
             if (counter.length) {
                 $('.rs-count').counterUp({
-                    delay: 30,
+                    delay: 20,
                     time: 1000
                 });
             }
-        })
+        });
     </script>
+    {{-- clientele --}}
     <script>
         $(document).ready(function() {
             $('#client-logo-carousel').owlCarousel({
@@ -406,9 +407,10 @@
                 autoplay: true,
                 slideTransition: 'linear',
                 autoplaySpeed: 5000,
+                smartSpeed: 5000,
                 center: true,
                 dots: false,
-                autoplayHoverPause: true,
+                autoplayHoverPause: true
             });
 
             $('#client-logo-carousel').trigger('play.owl.autoplay', [2000]);
