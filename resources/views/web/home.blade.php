@@ -288,24 +288,26 @@
 
                 <div class="services-content-wrapper mt-5">
                     <div class="row justify-content-between">
+                        <!-- @foreach($results as $result) -->
                         <div class="col-lg-3 services-card">
-                            <a href="">
+                            <a href="#">
                                 <div class="automobile">
                                     <div class="row">
                                         <div class="icon-box-verticals">
                                             <span class="strategy-box">
-                                                <i class="fas fa-car-side" aria-hidden="true"></i>
+                                                <i class="{{$result->icon}}" aria-hidden="true"></i>
                                             </span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="verticals-heading">
-                                            <h5>Automobile & Transportation</h5>
+                                            <h5>{{$result->name}}</h5>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
+                        <!-- @endforeach -->
                     </div>
                 </div>
             </div>
@@ -351,18 +353,18 @@
                         </div>
                         <div class="card-body">
                             <div class="owl-carousel owl-theme" id="client-logo-carousel">
-                                <img src="{{ asset('web/images/home/client-logos/ABB2.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/BASF.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Bosch.png') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Dow-1.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Emerson.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Fiserv.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Fujitsu2.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Harman.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/HP.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/LG.webp') }}" alt="">
+                                <img src="{{ asset('web/images/home/client-logos/ABB2.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/BASF.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Bosch.png') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Dow-1.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Emerson.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Fiserv.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Fujitsu2.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Harman.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/HP.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/LG.webp') }}" alt="Image Processing">
                             </div>
                         </div>
                     </div>
