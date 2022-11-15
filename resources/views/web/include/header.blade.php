@@ -11,36 +11,36 @@
             <div class="nav-item-container">
                <ul class="navbar-nav text-center justify-content-center">
                   <li class="nav-item">
-                     <a class="nav-link {{(Request::is('/*')) ? 'active' : ''}}" href="{{ route("home") }}">Home</a>
+                     <a class="nav-link {{(Request::is('/')) ? 'active' : ''}}" href="{{ route('home') }}">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link {{(Request::is('industry*')) ? 'active' : ''}}" href="{{ route("industry") }}">Industry Vertical</a>
+                     <a class="nav-link {{(Request::is('industry*')) ? 'active' : ''}}" href="{{ route('industry') }}">Industry Vertical</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link {{(Request::is('report*')) ? 'active' : ''}}" href="{{ route("report") }}">Report Hub</a>
+                     <a class="nav-link {{(Request::is('report*')) ? 'active' : ''}}" href="{{ route('report') }}">Report Hub</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link {{(Request::is('partner*')) ? 'active' : ''}}" href="{{ route("partner") }}">Partner With Us</a>
+                     <a class="nav-link {{(Request::is('partner*')) ? 'active' : ''}}" href="{{ route('partner') }}">Partner With Us</a>
                   </li>
                   <li class="nav-item about-us">
-                     <a class="nav-link {{(Request::is('about*') || Request::is('career*') || Request::is('team*')) ? 'active' : ''}}" href="{{ route("about") }}">About Us</a>
+                     <a class="nav-link {{(Request::is('about*') || Request::is('career*') || Request::is('team*')) ? 'active' : ''}}" href="{{ route('about') }}">About Us</a>
                      <ul class="ps-0 career-team-dropdown text-center">
                         <li>
-                           <a class="nav-link" href="{{ route("career") }}">Career</a>
+                           <a class="nav-link" href="{{ route('career') }}">Career</a>
                         </li>
                         <li>
-                           <a class="nav-link" href="{{ route("team") }}">Team</a>
+                           <a class="nav-link" href="{{ route('team') }}">Team</a>
                         </li>
                      </ul>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link {{(Request::is('contact*')) ? 'active' : ''}}" href="{{ route("contact") }}">Contact Us</a>
+                     <a class="nav-link {{(Request::is('contact*')) ? 'active' : ''}}" href="{{ route('contact') }}">Contact Us</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link {{(Request::is('blog*')) ? 'active' : ''}}" href="{{ route("blog") }}">Blogs</a>
+                     <a class="nav-link {{(Request::is('blog*')) ? 'active' : ''}}" href="{{ route('blog') }}">Blogs</a>
                   </li>
                   {{-- <li class="nav-item">
-                     <a class="nav-link {{(Request::is('news*')) ? 'active' : ''}}" href="{{ route("news") }}">News</a>
+                     <a class="nav-link {{(Request::is('news*')) ? 'active' : ''}}" href="{{ route('news') }}">News</a>
                   </li> --}}
                </ul>
              </div>

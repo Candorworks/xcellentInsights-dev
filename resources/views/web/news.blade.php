@@ -1,4 +1,4 @@
-@extends("index")
+@extends("web.include.index")
 
 @section("content")
    <h1>News</h1>

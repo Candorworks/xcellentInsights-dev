@@ -1,4 +1,4 @@
-@extends("index")
+@extends("web.include.index")
 
 @section("content")
    <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row" >
             <div class="col-lg-4">
-                <a href="{{route("individual-blog")}}" style="text-decoration: none;">
+                <a href="{{route('blog-details')}}" style="text-decoration: none;">
                     <div class="blog-img-box">
                         <img class="img-fluid" src="{{asset("web/images/blog/1.jpg")}}" alt="">
                     </div>
@@ -23,7 +23,7 @@
                 </a>
             </div>
             <div class="col-lg-4">
-                <a href="{{route("individual-blog")}}" style="text-decoration: none;">
+                <a href="{{route('blog-details')}}" style="text-decoration: none;">
                     <div class="blog-img-box">
                         <img class="img-fluid" src="{{asset("web/images/blog/2.jpg")}}" alt="">
                     </div>

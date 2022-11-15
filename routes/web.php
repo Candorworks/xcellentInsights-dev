@@ -14,51 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// HOME 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-// ABOUT US 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-// CONTACT US
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-// BLOG
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
-// INDIVIDUAL BLOG
-Route::get('/blog/hi', function () {
-    return view('singleBlog');
-})->name('individual-blog');
-// NEWS
-Route::get('/news', function () {
-    return view('news');
-})->name('news');
-// INDUSTRY
-Route::get('/industry', function () {
-    return view('industry');
-})->name('industry');
-// REPORT
-Route::get('/report', function () {
-    return view('report');
-})->name('report');
-// PARTNER
-Route::get('/partner', function () {
-    return view('partner');
-})->name('partner');
-// CAREER
-Route::get('/career', function () {
-    return view('career');
-})->name('career');
-// TEAM
-Route::get('/team', function () {
-    return view('team');
-})->name('team');
-// MODAL FORM
+//Web
+Route::get('/',[App\Http\Controllers\web\HomeController::class,'home'])->name('home');
+Route::get('/industry',[App\Http\Controllers\web\HomeController::class,'industry'])->name('industry');
+Route::get('/report',[App\Http\Controllers\web\HomeController::class,'report'])->name('report');
+Route::get('/partner',[App\Http\Controllers\web\HomeController::class,'partner'])->name('partner');
+Route::get('/about',[App\Http\Controllers\web\HomeController::class,'about'])->name('about');
+Route::get('/career',[App\Http\Controllers\web\HomeController::class,'career'])->name('career');
+Route::get('/team',[App\Http\Controllers\web\HomeController::class,'team'])->name('team');
+Route::get('/contact',[App\Http\Controllers\web\HomeController::class,'contact'])->name('contact');  
+Route::get('/blog',[App\Http\Controllers\web\HomeController::class,'blog'])->name('blog');  
+Route::get('/blog-details',[App\Http\Controllers\web\HomeController::class,'blog_details'])->name('blog-details');  
+Route::get('/news',[App\Http\Controllers\web\HomeController::class,'news'])->name('news');  
+
+
+
+
 Route::get('/get-in-touch', function () {
     return view('modalContactForm');
 })->name('get-in-touch');
