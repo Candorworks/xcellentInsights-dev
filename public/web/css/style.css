@@ -654,8 +654,19 @@ a {
    background-size: cover;
    height: 12rem;
    width: 18rem;
-   margin-bottom: 15px;
 }
+
+.industryIcon {
+   /* color: #e4a63a7d; */
+   color: #ced4d5;
+   /* color: black; */
+   position: absolute;
+   top: 360px;
+   left: 220px;
+   font-size: 32px;
+}
+
+
 
 .all-verticals-container>.container>.row {
    justify-content: space-between;
