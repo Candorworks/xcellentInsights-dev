@@ -15,10 +15,10 @@ class CreateCmsTable extends Migration
     {
         Schema::create('cms', function (Blueprint $table) {
             $table->id();
-            $table->char('page', 255);
-            $table->char('title', 255);
-            $table->char('meta_title', 255);
-            $table->string('meta_desc', 255);
+            $table->string('page', 255);
+            $table->string('title', 255);
+            $table->string('meta_title', 255);
+            $table->text('meta_desc', 255);
             $table->timestamps();
         });
     }

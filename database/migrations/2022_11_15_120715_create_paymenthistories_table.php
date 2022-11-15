@@ -16,9 +16,9 @@ class CreatePaymenthistoriesTable extends Migration
         Schema::create('paymenthistories', function (Blueprint $table) {
             $table->id();
             $table->integer('order_id');
-            $table->char('payment_method' ,100);
-            $table->char('transaction_id' ,255);
-            $table->string('text' ,255);
+            $table->string('payment_method' ,100);
+            $table->string('transaction_id' ,255);
+            $table->text('text' ,255);
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class CreateNewslettersTable extends Migration
     {
         Schema::create('newsletters', function (Blueprint $table) {
             $table->id();
-            $table->char('email' ,255);
+            $table->string('email' ,255);
             $table->enum('active', ['1', '0']);
             $table->timestamps();
         });

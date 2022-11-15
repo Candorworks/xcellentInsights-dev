@@ -15,12 +15,12 @@ class CreateDiscountLeadsTable extends Migration
     {
         Schema::create('discount_leads', function (Blueprint $table) {
             $table->id();
-            $table->char('report_id' , 255);
-            $table->char('email', 255);
-            $table->char('plan', 50);
-            $table->char('link', 255);
-            $table->char('status', 50);
-            $table->char('type', 20);
+            $table->string('report_id' , 255);
+            $table->string('email', 255);
+            $table->string('plan', 50);
+            $table->string('link', 255);
+            $table->string('status', 50);
+            $table->string('type', 20);
             $table->integer('discount_value');
             $table->timestamps();
         });

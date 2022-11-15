@@ -15,8 +15,8 @@ class CreateTokenTable extends Migration
     {
         Schema::create('token', function (Blueprint $table) {
             $table->id();
-            $table->char('api_token', 255);
-            $table->char('email', 50);
+            $table->string('api_token', 255);
+            $table->string('email', 50);
             $table->text('auth_token');
         });
     }

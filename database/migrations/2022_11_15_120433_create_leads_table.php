@@ -17,17 +17,17 @@ class CreateLeadsTable extends Migration
             $table->id();
             $table->integer('lead_type');
             $table->integer('report_id');
-            $table->char('name' , 100);
-            $table->char('email' , 100);
-            $table->char('website' , 100);
-            $table->char('country' , 100);
+            $table->string('name' , 100);
+            $table->string('email' , 100);
+            $table->string('website' , 100);
+            $table->string('country' , 100);
             $table->bigInteger('number');
-            $table->string('description', 255);
-            $table->char('company' , 100);
-            $table->char('job_title' , 100);
-            $table->char('report_no' , 10);
-            $table->char('new_publications' , 10);
-            $table->char('ip' , 100);
+            $table->text('description', 255);
+            $table->string('company' , 100);
+            $table->string('job_title' , 100);
+            $table->string('report_no' , 10);
+            $table->string('new_publications' , 10);
+            $table->string('ip' , 100);
             $table->timestamps();
         });
     }

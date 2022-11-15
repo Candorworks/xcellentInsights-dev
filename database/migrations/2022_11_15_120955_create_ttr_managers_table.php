@@ -15,10 +15,10 @@ class CreateTtrManagersTable extends Migration
     {
         Schema::create('ttr_managers', function (Blueprint $table) {
             $table->id();
-            $table->char('email', 100);
-            $table->char('password', 100);
-            $table->char('username', 100);
-            $table->char('active', 100);
+            $table->string('email', 100);
+            $table->string('password', 100);
+            $table->string('username', 100);
+            $table->string('active', 100);
             $table->timestamp('last_login', $precision = 0);
             $table->timestamps();
         });

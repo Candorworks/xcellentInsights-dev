@@ -17,13 +17,13 @@ class CreateBlogsTable extends Migration
             $table->id();
             $table->longText('title');
             $table->longText('subtitle');
-            $table->char('slug', 255);
+            $table->string('slug', 255);
             $table->longText('description');
-            $table->char('author', 255);
-            $table->char('tag', 255);
+            $table->string('author', 255);
+            $table->string('tag', 255);
             $table->integer('category_id');
-            $table->char('image', 255);
-            $table->char('type', 10);
+            $table->string('image', 255);
+            $table->string('type', 10);
             $table->enum('active', ['1', '0']);
             $table->timestamps();
         });

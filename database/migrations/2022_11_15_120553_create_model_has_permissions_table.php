@@ -15,7 +15,7 @@ class CreateModelHasPermissionsTable extends Migration
     {
         Schema::create('model_has_permissions', function (Blueprint $table) {
             $table->bigInteger('permission_id');
-            $table->char('model_type' , 255);
+            $table->string('model_type' , 255);
             $table->bigInteger('model_id');
         });
     }
