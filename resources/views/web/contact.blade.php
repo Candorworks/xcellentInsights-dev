@@ -1,4 +1,4 @@
-@extends("index")
+@extends("web.include.index")
 
 @section("content")
    <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">

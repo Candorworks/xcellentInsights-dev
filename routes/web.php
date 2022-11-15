@@ -16,19 +16,19 @@ use Illuminate\Support\Facades\Route;
 
 // HOME 
 Route::get('/', function () {
-    return view('home');
+    return view('web.home');
 })->name('home');
 // ABOUT US 
 Route::get('/about', function () {
-    return view('about');
+    return view('web.about');
 })->name('about');
 // CONTACT US
 Route::get('/contact', function () {
-    return view('contact');
+    return view('web.contact');
 })->name('contact');
 // BLOG
 Route::get('/blog', function () {
-    return view('blog');
+    return view('web.blog');
 })->name('blog');
 // INDIVIDUAL BLOG
 Route::get('/blog/hi', function () {
@@ -36,27 +36,29 @@ Route::get('/blog/hi', function () {
 })->name('individual-blog');
 // NEWS
 Route::get('/news', function () {
-    return view('news');
+    return view('web.news');
 })->name('news');
 // INDUSTRY
-Route::get('/industry', function () {
-    return view('industry');
+Route::get('industry', function () {
+    return view('web.industry.industry');
 })->name('industry');
+
+// Route::view('industry','web.industry.industry')->name('industry');
 // REPORT
 Route::get('/report', function () {
-    return view('report');
+    return view('web.report.report');
 })->name('report');
 // PARTNER
 Route::get('/partner', function () {
-    return view('partner');
+    return view('web.partner');
 })->name('partner');
 // CAREER
 Route::get('/career', function () {
-    return view('career');
+    return view('web.career.career');
 })->name('career');
 // TEAM
 Route::get('/team', function () {
-    return view('team');
+    return view('web.career.team');
 })->name('team');
 // MODAL FORM
 Route::get('/get-in-touch', function () {

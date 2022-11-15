@@ -1,4 +1,4 @@
-@extends('index')
+@extends('web.include.index')
 @section('content')
     <div class="hero-section">
         <video class="video-fluid img-fluid" autoplay loop muted>
