@@ -15,6 +15,7 @@ class CreateLicencesTypesTable extends Migration
     {
         Schema::create('licences_types', function (Blueprint $table) {
             $table->id();
+            $table->char('name' , 255);
             $table->timestamps();
         });
     }

@@ -15,6 +15,11 @@ class CreateRssDataTable extends Migration
     {
         Schema::create('rss_data', function (Blueprint $table) {
             $table->id();
+            $table->char('title' ,500);
+            $table->enum('active', ['1', '0']);
+            $table->char('url' ,500);
+            $table->text('description');
+            $table->longText('pr');
             $table->timestamps();
         });
     }
