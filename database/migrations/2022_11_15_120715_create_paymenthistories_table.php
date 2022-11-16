@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreatePaymenthistoriesTable extends Migration
 {
@@ -18,8 +19,9 @@ class CreatePaymenthistoriesTable extends Migration
             $table->integer('order_id');
             $table->string('payment_method' ,100);
             $table->string('transaction_id' ,255);
-            $table->text('text' ,255);
-            $table->timestamps();
+            $table->text('text' ,25);
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
     }
 
