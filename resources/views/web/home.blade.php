@@ -1,4 +1,5 @@
 @extends('web.include.index')
+
 @section('content')
     <div class="hero-section">
         <video class="video-fluid img-fluid" autoplay loop muted>
@@ -297,221 +298,210 @@
                         <div class="col">
                             <div class="owl-carousel" id="topSellingReport">
 
-                                {{-- individual top selling report --}}
-                                @for ($i = 0; $i < 7; $i++)
-                                    <div class="top-selling-report-card ms-1">
-                                        <div class="top-selling-img-part">
-                                            <img src="{{ asset('web/images/industry/1650879804.webp') }}"
-                                                class="img-fluid" height="278">
-                                        </div>
-                                        <div class="arrow-to-page">
+                                <div class="services-content-wrapper mt-5">
+                                    <div class="row justify-content-between">
+                                        <div class="col-lg-3 services-card">
                                             <a href="">
-                                                <i class="flaticon-right-arrow"></i>
-                                            </a>
-                                        </div>
-                                        <div class="top-selling-content-part p-3">
-                                            <a class="top-selling-report-category" href="">
-                                                CHEMICAL & MATERIALS
-                                            </a>
-                                            <h6 class="top-selling-report-desc my-4">
-                                                <a href=""><strong>
-                                                        2023-2028 Global and Regional
-                                                        2,4-DIAMINO-6-(4-FLUOROPHENYL)PY...
-                                                    </strong>
-                                                </a>
-                                            </h6>
-                                            <div class="top-selling-report-meta">
-                                                <div class="date-price">
-                                                    <p class="mb-0">
-                                                        <i class="far fa-clock" aria-hidden="true"></i>
-                                                        Nov 2022
-                                                    </p>
-                                                    <p class="mb-0">
-                                                        <i class="fa fa-credit-card" aria-hidden="true"></i>
-                                                        USD 3500
-                                                    </p>
+                                                <div class="automobile">
+                                                    <div class="row">
+                                                        <div class="icon-box-verticals">
+                                                            <span class="strategy-box">
+                                                                <i class="fas fa-car-side" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="verticals-heading">
+                                                            <h5>Automobile & Transportation</h5>
+                                                        </div>
+                                                    </div>
+                                                    @endfor
                                                 </div>
-                                                <div class="pages-format">
-                                                    <p class="mb-0"><strong>Pages :</strong> 162</p>
-                                                    <p class="mb-0"><strong>Format :</strong> PDF</p>
-                                                </div>
-                                            </div>
                                         </div>
+
                                     </div>
-                                @endfor
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            {{-- latest report section --}}
-            <div class="services-wrap-content latest-reports-wrapper mt-5" id="card2">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <div class="latest-report-title" style="color: #002c60">
-                            <span class="">Industry Reports</span>
-                            <h2 class="">Latest Reports</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="browse-all-btn">
-                            <a class="btn" href="">Browse All Reports</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            {{-- vertical section --}}
-            <div class="services-wrap-content industry-vertical-wrapper mt-5" id="card3">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <div class="industry-vertical-title" style="color: #002c60">
-                            <span class="">Industry Reports</span>
-                            <h2 class="">Industry Verticals</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="browse-all-btn">
-                            <a class="btn" href="{{ route('industry') }}">Browse All Verticals</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="services-content-wrapper mt-5">
-                    <div class="row justify-content-between">
-
-                        {{-- individual vertical --}}
-                        <div class="col-lg-3 services-card">
-                            <a href="">
-                                <div class="automobile">
-                                    <div class="row">
-                                        <div class="icon-box-verticals">
-                                            <span class="strategy-box">
-                                                <i class="fas fa-car-side" aria-hidden="true"></i>
-                                            </span>
+                            {{-- latest report section --}}
+                            <div class="services-wrap-content latest-reports-wrapper mt-5" id="card2">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div class="latest-report-title" style="color: #002c60">
+                                            <span class="">Industry Reports</span>
+                                            <h2 class="">Latest Reports</h2>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="verticals-heading">
-                                            <h5>Automobile & Transportation</h5>
+                                    <div class="col-lg-2">
+                                        <div class="browse-all-btn">
+                                            <a class="btn" href="">Browse All Reports</a>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+
+                            </div>
+
+                            {{-- vertical section --}}
+                            <div class="services-wrap-content industry-vertical-wrapper mt-5" id="card3">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div class="industry-vertical-title" style="color: #002c60">
+                                            <span class="">Industry Reports</span>
+                                            <h2 class="">Industry Verticals</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="browse-all-btn">
+                                            <a class="btn" href="{{ route('industry') }}">Browse All Verticals</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="services-content-wrapper mt-5">
+                                    <div class="row justify-content-between">
+
+                                        {{-- individual vertical --}}
+                                        <div class="col-lg-3 services-card">
+                                            <a href="">
+                                                <div class="automobile">
+                                                    <div class="row">
+                                                        <div class="icon-box-verticals">
+                                                            <span class="strategy-box">
+                                                                <i class="fas fa-car-side" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="verticals-heading">
+                                                            <h5>Automobile & Transportation</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
                         </div>
                     </div>
-                </div>
-            </div>
 
-
-
-
-        </div>
-    </div>
-
-    {{-- our clientele section --}}
-    <div class="clientele mt-4">
-        <div class="container ">
-            <div class="row">
-                <div class="col">
-                    <div class="card client-logos">
-                        <div class="card-header text-center">
-                            <h4 class="m-0">Our Clientele</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="owl-carousel owl-theme" id="client-logo-carousel">
-                                <img src="{{ asset('web/images/home/client-logos/ABB2.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/BASF.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Bosch.png') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Dow-1.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Emerson.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Fiserv.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Fujitsu2.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Harman.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/HP.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}" alt="">
-                                <img src="{{ asset('web/images/home/client-logos/LG.webp') }}" alt="">
+                    {{-- our clientele section --}}
+                    <div class="clientele mt-4">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card client-logos">
+                                        <div class="card-header text-center">
+                                            <h4 class="m-0">Our Clientele</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="owl-carousel owl-theme" id="client-logo-carousel">
+                                                <img src="{{ asset('web/images/home/client-logos/ABB2.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/BASF.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/Bosch.png') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/Dow-1.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/Emerson.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/Fiserv.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/Fujitsu2.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/Harman.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/HP.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}"
+                                                    alt="Image Processing">
+                                                <img src="{{ asset('web/images/home/client-logos/LG.webp') }}"
+                                                    alt="Image Processing">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@section('script')
-    {{-- testimonials --}}
-    <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#testi').owlCarousel({
-                items: 2,
-                margin: 30
-            })
-        });
-    </script>
-    {{-- counter --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+                    @section('script')
+                        {{-- testimonials --}}
+                        <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                $('#testi').owlCarousel({
+                                    items: 2,
+                                    margin: 30
+                                })
+                            });
+                        </script>
+                        {{-- counter --}}
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            var counter = $('.rs-count');
-            if (counter.length) {
-                $('.rs-count').counterUp({
-                    delay: 20,
-                    time: 1000
-                });
-            }
-        });
-    </script>
+                        <script>
+                            $(document).ready(function() {
+                                var counter = $('.rs-count');
+                                if (counter.length) {
+                                    $('.rs-count').counterUp({
+                                        delay: 20,
+                                        time: 1000
+                                    });
+                                }
+                            });
+                        </script>
 
-    <script>
-        $(document).ready(function() {
-            $('#topSellingReport').owlCarousel({
-                loop: true,
-                items: 3,
-                margin: 30,
-                // autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true
-            });
+                        <script>
+                            $(document).ready(function() {
+                                $('#topSellingReport').owlCarousel({
+                                    loop: true,
+                                    items: 3,
+                                    margin: 30,
+                                    // autoplay: true,
+                                    autoplayTimeout: 2000,
+                                    autoplayHoverPause: true
+                                });
 
-            // $('#topSellingReport').trigger('play.owl.autoplay', [2000]);
+                                // $('#topSellingReport').trigger('play.owl.autoplay', [2000]);
 
-            // function setSpeed() {
-            //     $('#topSellingReport').trigger('play.owl.autoplay', [5000]);
-            // }
-            // setTimeout(setSpeed, 0);
-        });
-    </script>
-    {{-- clientele --}}
-    <script>
-        $(document).ready(function() {
-            $('#client-logo-carousel').owlCarousel({
-                loop: true,
-                items: 5,
-                autoplay: true,
-                slideTransition: 'linear',
-                autoplaySpeed: 5000,
-                smartSpeed: 5000,
-                center: true,
-                dots: false,
-                autoplayHoverPause: true
-            });
+                                // function setSpeed() {
+                                //     $('#topSellingReport').trigger('play.owl.autoplay', [5000]);
+                                // }
+                                // setTimeout(setSpeed, 0);
+                            });
+                        </script>
+                        {{-- clientele --}}
+                        <script>
+                            $(document).ready(function() {
+                                $('#client-logo-carousel').owlCarousel({
+                                    loop: true,
+                                    items: 5,
+                                    autoplay: true,
+                                    slideTransition: 'linear',
+                                    autoplaySpeed: 5000,
+                                    smartSpeed: 5000,
+                                    center: true,
+                                    dots: false,
+                                    autoplayHoverPause: true
+                                });
 
-            $('#client-logo-carousel').trigger('play.owl.autoplay', [2000]);
+                                $('#client-logo-carousel').trigger('play.owl.autoplay', [2000]);
 
-            function setSpeed() {
-                $('#client-logo-carousel').trigger('play.owl.autoplay', [5000]);
-            }
-            setTimeout(setSpeed, 0);
-        });
-    </script>
-@endsection
-@endsection
+                                function setSpeed() {
+                                    $('#client-logo-carousel').trigger('play.owl.autoplay', [5000]);
+                                }
+                                setTimeout(setSpeed, 0);
+                            });
+                        </script>
+                    @endsection
+                @endsection

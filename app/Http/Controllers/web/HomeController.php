@@ -4,6 +4,8 @@ namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Category;
+use DB;
 
 class HomeController extends Controller
 {
@@ -84,6 +86,8 @@ class HomeController extends Controller
     }
 
     public function home(){
+
+        // $results = Category::all();
         return view('web.home');
     }
 
@@ -117,5 +121,9 @@ class HomeController extends Controller
 
     public function blog(){
         return view('web.cms.blog');
+    }
+
+    public function blog_details(){
+        return view('web.cms.singleBlog');
     }
 }
