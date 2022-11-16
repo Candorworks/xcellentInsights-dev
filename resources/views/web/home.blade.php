@@ -55,7 +55,7 @@
                     <div class="row mt-3">
                         <div class="col-lg-4 report-milestone">
                             <div class="row">
-                                <h1 class="fw-bold rs-count mil-20">20</h1>
+                                <h1 class=" rs-count mil-20">20</h1>
                             </div>
                             <div class="row">
                                 <p style="letter-spacing: 2px; font-weight: 600">REPORTS</p>
@@ -71,7 +71,7 @@
                     <div class="row mt-3">
                         <div class="col-lg-4 verticals-milestone">
                             <div class="row">
-                                <h1 class="fw-bold rs-count">100</h1>
+                                <h1 class=" rs-count">100</h1>
                             </div>
                             <div class="row">
                                 <p style="letter-spacing: 2px; font-weight: 600">VERTICALS & SUB VERTICALS</p>
@@ -225,8 +225,10 @@
     <div class="services mt-4">
         <div class="container">
             <div class="row">
+
+                {{-- top selling report card --}}
                 <div class="col-lg-4">
-                    <div class="services-wrap top-selling-reports text-center">
+                    <div class="services-wrap active top-selling-reports text-center" divId="card1">
                         <div class="row">
                             <div class="icon-box-services col">
                                 <img class="light" src="{{ asset('web/icons/services1.png') }}" alt="">
@@ -239,8 +241,10 @@
                         </div>
                     </div>
                 </div>
+
+                {{-- latest report card --}}
                 <div class="col-lg-4">
-                    <div class="services-wrap latest-report text-center">
+                    <div class="services-wrap latest-report text-center" divId="card2">
                         <div class="row">
                             <div class="icon-box-services col">
                                 <img class="light" src="{{ asset('web/icons/services2.png') }}" alt="">
@@ -253,8 +257,10 @@
                         </div>
                     </div>
                 </div>
+
+                {{-- vertical card --}}
                 <div class="col-lg-4">
-                    <div class="services-wrap verticals text-center">
+                    <div class="services-wrap verticals text-center" divId="card3">
                         <div class="row">
                             <div class="icon-box-services col">
                                 <img class="light" src="{{ asset('web/icons/services3.png') }}" alt="">
@@ -268,13 +274,102 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="industry-vertical-wrapper mt-5">
+
+            {{-- top selling section --}}
+            <div class="services-wrap-content top-selling-reports-wrapper mt-5" id="card1">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="top-selling-report-title" style="color: #002c60">
+                            <span class="">Industry Reports</span>
+                            <h2 class="">Top Selling Reports</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="browse-all-btn">
+                            <a class="btn" href="">Browse All Reports</a>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- top selling report caraousel --}}
+                <div class="top-selling-reports-content mt-5">
+                    <div class="row">
+                        <div class="col">
+                            <div class="owl-carousel" id="topSellingReport">
+
+                                {{-- individual top selling report --}}
+                                @for ($i = 0; $i < 7; $i++)
+                                    <div class="top-selling-report-card ms-1">
+                                        <div class="top-selling-img-part">
+                                            <img src="{{ asset('web/images/industry/1650879804.webp') }}"
+                                                class="img-fluid" height="278">
+                                        </div>
+                                        <div class="arrow-to-page">
+                                            <a href="">
+                                                <i class="flaticon-right-arrow"></i>
+                                            </a>
+                                        </div>
+                                        <div class="top-selling-content-part p-3">
+                                            <a class="top-selling-report-category" href="">
+                                                CHEMICAL & MATERIALS
+                                            </a>
+                                            <h6 class="top-selling-report-desc my-4">
+                                                <a href=""><strong>
+                                                        2023-2028 Global and Regional
+                                                        2,4-DIAMINO-6-(4-FLUOROPHENYL)PY...
+                                                    </strong>
+                                                </a>
+                                            </h6>
+                                            <div class="top-selling-report-meta">
+                                                <div class="date-price">
+                                                    <p class="mb-0">
+                                                        <i class="far fa-clock" aria-hidden="true"></i>
+                                                        Nov 2022
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                                        USD 3500
+                                                    </p>
+                                                </div>
+                                                <div class="pages-format">
+                                                    <p class="mb-0"><strong>Pages :</strong> 162</p>
+                                                    <p class="mb-0"><strong>Format :</strong> PDF</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endfor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- latest report section --}}
+            <div class="services-wrap-content latest-reports-wrapper mt-5" id="card2">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="latest-report-title" style="color: #002c60">
+                            <span class="">Industry Reports</span>
+                            <h2 class="">Latest Reports</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="browse-all-btn">
+                            <a class="btn" href="">Browse All Reports</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            {{-- vertical section --}}
+            <div class="services-wrap-content industry-vertical-wrapper mt-5" id="card3">
                 <div class="row">
                     <div class="col-lg-10">
                         <div class="industry-vertical-title" style="color: #002c60">
-                            <span class="fw-semibold">Industry Reports</span>
-                            <h2 class="fw-bold">Industry Verticals</h2>
+                            <span class="">Industry Reports</span>
+                            <h2 class="">Industry Verticals</h2>
                         </div>
                     </div>
                     <div class="col-lg-2">
@@ -284,10 +379,11 @@
                     </div>
                 </div>
 
-                {{-- content of this section --}}
 
                 <div class="services-content-wrapper mt-5">
                     <div class="row justify-content-between">
+
+                        {{-- individual vertical --}}
                         <div class="col-lg-3 services-card">
                             <a href="">
                                 <div class="automobile">
@@ -309,38 +405,14 @@
                     </div>
                 </div>
             </div>
-            <div class="latest-reports-wrapper mt-5">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <div class="latest-report-title" style="color: #002c60">
-                            <span class="fw-semibold">Industry Reports</span>
-                            <h2 class="fw-bold">Latest Reports</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="browse-all-btn">
-                            <a class="btn" href="">Browse All Reports</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="top-selling-reports-wrapper mt-5">
-                <div class="row">
-                    <div class="col-lg-10">
-                        <div class="top-selling-report-title" style="color: #002c60">
-                            <span class="fw-semibold">Industry Reports</span>
-                            <h2 class="fw-bold">Top Selling Reports</h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-2">
-                        <div class="browse-all-btn">
-                            <a class="btn" href="">Browse All Reports</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
+
         </div>
     </div>
+
+    {{-- our clientele section --}}
     <div class="clientele mt-4">
         <div class="container ">
             <div class="row">
@@ -396,6 +468,26 @@
                     time: 1000
                 });
             }
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#topSellingReport').owlCarousel({
+                loop: true,
+                items: 3,
+                margin: 30,
+                // autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true
+            });
+
+            // $('#topSellingReport').trigger('play.owl.autoplay', [2000]);
+
+            // function setSpeed() {
+            //     $('#topSellingReport').trigger('play.owl.autoplay', [5000]);
+            // }
+            // setTimeout(setSpeed, 0);
         });
     </script>
     {{-- clientele --}}
