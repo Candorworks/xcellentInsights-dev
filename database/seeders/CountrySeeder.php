@@ -14,7 +14,6 @@ class CountrySeeder extends Seeder
      */
     public function run()
     {
-
         DB::table('countries')->truncate();
 
         $countries = array(
@@ -274,6 +273,5 @@ class CountrySeeder extends Seeder
           );
 
           DB::table('countries')->insert($countries);
-
     }
 }
