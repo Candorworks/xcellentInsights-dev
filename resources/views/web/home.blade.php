@@ -297,6 +297,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="owl-carousel" id="topSellingReport">
+
                                 <div class="services-content-wrapper mt-5">
                                     <div class="row justify-content-between">
                                         <div class="col-lg-3 services-card">
@@ -314,192 +315,194 @@
                                                             <h5>Automobile & Transportation</h5>
                                                         </div>
                                                     </div>
-                                                </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- latest report section --}}
-                            <div class="services-wrap-content latest-reports-wrapper mt-5" id="card2">
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <div class="latest-report-title" style="color: #002c60">
-                                            <span class="">Industry Reports</span>
-                                            <h2 class="">Latest Reports</h2>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="browse-all-btn">
-                                            <a class="btn" href="">Browse All Reports</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            {{-- vertical section --}}
-                            <div class="services-wrap-content industry-vertical-wrapper mt-5" id="card3">
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <div class="industry-vertical-title" style="color: #002c60">
-                                            <span class="">Industry Reports</span>
-                                            <h2 class="">Industry Verticals</h2>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-2">
-                                        <div class="browse-all-btn">
-                                            <a class="btn" href="{{ route('industry') }}">Browse All Verticals</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="services-content-wrapper mt-5">
-                                    <div class="row justify-content-between">
-
-                                        {{-- individual vertical --}}
-                                        <div class="col-lg-3 services-card">
-                                            <a href="">
-                                                <div class="automobile">
-                                                    <div class="row">
-                                                        <div class="icon-box-verticals">
-                                                            <span class="strategy-box">
-                                                                <i class="fas fa-car-side" aria-hidden="true"></i>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="verticals-heading">
-                                                            <h5>Automobile & Transportation</h5>
-                                                        </div>
-                                                    </div>
-                                                </div>
                                             </a>
                                         </div>
+
                                     </div>
+
                                 </div>
                             </div>
-
-
-
-
                         </div>
-                    </div>
 
-                    {{-- our clientele section --}}
-                    <div class="clientele mt-4">
-                        <div class="container ">
+                        {{-- latest report section --}}
+                        <div class="services-wrap-content latest-reports-wrapper mt-5" id="card2">
                             <div class="row">
-                                <div class="col">
-                                    <div class="card client-logos">
-                                        <div class="card-header text-center">
-                                            <h4 class="m-0">Our Clientele</h4>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="owl-carousel owl-theme" id="client-logo-carousel">
-                                                <img src="{{ asset('web/images/home/client-logos/ABB2.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/BASF.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/Bosch.png') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/Dow-1.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/Emerson.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/Fiserv.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/Fujitsu2.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/Harman.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/HP.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}"
-                                                    alt="Image Processing">
-                                                <img src="{{ asset('web/images/home/client-logos/LG.webp') }}"
-                                                    alt="Image Processing">
+                                <div class="col-lg-10">
+                                    <div class="latest-report-title" style="color: #002c60">
+                                        <span class="">Industry Reports</span>
+                                        <h2 class="">Latest Reports</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="browse-all-btn">
+                                        <a class="btn" href="">Browse All Reports</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        {{-- vertical section --}}
+                        <div class="services-wrap-content industry-vertical-wrapper mt-5" id="card3">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="industry-vertical-title" style="color: #002c60">
+                                        <span class="">Industry Reports</span>
+                                        <h2 class="">Industry Verticals</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="browse-all-btn">
+                                        <a class="btn" href="{{ route('industry') }}">Browse All Verticals</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="services-content-wrapper mt-5">
+                                <div class="row justify-content-between">
+
+                                    {{-- individual vertical --}}
+                                    <div class="col-lg-3 services-card">
+                                        <a href="">
+                                            <div class="automobile">
+                                                <div class="row">
+                                                    <div class="icon-box-verticals">
+                                                        <span class="strategy-box">
+                                                            <i class="fas fa-car-side" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="verticals-heading">
+                                                        <h5>Automobile & Transportation</h5>
+                                                    </div>
+                                                </div>
                                             </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+                {{-- our clientele section --}}
+                <div class="clientele mt-4">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card client-logos">
+                                    <div class="card-header text-center">
+                                        <h4 class="m-0">Our Clientele</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="owl-carousel owl-theme" id="client-logo-carousel">
+                                            <img src="{{ asset('web/images/home/client-logos/ABB2.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/BASF.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/Bosch.png') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/Dow-1.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/Emerson.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/Fiserv.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/Fujitsu2.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/Harman.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/HP.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}"
+                                                alt="Image Processing">
+                                            <img src="{{ asset('web/images/home/client-logos/LG.webp') }}"
+                                                alt="Image Processing">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                @section('script')
-                    {{-- testimonials --}}
-                    <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-                    <script>
-                        $(document).ready(function() {
-                            $('#testi').owlCarousel({
-                                items: 2,
-                                margin: 30
-                            })
-                        });
-                    </script>
-                    {{-- counter --}}
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+                </div>
+            @section('script')
+                {{-- testimonials --}}
+                <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('#testi').owlCarousel({
+                            items: 2,
+                            margin: 30
+                        })
+                    });
+                </script>
+                {{-- counter --}}
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
-                    <script>
-                        $(document).ready(function() {
-                            var counter = $('.rs-count');
-                            if (counter.length) {
-                                $('.rs-count').counterUp({
-                                    delay: 20,
-                                    time: 1000
-                                });
-                            }
-                        });
-                    </script>
-
-                    <script>
-                        $(document).ready(function() {
-                            $('#topSellingReport').owlCarousel({
-                                loop: true,
-                                items: 3,
-                                margin: 30,
-                                // autoplay: true,
-                                autoplayTimeout: 2000,
-                                autoplayHoverPause: true
+                <script>
+                    $(document).ready(function() {
+                        var counter = $('.rs-count');
+                        if (counter.length) {
+                            $('.rs-count').counterUp({
+                                delay: 20,
+                                time: 1000
                             });
+                        }
+                    });
+                </script>
 
-                            // $('#topSellingReport').trigger('play.owl.autoplay', [2000]);
-
-                            // function setSpeed() {
-                            //     $('#topSellingReport').trigger('play.owl.autoplay', [5000]);
-                            // }
-                            // setTimeout(setSpeed, 0);
+                <script>
+                    $(document).ready(function() {
+                        $('#topSellingReport').owlCarousel({
+                            loop: true,
+                            items: 3,
+                            margin: 30,
+                            // autoplay: true,
+                            autoplayTimeout: 2000,
+                            autoplayHoverPause: true
                         });
-                    </script>
-                    {{-- clientele --}}
-                    <script>
-                        $(document).ready(function() {
-                            $('#client-logo-carousel').owlCarousel({
-                                loop: true,
-                                items: 5,
-                                autoplay: true,
-                                slideTransition: 'linear',
-                                autoplaySpeed: 5000,
-                                smartSpeed: 5000,
-                                center: true,
-                                dots: false,
-                                autoplayHoverPause: true
-                            });
 
-                            $('#client-logo-carousel').trigger('play.owl.autoplay', [2000]);
+                        // $('#topSellingReport').trigger('play.owl.autoplay', [2000]);
 
-                            function setSpeed() {
-                                $('#client-logo-carousel').trigger('play.owl.autoplay', [5000]);
-                            }
-                            setTimeout(setSpeed, 0);
+                        // function setSpeed() {
+                        //     $('#topSellingReport').trigger('play.owl.autoplay', [5000]);
+                        // }
+                        // setTimeout(setSpeed, 0);
+                    });
+                </script>
+                {{-- clientele --}}
+                <script>
+                    $(document).ready(function() {
+                        $('#client-logo-carousel').owlCarousel({
+                            loop: true,
+                            items: 5,
+                            autoplay: true,
+                            slideTransition: 'linear',
+                            autoplaySpeed: 5000,
+                            smartSpeed: 5000,
+                            center: true,
+                            dots: false,
+                            autoplayHoverPause: true
                         });
-                    </script>
-                @endsection
+
+                        $('#client-logo-carousel').trigger('play.owl.autoplay', [2000]);
+
+                        function setSpeed() {
+                            $('#client-logo-carousel').trigger('play.owl.autoplay', [5000]);
+                        }
+                        setTimeout(setSpeed, 0);
+                    });
+                </script>
             @endsection
+        @endsection
