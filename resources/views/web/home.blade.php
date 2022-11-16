@@ -223,10 +223,9 @@
             </div>
         </div>
     </div>
-    <div class="services mt-4">
+    <div class="services mt-4 px-5">
         <div class="container">
             <div class="row">
-
                 {{-- top selling report card --}}
                 <div class="col-lg-4">
                     <div class="services-wrap active top-selling-reports text-center" divId="card1">
@@ -296,9 +295,52 @@
                 <div class="top-selling-reports-content mt-5">
                     <div class="row">
                         <div class="col">
-                            <div class="owl-carousel" id="topSellingReport">
+                            <div class="owl-carousel " id="topSellingReport">
 
-
+                                {{-- indivudial top selling report loop --}}
+                                @for ($i = 0; $i < 7; $i++)
+                                    <div class="top-selling-report-card ms-1">
+                                        <div class="top-selling-img-part">
+                                            <img src="{{ asset('web/images/industry/1650880205.webp') }}">
+                                        </div>
+                                        <div class="top-selling-content-part p-3">
+                                            <p class="text-uppercase mb-0">
+                                                <a href="">
+                                                    Service & Software
+                                                </a>
+                                            </p>
+                                            <p class="my-4">
+                                                <strong><a href=""> Global Video Monitoring Software Market Research
+                                                        Report 2022</a></strong>
+                                            </p>
+                                            <div class="arrow-to-page">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                            <div class="top-selling-report-meta" style="font-size: 14px">
+                                                <div class="date-price">
+                                                    <p class="mb-0">
+                                                        <i class="far fa-clock" aria-hidden="true"></i>
+                                                        Nov 2022
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                                        USD 2900
+                                                    </p>
+                                                </div>
+                                                <div class="page-format">
+                                                    <p class="mb-0">
+                                                        <strong>Pages : </strong>
+                                                        112
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <strong>Format : </strong>
+                                                        PDF
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endfor
                             </div>
                         </div>
                     </div>
@@ -419,6 +461,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
+    {{-- home page counter --}}
     <script>
         $(document).ready(function() {
             var counter = $('.rs-count');
@@ -431,25 +474,20 @@
         });
     </script>
 
+    {{-- top selling carousel --}}
     <script>
         $(document).ready(function() {
             $('#topSellingReport').owlCarousel({
-                loop: true,
                 items: 3,
-                margin: 30,
-                // autoplay: true,
+                loop: true,
+                margin: 20,
+                autoplay: true,
                 autoplayTimeout: 2000,
                 autoplayHoverPause: true
             });
-
-            // $('#topSellingReport').trigger('play.owl.autoplay', [2000]);
-
-            // function setSpeed() {
-            //     $('#topSellingReport').trigger('play.owl.autoplay', [5000]);
-            // }
-            // setTimeout(setSpeed, 0);
         });
     </script>
+
     {{-- clientele --}}
     <script>
         $(document).ready(function() {
