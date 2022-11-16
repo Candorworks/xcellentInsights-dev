@@ -87,8 +87,8 @@ class HomeController extends Controller
 
     public function home(){
 
-        $results = Category::all();
-        return view('web.home' , compact('results'));
+        // $results = Category::all();
+        return view('web.home');
     }
 
     public function industry(){

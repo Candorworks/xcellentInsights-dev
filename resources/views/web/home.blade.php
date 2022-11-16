@@ -1,4 +1,5 @@
 @extends('web.include.index')
+
 @section('content')
     <div class="hero-section">
         <video class="video-fluid img-fluid" autoplay loop muted>
@@ -288,26 +289,26 @@
 
                 <div class="services-content-wrapper mt-5">
                     <div class="row justify-content-between">
-                        <!-- @foreach($results as $result) -->
+                        
                         <div class="col-lg-3 services-card">
                             <a href="#">
                                 <div class="automobile">
                                     <div class="row">
                                         <div class="icon-box-verticals">
                                             <span class="strategy-box">
-                                                <i class="{{$result->icon}}" aria-hidden="true"></i>
+                                                <i class="fa fa-car" aria-hidden="true"></i>
                                             </span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="verticals-heading">
-                                            <h5>{{$result->name}}</h5>
+                                            <h5>automobile</h5>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <!-- @endforeach -->
+                        
                     </div>
                 </div>
             </div>
