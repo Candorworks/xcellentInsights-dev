@@ -315,7 +315,7 @@
                                                             <h5>Automobile & Transportation</h5>
                                                         </div>
                                                     </div>
-                                                    @endfor
+                                                    
                                                 </div>
                                         </div>
 
