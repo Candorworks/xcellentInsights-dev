@@ -151,6 +151,19 @@
    border-radius: 0px 20px 20px 0px;
 }
 
+.header-wrapper-sticky .header-search-bar form button{
+   border: 1px solid black;
+   border-left: none;
+   padding: 4px 20px;
+   font-size: 16px;
+   height: 35px;
+   position: absolute;
+   right: 0;
+   color: white;
+   background-color: var(--text-blue);
+   border-radius: 0px 20px 20px 0px;
+}
+
 .nav-link {
    color: #ffffff;
 }
