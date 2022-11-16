@@ -297,7 +297,6 @@
                     <div class="row">
                         <div class="col">
                             <div class="owl-carousel" id="topSellingReport">
-
                                 <div class="services-content-wrapper mt-5">
                                     <div class="row justify-content-between">
                                         <div class="col-lg-3 services-card">
@@ -315,7 +314,6 @@
                                                             <h5>Automobile & Transportation</h5>
                                                         </div>
                                                     </div>
-                                                    @endfor
                                                 </div>
                                         </div>
 
@@ -432,76 +430,76 @@
                             </div>
                         </div>
                     </div>
-                    @section('script')
-                        {{-- testimonials --}}
-                        <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-                        <script>
-                            $(document).ready(function() {
-                                $('#testi').owlCarousel({
-                                    items: 2,
-                                    margin: 30
-                                })
-                            });
-                        </script>
-                        {{-- counter --}}
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+                @section('script')
+                    {{-- testimonials --}}
+                    <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+                    <script>
+                        $(document).ready(function() {
+                            $('#testi').owlCarousel({
+                                items: 2,
+                                margin: 30
+                            })
+                        });
+                    </script>
+                    {{-- counter --}}
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
 
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
-                        <script>
-                            $(document).ready(function() {
-                                var counter = $('.rs-count');
-                                if (counter.length) {
-                                    $('.rs-count').counterUp({
-                                        delay: 20,
-                                        time: 1000
-                                    });
-                                }
-                            });
-                        </script>
-
-                        <script>
-                            $(document).ready(function() {
-                                $('#topSellingReport').owlCarousel({
-                                    loop: true,
-                                    items: 3,
-                                    margin: 30,
-                                    // autoplay: true,
-                                    autoplayTimeout: 2000,
-                                    autoplayHoverPause: true
+                    <script>
+                        $(document).ready(function() {
+                            var counter = $('.rs-count');
+                            if (counter.length) {
+                                $('.rs-count').counterUp({
+                                    delay: 20,
+                                    time: 1000
                                 });
+                            }
+                        });
+                    </script>
 
-                                // $('#topSellingReport').trigger('play.owl.autoplay', [2000]);
-
-                                // function setSpeed() {
-                                //     $('#topSellingReport').trigger('play.owl.autoplay', [5000]);
-                                // }
-                                // setTimeout(setSpeed, 0);
+                    <script>
+                        $(document).ready(function() {
+                            $('#topSellingReport').owlCarousel({
+                                loop: true,
+                                items: 3,
+                                margin: 30,
+                                // autoplay: true,
+                                autoplayTimeout: 2000,
+                                autoplayHoverPause: true
                             });
-                        </script>
-                        {{-- clientele --}}
-                        <script>
-                            $(document).ready(function() {
-                                $('#client-logo-carousel').owlCarousel({
-                                    loop: true,
-                                    items: 5,
-                                    autoplay: true,
-                                    slideTransition: 'linear',
-                                    autoplaySpeed: 5000,
-                                    smartSpeed: 5000,
-                                    center: true,
-                                    dots: false,
-                                    autoplayHoverPause: true
-                                });
 
-                                $('#client-logo-carousel').trigger('play.owl.autoplay', [2000]);
+                            // $('#topSellingReport').trigger('play.owl.autoplay', [2000]);
 
-                                function setSpeed() {
-                                    $('#client-logo-carousel').trigger('play.owl.autoplay', [5000]);
-                                }
-                                setTimeout(setSpeed, 0);
+                            // function setSpeed() {
+                            //     $('#topSellingReport').trigger('play.owl.autoplay', [5000]);
+                            // }
+                            // setTimeout(setSpeed, 0);
+                        });
+                    </script>
+                    {{-- clientele --}}
+                    <script>
+                        $(document).ready(function() {
+                            $('#client-logo-carousel').owlCarousel({
+                                loop: true,
+                                items: 5,
+                                autoplay: true,
+                                slideTransition: 'linear',
+                                autoplaySpeed: 5000,
+                                smartSpeed: 5000,
+                                center: true,
+                                dots: false,
+                                autoplayHoverPause: true
                             });
-                        </script>
-                    @endsection
+
+                            $('#client-logo-carousel').trigger('play.owl.autoplay', [2000]);
+
+                            function setSpeed() {
+                                $('#client-logo-carousel').trigger('play.owl.autoplay', [5000]);
+                            }
+                            setTimeout(setSpeed, 0);
+                        });
+                    </script>
                 @endsection
+            @endsection
