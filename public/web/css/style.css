@@ -18,7 +18,7 @@
 
 }
 
-/***************************************** Scroll to top **************************************/
+/* Scroll to top*/
 .scrollUp {
    opacity: 0;
    text-align: center;
@@ -42,7 +42,7 @@
    transition: all 1s ease;
 }
 
-/******************************************** Floating contact button  ******************/
+/* Floating contact button  **/
 .get-in-touch>a {
    background-color: var(--text-blue);
    color: #fff;
@@ -139,11 +139,11 @@
 }
 
 .header-search-bar form button {
-   border: 1px solid white;
+   border: 1px solid #002c60;
    border-left: none;
    padding: 4px 20px;
    font-size: 16px;
-   height: 34px;
+   height: 35px;
    position: absolute;
    right: 0;
    color: white;
@@ -175,10 +175,10 @@
 }
 
 .header-wrapper-sticky li a {
-   color: #494949;
+  /* : #494949; */
 }
 
-/********************************* Chatbot*************************/
+/* Chatbot*************************/
 .zsiq_floatmain {
    position: fixed;
    /* right: 20px;
@@ -217,7 +217,7 @@
    font-size: 24px !important;
 }
 
-/******************************************************* footer *********************************************/
+/**** footer**/
 .footer-wrapper {
    background-color: #212121;
    color: #fff;
@@ -340,7 +340,7 @@ a {
    padding: 12px 30px;
 }
 
-/* ********************************* Contact Us Page ********************************/
+/* *Contact Us Page**/
 
 .contact-info-heading {
    font-weight: 400;
@@ -408,7 +408,7 @@ a {
 }
 
 
-/********************************************* HOME PAGE  *********************************/
+/** HOME PAGE **/
 
 .text-section {
    position: absolute;
@@ -656,7 +656,7 @@ a {
    align-items: center;
 }
 
-/* *************************************  Industry Vertical page  ***********************************/
+/*   Industry Vertical page ***/
 .vertical-card {
    background-image: url("../images/industry/1650880205.webp");
    background-size: cover;
@@ -680,7 +680,7 @@ a {
    justify-content: space-between;
 }
 
-/********************************** Partner with us *************************************************/
+/** Partner with us */
 .partner-icon-box img {
    max-width: 70px;
 }
@@ -734,7 +734,7 @@ a {
    background-color: #e6e7ee;
 }
 
-/********************************************************* career page *********************************/
+/* career page */
 .we-are-hiring {
    background-color: var(--text-blue);
    display: inline-block;
@@ -838,7 +838,7 @@ a {
    color: white !important;
 }
 
-/************************************************************ about us page ************************************/
+/****** about us page ****/
 .about-us-content-heading p,
 .about-us-vision p {
    font-size: 1.25rem;
@@ -946,9 +946,7 @@ a {
    width: 50px;
 }
 
-
-
-/*************************************************** FAQ Page  **********************************/
+/*** FAQ Page  **/
 
 .accordion-btn-faq {
    font-size: 18px;
@@ -1030,7 +1028,7 @@ a {
 }
 
 
-/************************************************************* Team Page **************************************/
+/*** Team Page ******/
 .team-apply-now-btn>a {
    border-radius: 35px;
    color: var(--text-blue);
@@ -1120,18 +1118,18 @@ a {
 }
 
 .panel-content-team {
-   display: none;
+ : none;
 }
 
-/****************************************** Blog Pge  *********************************/
+/*Blog Pge  */
 .blog-desc-box {
    color: var(--text-blue);
    height: 170px;
    border: 2px solid #f0f0f0;
-   border-top: none;
+   b-top: none;
 }
 
-/**************************************** Indivisual Blog page **************************/
+/******** Indivisual Blog page **************************/
 .blog-content-container {
    box-shadow: var(--soft-shadow);
 }
@@ -1234,7 +1232,7 @@ a {
 }
 
 
-/************************************ Modal ******************************/
+/*Modal*/
 .modal {
    display: none;
    position: fixed;
@@ -1279,8 +1277,8 @@ a {
    border-radius: 35px;
 }
 
-/***************************************** report hub page*/
-.category-sidebar-title,
+/* report hub page */
+
 .enquiry-now-report-hub {
    box-shadow: var(--inset-shadow);
 }

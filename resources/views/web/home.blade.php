@@ -315,6 +315,69 @@
                                                             <h5>Automobile & Transportation</h5>
                                                         </div>
                                                     </div>
+                                                    
+                                                </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- latest report section --}}
+                            <div class="services-wrap-content latest-reports-wrapper mt-5" id="card2">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div class="latest-report-title" style="color: #002c60">
+                                            <span class="">Industry Reports</span>
+                                            <h2 class="">Latest Reports</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="browse-all-btn">
+                                            <a class="btn" href="">Browse All Reports</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            {{-- vertical section --}}
+                            <div class="services-wrap-content industry-vertical-wrapper mt-5" id="card3">
+                                <div class="row">
+                                    <div class="col-lg-10">
+                                        <div class="industry-vertical-title" style="color: #002c60">
+                                            <span class="">Industry Reports</span>
+                                            <h2 class="">Industry Verticals</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <div class="browse-all-btn">
+                                            <a class="btn" href="{{ route('industry') }}">Browse All Verticals</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="services-content-wrapper mt-5">
+                                    <div class="row justify-content-between">
+
+                                        {{-- individual vertical --}}
+                                        <div class="col-lg-3 services-card">
+                                            <a href="">
+                                                <div class="automobile">
+                                                    <div class="row">
+                                                        <div class="icon-box-verticals">
+                                                            <span class="strategy-box">
+                                                                <i class="fas fa-car-side" aria-hidden="true"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="verticals-heading">
+                                                            <h5>Automobile & Transportation</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </a>
                                         </div>
 
