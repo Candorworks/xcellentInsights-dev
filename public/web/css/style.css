@@ -9,10 +9,13 @@
 
 :root {
    --text-blue: #002c60;
+   --text-black: #111111;
    --hover-blue: #263074;
    --inset-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
    --soft-shadow: 6px 6px 12px #b8b9be,
       -6px -6px 12px #fff;
+   --text-decoration-none: none;
+
 }
 
 /* Scroll to top*/
@@ -48,7 +51,7 @@
    top: 50%;
    right: -50px;
    transform: rotate(-90deg);
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
 }
 
 .container {
@@ -60,7 +63,7 @@
 }
 
 .nav-item-container>ul li a {
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
    font-size: 18px !important;
 }
 
@@ -93,7 +96,7 @@
 }
 
 .career-team-dropdown-show li a {
-   color: black;
+   color: var(--text-black);
    font-size: 1rem !important;
 }
 
@@ -116,14 +119,14 @@
    color: white;
 }
 
-.header-wrapper-sticky .header-search-bar form input{
+.header-wrapper-sticky .header-search-bar form input {
    border-radius: 50px;
    font-size: 14px;
    padding: 6px 15px;
    margin: 0;
-   border: 1px solid black;
+   border: 1px solid var(--text-black);
    background-color: transparent;
-   color: black;
+   color: var(--text-black);
 }
 
 
@@ -132,7 +135,7 @@
 }
 
 .header-wrapper-sticky .header-search-bar form input::placeholder {
-   color: black;
+   color: var(--text-black);
 }
 
 .header-search-bar form button {
@@ -232,7 +235,7 @@ a {
 
 .footer-widget-links li a {
    transition: all 0.3s ease;
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
 
 }
 
@@ -272,7 +275,7 @@ a {
 }
 
 .footer-email {
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
 }
 
 .footer-social li {
@@ -535,7 +538,7 @@ a {
 }
 
 .services-wrap:hover {
-   box-shadow: 0px 0px 12px 0px#aeadad;
+   /* box-shadow: 0px 0px 12px 0px#aeadad; */
    cursor: pointer;
 }
 
@@ -543,6 +546,10 @@ a {
    color: var(--text-blue);
    font-weight: 700;
    margin-top: 0.5rem;
+}
+
+.services-wrap.active {
+   box-shadow: 0px 0px 12px 0px#aeadad;
 }
 
 .browse-all-btn {
@@ -554,7 +561,6 @@ a {
 
 .browse-all-btn a {
    color: var(--text-blue);
-   font-weight: 600;
 }
 
 .browse-all-btn:hover {
@@ -562,9 +568,11 @@ a {
    color: white;
 }
 
+/* .services-wrap-content {
+   display: none;
+} */
 
 .industry-vertical-wrapper,
-.top-selling-reports-wrapper,
 .latest-reports-wrapper {
    display: none;
 }
@@ -578,7 +586,7 @@ a {
    transition: all 0.3s ease;
    box-shadow: var(--soft-shadow);
    text-align: center;
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
 }
 
 .services-card:hover {
@@ -588,7 +596,7 @@ a {
 }
 
 .services-card a {
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
 }
 
 .services-card .row {
@@ -639,7 +647,7 @@ a {
    box-shadow: var(--soft-shadow);
 }
 
-.owl-carousel .owl-item img {
+#client-logo-carousel .owl-item img {
    width: 90px !important;
 }
 
@@ -1015,8 +1023,8 @@ a {
 }
 
 .individual-links h6 a {
-   color: black;
-   text-decoration: none;
+   color: var(--text-black);
+   text-decoration: var(--text-decoration-none);
 }
 
 
@@ -1030,7 +1038,7 @@ a {
    background-color: white;
    border: none;
    font-weight: 500;
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
 }
 
 .team-apply-now-btn>a:hover {
@@ -1183,7 +1191,7 @@ a {
 
 .recent-single-post-title a {
    color: var(--text-blue);
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
 }
 
 .recent-post-container .recent-post-title h5,
@@ -1207,8 +1215,8 @@ a {
 }
 
 .categories-blog-page ul li a {
-   color: black;
-   text-decoration: none;
+   color: var(--text-black);
+   text-decoration: var(--text-decoration-none);
 }
 
 .categories-blog-page ul li {
@@ -1288,7 +1296,7 @@ a {
 
 .categories-report-hub-page ul li a,
 .enquiry-now-report-hub a {
-   text-decoration: none;
+   text-decoration: var(--text-decoration-none);
    color: var(--text-blue);
 }
 
@@ -1352,4 +1360,39 @@ a {
 .individual-report-container,
 .report-detail-bar {
    border-radius: 8px;
+}
+
+/* ******************************************************************* Top Selling Reports ************************************************************/
+.top-selling-content-part {
+   border: 2px solid #d6d6d6;
+   border-top: none;
+}
+
+.top-selling-content-part a {
+   text-decoration: var(--text-decoration-none);
+   color: var(--text-black);
+}
+
+.top-selling-report-meta {
+   display: flex;
+   justify-content: space-between;
+}
+
+.top-selling-report-card {
+   transition: all 0.3s ease;
+}
+
+.top-selling-report-card:hover {
+   transform: translateY(-10px);
+   filter: grayscale(100%);
+}
+
+.arrow-to-page {
+   position: absolute;
+   left: 50%;
+   bottom: -24px;
+   transform: translateX(-50%);
+   opacity: 0;
+   transition: all 0.3s ease;
+   background-color: #002c60;
 }
