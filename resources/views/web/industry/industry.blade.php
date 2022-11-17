@@ -18,7 +18,7 @@
                             <img src="{{ asset('web/category/1650880205.webp') }}" alt="{{ $result->name }}"
                                 style="height:210px; width: 270px;" class="img-fluid">
                         </a>
-                        <i class="{{ $result->icon }} industryIcon"></i>
+                        <i class="{{ $result->icon }}"></i>
                     </div>
                 @endforeach
             </div>
