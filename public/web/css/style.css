@@ -143,7 +143,20 @@
    border-left: none;
    padding: 4px 20px;
    font-size: 16px;
-   height: 34px;
+   height: 35px;
+   position: absolute;
+   right: 0;
+   color: white;
+   background-color: var(--text-blue);
+   border-radius: 0px 20px 20px 0px;
+}
+
+.header-wrapper-sticky .header-search-bar form button{
+   border: 1px solid black;
+   border-left: none;
+   padding: 4px 20px;
+   font-size: 16px;
+   height: 35px;
    position: absolute;
    right: 0;
    color: white;
@@ -664,12 +677,10 @@ a {
 }
 
 .industryIcon {
-   /* color: #e4a63a7d; */
    color: #ced4d5;
-   /* color: black; */
-   position: absolute;
-   top: 360px;
-   left: 220px;
+   position: relative;
+   bottom: 106px;
+   left: 33px;
    font-size: 32px;
 }
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Report;
 use DB;
 
 class HomeController extends Controller
@@ -87,16 +88,20 @@ class HomeController extends Controller
 
     public function home(){
 
-        // $results = Category::all();
-        return view('web.home');
+        $results = Category::all();
+        return view('web.home' , compact('results'));
     }
 
     public function industry(){
-        return view('web.industry.industry');
+        $results = Category::all();
+        return view('web.industry.industry' , compact('results'));
     }
 
     public function report(){
-        return view('web.report.report');
+        
+        $results = Category::all();
+        $reports = Report::all();
+        return view('web.report.report' , compact('results' ,'reports'));
     }
 
     public function partner(){
