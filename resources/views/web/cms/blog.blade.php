@@ -11,28 +11,23 @@
    <div class="blog-content mt-5">
     <div class="container">
         <div class="row" >
+            @foreach($results as $result)
             <div class="col-lg-4">
                 <a href="{{route('blog-details')}}" style="text-decoration: none;">
                     <div class="blog-img-box">
-                        <img class="img-fluid" src="{{asset("web/images/blog/1.jpg")}}" alt="">
+                        @if(($result->image)==null)
+                        <img class="img-fluid" src="{{asset('web/images/blog/5.jpg')}}" alt="Image Processing" style="height:250px; width:415.99px;">
+                        @else
+                        <img class="img-fluid" src="{{asset('web/'.$result->image)}}" alt="Image Processing" style="height:250px; width:415.99px;">
+                        @endif
                     </div>
                     <div class="blog-desc-box px-4 py-3">
-                        <h6>Pharma & Healthcare</h6>
-                        <p>Gluten Free Biscuits Companies Helping Patients with Celiac and Gluten Sensitivity To Enjoy Their Favorite Biscuit Flavors with Gluten Alternatives</p>
+                        <h6>{{$result->Category->name}}</h6>
+                        <p>{{$result->title}}</p>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4">
-                <a href="{{route('blog-details')}}" style="text-decoration: none;">
-                    <div class="blog-img-box">
-                        <img class="img-fluid" src="{{asset("web/images/blog/2.jpg")}}" alt="">
-                    </div>
-                    <div class="blog-desc-box px-4 py-3">
-                        <h6>Pharma & Healthcare</h6>
-                        <p>Benefits and Harmful Effects of Marijuana: A Recreational and Medical Drug</p>
-                    </div>
-                </a>
-            </div>
+            @endforeach
         </div>
     </div>
    </div>

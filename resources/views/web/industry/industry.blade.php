@@ -14,7 +14,7 @@
             @foreach($results as $result)
             <div class="col-lg-3 mb-4">
                 <a href="#">
-                    <img src="{{asset('web/category/1650880205.webp')}}" alt="{{$result->name}}" style="height:210px; width: 270px;">
+                    <img src="{{asset('web/'.$result->thumbnail)}}" alt="{{$result->name}}" style="height:210px; width: 270px;">
                 </a>
                 <div class="industryIcon">
                     <i class="{{$result->icon}}"></i>
