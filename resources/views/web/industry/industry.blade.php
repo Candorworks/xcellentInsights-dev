@@ -11,12 +11,14 @@
 <div class="all-verticals-container mt-5">
     <div class="container">
         <div class="row">
+            @foreach($results as $result)
             <div class="col-lg-3 mb-4">
-                <a href="https://xcellentinsights.com/category/agriculture">
-                    <img src="https://xcellentinsights.com/web/category/1650880205.webp" alt="Agriculture" style="height:210px; width: 270px;">
+                <a href="#">
+                    <img src="{{asset('web/category/1650880205.webp')}}" alt="{{$result->name}}" style="height:210px; width: 270px;">
                 </a>
-                <i class="fa-solid fa-tractor industryIcon"></i>
+                <i class="{{$result->icon}} industryIcon"></i>
             </div>
+            @endforeach
         </div>
     </div>
 </div>
