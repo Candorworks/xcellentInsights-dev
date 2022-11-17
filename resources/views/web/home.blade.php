@@ -9,10 +9,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <h1 class="title text-white"><span style="opacity: 0.8; background-color: black;">Industry’s best
+                        <h1 class="title text-white"><span>Industry’s best
                                 reports at your<br>fingertips</span></h1>
                         <!-- <div class="carousel-caption-2"> -->
-                        <h4 class="text-white  my-4" style="opacity: 0.8; background-color: black; width: fit-content;">
+                        <h4 class="text-white my-4">
                             We've got you covered</h4>
                         <!-- </div> -->
                         <form class="subscribe-form mb-4 pe-5" method="get" action="">
@@ -56,7 +56,7 @@
                     <div class="row mt-3">
                         <div class="col-lg-4 report-milestone">
                             <div class="row">
-                                <h1 class=" rs-count mil-20">20</h1>
+                                <h1 class="rs-count mil-20">20</h1>
                             </div>
                             <div class="row">
                                 <p style="letter-spacing: 2px; font-weight: 600">REPORTS</p>
@@ -72,7 +72,7 @@
                     <div class="row mt-3">
                         <div class="col-lg-4 verticals-milestone">
                             <div class="row">
-                                <h1 class=" rs-count">100</h1>
+                                <h1 class="rs-count">100</h1>
                             </div>
                             <div class="row">
                                 <p style="letter-spacing: 2px; font-weight: 600">VERTICALS & SUB VERTICALS</p>
@@ -291,7 +291,7 @@
                     </div>
                 </div>
 
-                {{-- top selling report caraousel --}}
+                {{-- top selling report carousel --}}
                 <div class="top-selling-reports-content mt-5">
                     <div class="row">
                         <div class="col">
@@ -304,7 +304,7 @@
                                             <img src="{{ asset('web/images/industry/1650880205.webp') }}">
                                         </div>
                                         <div class="top-selling-content-part p-3">
-                                            <p class="text-uppercase mb-0">
+                                            <p class="text-uppercase mb-0 mt-3">
                                                 <a href="">
                                                     Service & Software
                                                 </a>
@@ -314,7 +314,9 @@
                                                         Report 2022</a></strong>
                                             </p>
                                             <div class="arrow-to-page">
-                                                <i class="fa-solid fa-arrow-right"></i>
+                                                <a href="">
+                                                    <i class="fa-solid fa-arrow-right text-white"></i>
+                                                </a>
                                             </div>
                                             <div class="top-selling-report-meta" style="font-size: 14px">
                                                 <div class="date-price">
@@ -363,6 +365,60 @@
                     </div>
                 </div>
 
+                {{-- latest report carousel --}}
+                <div class="latest-reports-content mt-5">
+                    <div class="row">
+                        <div class="col">
+                            <div class="owl-carousel " id="topSellingReport">
+
+                                {{-- indivudial top selling report loop --}}
+                                @for ($i = 0; $i < 7; $i++)
+                                    <div class="latest-report-card ms-1">
+                                        <div class="latest-img-part">
+                                            <img src="{{ asset('web/images/industry/1650880205.webp') }}">
+                                        </div>
+                                        <div class="latest-content-part p-3">
+                                            <p class="text-uppercase mb-0 mt-3">
+                                                <a href="">
+                                                    Service & Software
+                                                </a>
+                                            </p>
+                                            <p class="my-4">
+                                                <strong><a href=""> Global Video Monitoring Software Market Research
+                                                        Report 2022</a></strong>
+                                            </p>
+                                            <div class="arrow-to-page">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                            <div class="latest-report-meta" style="font-size: 14px">
+                                                <div class="date-price">
+                                                    <p class="mb-0">
+                                                        <i class="far fa-clock" aria-hidden="true"></i>
+                                                        Nov 2022
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                                        USD 2900
+                                                    </p>
+                                                </div>
+                                                <div class="page-format">
+                                                    <p class="mb-0">
+                                                        <strong>Pages : </strong>
+                                                        112
+                                                    </p>
+                                                    <p class="mb-0">
+                                                        <strong>Format : </strong>
+                                                        PDF
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endfor
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {{-- vertical section --}}
@@ -417,7 +473,7 @@
                 <div class="col">
                     <div class="card client-logos">
                         <div class="card-header text-center">
-                            <h4 class="m-0">Our Clientele</h4>
+                            <h4 class="m-0" style="color: #002c60">Our Clientele</h4>
                         </div>
                         <div class="card-body">
                             <div class="owl-carousel owl-theme" id="client-logo-carousel">
@@ -457,21 +513,38 @@
         });
     </script>
     {{-- counter --}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+        integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+        integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     {{-- home page counter --}}
     <script>
         $(document).ready(function() {
             var counter = $('.rs-count');
-            if (counter.length) {
-                $('.rs-count').counterUp({
-                    delay: 20,
-                    time: 1000
-                });
-            }
+            setTimeout(() => {
+                if (counter.length) {
+                    $('.rs-count').counterUp({
+                        delay: 20,
+                        time: 1300
+                    });
+                }
+            }, 1000);
+
         });
+        // let counts = setInterval(updated, 200);
+        // let upto = 0;
+
+        // function updated() {
+        //     var count = document.querySelector('.rs-count');
+        //     count.innerHTML = ++upto;
+        //     if (upto === 20) {
+        //         clearInterval(counts);
+        //     }
+        // }
     </script>
 
     {{-- top selling carousel --}}
@@ -510,6 +583,11 @@
             }
             setTimeout(setSpeed, 0);
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#search-bar').hide();
+        })
     </script>
 @endsection
 @endsection
