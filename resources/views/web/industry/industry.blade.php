@@ -16,7 +16,9 @@
                 <a href="#">
                     <img src="{{asset('web/category/1650880205.webp')}}" alt="{{$result->name}}" style="height:210px; width: 270px;">
                 </a>
-                <i class="{{$result->icon}} industryIcon"></i>
+                <div class="industryIcon">
+                    <i class="{{$result->icon}}"></i>
+                </div>
             </div>
             @endforeach
         </div>
