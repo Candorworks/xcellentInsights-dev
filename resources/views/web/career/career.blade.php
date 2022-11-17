@@ -19,33 +19,35 @@
                      </div>
                </div>
                <div class="row">
+                  @foreach($results as $result)
                   <div class="openings pb-3 pe-3 ps-0 pt-0">
                      <div class="opening-heading">
-                        <h6 class="mb-0 fw-semibold">DM - Executive</h6>
+                        <h6 class="mb-0 fw-semibold">{{$result->title}}</h6>
                      </div>
                      <div class="opening-desc">
                         <div class="row mb-3">
                            <div class="col-lg-6 fw-semibold">Location:</div>
-                           <div class="col-lg-6">Pune</div>
+                           <div class="col-lg-6">{{$result->location}}</div>
                         </div>
                         <div class="row mb-3">
                            <div class="col-lg-6 fw-semibold">No of position:</div>
-                           <div class="col-lg-6">1</div>
+                           <div class="col-lg-6">{{$result->no_vacancy}}</div>
                         </div>
                         <div class="row mb-3">
                            <div class="col-lg-6 fw-semibold">Experience required:</div>
-                           <div class="col-lg-6">1-2 years</div>
+                           <div class="col-lg-6">{{$result->experience}}</div>
                         </div>
                         <div class="row mb-3">
                            <div class="col-lg-6 fw-semibold">Roles & Responsibilities:</div>
-                           <div class="col-lg-6">DM</div>
+                           <div class="col-lg-6">{{$result->roles}}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-6 fw-semibold">What we are looking for in you:</div>
-                           <div class="col-lg-6">DM</div>
+                           <div class="col-lg-6">{{$result->roles}}</div>
                         </div>
                      </div>
                   </div>
+                  @endforeach
                </div>
             </div>
             <div class="col-lg-6">

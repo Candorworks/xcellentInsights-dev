@@ -676,8 +676,11 @@ a {
    width: 18rem;
 }
 
-.industry-category {
+.industryIcon {
    position: relative;
+   bottom: 106px;
+   left: 45px;
+   font-size: 32px;
 }
 
 .industry-category>a>img:hover {
