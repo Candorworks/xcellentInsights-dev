@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Report;
+use App\Models\Blog;
 use DB;
 
 class HomeController extends Controller
@@ -124,8 +125,10 @@ class HomeController extends Controller
         return view('web.contact');
     }
 
-    public function blog(){
-        return view('web.cms.blog');
+    public function blog($categoryName=null)
+    {
+        $results=Blog::where('active','1')->get();
+        return view('web.cms.blog', compact('results','categoryName'));
     }
 
     public function blog_details(){
