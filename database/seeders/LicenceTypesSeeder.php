@@ -14,14 +14,14 @@ class LicenceTypesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('licence_types')->truncate();
+        DB::table('licences_types')->truncate();
 
-        $licence_types = array(
+        $licences_types = array(
             array("name" => "Single User license"),
             array("name" => "Multi User license"),
             array("name" => "Enterprise license"),
         );
 
-        DB::table('licence_types')->insert($licence_types);
+        DB::table('licences_types')->insert($licences_types);
     }
 }

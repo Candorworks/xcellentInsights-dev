@@ -678,12 +678,10 @@ a {
 }
 
 .industryIcon {
-   /* color: #e4a63a7d; */
    color: #ced4d5;
-   /* color: black; */
-   position: absolute;
-   top: 360px;
-   left: 220px;
+   position: relative;
+   bottom: 106px;
+   left: 33px;
    font-size: 32px;
 }
 

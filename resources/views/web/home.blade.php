@@ -286,7 +286,7 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="browse-all-btn">
-                            <a class="btn" href="">Browse All Reports</a>
+                            <a class="btn" href="{{route('report')}}">Browse All Reports</a>
                         </div>
                     </div>
                 </div>
@@ -301,7 +301,7 @@
                                 @for ($i = 0; $i < 7; $i++)
                                     <div class="top-selling-report-card ms-1">
                                         <div class="top-selling-img-part">
-                                            <img src="{{ asset('web/images/industry/1650880205.webp') }}">
+                                            <img src="{{asset('web/category/1650880205.webp')}}">
                                         </div>
                                         <div class="top-selling-content-part p-3">
                                             <p class="text-uppercase mb-0">
@@ -358,7 +358,7 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="browse-all-btn">
-                            <a class="btn" href="">Browse All Reports</a>
+                            <a class="btn" href="{{route('report')}}">Browse All Reports</a>
                         </div>
                     </div>
                 </div>
@@ -383,27 +383,29 @@
 
 
                 <div class="services-content-wrapper mt-5">
-                    <div class="row justify-content-between">
+                    <div class="row ">
 
                         {{-- individual vertical --}}
-                        <div class="col-lg-3 services-card">
-                            <a href="">
-                                <div class="automobile">
+                        @foreach($results as $result)
+                        <div class="col-lg-3 services-card mx-3">
+                            <a href="#">
+                                <div class="industry_verticle_category">
                                     <div class="row">
                                         <div class="icon-box-verticals">
                                             <span class="strategy-box">
-                                                <i class="fas fa-car-side" aria-hidden="true"></i>
+                                                <i class="{{$result->icon}}" aria-hidden="true"></i>
                                             </span>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="verticals-heading">
-                                            <h5>Automobile & Transportation</h5>
+                                            <h5>{{$result->name}}</h5>
                                         </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
