@@ -49,9 +49,7 @@
                         @csrf
                         <input type="search" placeholder="Search...">
                         <span>
-                            <button type="submit">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </button>
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </span>
                     </form>
                 </div>
