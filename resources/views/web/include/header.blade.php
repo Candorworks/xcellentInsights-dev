@@ -18,7 +18,8 @@
                         href="{{ route('industry') }}">Industry Vertical</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('report*') ? 'active' : '' }}" href="{{ route('report') }}">Report
+                    <a class="nav-link {{ Request::is('report*') || Request::is('category*') ? 'active' : '' }}"
+                        href="{{ route('report') }}">Report
                         Hub</a>
                 </li>
                 <li class="nav-item">
