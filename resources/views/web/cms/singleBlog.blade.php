@@ -79,7 +79,7 @@
                                         </div>
                                         <div class="col-lg-7">
                                             <div class="recent-single-post-title">
-                                                <a href="">
+                                                <a href="{{ route('blog-details', ['blog_slug' => $result['slug']]) }}">
                                                     <p class="mb-0">{{ substr($result->title, 0, 60) }}...</p>
                                                 </a>
                                             </div>
