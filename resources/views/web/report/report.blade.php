@@ -29,7 +29,7 @@
                         </div>
                         <ul class=" p-0">
                             @foreach ($results as $result)
-                                <li><a href="#">{{ $result->name }}</a></li>
+                                <li><a href="{{ route('category', ['category_slug' => $result['slug']]) }}">{{ $result->name }}</a></li>
                             @endforeach
 
                         </ul>
