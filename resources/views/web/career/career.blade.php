@@ -31,19 +31,19 @@
                         </div>
                         <div class="row mb-3">
                            <div class="col-lg-6 fw-semibold">No of position:</div>
-                           <div class="col-lg-6">{{$result->no_vacancy}}</div>
+                           <div class="col-lg-6"><p>{{$result->no_vacancy}}</p></div>
                         </div>
                         <div class="row mb-3">
                            <div class="col-lg-6 fw-semibold">Experience required:</div>
-                           <div class="col-lg-6">{{$result->experience}}</div>
+                           <div class="col-lg-6">{!!$result->experience!!}</div>
                         </div>
                         <div class="row mb-3">
                            <div class="col-lg-6 fw-semibold">Roles & Responsibilities:</div>
-                           <div class="col-lg-6">{{$result->roles}}</div>
+                           <div class="col-lg-6">{!!$result->roles!!}</div>
                         </div>
                         <div class="row">
                            <div class="col-lg-6 fw-semibold">What we are looking for in you:</div>
-                           <div class="col-lg-6">{{$result->roles}}</div>
+                           <div class="col-lg-6">{!!$result->roles!!}</div>
                         </div>
                      </div>
                   </div>
