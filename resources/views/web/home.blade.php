@@ -1,6 +1,11 @@
 @extends('web.include.index')
 
 @section('content')
+    <style>
+        .footer-newsletter {
+            display: block;
+        }
+    </style>
     <div class="hero-section">
         <video class="video-fluid img-fluid" autoplay loop muted>
             <source src="{{ asset('web/videos/slide-02.mp4') }}" type="video/mp4">
@@ -32,6 +37,8 @@
             </div>
         </div>
     </div>
+
+    {{-- welcome section --}}
     <div class="welcome-section my-4">
         <div class="container">
             <div class="row">
@@ -150,6 +157,8 @@
             </div>
         </div>
     </div>
+
+    {{-- customer testimonial section --}}
     <div class="customer-testimonials p-4">
         <div class="customer-testimonial-heading text-white text-center mb-4 ">
             <h3>Customer Testimonials</h3>
@@ -223,6 +232,8 @@
             </div>
         </div>
     </div>
+
+    {{-- services section --}}
     <div class="services mt-4 px-5">
         <div class="container">
             <div class="row">
@@ -286,7 +297,7 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="browse-all-btn">
-                            <a class="btn" href="{{route('report')}}">Browse All Reports</a>
+                            <a class="btn" href="{{ route('report') }}">Browse All Reports</a>
                         </div>
                     </div>
                 </div>
@@ -301,7 +312,7 @@
                                 @for ($i = 0; $i < 7; $i++)
                                     <div class="top-selling-report-card ms-1">
                                         <div class="top-selling-img-part">
-                                            <img src="{{asset('web/category/1650880205.webp')}}">
+                                            <img src="{{ asset('web/category/1650880205.webp') }}">
                                         </div>
                                         <div class="top-selling-content-part p-3">
                                             <p class="text-uppercase mb-0 mt-3">
@@ -360,7 +371,7 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="browse-all-btn">
-                            <a class="btn" href="{{route('report')}}">Browse All Reports</a>
+                            <a class="btn" href="{{ route('report') }}">Browse All Reports</a>
                         </div>
                     </div>
                 </div>
@@ -439,28 +450,28 @@
 
 
                 <div class="services-content-wrapper mt-5">
-                    <div class="row ">
+                    <div class="row justify-content-between">
 
                         {{-- individual vertical --}}
-                        @foreach($results as $result)
-                        <div class="col-lg-3 services-card mx-3">
-                            <a href="#">
-                                <div class="industry_verticle_category">
-                                    <div class="row">
-                                        <div class="icon-box-verticals">
-                                            <span class="strategy-box">
-                                                <i class="{{$result->icon}}" aria-hidden="true"></i>
-                                            </span>
+                        @foreach ($results as $result)
+                            <div class="col-lg-3 services-card mx-3">
+                                <a href="#">
+                                    <div class="industry_verticle_category">
+                                        <div class="row">
+                                            <div class="icon-box-verticals">
+                                                <span class="strategy-box">
+                                                    <i class="{{ $result->icon }}" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="verticals-heading">
+                                                <h5>{{ $result->name }}</h5>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="verticals-heading">
-                                            <h5>{{$result->name}}</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                                </a>
+                            </div>
                         @endforeach
                     </div>
                 </div>
@@ -503,25 +514,28 @@
         </div>
     </div>
 @section('script')
-    {{-- testimonials --}}
     <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#testi').owlCarousel({
-                items: 2,
-                margin: 30
-            })
-        });
-    </script>
-    {{-- counter --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
         integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
         integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {{-- customer testimonial carousel --}}
+    <script>
+        $(document).ready(function() {
+            $('#testi').owlCarousel({
+                loop: true,
+                items: 2,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true
+            })
+        });
+    </script>
 
     {{-- home page counter --}}
     <script>
@@ -537,16 +551,6 @@
             }, 1000);
 
         });
-        // let counts = setInterval(updated, 200);
-        // let upto = 0;
-
-        // function updated() {
-        //     var count = document.querySelector('.rs-count');
-        //     count.innerHTML = ++upto;
-        //     if (upto === 20) {
-        //         clearInterval(counts);
-        //     }
-        // }
     </script>
 
     {{-- top selling carousel --}}
@@ -586,6 +590,8 @@
             setTimeout(setSpeed, 0);
         });
     </script>
+
+    {{-- hide search bar on home page --}}
     <script>
         $(document).ready(function() {
             $('#search-bar').hide();
