@@ -5,7 +5,7 @@
     <div class="container pt-5">
         <div class="text-center mt-3">
             <h3 class="breadcrumbs-title  fw-bold text-white">
-                @if()
+                Report Hub
             </h3>
         </div>
     </div>
