@@ -36,11 +36,6 @@
     </div>
 
     <div class="modal-container">
-        {{-- <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
-        </button> --}}
-
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 60vw">
@@ -97,8 +92,10 @@
                                                 placeholder="Do you have any Specific field of Interest? Please suggest us" name="description"></textarea>
                                         </div>
                                         <div class="text-dark pe-3 form-group">
-                                            We ensure/ offer complete secrecy of your personal details <a
-                                                href="https://www.xcellentinsights.com/privacy-policy">Privacy</a>
+                                            <span> We ensure/ offer complete secrecy of your personal details <a
+                                                    href="{{ route('privacy') }}"
+                                                    style="color: #002c60; text-decoration: none;" target="__blank">
+                                                    Privacy</a></span>
                                         </div>
                                         <div class="row form-group my-2 align-items-center">
                                             <div class="col-lg-12">
@@ -123,7 +120,7 @@
                                                 data-bs-dismiss="modal">Close</button>
                                             <button type="submit"
                                                 class="speakWithAnalystSubmitBtn submitcaptcha1 btn bg-grey w-25 white-btn p-2"
-                                                disabled>Submit</button>
+                                                disabled style="border: none">Submit</button>
                                         </div>
                                     </form>
                                 </div>

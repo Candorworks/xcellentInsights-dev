@@ -138,23 +138,7 @@ for (i = 0; i < accordionTeam.length; i++) {
     });
 }
 
-//modal form
+// //modal form
 
-var modal = document.querySelector(".modal");
-var modelTrigger = document.querySelector(".get-in-touch");
-var getInTouch = document.querySelector(".modal-title");
-var modalCloseBtn = document.querySelector(".modalCloseBtn");
-
-modelTrigger.addEventListener("click", () => {
-    modal.style.display = "block";
-    getInTouch.innerHTML = "Get In Touch";
-});
-modalCloseBtn.onclick = function () {
-    modal.style.display = "none";
-};
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
+var getInTouch = (document.querySelector(".modal-title").innerHTML =
+    "Get In Touch");
