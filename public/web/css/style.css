@@ -309,7 +309,7 @@ a {
 
 .footer-social li a:hover {
    background: var(--text-blue);
-   color: #ffffff !important;
+   color: #ffffff;
 }
 
 .footer-social li a i,
@@ -323,6 +323,7 @@ a {
 
 .footer-newsletter {
    background-color: var(--text-blue);
+   display: none;
 }
 
 .newsletter-form button {
@@ -1246,13 +1247,10 @@ a {
    transition: all 0.5s ease;
 }
 
-.form-controller {
-   border-radius: 10px;
-   background-color: white;
-   width: 60vw;
-   margin: auto;
-   margin-top: 1rem;
+body.modal-open {
+   overflow-y: scroll !important;
 }
+
 
 .form-controller form input,
 .form-controller form textarea {
@@ -1263,7 +1261,7 @@ a {
 .modalimagehead {
    position: absolute;
    top: 40%;
-   left: 26.5%;
+   left: 13.5%;
    color: white;
 }
 

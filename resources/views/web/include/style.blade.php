@@ -20,3 +20,6 @@
 
 {{-- FLATICON --}}
 <link rel="stylesheet" type="text/css" href="{{ url('/web/css/flaticon.css') }}">
+
+{{-- BOOTSTRAP JS --}}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
