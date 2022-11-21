@@ -665,11 +665,11 @@
 }
 
 .industryIcon {
-   color: #ced4d5;
-   position: relative;
-   font-size: 32px;
-   left: 40px;
-   bottom: 110px;
+    color: #ced4d5;
+    position: relative;
+    left: 45px;
+    bottom: 111px;
+    font-size: 32px;
 }
 
 /********************************** Partner with us *************************************************/
@@ -1224,6 +1224,10 @@
    font-family: FontAwesome;
    color: #1c1b1b;
    margin-right: 10px;
+}
+
+.sidebar-search{
+   padding: 40px 30px;
 }
 
 /************************************ Modal ******************************/
