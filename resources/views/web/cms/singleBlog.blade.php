@@ -94,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="categories-blog-page p-5">
+                    <div class="categories-blog-page p-5 mt-5">
                         <div class="category-sidebar-title mb-4">
                             <h5>Categories</h5>
                         </div>

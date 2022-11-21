@@ -545,7 +545,7 @@
                 if (counter.length) {
                     $('.rs-count').counterUp({
                         delay: 20,
-                        time: 1300
+                        time: 1500
                     });
                 }
             }, 1000);
