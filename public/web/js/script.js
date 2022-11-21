@@ -21,8 +21,6 @@ var sticky = header.offsetTop;
 window.onscroll = function () {
     stickyHeader();
     scrollToTop();
-    // headerSearchBox.style.border = "1px solid #002c60";
-    // headerSearchBoxBtn.style.border = "1px solid #002c60";
 };
 
 function stickyHeader() {
@@ -77,13 +75,6 @@ for (i = 0; i < accordion.length; i++) {
         }
     });
 }
-
-// for (i; i < accordion.length; i++) {
-//     accordion[i].addEventListener("click", function () {
-//         this.classList.toggle("accordion-active");
-//         const panel = this.nextElementSibling;
-//     });
-// }
 
 // accordion faq page
 
