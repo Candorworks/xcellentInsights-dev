@@ -665,11 +665,11 @@
 }
 
 .industryIcon {
-    color: #ced4d5;
-    position: relative;
-    left: 45px;
-    bottom: 111px;
-    font-size: 32px;
+   color: #ced4d5;
+   position: relative;
+   left: 45px;
+   bottom: 111px;
+   font-size: 32px;
 }
 
 /********************************** Partner with us *************************************************/
@@ -1124,6 +1124,12 @@
    border-top: none;
 }
 
+.badge {
+   width: fit-content;
+   font-weight: normal;
+   background-color: var(--text-blue) !important;
+}
+
 /**************************************** Indivisual Blog page **************************/
 .blog-content-container {
    box-shadow: var(--soft-shadow);
@@ -1226,7 +1232,7 @@
    margin-right: 10px;
 }
 
-.sidebar-search{
+.sidebar-search {
    padding: 40px 30px;
 }
 
@@ -1265,7 +1271,6 @@ body.modal-open {
 }
 
 /***************************************** report hub page*/
-.category-sidebar-title,
 .enquiry-now-report-hub {
    box-shadow: var(--inset-shadow);
 }
