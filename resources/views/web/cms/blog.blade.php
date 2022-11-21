@@ -1,16 +1,27 @@
 @extends("web.include.index")
 
 @section("content")
-   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
+<div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
     <div class="container pt-5">
         <div class="text-center mt-3">
             <h3 class="breadcrumbs-title  text-white">Blogs</h3>
         </div>
     </div>
-   </div>
-   <div class="blog-content mt-5">
+</div>
+<div class="blog-content mt-5">
     <div class="container">
-        <div class="row" >
+        <div class="row">
+            @if($results->count()===0)
+            <p class="blog_badge">{{$categoryName?$categoryName:''}}</p>
+                <div class="col-md-9 p-0">
+                    <p>No blogs are present of category {{$categoryName?$categoryName:''}}</p>
+                </div>
+                <div class="col-md-3 text-right">
+                    <a href="{{route('blog')}}"><button class="btn text-white" style="background-color:#002c60;">Checkout another blogs</button></a>
+                </div>
+            </div>
+
+            @else
             @foreach($results as $result)
             <div class="col-lg-4 mb-4">
                 <a href="{{ route('blog-details', ['blog_slug' => $result['slug']]) }}" style="text-decoration: none;">
@@ -28,7 +39,8 @@
                 </a>
             </div>
             @endforeach
+            @endif
         </div>
     </div>
-   </div>
+</div>
 @endsection
