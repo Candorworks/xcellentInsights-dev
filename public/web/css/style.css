@@ -229,16 +229,13 @@
    min-width: 100%;
 }
 
-a {
-   color: #fff;
-}
-
 .footer-widget-links li {
    margin-bottom: 0.5rem;
    list-style: none;
 }
 
 .footer-widget-links li a {
+   color: #fff;
    transition: all 0.3s ease;
    text-decoration: var(--text-decoration-none);
 }
