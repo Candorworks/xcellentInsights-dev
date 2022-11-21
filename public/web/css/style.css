@@ -544,6 +544,8 @@ a {
 
 .services-wrap:hover {
    cursor: pointer;
+   box-shadow: 0px 0px 12px 0px#aeadad;
+   transition: all 0.3s ease;
 }
 
 .services-title>h6 {
@@ -572,17 +574,12 @@ a {
    color: white;
 }
 
-/* .services-wrap-content {
-   display: none;
-} */
-
 .industry-vertical-wrapper,
 .latest-reports-wrapper {
    display: none;
 }
 
 .services-card {
-   min-width: 22rem;
    margin-bottom: 30px;
    padding: 1.5rem 1rem;
    background-color: #e6e7ee;
@@ -590,7 +587,6 @@ a {
    transition: all 0.3s ease;
    box-shadow: var(--soft-shadow);
    text-align: center;
-   text-decoration: var(--text-decoration-none);
 }
 
 .services-card:hover {
@@ -629,7 +625,6 @@ a {
 .verticals-heading h5 {
    margin: 1rem 0rem;
    color: var(--text-blue);
-   font-weight: 600;
 }
 
 .rs-count {
@@ -1020,8 +1015,13 @@ a {
 }
 
 .individual-links h6 a {
-   color: var(--text-black);
+   color: #363636;
+   font-weight: 400;
    text-decoration: var(--text-decoration-none);
+}
+
+.individual-links h6 a:hover {
+   color: #002c60;
 }
 
 /************************************************************* Team Page **************************************/

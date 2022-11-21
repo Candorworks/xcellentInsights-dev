@@ -12,7 +12,7 @@
     <div class="privacy-page-container mt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                     <h3 class="privacy-heading" style="color: #002c60; font-weight: bold;">Privacy Policy</h3>
                     <ul>
                         <li>
@@ -108,12 +108,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="faq-sidebar">
                         <div class="row">
                             <div class="col">
                                 <div class="sidebar-heading mb-3 pb-3">
-                                    <h5 style="font-weight: bold;">Related Links</h5>
+                                    <h5>Related Links</h5>
                                 </div>
                                 <div class="related-links">
                                     <div class="individual-links">
