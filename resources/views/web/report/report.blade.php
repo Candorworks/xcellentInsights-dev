@@ -1,23 +1,12 @@
 @extends('web.include.index')
 
-@section("content")
-   <div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
-    <div class="container pt-5">
-        <div class="text-center mt-3">
-            <h3 class="breadcrumbs-title  fw-bold text-white">
-                Report Hub
-            </h3>
-        </div>
-    </div>
-   </div>
-   <div class="report-hub-container mt-4">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="search-report">
-                    <input type="text" class="search-report-input" placeholder="Search Report Title / Keyword">
-                    <button class="search-report-submit-btn">Search</button>
-                </div>
+@section('content')
+    <div class="breadcrums-container py-5"
+        style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
+        <div class="container pt-5">
+            <div class="text-center mt-3">
+                <h3 class="breadcrumbs-title  fw-bold text-white">
+                </h3>
             </div>
         </div>
     </div>
