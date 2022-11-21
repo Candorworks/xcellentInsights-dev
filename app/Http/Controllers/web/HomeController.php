@@ -133,7 +133,10 @@ class HomeController extends Controller
         return view('web.cms.blog', compact('results','categoryName'));
     }
 
-    public function blog_details(){
-        return view('web.cms.singleBlog');
+    public function blog_details(Request $request, $blog_slug){  
+        $categories=Category::where('active','1')->get(); 
+        $results=Blog::orderBy('id','desc')->where('active','1')->where('type','Blog')->limit(5)->get();
+        $blog =Blog::where("slug",$blog_slug)->first();
+        return view('web.cms.singleBlog',compact('blog' , 'results' , 'categories'));
     }
 }

@@ -1229,6 +1229,10 @@ a {
    margin-right: 10px;
 }
 
+.sidebar-search{
+   padding: 40px 30px;
+}
+
 /************************************ Modal ******************************/
 .modal {
    background-color: #e6e7eee0;

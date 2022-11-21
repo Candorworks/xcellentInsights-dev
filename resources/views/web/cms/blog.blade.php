@@ -12,8 +12,8 @@
     <div class="container">
         <div class="row" >
             @foreach($results as $result)
-            <div class="col-lg-4">
-                <a href="{{route('blog-details')}}" style="text-decoration: none;">
+            <div class="col-lg-4 mb-4">
+                <a href="{{ route('blog-details', ['blog_slug' => $result['slug']]) }}" style="text-decoration: none;">
                     <div class="blog-img-box">
                         @if(($result->image)==null)
                         <img class="img-fluid" src="{{asset('web/images/blog/5.jpg')}}" alt="Image Processing" style="height:250px; width:415.99px;">

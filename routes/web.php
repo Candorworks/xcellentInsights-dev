@@ -24,7 +24,7 @@ Route::get('/career',[App\Http\Controllers\web\HomeController::class,'career'])-
 Route::get('/team',[App\Http\Controllers\web\HomeController::class,'team'])->name('team');
 Route::get('/contact',[App\Http\Controllers\web\HomeController::class,'contact'])->name('contact');  
 Route::get('/blog',[App\Http\Controllers\web\HomeController::class,'blog'])->name('blog');  
-Route::get('/blog-details',[App\Http\Controllers\web\HomeController::class,'blog_details'])->name('blog-details');  
+Route::get('/blog/{blog_slug}',[App\Http\Controllers\web\HomeController::class,'blog_details'])->name('blog-details');  
 Route::get('/news',[App\Http\Controllers\web\HomeController::class,'news'])->name('news');  
 
 
