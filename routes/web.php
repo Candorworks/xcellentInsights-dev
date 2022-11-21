@@ -25,6 +25,8 @@ Route::get('/team',[App\Http\Controllers\web\HomeController::class,'team'])->nam
 Route::get('/contact',[App\Http\Controllers\web\HomeController::class,'contact'])->name('contact');  
 Route::get('/blog',[App\Http\Controllers\web\HomeController::class,'blog'])->name('blog');  
 Route::get('/blog/{blog_slug}',[App\Http\Controllers\web\HomeController::class,'blog_details'])->name('blog-details');  
+Route::post('/blog',[App\Http\Controllers\web\HomeController::class,'blogSearch'])->name('blogSeacrhByTitle');
+Route::get('/blog/category/{slug}',[App\Http\Controllers\web\HomeController::class,'blogCategory'])->name('blogCategory');
 Route::get('/news',[App\Http\Controllers\web\HomeController::class,'news'])->name('news');  
 
 

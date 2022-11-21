@@ -45,9 +45,9 @@
 
             <div class="col-lg-4">
                 <div class="search-box-blog shadow-soft sidebar-search">
-                    <form class="search-bar">
+                    <form class="search-bar" method="post" action="{{route('blogSeacrhByTitle')}}">
                         @csrf
-                        <input type="search" placeholder="Search...">
+                        <input type="text" name="searchtitle" placeholder="Search...">
                         <span>
                             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </span>
@@ -90,7 +90,7 @@
                     <h5 class="category-sidebar-title">Categories</h5>
                     <ul class="mt-3 p-0">
                         @foreach($categories as $category)
-                        <li><a href="#">{{$category->name}}</a></li>
+                        <li><a href="{{url('blog/category')}}/{{$category->slug}}">{{$category->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
