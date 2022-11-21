@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,9 +30,7 @@ Route::post('/blog',[App\Http\Controllers\web\HomeController::class,'blogSearch'
 Route::get('/blog/category/{slug}',[App\Http\Controllers\web\HomeController::class,'blogCategory'])->name('blogCategory');
 Route::get('/news',[App\Http\Controllers\web\HomeController::class,'news'])->name('news');  
 
-
-
-
+// MODAL FORM
 Route::get('/get-in-touch', function () {
     return view('modalContactForm');
 })->name('get-in-touch');
@@ -61,3 +60,8 @@ Route::get('/sitemap', function () {
 Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');
 })->name('order');
+
+// CATEGORY
+Route::get('/category', function () {
+    return view(('web.industry.category'));
+})->name('category');
