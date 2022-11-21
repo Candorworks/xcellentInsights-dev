@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 //Web
 Route::get('/',[App\Http\Controllers\web\HomeController::class,'home'])->name('home');
 Route::get('/industry',[App\Http\Controllers\web\HomeController::class,'industry'])->name('industry');
+Route::get('/category/{category_slug}',[App\Http\Controllers\web\HomeController::class,'category'])->name('category');  
 Route::get('/report',[App\Http\Controllers\web\HomeController::class,'report'])->name('report');
 Route::get('/partner',[App\Http\Controllers\web\HomeController::class,'partner'])->name('partner');
 Route::get('/about',[App\Http\Controllers\web\HomeController::class,'about'])->name('about');
@@ -60,8 +61,3 @@ Route::get('/sitemap', function () {
 Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');
 })->name('order');
-
-// CATEGORY
-Route::get('/category', function () {
-    return view(('web.industry.category'));
-})->name('category');
