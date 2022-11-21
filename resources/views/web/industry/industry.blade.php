@@ -13,7 +13,7 @@
         <div class="row">
             @foreach($results as $result)
             <div class="col-lg-3 mb-4">
-                <a href="#">
+                <a href="{{ route('category', ['category_slug' => $result['slug']]) }}">
                     <img src="{{asset('web/'.$result->thumbnail)}}" alt="{{$result->name}}" style="height:210px; width: 270px;">
                 </a>
                 <div class="industryIcon">
