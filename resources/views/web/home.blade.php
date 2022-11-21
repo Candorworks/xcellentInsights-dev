@@ -7,8 +7,7 @@
         }
     </style>
     <div class="hero-section">
-        <video class="video-fluid" autoplay loop muted style="min-width: 100vw" <source
-            src="{{ asset('web/videos/slide-02.mp4') }}" type="video/mp4">
+        <video class="video-fluid" autoplay loop muted <source src="{{ asset('web/videos/slide-02.mp4') }}" type="video/mp4">
         </video>
         <div class="text-section">
             <div class="container">
