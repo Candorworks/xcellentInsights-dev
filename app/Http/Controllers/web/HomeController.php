@@ -89,9 +89,9 @@ class HomeController extends Controller
     }
 
     public function home(){
-
+        $reports = Report::orderBy('id','desc')->where('active','1')->limit(4)->get();
         $results = Category::all();
-        return view('web.home' , compact('results'));
+        return view('web.home' , compact('results' , 'reports'));
     }
 
     public function industry(){

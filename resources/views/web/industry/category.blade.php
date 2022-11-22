@@ -41,7 +41,7 @@
                 </div>
                 <div class="col-lg-8">
                     @foreach ($reports as $report)
-                        <div class="individual-report-container p-3">
+                        <div class="individual-report-container p-3 mb-4">
                             <h5>{{ $report->title }}</h5>
                             <p>{!! substr($report->meta_desc, 0, 180) !!}</p>
                             <div class="report-detail-bar py-2 px-3">
