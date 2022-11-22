@@ -1337,7 +1337,11 @@ body.modal-open {
 .individual-report-container {
    box-shadow: var(--soft-shadow);
    color: var(--text-blue);
-   margin-top: 2rem;
+}
+
+.individual-report-container a{
+   color: #002c60;
+   text-decoration: none;
 }
 
 .individual-report-container:hover {
