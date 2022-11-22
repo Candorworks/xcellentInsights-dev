@@ -306,21 +306,21 @@
                     <div class="col">
                         <div class="owl-carousel " id="topSellingReport">
 
-                            {{-- indivudial top selling report loop --}}
                             @foreach($reports as $report)
                             <div class="top-selling-report-card ms-1">
                                 <div class="top-selling-img-part">
-                                    <img src="{{ asset('web/category/1650880205.webp') }}">
+                                    <img src="{{asset('web/'.$report->Category->thumbnail)}}">
                                 </div>
                                 <div class="top-selling-content-part p-3">
-                                    <p class="text-uppercase mb-0 mt-3">
-                                        <a href="">
-                                            Service & Software
-                                        </a>
-                                    </p>
+                                    <a href="">
+                                        <p class="text-uppercase mb-0 mt-3">{{$report->Category->name}}</p>
+                                    </a>
                                     <p class="my-4">
-                                        <strong><a href=""> Global Video Monitoring Software Market Research
-                                                Report 2022</a></strong>
+                                        <strong>
+                                            <a href="">
+                                                {{$report->meta_title}}
+                                            </a>
+                                        </strong>
                                     </p>
                                     <div class="arrow-to-page">
                                         <a href="">
@@ -330,22 +330,18 @@
                                     <div class="top-selling-report-meta" style="font-size: 14px">
                                         <div class="date-price">
                                             <p class="mb-0">
-                                                <i class="far fa-clock" aria-hidden="true"></i>
-                                                Nov 2022
+                                                <i class="far fa-clock" aria-hidden="true"></i>  {{date("M Y", strtotime($report->publish))}}
                                             </p>
                                             <p class="mb-0">
-                                                <i class="fa fa-credit-card" aria-hidden="true"></i>
-                                                USD 2900
+                                                <i class="fa fa-credit-card" aria-hidden="true"></i> USD {{$report->single_price}}
                                             </p>
                                         </div>
                                         <div class="page-format">
                                             <p class="mb-0">
-                                                <strong>Pages : </strong>
-                                                112
+                                                <strong>Pages : </strong> {{$report->pages}}
                                             </p>
                                             <p class="mb-0">
-                                                <strong>Format : </strong>
-                                                PDF
+                                                <strong>Format : </strong> {{$report->format}}
                                             </p>
                                         </div>
                                     </div>
@@ -380,49 +376,48 @@
                     <div class="col">
                         <div class="owl-carousel " id="topSellingReport">
 
-                            {{-- indivudial top selling report loop --}}
-                            @for ($i = 0; $i < 7; $i++) <div class="latest-report-card ms-1">
-                                <div class="latest-img-part">
-                                    <img src="{{ asset('web/images/industry/1650880205.webp') }}">
+                        @foreach($reports as $report)
+                            <div class="top-selling-report-card ms-1">
+                                <div class="top-selling-img-part">
+                                    <img src="{{asset('web/'.$report->Category->thumbnail)}}">
                                 </div>
-                                <div class="latest-content-part p-3">
-                                    <p class="text-uppercase mb-0 mt-3">
-                                        <a href="">
-                                            Service & Software
-                                        </a>
-                                    </p>
+                                <div class="top-selling-content-part p-3">
+                                    <a href="">
+                                        <p class="text-uppercase mb-0 mt-3">{{$report->Category->name}}</p>
+                                    </a>
                                     <p class="my-4">
-                                        <strong><a href=""> Global Video Monitoring Software Market Research
-                                                Report 2022</a></strong>
+                                        <strong>
+                                            <a href="">
+                                                {{$report->meta_title}}
+                                            </a>
+                                        </strong>
                                     </p>
                                     <div class="arrow-to-page">
-                                        <i class="fa-solid fa-arrow-right"></i>
+                                        <a href="">
+                                            <i class="fa-solid fa-arrow-right text-white"></i>
+                                        </a>
                                     </div>
-                                    <div class="latest-report-meta" style="font-size: 14px">
+                                    <div class="top-selling-report-meta" style="font-size: 14px">
                                         <div class="date-price">
                                             <p class="mb-0">
-                                                <i class="far fa-clock" aria-hidden="true"></i>
-                                                Nov 2022
+                                                <i class="far fa-clock" aria-hidden="true"></i>  {{date("M Y", strtotime($report->publish))}}
                                             </p>
                                             <p class="mb-0">
-                                                <i class="fa fa-credit-card" aria-hidden="true"></i>
-                                                USD 2900
+                                                <i class="fa fa-credit-card" aria-hidden="true"></i> USD {{$report->single_price}}
                                             </p>
                                         </div>
                                         <div class="page-format">
                                             <p class="mb-0">
-                                                <strong>Pages : </strong>
-                                                112
+                                                <strong>Pages : </strong> {{$report->pages}}
                                             </p>
                                             <p class="mb-0">
-                                                <strong>Format : </strong>
-                                                PDF
+                                                <strong>Format : </strong> {{$report->format}}
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                        </div>
-                        @endfor
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
