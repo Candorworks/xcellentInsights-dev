@@ -19,9 +19,10 @@
                     <h4 class="text-white my-4">
                         We've got you covered</h4>
                     <!-- </div> -->
-                    <form class="subscribe-form mb-4 pe-5" method="get" action="">
+                    <form class="subscribe-form mb-4 pe-5" method="post" action="{{ route('reportSeacrhByTitle') }}">
+                        @csrf
                         <div class="form-group">
-                            <input class="" type="text" autocomplete="off" name="search" placeholder=" Looking for Reports..." autofocus />
+                            <input class="" type="text" autocomplete="off" name="homepagesearch" placeholder=" Looking for Reports..." autofocus />
                             <button type="submit"><i class="fas fa-search"></i> </button>
                         </div>
                         <!--  Search -->

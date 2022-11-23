@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 //Web
 Route::get('/', [App\Http\Controllers\web\HomeController::class, 'home'])->name('home');
+Route::post('/report', [App\Http\Controllers\web\HomeController::class, 'reportSearch'])->name('reportSeacrhByTitle');
 
 Route::get('/industry', [App\Http\Controllers\web\HomeController::class, 'industry'])->name('industry');
 Route::get('/category/{category_slug}', [App\Http\Controllers\web\HomeController::class, 'category'])->name('category');
