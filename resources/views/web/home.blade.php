@@ -311,14 +311,14 @@
                                     <img src="{{asset('web/'.$report->Category->thumbnail)}}">
                                 </div>
                                 <div class="top-selling-content-part p-3">
-                                    <a href="">
+                                    <a href="{{ route('category', ['category_slug' => $report->Category->slug]) }}">
                                         <p class="text-uppercase mb-0 mt-3">{{$report->Category->name}}</p>
                                     </a>
                                     <p class="my-4">
-                                        <strong><a href="">{!!substr($report->meta_title,0,90)!!}</a></strong>
+                                        <strong><a href="{{ route('report_detail', ['report_slug' => $report['slug']]) }}">{!!substr($report->meta_title,0,90)!!}</a></strong>
                                     </p>
                                     <div class="arrow-to-page">
-                                        <a href="">
+                                        <a href="{{ route('report_detail', ['report_slug' => $report['slug']]) }}">
                                             <i class="fa-solid fa-arrow-right text-white"></i>
                                         </a>
                                     </div>
@@ -342,7 +342,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
+                        @endforeach
                         </div>
                     </div>
                 </div>
@@ -377,18 +377,14 @@
                                     <img src="{{asset('web/'.$report->Category->thumbnail)}}">
                                 </div>
                                 <div class="top-selling-content-part p-3">
-                                    <a href="">
+                                    <a href="{{ route('category', ['category_slug' => $report->Category->slug]) }}">
                                         <p class="text-uppercase mb-0 mt-3">{{$report->Category->name}}</p>
                                     </a>
                                     <p class="my-4">
-                                        <strong>
-                                            <a href="">
-                                                {{$report->meta_title}}
-                                            </a>
-                                        </strong>
+                                        <strong><a href="{{ route('report_detail', ['report_slug' => $report['slug']]) }}">{!!substr($report->meta_title,0,90)!!}</a></strong>
                                     </p>
                                     <div class="arrow-to-page">
-                                        <a href="">
+                                        <a href="{{ route('report_detail', ['report_slug' => $report['slug']]) }}">
                                             <i class="fa-solid fa-arrow-right text-white"></i>
                                         </a>
                                     </div>

@@ -9,6 +9,7 @@ use App\Models\Report;
 use App\Models\Blog;
 use App\Models\Job;
 use App\Models\Cms;
+use App\Models\Country;
 use DB;
 
 class HomeController extends Controller
@@ -114,6 +115,12 @@ class HomeController extends Controller
         $results = Category::all();
         $reports = Report::all();
         return view('web.report.report' , compact('results' ,'reports'));
+    }
+
+    public function report_detail(Request $request, $report_slug){
+        $report = Report::where("slug" , $report_slug)->first();
+        $countries = Country::all();
+        return view('web.report.reportDetail' , compact('report' , 'countries'));
     }
 
     public function partner(){
