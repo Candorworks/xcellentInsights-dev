@@ -97,6 +97,19 @@ class HomeController extends Controller
         return view('web.home' , compact('results' , 'reports'));
     }
 
+    public function reportSearch(Request $request,$categoryName=null){
+        try{
+            $results = Category::all();
+            $reports = Report::Where('title', 'like', '%' . $request->get('homepagesearch') . '%')->where('active','1')->get();
+            return view('web.report.report', compact('results','reports','categoryName'));
+        }catch(\Exception $e)
+        {
+            logger($e->getMessage());
+            logger($e->getTraceAsString());
+            return redirect()->back()->withFail('Error Oops somethings wents wrong.');
+        }
+    }
+
     public function industry(){
         $results = Category::all();
         return view('web.industry.industry' , compact('results'));
