@@ -31,7 +31,6 @@ class HomeController extends Controller
      */
     public function create()
     {
-        
     }
 
     /**
@@ -90,93 +89,120 @@ class HomeController extends Controller
         //
     }
 
-    public function home(){
-        $reports = Report::orderBy('id','desc')->where('active','1')->limit(4)->get();
+    public function home()
+    {
+        $reports = Report::orderBy('id', 'desc')->where('active', '1')->limit(4)->get();
         $results = Category::all();
         $cms = CMS::all();
-        return view('web.home' , compact('results' , 'reports'));
+        return view('web.home', compact('results', 'reports'));
     }
 
-    public function reportSearch(Request $request,$categoryName=null){
-        try{
+    public function reportSearch(Request $request, $categoryName = null)
+    {
+        try {
             $results = Category::all();
-            $reports = Report::Where('title', 'like', '%' . $request->get('homepagesearch') . '%')->where('active','1')->get();
-            return view('web.report.report', compact('results','reports','categoryName'));
-        }catch(\Exception $e)
-        {
+            $reports = Report::Where('title', 'like', '%' . $request->get('homepagesearch') . '%')->where('active', '1')->get();
+            return view('web.report.report', compact('results', 'reports', 'categoryName'));
+        } catch (\Exception $e) {
             logger($e->getMessage());
             logger($e->getTraceAsString());
             return redirect()->back()->withFail('Error Oops somethings wents wrong.');
         }
     }
 
-    public function industry(){
+    // public function categorySearch(Request $request, $category_slug)
+    // {
+    //     try {
+    //         $categories = Category::where("slug", $category_slug)->first();
+    //         $category_id =  $categories->id;
+    //         $reports = Report::Where('title', 'like', '%' . $request->get('categorysearch') . '%')->where('active', '1')->get();
+    //         $category_name = $categories->name;
+    //         $results = Category::all();
+    //         return view('web.industry.category', compact('categories','results', 'reports'));
+    //     } catch (\Exception $e) {
+    //         logger($e->getMessage());
+    //         logger($e->getTraceAsString());
+    //         return redirect()->back()->withFail('Error Oops somethings wents wrong.');
+    //     }
+    // }
+
+    public function industry()
+    {
         $results = Category::all();
-        return view('web.industry.industry' , compact('results'));
+        return view('web.industry.industry', compact('results'));
     }
 
-    public function category(Request $request, $category_slug){
-        $categories =Category::where("slug",$category_slug)->first();
+    public function category(Request $request, $category_slug)
+    {
+        $categories = Category::where("slug", $category_slug)->first();
         $category_id =  $categories->id;
         $category_name = $categories->name;
-        $reports = Report::where('category_id' , $category_id)->where('active','1')->get();
+        $reports = Report::where('category_id', $category_id)->where('active', '1')->get();
         $results = Category::all();
-        return view('web.industry.category' , compact('categories' , 'results' , 'reports'));
+        return view('web.industry.category', compact('categories', 'results', 'reports'));
     }
 
-    public function report(){
+
+    public function report()
+    {
         $results = Category::all();
         $reports = Report::all();
-        return view('web.report.report' , compact('results' ,'reports'));
+        return view('web.report.report', compact('results', 'reports'));
     }
 
-    public function report_detail(Request $request, $report_slug){
-        $report = Report::where("slug" , $report_slug)->first();
+    public function report_detail(Request $request, $report_slug)
+    {
+        $report = Report::where("slug", $report_slug)->first();
         $countries = Country::all();
-        return view('web.report.reportDetail' , compact('report' , 'countries'));
+        return view('web.report.reportDetail', compact('report', 'countries'));
     }
 
-    public function partner(){
+    public function partner()
+    {
         return view('web.partner');
     }
 
-    public function about(){
+    public function about()
+    {
         return view('web.about');
     }
 
-    public function career(){
+    public function career()
+    {
         $results = Job::all();
-        return view('web.career.career' , compact('results'));
+        return view('web.career.career', compact('results'));
     }
 
-    public function team(){
+    public function team()
+    {
         return view('web.career.team');
     }
 
-    public function contact(){
+    public function contact()
+    {
         return view('web.contact');
     }
 
-    public function blog($categoryName=null)
+    public function blog($categoryName = null)
     {
-        $results=Blog::where('active','1')->get();
-        return view('web.cms.blog', compact('results','categoryName'));
+        $results = Blog::where('active', '1')->get();
+        return view('web.cms.blog', compact('results', 'categoryName'));
     }
 
-    public function blog_details(Request $request, $blog_slug){  
-        $categories=Category::where('active','1')->get(); 
-        $results=Blog::orderBy('id','desc')->where('active','1')->where('type','Blog')->limit(5)->get();
-        $blog =Blog::where("slug",$blog_slug)->first();
-        return view('web.cms.singleBlog',compact('blog' , 'results' , 'categories'));
+    public function blog_details(Request $request, $blog_slug)
+    {
+        $categories = Category::where('active', '1')->get();
+        $results = Blog::orderBy('id', 'desc')->where('active', '1')->where('type', 'Blog')->limit(5)->get();
+        $blog = Blog::where("slug", $blog_slug)->first();
+        return view('web.cms.singleBlog', compact('blog', 'results', 'categories'));
     }
 
-    public function blogSearch(Request $request,$categoryName=null)
+    public function blogSearch(Request $request, $categoryName = null)
     {
-        try{
-            $results = Blog::Where('title', 'like', '%' . $request->get('searchtitle') . '%')->where('active','1')->where('type','Blog')->get();
-            return view('web.cms.blog', compact('results','categoryName'));
-        }catch(\Exception $e)
-        {
+        try {
+            $results = Blog::Where('title', 'like', '%' . $request->get('searchtitle') . '%')->where('active', '1')->where('type', 'Blog')->get();
+            return view('web.cms.blog', compact('results', 'categoryName'));
+        } catch (\Exception $e) {
             logger($e->getMessage());
             logger($e->getTraceAsString());
             return redirect()->back()->withFail('Error Oops somethings wents wrong.');
@@ -185,18 +211,17 @@ class HomeController extends Controller
 
     public function blogCategory($category_slug)
     {
-       try{
-            $category = Category::select('id','name')->where('slug',$category_slug)->first();
+        try {
+            $category = Category::select('id', 'name')->where('slug', $category_slug)->first();
             $categoryId = $category->id;
-            $categoryName=$category->name;
-            $results = Blog::where('category_id' , $categoryId)->where('active','1')->where('type' , 'blog')->get(); 
-            return view('web.cms.blog', compact('results','categoryName'));
-       }catch(\Exception $e)
-       {
+            $categoryName = $category->name;
+            $results = Blog::where('category_id', $categoryId)->where('active', '1')->where('type', 'blog')->get();
+            return view('web.cms.blog', compact('results', 'categoryName'));
+        } catch (\Exception $e) {
             dd($e);
             logger($e->getMessage());
             logger($e->getTraceAsString());
             return redirect()->back()->withFail('Error Oops somethings wents wrong.');
-       }
+        }
     }
 }
