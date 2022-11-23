@@ -15,7 +15,7 @@
                 <div class="col-lg-7 blog-content-container p-5">
                     @if ($blog->image == null)
                         <div class="blog-bg px-3 py-4 m-0"
-                            style="background-image: linear-gradient(45deg, rgb(60 59 64 / 34%), rgb(8 83 156 / 51%)),url('{{ asset('web/images/blog/5.jpg') }}'); ">
+                            style="background-image: linear-gradient(45deg, rgb(60 59 64 / 34%), rgb(8 83 156 / 51%)),url('{{asset('web/images/blog/5.jpg') }}'); ">
                             <p class="blog-badge mb-3">{{ $blog->category->name }}</p>
                             <h3 class="mb-3 text-light"> {{ $blog->title }}</h3>
                             <div class="text-light pt-2">
@@ -31,7 +31,7 @@
                         <div class="blog-content mt-5">{!! $blog->description !!}</div>
                     @else
                         <div class="blog-bg px-3 py-4 m-0"
-                            style="background-image: linear-gradient(45deg, rgb(60 59 64 / 34%), rgb(8 83 156 / 51%)),url('{{ asset('web/' . $blog->image) }}'); ">
+                            style="background-image: linear-gradient(45deg, rgb(60 59 64 / 34%), rgb(8 83 156 / 51%)),url('{{ asset('web/'.$blog->image) }}');">
                             <p class="blog-badge mb-3">{{ $blog->category->name }}</p>
                             <h3 class="mb-3 text-light"> {{ $blog->title }}</h3>
                             <div class="text-light pt-2">

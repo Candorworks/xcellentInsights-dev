@@ -14,10 +14,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <div class="search-report">
-                    <input type="text" class="search-report-input" placeholder="Search Report Title / Keyword">
-                    <button class="search-report-submit-btn">Search</button>
-                </div>
+                <form method="post" action="{{ route('reportSeacrhByTitle') }}">
+                    @csrf
+                    <div class="search-report">
+                        <input type="text" class="search-report-input" name="homepagesearch" placeholder="Search Report Title / Keyword">
+                        <button class="search-report-submit-btn">Search</button>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="row mt-4 justify-content-center ">
