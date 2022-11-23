@@ -40,7 +40,7 @@
             <div class="col-lg-8">
                 @foreach ($reports as $report)
                 <div class="individual-report-container p-3 mb-4">
-                    <a href="#">
+                    <a href="{{ route('report_detail', ['report_slug' => $report['slug']]) }}">
                         <h5>{{$report->title}}</h5>
                         <p>{!!substr($report->meta_desc,0,180)!!}</p>
                         <div class="report-detail-bar py-2 px-3">
