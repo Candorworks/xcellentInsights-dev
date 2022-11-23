@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Report extends Model
 {
     use HasFactory;
+    public function Category(){
+        return $this->hasOne(Category::class,'id','category_id');
+    }
 }
