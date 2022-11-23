@@ -253,6 +253,40 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="check-report-price mt-5">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Check Report Price
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="form-group justify-content-around">
+                                                <input type="radio" id="single" value="single">
+                                                <label for="single">Single User License </label><span>$4000</span>
+                                            </div>
+                                            <div class="form-group justify-content-around">
+                                                <input type="radio" id="multi" value="multi">
+                                                <label for="multi" style="width: 138px;">Multi User License</label>
+                                                <span>$6000</span>
+                                            </div>
+                                            <div class="form-group justify-content-around">
+                                                <input type="radio" id="enterprise" value="enterprise">
+                                                <label for="enterprise" style="width: 138px;">Enterprise License
+                                                </label><span>$8000</span>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1336,7 +1336,7 @@ body.modal-open {
    color: var(--text-blue);
 }
 
-.individual-report-container a{
+.individual-report-container a {
    color: #002c60;
    text-decoration: none;
 }
@@ -1523,4 +1523,13 @@ body.modal-open {
    content: "≫ ";
    font-weight: bold;
    margin-right: 5px;
+}
+
+.check-report-price .accordion-button {
+   color: #002c60;
+   background-color: #e6e7ee;
+}
+
+.check-report-price .accordion-button:focus {
+   box-shadow: none;
 }
