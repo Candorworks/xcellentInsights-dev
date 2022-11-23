@@ -150,8 +150,9 @@
                                         <div class="row mb-3">
                                             <div class="col-lg-12">
                                                 <div class="form-group mt-3">
-                                                    <div id="s_i_t_e_k_e_y"></div>
 
+                                                    <div class="g-recaptcha"
+                                                        data-sitekey="6Lf4uisjAAAAALKzirLZbJrXDevMeUHE85YWOqKe"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -331,7 +332,7 @@
                             <div class="request-preorder-discount">
                                 <div class="row mb-4">
 
-                                    <a href="" class="request">
+                                    <a href="" class="request blink">
                                         <i class="fas fa-paper-plane mr-5" aria-hidden="true"></i>
                                         <h6>Request Free PDF Sample</h6>
                                     </a>
@@ -459,9 +460,7 @@
 
         </div>
     </div>
-
-
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
