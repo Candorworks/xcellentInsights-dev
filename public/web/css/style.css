@@ -277,7 +277,9 @@
 
 .footer-email {
    text-decoration: var(--text-decoration-none);
+   color: white;
 }
+
 
 .footer-social li {
    display: inline;
@@ -844,7 +846,7 @@
    border-bottom: 1px solid rgb(189, 189, 189);
 }
 
-.accordion {
+.about-content .accordion {
    box-shadow: var(--soft-shadow);
    transition: all 0.2s ease;
 }
@@ -1489,13 +1491,16 @@ body.modal-open {
    box-shadow: var(--soft-shadow);
    padding: 10px 15px;
    text-decoration: none;
-   color: var(--text-blue);
 }
 
 .request-preorder-discount a h6 {
    display: inline-block;
    margin: 0px 0px 0px 10px;
    font-size: 0.85rem;
+}
+
+.request-preorder-discount a {
+   color: var(--text-blue);
 }
 
 .discount:hover,
@@ -1525,11 +1530,57 @@ body.modal-open {
    margin-right: 5px;
 }
 
-.check-report-price .accordion-button {
+.accordion-button {
    color: #002c60;
    background-color: #e6e7ee;
 }
 
-.check-report-price .accordion-button:focus {
+.menu-content .accordion-item {
+   margin-bottom: 20px;
+   box-shadow: var(--soft-shadow);
+}
+
+.menu-content .accordion-header {
+   background-color: rgba(0, 0, 0, .03);
+   border-radius: 15px;
+}
+
+.menu-content .accordion-button:not(.collapsed) {
+   color: var(--text-blue);
+   background-color: rgba(0, 0, 0, .03);
+}
+
+.menu-content .accordion-button::after {
+   background-image: none;
+}
+
+.report-buy-now {
+   background-color: #e6e7ee;
+}
+
+.report-buy-now button {
+   background-color: #25950f;
+   border: none;
+   color: white;
+   border-radius: 25px;
+   padding: 5px 0px;
+   width: 100%;
+   box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
+   transition: all 0.2s ease;
+}
+
+.accordion-button:focus {
    box-shadow: none;
+}
+
+.check-report-price .accordion-item {
+   box-shadow: var(--soft-shadow);
+}
+
+.check-report-price .accordion-body .individual-report-price {
+   box-shadow: var(--inset-shadow);
+   transition: all 0.2s ease;
+   padding: 10px;
+   margin-bottom: 15px;
+   border-radius: 5px;
 }

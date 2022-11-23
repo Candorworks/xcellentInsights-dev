@@ -8,6 +8,8 @@ use App\Models\Category;
 use App\Models\Report;
 use App\Models\Blog;
 use App\Models\Job;
+use App\Models\Cms;
+use App\Models\Country;
 use DB;
 
 class HomeController extends Controller
@@ -91,6 +93,7 @@ class HomeController extends Controller
     public function home(){
         $reports = Report::orderBy('id','desc')->where('active','1')->limit(4)->get();
         $results = Category::all();
+        $cms = CMS::all();
         return view('web.home' , compact('results' , 'reports'));
     }
 
@@ -112,6 +115,12 @@ class HomeController extends Controller
         $results = Category::all();
         $reports = Report::all();
         return view('web.report.report' , compact('results' ,'reports'));
+    }
+
+    public function report_detail(Request $request, $report_slug){
+        $report = Report::where("slug" , $report_slug)->first();
+        $countries = Country::all();
+        return view('web.report.reportDetail' , compact('report' , 'countries'));
     }
 
     public function partner(){

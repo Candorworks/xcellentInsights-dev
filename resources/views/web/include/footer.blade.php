@@ -68,7 +68,7 @@
                     </div>
                     <div class="row my-3 justify-content-center">
                         <div class="col-lg-6 px-0">
-                            <ul class="footer-social p-0 ">
+                            <ul class="footer-social text-center p-0 ">
                                 <li><a href="https://www.facebook.com/xcellentinsights/" target="_blank"><i
                                             class="fab fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/XcellentInsight" target="_blank"><i

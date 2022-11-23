@@ -11,32 +11,29 @@
             </div>
         </div>
     </div>
+
     <div class="report-container mt-n5">
         <div class="container">
+
             <div class="report-desc p-4">
                 <div class="row">
                     <div class="col-lg-2 pe-0">
                         <div class="report-img">
-                            <img src="{{ asset('web/category/1650879736.webp') }}" alt=""
+                            <img src="{{ asset('web/' . $report->Category->thumbnail) }}" alt="Image processing"
                                 style="width: 150px; height: 170px;">
                         </div>
                     </div>
                     <div class="col-lg-10">
                         <div class="report-content">
-                            <h3 class="mb-3" style="color: #002c60">
-                                Global Video Monitoring Software Market Research Report 2022
-                            </h3>
-                            <p>Video Monitoring Software market is segmented by players, region (country), by Type and
-                                by Application. Players, stakeholders, and other participants in the global Video
-                                Monitoring Software market wil...
-                            </p>
+                            <h3 class="mb-3" style="color: #002c60">{{ $report->title }}</h3>
+                            <p>{!! nl2br(str_replace('_x000D_', ' ', substr($report->description, 0, 200))) !!}...</p>
                             <div class="report-meta py-2">
                                 <div class="row justify-content-center">
-                                    <p class="col-lg-2">ID: QYR306030</p>
-                                    <p class="col-lg-2">Published: Nov 2022</p>
-                                    <p class="col-lg-2">Pages: 112</p>
-                                    <p class="col-lg-2">Format: PDF</p>
-                                    <p class="col-lg-3">Industry: Service & Software</p>
+                                    <p class="col-lg-2">ID: {{ $report->unique_id }}</p>
+                                    <p class="col-lg-2">Published: {{ date('M Y', strtotime($report->publish)) }}</p>
+                                    <p class="col-lg-2">Pages: {{ $report->pages }}</p>
+                                    <p class="col-lg-2">Format: {{ $report->format }}</p>
+                                    <p class="col-lg-3">Industry: {{ $report->Category->name }}</p>
                                 </div>
                             </div>
 
@@ -48,6 +45,8 @@
 
             <div class="mt-5">
                 <div class="row">
+
+                    {{-- content side of the report --}}
                     <div class="col-lg-9">
                         <div class="report-content-container p-4">
                             <div class="report-content-menu-container">
@@ -75,62 +74,12 @@
                                 </div>
                             </div>
                             <div class="report-content px-4 mt-4">
-                                <p class="menu-content desc" id="menu1">Video Monitoring Software market is segmented by
-                                    players, region
-                                    (country), by
-                                    Type and by Application. Players, stakeholders, and other participants in the global
-                                    Video
-                                    Monitoring Software market will be able to gain the upper hand as they use the report as
-                                    a
-                                    powerful resource. The segmental analysis focuses on revenue and forecast by Type and by
-                                    Application for the period 2017-2028.
+                                <p class="menu-content desc" id="menu1">{!! $report->description !!}</p>
+                                <p class="menu-content toc" id="menu2">{!! $report->toc !!}</p>
+                                <p class="menu-content tables-figures" id="menu3">{!! $report->table_figures !!}</p>
+                                <p class="menu-content companies" id="menu4">{!! $report->companies !!}</p>
 
-                                    Video Monitoring Software Market Segment by Type
-
-                                    Video Analytics Software
-
-                                    Video Management Software
-
-                                    Video Monitoring Software Market Segment by Application
-
-                                    Commercial</p>
-                                <p class="menu-content toc" id="menu2">Table of Content
-                                    1 Report Overview
-                                    1.1 Study Scope
-                                    1.2 Market Analysis by Type
-                                    1.2.1 Global Video Monitoring Software Market Size Growth Rate by Type: 2017 VS 2021 VS
-                                    2028
-                                    1.2.2 Video Analytics Software
-                                    1.2.3 Video Management Software
-                                    1.3 Market by Application
-                                    1.3.1 Global Video Monitoring Software Market Share by Application: 2017 VS 2021 VS 2028
-                                    1.3.2 Commercial
-                                    1.3.3 Residential
-                                    1.3.4 Others
-                                    1.4 Study Objectives
-                                    1.5 Years Considered
-                                    2 Global Growth Trends
-                                    2.1 Global Video Monitoring Software Market Perspective (2017-2028)
-                                    2.2 Video Monitoring Software Growth Trends by Region</p>
-                                <p class="menu-content tables-figures" id="menu3">Tables and Figures
-                                    List of Tables
-                                    Table 1. Global Video Monitoring Software Market Size Growth Rate by Type (US$ Million):
-                                    2017 VS 2021 VS 2028
-                                    Table 2. Key Players of Video Analytics Software
-                                    Table 3. Key Players of Video Management Software
-                                    Table 4. Global Video Monitoring Software Market Size Growth by Application (US$
-                                    Million):
-                                    2017 VS 2021 VS 2028</p>
-                                <p class="menu-content companies" id="menu4">Key Players
-                                    Milestone Systems Inc.
-                                    Axis Communication
-                                    A&H Software House
-                                    Hanwha Techwin
-                                    Vista IT Solutions
-                                    Avigilon
-                                    Bosch
-                                    Honeywell
-                                    Pelco</p>
+                                {{-- speak with analyst form --}}
                                 <div class="menu-content speak-with-analyst" id="menu5">
                                     <form id="speak-with-analyst-form" method="post" action="">
                                         @csrf
@@ -158,17 +107,15 @@
                                                         placeholder="email" required="">
                                                 </div>
                                             </div>
+
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col-lg-6">
                                                 <select name="country" class="form-control shadow-inset" required>
-                                                    <option value="" disabled="" selected="" hidden="">
-                                                        Select country</option>
-                                                    {{-- @foreach ($countries as $item)
-                                                <option value="{{ $item->sort_name }}">
-                                                    {{ $item->name }}
-                                                </option>
-                                            @endforeach --}}
+                                                    <option value="" disabled selected hidden>Select country</option>
+                                                    @foreach ($countries as $item)
+                                                        <option value="{{ $item->sort_name }}">{{ $item->name }}</option>
+                                                    @endforeach
 
                                                 </select>
                                             </div>
@@ -214,74 +161,236 @@
                                                     id="speakWithAnalystSubmitBtn">Submit Now</button>
                                             </div>
                                         </div>
-
                                     </form>
                                 </div>
-                                <p class="menu-content faq" id="menu6">Lorem ipsum dolor sit amet consectetur
-                                    adipisicing
-                                    elit. Exercitationem, reiciendis?</p>
+
+                                <div class="menu-content faq" id="menu6">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    Which regions are covered in the market report?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse "
+                                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">The market research report includes specific
+                                                    segments by region (country), i.e.
+                                                    North America, Europe, Asia Pacific,
+                                                    South America, Middle East and Africa
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo" aria-expanded="true"
+                                                    aria-controls="collapseTwo">
+                                                    What are the benefits of the market analysis report?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse "
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">The market report provides global companies
+                                                    with an opportunity to enter new
+                                                    markets, invest in new sectors, analyze
+                                                    consumer reactions, investigate global competition, and ultimately make
+                                                    smart investments.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseThree" aria-expanded="true"
+                                                    aria-controls="collapseThree">
+                                                    What are the Recent Developments and Latest Happenings in Industry?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse "
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">This report covers the latest market
+                                                    developments in terms of acquisitions,
+                                                    growth strategies, joint ventures and
+                                                    collaborations, new product launches, and more on industry.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFour" aria-expanded="true"
+                                                    aria-controls="collapseFour">
+                                                    Can I get customise market report?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse "
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">We can provide customization on reports prior
+                                                    to the sale. If you need
+                                                    customization we request you to provide specific
+                                                    details on customization prior to the dispatch. This is because we move
+                                                    fast with your queries as it
+                                                    requires a lot of
+                                                    diligence. There will be additional charges for customization once the
+                                                    report is dispatched to you and
+                                                    will be treated
+                                                    as post-sales query.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseFive" aria-expanded="true"
+                                                    aria-controls="collapseFive">
+                                                    How can I get the market sample report?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFive" class="accordion-collapse collapse "
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">Requesting a Sample copy of the report from
+                                                    Xcellent Insights is hassle-free!
+                                                    You can either request it from the report
+                                                    page or call our sales Executive at US: +1 408 627 7717 /UK: +44 208 638
+                                                    6439 and share/discuss your
+                                                    requirements. Our
+                                                    Team will share the sample copy of the report with you within 12 Working
+                                                    Hours / Shortly.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSix" aria-expanded="true"
+                                                    aria-controls="collapseSix">
+                                                    How can I purchase this market report?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSix" class="accordion-collapse collapse "
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">Ordering a report from Xcellent Insights is
+                                                    hassle-free! You can select a
+                                                    licence type that suits your requirement and
+                                                    proceed to checkout. It will redirect you to the payment gateway with a
+                                                    list of payment options. Be rest
+                                                    assured that we
+                                                    do not store the payment details. Once we receive the payment, a
+                                                    confirmation email will be sent on your
+                                                    registered mail
+                                                    id with details on the report delivery timeline. You can also get your
+                                                    order placed through our business
+                                                    development
+                                                    executives and they will guide you thoroughly.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseSeven" aria-expanded="true"
+                                                    aria-controls="collapseSeven">
+                                                    Why Should You Buy This Report from Xcellent Insights?
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSeven" class="accordion-collapse collapse "
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <ul
+                                                        style="list-style-type: disc !important; padding-left:1em !important; margin-left:1em;">
+                                                        <li> You should buy this report from Xcellent Insights for a better
+                                                            clarity on market scenarios. </li>
+                                                        <li> The market report has been prepared using a pragmatic approach
+                                                            to suit your needs. </li>
+                                                        <li> We have an extensive library of reports that can help you
+                                                            understand the market landscape and
+                                                            make informed
+                                                            decisions about your business. </li>
+                                                        <li> Additionally, the reports are written by experienced analysts
+                                                            who have a deep understanding of
+                                                            the market and
+                                                            the latest trends.</li>
+                                                        <li> Besides, customization is a value-added service if you decide
+                                                            to opt.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                    {{-- discount and price side of the report --}}
                     <div class="col-lg-3">
                         <div class="report-sidebar p-4">
                             <div class="request-preorder-discount">
                                 <div class="row mb-4">
-                                    <div class="request">
-                                        <a>
-                                            <i class="fas fa-paper-plane mr-5" aria-hidden="true"></i>
-                                            <h6>Request Free PDF Sample</h6>
-                                        </a>
-                                    </div>
+
+                                    <a href="" class="request">
+                                        <i class="fas fa-paper-plane mr-5" aria-hidden="true"></i>
+                                        <h6>Request Free PDF Sample</h6>
+                                    </a>
+
                                 </div>
                                 <div class="row mb-4">
-                                    <div class="pre-order">
-                                        <a>
-                                            <i class="fas fa-envelope mr-5" aria-hidden="true"></i>
-                                            <h6>Pre-Order Enquiry</h6>
-                                        </a>
-                                    </div>
+
+                                    <a href="" class="pre-order">
+                                        <i class="fas fa-envelope mr-5" aria-hidden="true"></i>
+                                        <h6>Pre-Order Enquiry</h6>
+                                    </a>
+
                                 </div>
                                 <div class="row">
-                                    <div class="discount">
-                                        <a>
-                                            <i class="fas fa-tags mr-5" aria-hidden="true"></i>
-                                            <h6>Check Today's Discount</h6>
-                                        </a>
-                                    </div>
+
+                                    <a href="" class="discount">
+                                        <i class="fas fa-tags mr-5" aria-hidden="true"></i>
+                                        <h6>Check Today's Discount</h6>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
                         <div class="check-report-price mt-5">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
+                                    <h2 class="accordion-header" id="headingPrice">
                                         <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
+                                            data-bs-toggle="collapse" data-bs-target="#collapsePrice"
+                                            aria-expanded="true" aria-controls="collapsePrice">
                                             Check Report Price
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapsePrice" class="accordion-collapse collapse"
+                                        aria-labelledby="headingPrice" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <div class="form-group justify-content-around">
-                                                <input type="radio" id="single" value="single">
+                                            <div class="form-group individual-report-price  justify-content-around">
+                                                <input type="radio" id="single" value="single" name="price">
                                                 <label for="single">Single User License </label><span>$4000</span>
                                             </div>
-                                            <div class="form-group justify-content-around">
-                                                <input type="radio" id="multi" value="multi">
+                                            <div class="form-group individual-report-price justify-content-around">
+                                                <input type="radio" id="multi" value="multi" name="price">
                                                 <label for="multi" style="width: 138px;">Multi User License</label>
                                                 <span>$6000</span>
                                             </div>
-                                            <div class="form-group justify-content-around">
-                                                <input type="radio" id="enterprise" value="enterprise">
+                                            <div class="form-group individual-report-price justify-content-around">
+                                                <input type="radio" id="enterprise" value="enterprise" name="price">
                                                 <label for="enterprise" style="width: 138px;">Enterprise License
                                                 </label><span>$8000</span>
                                             </div>
 
 
+                                        </div>
+                                        {{-- buy now button --}}
+                                        <div class="report-buy-now text-center p-3">
+                                            <button type="submit">
+                                                <i class="fa fa-shopping-cart me-2" aria-hidden="true"></i>
+                                                Buy Now
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -290,6 +399,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="why-choose-us mt-5">
                 <div class="card">
@@ -346,11 +456,15 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
 
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     {{-- report tab switching logic --}}
     <script>
         $(".report-content-menu").on("click", function() {
@@ -390,6 +504,52 @@
                 $('#client-logo-carousel').trigger('play.owl.autoplay', [5000]);
             }
             setTimeout(setSpeed, 0);
+        });
+    </script>
+    <script>
+        $("#speak-with-analyst-form").validate({
+            errorClass: "error-class",
+            validClass: "valid-class",
+            errorElement: "span",
+            rules: {
+                fname: "required",
+                lname: "required",
+                company: "required",
+                email: "required",
+                number: {
+                    required: true,
+                    number: true
+                },
+                description: "required",
+                job_title: "required",
+                country: "required"
+            },
+            messages: {
+                fname: "First Name is required",
+                lname: "Last Name is required",
+                company: "Company is required",
+                email: "Email is required",
+                number: {
+                    required: "Number is required",
+                    number: "Please enter numbers only"
+                },
+                description: "Description is required",
+                job_title: "Job Title is required",
+                country: "Country is required"
+            },
+            errorPlacement: function(error, element) {
+                error.insertAfter(element);
+            },
+            submitHandler: function(form) {
+                var v = grecaptcha.getResponse();
+                if (v.length == 0) {
+                    alert('Please verify that you are not a robot.');
+                    return false;
+                } else {
+                    form.submit();
+                    return true;
+                }
+            }
         });
     </script>
 @endsection
