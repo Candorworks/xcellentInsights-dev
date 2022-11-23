@@ -31,32 +31,32 @@ Route::post('/blog',[App\Http\Controllers\web\HomeController::class,'blogSearch'
 Route::get('/blog/category/{slug}',[App\Http\Controllers\web\HomeController::class,'blogCategory'])->name('blogCategory');
 Route::get('/news',[App\Http\Controllers\web\HomeController::class,'news'])->name('news');  
 
-// MODAL FORM
-Route::get('/get-in-touch', function () {
-    return view('modalContactForm');
-})->name('get-in-touch');
-
 
 // PRIVACY
 Route::get('/privacy-policy', function () {
     return view('web.cms.privacy_policy');
 })->name('privacy');
+
 // FAQ
 Route::get('/faq', function () {
     return view('web.cms.faq');
 })->name('faq');
+
 // TERMS
 Route::get('/terms', function () {
     return view('web.cms.terms_of_use');
 })->name('terms');
+
 // AGREEMENT
 Route::get('/agreement', function () {
     return view('web.cms.agreement');
 })->name('agreement');
+
 // SITEMAP
 Route::get('/sitemap', function () {
     return view('web.cms.sitemap');
 })->name('sitemap');
+
 // ORDER
 Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');

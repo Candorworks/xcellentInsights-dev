@@ -304,9 +304,8 @@
             <div class="top-selling-reports-content mt-5">
                 <div class="row">
                     <div class="col">
-                        <div class="owl-carousel " id="topSellingReport">
-
-                            @foreach($reports as $report)
+                        <div class="owl-carousel" id="topSellingReport">
+                        @foreach($reports as $report)
                             <div class="top-selling-report-card ms-1">
                                 <div class="top-selling-img-part">
                                     <img src="{{asset('web/'.$report->Category->thumbnail)}}">
@@ -316,11 +315,7 @@
                                         <p class="text-uppercase mb-0 mt-3">{{$report->Category->name}}</p>
                                     </a>
                                     <p class="my-4">
-                                        <strong>
-                                            <a href="">
-                                                {{$report->meta_title}}
-                                            </a>
-                                        </strong>
+                                        <strong><a href="">{!!substr($report->meta_title,0,90)!!}</a></strong>
                                     </p>
                                     <div class="arrow-to-page">
                                         <a href="">
