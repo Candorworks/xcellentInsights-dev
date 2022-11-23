@@ -51,9 +51,10 @@
     </div>
     <div class="col-lg-2">
         <div class="header-search-bar" id="search-bar">
-            <form method="get" action="{{ route('report') }}">
+            <form method="post" action="{{ route('reportSeacrhByTitle') }}">
+                @csrf
                 <div class="form-group">
-                    <input class="form-control header-search-bar-input" name="search" placeholder="Search Here..."
+                    <input class="form-control header-search-bar-input" name="homepagesearch" placeholder="Search Here..."
                         type="text">
                     <button type="submit header-search-bar-btn"><i class="fas fa-search"></i></button>
                 </div>
