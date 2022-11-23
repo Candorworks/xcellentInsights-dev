@@ -14,6 +14,7 @@
    --inset-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
    --soft-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff;
    --text-decoration-none: none;
+   --border-radius: 5px;
 }
 
 /***************************************** Scroll to top **************************************/
@@ -50,10 +51,6 @@
    right: -50px;
    transform: rotate(-90deg);
    text-decoration: var(--text-decoration-none);
-}
-
-.container {
-   /* max-width: 1200px !important;  */
 }
 
 .nav-item-container>ul li {
@@ -1406,4 +1403,124 @@ body.modal-open {
 .fa-credit-card,
 .fa-clock {
    color: #263074;
+}
+
+/********************************* Individual Report Page ******************************/
+.report-container .report-desc {
+   box-shadow: var(--inset-shadow);
+   z-index: 9999999;
+   margin-top: -3rem;
+   background-color: white;
+   border-radius: 5px;
+}
+
+.report-container .report-meta {
+   box-shadow: var(--soft-shadow);
+   border-radius: var(--border-radius);
+}
+
+.report-container .report-meta p {
+   padding: 0px;
+   margin: 0px;
+   width: fit-content;
+   font-weight: 500;
+   color: var(--text-blue);
+}
+
+.report-container .report-meta p::after {
+   content: "|";
+   margin: 10px;
+}
+
+.report-content-container {
+   box-shadow: var(--soft-shadow);
+}
+
+.report-content-menu-container {
+   box-shadow: var(--inset-shadow);
+}
+
+.report-content-menu h6 {
+   margin-bottom: 0px;
+   padding: 15px 0px;
+}
+
+.report-content-menu h6:hover,
+.report-content-menu.active h6 {
+   background: #002c60;
+   color: white;
+   cursor: pointer;
+}
+
+.toc,
+.tables-figures,
+.speak-with-analyst,
+.faq,
+.companies {
+   display: none;
+}
+
+#speak-with-analyst-form input,
+#speak-with-analyst-form select,
+#speak-with-analyst-form textarea {
+   box-shadow: var(--inset-shadow);
+   background-color: #e6e7ee;
+}
+
+.cta-btn {
+   background-color: #25950f;
+   color: white;
+   border-radius: 25px;
+   border: none;
+   padding: 5px 0px 5px 0px;
+   box-shadow: var(--soft-shadow);
+}
+
+.report-sidebar {
+   background-color: rgba(0, 0, 0, .03);
+   box-shadow: var(--soft-shadow);
+   border-radius: 5px;
+}
+
+.discount,
+.request,
+.pre-order {
+   border-radius: 35px;
+   box-shadow: var(--soft-shadow);
+   padding: 10px 15px;
+   text-decoration: none;
+   color: var(--text-blue);
+}
+
+.request-preorder-discount a h6 {
+   display: inline-block;
+   margin: 0px 0px 0px 10px;
+   font-size: 0.85rem;
+}
+
+.discount:hover,
+.request:hover,
+.pre-order:hover {
+   background-color: var(--hover-blue);
+   color: white;
+   transition: all .3s ease;
+   cursor: pointer;
+}
+
+.card-body {
+   box-shadow: var(--inset-shadow);
+}
+
+.why-choose-us {
+   box-shadow: var(--soft-shadow);
+}
+
+.reason-to-choose-us {
+   list-style: none;
+}
+
+.reason-to-choose-us::before {
+   content: "≫ ";
+   font-weight: bold;
+   margin-right: 5px;
 }
