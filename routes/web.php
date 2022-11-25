@@ -45,6 +45,10 @@ Route::get('/blog/category/{slug}', [App\Http\Controllers\web\HomeController::cl
 Route::get('/news', [App\Http\Controllers\web\HomeController::class, 'news'])->name('news');
 
 
+// Mail routes
+Route::post('/getintouch', [App\Http\Controllers\web\MailController::class, 'getintouch'])->name('getintouch');
+
+
 // PRIVACY
 Route::get('/privacy-policy', function () {
     return view('web.cms.privacy_policy');
