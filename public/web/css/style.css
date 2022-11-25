@@ -1700,8 +1700,15 @@ body.modal-open {
 /**************************************** Checkout Page*/
 .billing-info,
 .choose-licence-type,
-.payment-method {
+.payment-method,
+.individual-report-price,
+.licence-part,
+.price-part {
    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.individual-report-price {
+   padding: 10px 0px;
 }
 
 .checkout-content .billing-info input,
@@ -1739,4 +1746,13 @@ body.modal-open {
 
 .we-accept {
    border-top: 1px solid rgba(0, 0, 0, .125);
+}
+
+.multi-lic,
+.enterprise-lic {
+   display: none;
+}
+
+.licence-wrap-content {
+   padding: 0rem 1rem;
 }

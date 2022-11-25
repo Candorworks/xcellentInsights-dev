@@ -18,7 +18,7 @@
                     <div class="col-lg-2 pe-0">
                         <div class="report-img">
                             <img src="{{ asset('web/category/1646668183.webp') }}" alt="Image processing"
-                                style="width: 150px; height: 170px;">
+                                style="width: 150px;">
                         </div>
                     </div>
                     <div class="col-lg-10">
@@ -134,11 +134,69 @@
                     <div class="col-lg-3">
                         <div class="choose-licence-type">
                             <div class="arrow-right">Choose Licence Type</div>
+
+                            <div class="p-3">
+                                <div class="form-group licence-wrap individual-report-price  justify-content-around"
+                                    divID="lic1">
+                                    <input type="radio" id="single" value="single" name="price"
+                                        checked="selected">
+                                    <label for="single">Single User License
+                                    </label><span style="color: #002c60">$4000</span>
+                                </div>
+                                <div class="form-group licence-wrap individual-report-price justify-content-around"
+                                    divID="lic2">
+                                    <input type="radio" id="multi" value="multi" name="price">
+                                    <label for="multi" style="width: 138px;">Multi User License</label>
+                                    <span style="color: #002c60">$6000</span>
+                                </div>
+                                <div class="form-group licence-wrap individual-report-price justify-content-around"
+                                    divID="lic3">
+                                    <input type="radio" id="enterprise" value="enterprise" name="price">
+                                    <label for="enterprise" style="width: 138px;">Enterprise License
+                                    </label><span style="color: #002c60">$8000</span>
+                                </div>
+
+
+                            </div>
+
+                            <div class="p-3">
+                                <div class="single-lic licence-wrap-content" id="lic1">
+                                    <div class="licence-part py-3 row">
+                                        <label class="col-lg-6">Licence -</label>
+                                        <span class="col-lg-6 text-end" style="color: #002c60">Single</span>
+                                    </div>
+                                    <div class="price-part py-3 row">
+                                        <label class="col-lg-6">Price -</label>
+                                        <span class="col-lg-6 text-end" style="color: #002c60">$4000</span>
+                                    </div>
+                                </div>
+                                <div class="multi-lic licence-wrap-content" id="lic2">
+                                    <div class="licence-part py-3 row ">
+                                        <label class="col-lg-6">Licence -</label>
+                                        <span class="col-lg-6 text-end" style="color: #002c60">Multi</span>
+                                    </div>
+                                    <div class="price-part py-3 row">
+                                        <label class="col-lg-6">Price -</label>
+                                        <span class="col-lg-6 text-end" style="color: #002c60">$6000</span>
+                                    </div>
+                                </div>
+                                <div class="enterprise-lic licence-wrap-content" id="lic3">
+                                    <div class="licence-part py-3 row">
+                                        <label class="col-lg-6">Licence -</label>
+                                        <span class="col-lg-6 text-end" style="color: #002c60">Enterprise</span>
+                                    </div>
+                                    <div class="price-part py-3 row">
+                                        <label class="col-lg-6">Price -</label>
+                                        <span class="col-lg-6 text-end" style="color: #002c60">$8000</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="payment-method">
                             <div class="arrow-right">Payment Method</div>
+
                             <div class="p-3">
                                 <div class="methods">
                                     <div class="debit-credit">
@@ -169,4 +227,20 @@
             </div>
         </div>
     </div>
+    <script>
+        $(".licence-wrap").on("click", function() {
+            $(".licence-wrap-content").hide();
+
+            var divId = $(this).attr("divId");
+
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $("#" + divId).hide();
+            } else {
+                $(".licence-wrap").removeClass("active");
+                $(this).addClass("active");
+                $("#" + divId).show();
+            }
+        });
+    </script>
 @endsection
