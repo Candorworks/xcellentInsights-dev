@@ -340,7 +340,7 @@
                                 </div>
                                 <div class="row mb-4">
 
-                                    <a href="" class="pre-order">
+                                    <a href="{{ route('enquire-before-buying') }}" class="pre-order">
                                         <i class="fas fa-envelope mr-5" aria-hidden="true"></i>
                                         <h6>Pre-Order Enquiry</h6>
                                     </a>

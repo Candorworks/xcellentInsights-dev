@@ -76,3 +76,9 @@ Route::get('/how-to-order', function () {
 Route::get('/enquire-before-buying', function () {
     return view('web.report.enquireBeforeBuying');
 })->name('enquire-before-buying');
+
+
+// CHECKOUT
+Route::get('/checkout', function () {
+    return view('web.report.checkout');
+})->name('checkout');
