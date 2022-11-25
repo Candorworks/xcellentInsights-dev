@@ -151,7 +151,6 @@
                                             <div class="col-lg-12">
                                                 <div class="form-group mt-3">
                                                     <div id="s_i_t_e_k_e_y"></div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -382,8 +381,6 @@
                                                 <label for="enterprise" style="width: 138px;">Enterprise License
                                                 </label><span>$8000</span>
                                             </div>
-
-
                                         </div>
                                         {{-- buy now button --}}
                                         <div class="report-buy-now text-center p-3">

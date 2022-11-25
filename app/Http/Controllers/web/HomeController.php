@@ -10,6 +10,7 @@ use App\Models\Blog;
 use App\Models\Job;
 use App\Models\Cms;
 use App\Models\Country;
+use App\Models\Licences_types;
 use DB;
 
 class HomeController extends Controller
@@ -154,7 +155,8 @@ class HomeController extends Controller
     {
         $report = Report::where("slug", $report_slug)->first();
         $countries = Country::all();
-        return view('web.report.reportDetail', compact('report', 'countries'));
+        $license = Licences_types::all();
+        return view('web.report.reportDetail', compact('report', 'countries' , 'license'));
     }
 
     public function partner()
