@@ -342,28 +342,22 @@
                         <div class="report-sidebar p-4">
                             <div class="request-preorder-discount">
                                 <div class="row mb-4">
-
-                                    <a href="{{ route('enquiry') }}" class="request blink">
+                                    <a href="{{ route('enquiry_sample', ['report_id' => $report['id']]) }}" class="request blink">
                                         <i class="fas fa-paper-plane mr-5" aria-hidden="true"></i>
                                         <h6>Request Free PDF Sample</h6>
                                     </a>
-
                                 </div>
                                 <div class="row mb-4">
-
-                                    <a href="{{ route('enquiry') }}" class="pre-order">
+                                    <a href="{{ route('enquiry_buying', ['report_id' => $report['id']]) }}" class="pre-order">
                                         <i class="fas fa-envelope mr-5" aria-hidden="true"></i>
                                         <h6>Pre-Order Enquiry</h6>
                                     </a>
-
                                 </div>
                                 <div class="row">
-
-                                    <a href="{{ route('enquiry') }}" class="discount">
+                                    <a href="{{ route('enquiry_discount', ['report_id' => $report['id']]) }}" class="discount">
                                         <i class="fas fa-tags mr-5" aria-hidden="true"></i>
                                         <h6>Check Today's Discount</h6>
                                     </a>
-
                                 </div>
                             </div>
                         </div>

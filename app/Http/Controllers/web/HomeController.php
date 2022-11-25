@@ -159,6 +159,27 @@ class HomeController extends Controller
         return view('web.report.reportDetail', compact('report', 'countries' , 'license'));
     }
 
+    public function enquiry_sample(Request $request, $report_id){
+        $heading = "Request Sample";
+        $report = Report::where("id", $report_id)->first();
+        $countries = Country::all();
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
+    }
+
+    public function enquiry_buying(Request $request, $report_id){
+        $heading = "Enquiry before Buying";
+        $report = Report::where("id", $report_id)->first();
+        $countries = Country::all();
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
+    }
+
+    public function enquiry_discount(Request $request, $report_id){
+        $heading = "Check For Discount";
+        $report = Report::where("id", $report_id)->first();
+        $countries = Country::all();
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
+    }
+
     public function partner()
     {
         return view('web.partner');

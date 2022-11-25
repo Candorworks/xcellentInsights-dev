@@ -5,9 +5,7 @@
         style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
         <div class="container pt-5">
             <div class="text-center mt-3 mb-5">
-                <h3 class="breadcrumbs-title fw-bold text-white">
-                    Enquire Before Buying
-                </h3>
+                <h2 class="breadcrumbs-title fw-bold text-white">{{$heading}}</h2>
             </div>
         </div>
     </div>
@@ -18,26 +16,21 @@
                 <div class="row">
                     <div class="col-lg-2 pe-0">
                         <div class="report-img">
-                            <img src="{{ asset('web/category/1646668183.webp') }}" alt="Image processing"
+                            <img src="{{ asset('web/' . $report->Category->thumbnail) }}" alt="Image processing"
                                 style="width: 150px; height: 170px;">
                         </div>
                     </div>
                     <div class="col-lg-10">
                         <div class="report-content">
-                            <h3 class="mb-3" style="color: #002c60">sample title</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis deserunt iusto cupiditate
-                                voluptate rem eum minima cumque voluptatibus harum quaerat officiis soluta nulla, reiciendis
-                                amet enim voluptas esse laborum necessitatibus!Eveniet mollitia distinctio, vitae earum
-                                officiis nobis. Deleniti voluptates quos corporis tempore magni, beatae minus quo
-                                necessitatibus facere voluptatibus dolores error nulla repellat. Temporibus culpa ea ad
-                                voluptatum mollitia neque?</p>
+                            <h3 class="mb-3" style="color: #002c60">{{$report->title}}</h3>
+                            <p>{!! nl2br(str_replace('_x000D_', ' ', substr($report->description, 0, 200))) !!}...</p>
                             <div class="report-meta py-2">
                                 <div class="row justify-content-center">
-                                    <p class="col-lg-2">ID: </p>
-                                    <p class="col-lg-2">Published: </p>
-                                    <p class="col-lg-2">Pages: </p>
-                                    <p class="col-lg-2">Format: </p>
-                                    <p class="col-lg-3">Industry: </p>
+                                    <p class="col-lg-2">ID: {{ $report->unique_id }}</p>
+                                    <p class="col-lg-2">Published: {{ date('M Y', strtotime($report->publish)) }}</p>
+                                    <p class="col-lg-2">Pages: {{ $report->pages }}</p>
+                                    <p class="col-lg-2">Format: {{ $report->format }}</p>
+                                    <p class="col-lg-3">Industry: {{ $report->Category->name }}</p>
                                 </div>
                             </div>
 
@@ -124,11 +117,11 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-lg-6">
-                                            <select name="country" class="form-control shadow-inset" required>
+                                            <select name="country" class="form-control shadow-inset form-select" required>
                                                 <option value="" disabled selected hidden>Select country</option>
-                                                {{-- @foreach ($countries as $item)
+                                                @foreach ($countries as $item)
                                                     <option value="{{ $item->sort_name }}">{{ $item->name }}</option>
-                                                @endforeach --}}
+                                                @endforeach 
 
                                             </select>
                                         </div>

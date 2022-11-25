@@ -24,7 +24,9 @@ Route::get('/category/{category_slug}', [App\Http\Controllers\web\HomeController
 
 Route::get('/report', [App\Http\Controllers\web\HomeController::class, 'report'])->name('report');
 Route::get('/report/{report_slug}', [App\Http\Controllers\web\HomeController::class, 'report_detail'])->name('report_detail');
-Route::get('/enquiry/{report_slug}', [App\Http\Controllers\web\HomeController::class, 'report_detail'])->name('report_detail');
+Route::get('/enquiry/sample/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_sample'])->name('enquiry_sample');
+Route::get('/enquiry/buying/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_buying'])->name('enquiry_buying');
+Route::get('/enquiry/discount/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_discount'])->name('enquiry_discount');
 
 Route::get('/partner', [App\Http\Controllers\web\HomeController::class, 'partner'])->name('partner');
 
@@ -71,12 +73,6 @@ Route::get('/sitemap', function () {
 Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');
 })->name('order');
-
-
-// ENQUIRE BEFORE BUYING
-Route::get('/enquiry', function () {
-    return view('web.report.enquiry');
-})->name('enquiry');
 
 
 // CHECKOUT
