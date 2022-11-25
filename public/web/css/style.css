@@ -1550,6 +1550,7 @@ body.modal-open {
    background-color: rgba(0, 0, 0, .03);
 }
 
+
 .menu-content .accordion-button::after {
    background-image: none;
 }
@@ -1577,10 +1578,47 @@ body.modal-open {
    box-shadow: var(--soft-shadow);
 }
 
+.check-report-price .accordion-button:not(.collapsed) {
+   background-color: #e6e7ee;
+   color: var(--text-blue);
+}
+
 .check-report-price .accordion-body .individual-report-price {
    box-shadow: var(--inset-shadow);
    transition: all 0.2s ease;
    padding: 10px;
    margin-bottom: 15px;
    border-radius: 5px;
+}
+
+.blink {
+   color: white;
+   animation: glowing 4s infinite;
+}
+
+@keyframes glowing {
+   0% {
+      background-color: #002c60;
+      color: #ffff;
+   }
+
+   25% {
+      background-color: #ffffff;
+      color: #002c60;
+   }
+
+   50% {
+      background-color: #002c60;
+      color: #ffff;
+   }
+
+   75% {
+      background-color: #ffffff;
+      color: #002c60;
+   }
+
+   100% {
+      background-color: #002c60;
+      color: #ffff;
+   }
 }
