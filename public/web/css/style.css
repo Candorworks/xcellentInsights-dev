@@ -1578,6 +1578,11 @@ body.modal-open {
    transition: all 0.2s ease;
 }
 
+.report-buy-now button a {
+   color: white;
+   text-decoration: none;
+}
+
 .accordion-button:focus {
    box-shadow: none;
 }
