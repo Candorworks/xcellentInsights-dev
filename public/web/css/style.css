@@ -1442,6 +1442,12 @@ body.modal-open {
    margin: 10px;
 }
 
+.report-container .report-meta p:last-child::after,
+.enquier-before-buying-container .report-meta p:last-child::after,
+.checkout-container .report-meta p:last-child::after {
+   content: "";
+}
+
 .report-content-container {
    box-shadow: var(--soft-shadow);
 }

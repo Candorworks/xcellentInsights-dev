@@ -31,9 +31,7 @@
 
     {{-- get in touch modal --}}
     <div class="get-in-touch" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <a href="#">
-            Get in Touch
-        </a>
+        <a href="#" id="get-in-touch">Get in Touch</a>
     </div>
 
     <div class="modal-container">

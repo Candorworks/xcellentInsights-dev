@@ -5,7 +5,7 @@
         style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
         <div class="container pt-5">
             <div class="text-center mt-3 mb-5">
-                <h2 class="breadcrumbs-title fw-bold text-white">{{$heading}}</h2>
+                <h2 class="breadcrumbs-title fw-bold text-white">{{ $heading }}</h2>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-lg-10">
                         <div class="report-content">
-                            <h3 class="mb-3" style="color: #002c60">{{$report->title}}</h3>
+                            <h3 class="mb-3" style="color: #002c60">{{ $report->title }}</h3>
                             <p>{!! nl2br(str_replace('_x000D_', ' ', substr($report->description, 0, 200))) !!}...</p>
                             <div class="report-meta py-2">
                                 <div class="row justify-content-center">
@@ -121,7 +121,7 @@
                                                 <option value="" disabled selected hidden>Select country</option>
                                                 @foreach ($countries as $item)
                                                     <option value="{{ $item->sort_name }}">{{ $item->name }}</option>
-                                                @endforeach 
+                                                @endforeach
 
                                             </select>
                                         </div>
