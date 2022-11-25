@@ -40,10 +40,132 @@
                 </div>
             </div>
 
-            <div class="checkout-content">
-                <div class="col-lg-5"></div>
-                <div class="col-lg-3"></div>
-                <div class="col-lg-4"></div>
+            <div class="checkout-content mt-5">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="billing-info">
+                            <div class="arrow-right">Billing Information</div>
+                            <div class="p-3">
+                                <div class="row mb-3 ">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" class="form-control" placeholder="Name"
+                                                required />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" placeholder="Email"
+                                                required />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <select name="country" class="form-control" required>
+                                                <option value="" disabled="" selected="" hidden="">Select
+                                                    country</option>
+                                                {{-- @foreach ($countries as $item)
+                                                    <option value="{{ $item['country_name'] }}">
+                                                        {{ $item['country_name'] }}
+                                                        (+{{ $item['country_phone_code'] }})
+                                                    </option>
+                                                @endforeach --}}
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-grou">
+                                            <input type="text" name="number" class="form-control"
+                                                placeholder="Phone Number" maxlength="12" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="job_title" class="form-control"
+                                                placeholder="Job Title" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group ss-item-required">
+                                            <input type="text" name="company" class="form-control"
+                                                placeholder="Company Name" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="address" class="form-control" name="website"
+                                                placeholder="Address..." />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" name="city" class="form-control"
+                                                placeholder="Town / City" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <select name="state" id="states-ids" class="form-control">
+                                                <option value="" disabled="" selected="" hidden="">Select
+                                                    State</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="text" maxlength="6" name="zip" class="form-control"
+                                                placeholder="Postcode / zip" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="choose-licence-type">
+                            <div class="arrow-right">Choose Licence Type</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="payment-method">
+                            <div class="arrow-right">Payment Method</div>
+                            <div class="p-3">
+                                <div class="methods">
+                                    <div class="debit-credit">
+                                        <input type="radio" name="card" id="card" checked="default-payment">
+                                        <label for="card" id="debit-credit">Credit / Debit Card <img
+                                                src="{{ asset('web/images/checkout/credit-card.png') }}" alt=""
+                                                height="21px"></label>
+                                    </div>
+                                    <div class="bank-transfer mt-3">
+                                        <input type="radio" name="card" id="transfer">
+                                        <label for="transfer" id="bank-transfer">Direct Bank Transfer <img
+                                                src="{{ asset('web/images/checkout/direct-bank-transfer.png') }}"
+                                                alt="" height="21px"></label>
+
+                                    </div>
+                                    <button type="submit" class="checkout-btn btn-block btn mt-4">Checkout</button>
+                                </div>
+                                <div class="we-accept row mt-5 align-items-center pt-3">
+                                    <div class="col-lg-4">We Accept</div>
+                                    <div class="col-lg-7"><img src="{{ asset('web/images/payment-logos.png') }}"
+                                            alt="payment-logo"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

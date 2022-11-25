@@ -1696,3 +1696,47 @@ body.modal-open {
 .quick-contact .email-id {
    border-top: 1px solid rgba(0, 0, 0, .125);
 }
+
+/**************************************** Checkout Page*/
+.billing-info,
+.choose-licence-type,
+.payment-method {
+   border: 1px solid rgba(0, 0, 0, .125);
+}
+
+.checkout-content .billing-info input,
+.checkout-content .billing-info select,
+.checkout-content .billing-info textarea {
+   background-color: #e6e7ee;
+}
+
+.arrow-right {
+   color: #fff;
+   background-color: #002c60 !important;
+   padding: 10px 15px;
+   position: relative;
+}
+
+.arrow-right::after {
+   content: '';
+   width: 0;
+   height: 0;
+   border-top: 24px solid transparent;
+   border-bottom: 20px solid transparent;
+   border-left: 20px solid #002c60;
+   right: -19px;
+   position: absolute;
+   top: 0;
+}
+
+.checkout-btn,
+.checkout-btn:hover {
+   background-color: #002c60;
+   color: white;
+   width: 100%;
+   border-radius: 35px;
+}
+
+.we-accept {
+   border-top: 1px solid rgba(0, 0, 0, .125);
+}
