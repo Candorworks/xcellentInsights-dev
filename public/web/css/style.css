@@ -1409,7 +1409,8 @@ body.modal-open {
 
 /********************************* Individual Report Page and some of the enquire before buying page ******************************/
 .report-container .report-desc,
-.enquier-before-buying-container .report-desc {
+.enquier-before-buying-container .report-desc,
+.checkout-container .report-desc {
    box-shadow: var(--inset-shadow);
    z-index: 9999999;
    margin-top: -3rem;
@@ -1418,13 +1419,15 @@ body.modal-open {
 }
 
 .report-container .report-meta,
-.enquier-before-buying-container .report-meta {
+.enquier-before-buying-container .report-meta,
+.checkout-container .report-meta {
    box-shadow: var(--soft-shadow);
    border-radius: var(--border-radius);
 }
 
 .report-container .report-meta p,
-.enquier-before-buying-container .report-meta p {
+.enquier-before-buying-container .report-meta p,
+.checkout-container .report-meta p {
    padding: 0px;
    margin: 0px;
    width: fit-content;
@@ -1433,7 +1436,8 @@ body.modal-open {
 }
 
 .report-container .report-meta p::after,
-.enquier-before-buying-container .report-meta p::after {
+.enquier-before-buying-container .report-meta p::after,
+.checkout-container .report-meta p::after {
    content: "|";
    margin: 10px;
 }

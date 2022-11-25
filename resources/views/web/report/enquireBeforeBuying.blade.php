@@ -240,7 +240,7 @@
 
                             {{-- quick contacts --}}
                             <div class="quick-contact-container mt-5">
-                                <div class="quick-contact  card">
+                                <div class="quick-contact card">
                                     <h5 class="card-header text-center py-3" id="headingPrice" style="color: #002c60">
                                         Quick Contacts
                                     </h5>
