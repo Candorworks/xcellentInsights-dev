@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-    <div class="checkout-container mt-5">
+    <div class="checkout-container">
         <div class="container">
             <div class="report-desc p-4">
                 <div class="row">
