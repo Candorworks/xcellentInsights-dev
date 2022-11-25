@@ -413,8 +413,8 @@
 
 .text-section {
    position: absolute;
-   top: 12.5rem;
-   left: 5rem;
+   top: 15.5rem;
+   left: 8rem;
 }
 
 .subscribe-form input {
@@ -1440,6 +1440,12 @@ body.modal-open {
 .checkout-container .report-meta p::after {
    content: "|";
    margin: 10px;
+}
+
+.report-container .report-meta p:last-child::after,
+.enquier-before-buying-container .report-meta p:last-child::after,
+.checkout-container .report-meta p:last-child::after {
+   content: "";
 }
 
 .report-content-container {

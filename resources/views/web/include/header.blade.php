@@ -18,7 +18,7 @@
                         href="{{ route('industry') }}">Industry Vertical</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('report*') || Request::is('category*') ? 'active' : '' }}"
+                    <a class="nav-link {{ Request::is('report*') || Request::is('category*') || Request::is('enquiry*') ? 'active' : '' }}"
                         href="{{ route('report') }}">Report
                         Hub</a>
                 </li>
@@ -54,8 +54,8 @@
             <form method="post" action="{{ route('reportSeacrhByTitle') }}">
                 @csrf
                 <div class="form-group">
-                    <input class="form-control header-search-bar-input" name="homepagesearch" placeholder="Search Here..."
-                        type="text">
+                    <input class="form-control header-search-bar-input" name="homepagesearch"
+                        placeholder="Search Here..." type="text">
                     <button type="submit header-search-bar-btn"><i class="fas fa-search"></i></button>
                 </div>
             </form>
