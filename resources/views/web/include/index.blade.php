@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>xcellentinsights</title>
-    
+
     @include('web.include.style')
 </head>
 
@@ -137,7 +137,6 @@
 
 </body>
 <script src="{{ asset('/web/js/script.js') }}"></script>
-{{-- <script src="{{asset('/web/js/numericaptcha.js')}}"></script> --}}
 <script src="{{ url('/web/js/numericaptcha.js') }}"></script>
 @yield('script')
 
