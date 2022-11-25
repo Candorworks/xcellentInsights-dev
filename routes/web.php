@@ -27,6 +27,7 @@ Route::get('/report/{report_slug}', [App\Http\Controllers\web\HomeController::cl
 Route::get('/enquiry/sample/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_sample'])->name('enquiry_sample');
 Route::get('/enquiry/buying/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_buying'])->name('enquiry_buying');
 Route::get('/enquiry/discount/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_discount'])->name('enquiry_discount');
+Route::get('/checkout/{report_id}', [App\Http\Controllers\web\HomeController::class, 'checkout'])->name('checkout');
 
 Route::get('/partner', [App\Http\Controllers\web\HomeController::class, 'partner'])->name('partner');
 
@@ -75,7 +76,3 @@ Route::get('/how-to-order', function () {
 })->name('order');
 
 
-// CHECKOUT
-Route::get('/checkout', function () {
-    return view('web.report.checkout');
-})->name('checkout');

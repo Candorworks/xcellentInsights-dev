@@ -180,6 +180,12 @@ class HomeController extends Controller
         return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
     }
 
+    public function checkout(Request $request, $report_id){
+        $report = Report::where("id", $report_id)->first();
+        $countries = Country::all();
+        return view('web.report.checkout' ,compact('report' , 'countries'));
+    }
+
     public function partner()
     {
         return view('web.partner');
