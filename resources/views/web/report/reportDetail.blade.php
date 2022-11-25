@@ -393,8 +393,9 @@
                                         {{-- buy now button --}}
                                         <div class="report-buy-now text-center p-3">
                                             <button type="submit">
+                                               <a href="{{ route('checkout', ['report_id' => $report['id']]) }}"> 
                                                 <i class="fa fa-shopping-cart me-2" aria-hidden="true"></i>
-                                                Buy Now
+                                                Buy Now</a>
                                             </button>
                                         </div>
                                     </div>
