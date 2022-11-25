@@ -71,3 +71,8 @@ Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');
 })->name('order');
 
+
+// ENQUIRE BEFORE BUYING
+Route::get('/enquire-before-buying', function () {
+    return view('web.report.enquireBeforeBuying');
+})->name('enquire-before-buying');

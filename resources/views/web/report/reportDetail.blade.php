@@ -370,16 +370,17 @@
                                         aria-labelledby="headingPrice" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             <div class="form-group individual-report-price  justify-content-around">
-                                                <input type="radio" id="single" value="single" name="price">
+                                                <input type="radio" id="single" value="single" name="price1"
+                                                    checked="selected">
                                                 <label for="single">Single User License </label><span>$4000</span>
                                             </div>
                                             <div class="form-group individual-report-price justify-content-around">
-                                                <input type="radio" id="multi" value="multi" name="price">
+                                                <input type="radio" id="multi" value="multi" name="price1">
                                                 <label for="multi" style="width: 138px;">Multi User License</label>
                                                 <span>$6000</span>
                                             </div>
                                             <div class="form-group individual-report-price justify-content-around">
-                                                <input type="radio" id="enterprise" value="enterprise" name="price">
+                                                <input type="radio" id="enterprise" value="enterprise" name="price1">
                                                 <label for="enterprise" style="width: 138px;">Enterprise License
                                                 </label><span>$8000</span>
                                             </div>
@@ -460,6 +461,10 @@
 
         </div>
     </div>
+
+
+
+
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

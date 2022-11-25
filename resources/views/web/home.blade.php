@@ -378,7 +378,6 @@
                     <div class="row">
                         <div class="col">
                             <div class="owl-carousel " id="latestReport">
-
                                 @foreach ($reports as $report)
                                     <div class="top-selling-report-card ms-1">
                                         <div class="top-selling-img-part">
@@ -509,7 +508,10 @@
             </div>
         </div>
     </div>
+
+
 @section('script')
+    @yield('script')
     <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"

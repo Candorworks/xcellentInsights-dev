@@ -1407,8 +1407,9 @@ body.modal-open {
    color: #263074;
 }
 
-/********************************* Individual Report Page ******************************/
-.report-container .report-desc {
+/********************************* Individual Report Page and some of the enquire before buying page ******************************/
+.report-container .report-desc,
+.enquier-before-buying-container .report-desc {
    box-shadow: var(--inset-shadow);
    z-index: 9999999;
    margin-top: -3rem;
@@ -1416,12 +1417,14 @@ body.modal-open {
    border-radius: 5px;
 }
 
-.report-container .report-meta {
+.report-container .report-meta,
+.enquier-before-buying-container .report-meta {
    box-shadow: var(--soft-shadow);
    border-radius: var(--border-radius);
 }
 
-.report-container .report-meta p {
+.report-container .report-meta p,
+.enquier-before-buying-container .report-meta p {
    padding: 0px;
    margin: 0px;
    width: fit-content;
@@ -1429,7 +1432,8 @@ body.modal-open {
    color: var(--text-blue);
 }
 
-.report-container .report-meta p::after {
+.report-container .report-meta p::after,
+.enquier-before-buying-container .report-meta p::after {
    content: "|";
    margin: 10px;
 }
@@ -1583,7 +1587,8 @@ body.modal-open {
    color: var(--text-blue);
 }
 
-.check-report-price .accordion-body .individual-report-price {
+.check-report-price .accordion-body .individual-report-price,
+.enquire-before-sidebar .individual-report-price {
    box-shadow: var(--inset-shadow);
    transition: all 0.2s ease;
    padding: 10px;
@@ -1621,4 +1626,69 @@ body.modal-open {
       background-color: #002c60;
       color: #ffff;
    }
+}
+
+/***************************************************** Enquire before buying page **************************************************/
+.get-free-pdf {
+   background-color: #002c60;
+}
+
+.enquier-before-buying-container .enquiry-section {
+   box-shadow: var(--soft-shadow);
+}
+
+.enquier-before-buying-container .enquiry-section .clientele-img {
+   border: 1px solid #002c60;
+   border-radius: 8px;
+}
+
+.clientele-container {
+   position: relative;
+}
+
+.clientele-container p {
+   position: absolute;
+   z-index: 2;
+   top: -11px;
+   background-color: white;
+   left: 43%;
+   width: 125px;
+}
+
+#free-pdf-form input,
+#free-pdf-form select,
+#free-pdf-form textarea {
+   box-shadow: var(--inset-shadow);
+   background-color: #e6e7ee;
+}
+
+#free-pdf-form .cta-btn {
+   font-size: 18px;
+   width: 300px;
+   box-shadow: var(--soft-shadow);
+}
+
+.client-testimonials {
+   box-shadow: var(--soft-shadow);
+}
+
+.client-testimonials .card-body {
+   box-shadow: none;
+}
+
+#testi {
+   background-color: #002c60;
+   width: unset;
+}
+
+.check-report-price-enquiry {
+   box-shadow: var(--soft-shadow);
+}
+
+.quick-contact {
+   box-shadow: var(--soft-shadow);
+}
+
+.quick-contact .email-id {
+   border-top: 1px solid rgba(0, 0, 0, .125);
 }
