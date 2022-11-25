@@ -74,10 +74,21 @@
                                 </div>
                             </div>
                             <div class="report-content px-4 mt-4">
-                                <p class="menu-content desc" id="menu1">{!! $report->description !!}</p>
-                                <p class="menu-content toc" id="menu2">{!! $report->toc !!}</p>
-                                <p class="menu-content tables-figures" id="menu3">{!! $report->table_figures !!}</p>
-                                <p class="menu-content companies" id="menu4">{!! $report->companies !!}</p>
+                                <div class="menu-content desc" id="menu1">
+                                    <p>{!! $report->description !!}</p>
+                                </div>
+                                <div class="menu-content toc" id="menu2">
+                                    <p><b>Table of Content</b></p>
+                                    <p>{!! $report->toc !!}</p>
+                                </div>
+                                <div class="menu-content tables-figures" id="menu3">
+                                    <p><b>Tables and Figures</b></p>
+                                    <p>{!! $report->table_figures !!}</p>
+                                </div>
+                                <div class="menu-content companies" id="menu4">
+                                    <p><b>Key Players</b></p>
+                                    <p>{!! $report->companies !!}</p>
+                                </div>
 
                                 {{-- speak with analyst form --}}
                                 <div class="menu-content speak-with-analyst" id="menu5">
