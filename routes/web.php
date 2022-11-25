@@ -24,6 +24,7 @@ Route::get('/category/{category_slug}', [App\Http\Controllers\web\HomeController
 
 Route::get('/report', [App\Http\Controllers\web\HomeController::class, 'report'])->name('report');
 Route::get('/report/{report_slug}', [App\Http\Controllers\web\HomeController::class, 'report_detail'])->name('report_detail');
+Route::get('/enquiry/{report_slug}', [App\Http\Controllers\web\HomeController::class, 'report_detail'])->name('report_detail');
 
 Route::get('/partner', [App\Http\Controllers\web\HomeController::class, 'partner'])->name('partner');
 
