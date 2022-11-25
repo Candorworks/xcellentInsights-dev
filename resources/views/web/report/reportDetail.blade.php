@@ -343,7 +343,7 @@
                             <div class="request-preorder-discount">
                                 <div class="row mb-4">
 
-                                    <a href="{{ route('enquire-before-buying') }}" class="request blink">
+                                    <a href="{{ route('enquiry') }}" class="request blink">
                                         <i class="fas fa-paper-plane mr-5" aria-hidden="true"></i>
                                         <h6>Request Free PDF Sample</h6>
                                     </a>
@@ -351,7 +351,7 @@
                                 </div>
                                 <div class="row mb-4">
 
-                                    <a href="{{ route('enquire-before-buying') }}" class="pre-order">
+                                    <a href="{{ route('enquiry') }}" class="pre-order">
                                         <i class="fas fa-envelope mr-5" aria-hidden="true"></i>
                                         <h6>Pre-Order Enquiry</h6>
                                     </a>
@@ -359,7 +359,7 @@
                                 </div>
                                 <div class="row">
 
-                                    <a href="{{ route('enquire-before-buying') }}" class="discount">
+                                    <a href="{{ route('enquiry') }}" class="discount">
                                         <i class="fas fa-tags mr-5" aria-hidden="true"></i>
                                         <h6>Check Today's Discount</h6>
                                     </a>
