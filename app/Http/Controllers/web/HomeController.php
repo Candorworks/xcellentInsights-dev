@@ -10,6 +10,7 @@ use App\Models\Blog;
 use App\Models\Job;
 use App\Models\Cms;
 use App\Models\Country;
+use App\Models\Licences_types;
 use DB;
 
 class HomeController extends Controller
@@ -154,7 +155,29 @@ class HomeController extends Controller
     {
         $report = Report::where("slug", $report_slug)->first();
         $countries = Country::all();
-        return view('web.report.reportDetail', compact('report', 'countries'));
+        $license = Licences_types::all();
+        return view('web.report.reportDetail', compact('report', 'countries' , 'license'));
+    }
+
+    public function enquiry_sample(Request $request, $report_id){
+        $heading = "Request Sample";
+        $report = Report::where("id", $report_id)->first();
+        $countries = Country::all();
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
+    }
+
+    public function enquiry_buying(Request $request, $report_id){
+        $heading = "Enquiry before Buying";
+        $report = Report::where("id", $report_id)->first();
+        $countries = Country::all();
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
+    }
+
+    public function enquiry_discount(Request $request, $report_id){
+        $heading = "Check For Discount";
+        $report = Report::where("id", $report_id)->first();
+        $countries = Country::all();
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
     }
 
     public function partner()

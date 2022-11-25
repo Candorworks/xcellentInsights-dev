@@ -74,10 +74,21 @@
                                 </div>
                             </div>
                             <div class="report-content px-4 mt-4">
-                                <p class="menu-content desc" id="menu1">{!! $report->description !!}</p>
-                                <p class="menu-content toc" id="menu2">{!! $report->toc !!}</p>
-                                <p class="menu-content tables-figures" id="menu3">{!! $report->table_figures !!}</p>
-                                <p class="menu-content companies" id="menu4">{!! $report->companies !!}</p>
+                                <div class="menu-content desc" id="menu1">
+                                    <p>{!! $report->description !!}</p>
+                                </div>
+                                <div class="menu-content toc" id="menu2">
+                                    <p><b>Table of Content</b></p>
+                                    <p>{!! $report->toc !!}</p>
+                                </div>
+                                <div class="menu-content tables-figures" id="menu3">
+                                    <p><b>Tables and Figures</b></p>
+                                    <p>{!! $report->table_figures !!}</p>
+                                </div>
+                                <div class="menu-content companies" id="menu4">
+                                    <p><b>Key Players</b></p>
+                                    <p>{!! $report->companies !!}</p>
+                                </div>
 
                                 {{-- speak with analyst form --}}
                                 <div class="menu-content speak-with-analyst" id="menu5">
@@ -331,28 +342,22 @@
                         <div class="report-sidebar p-4">
                             <div class="request-preorder-discount">
                                 <div class="row mb-4">
-
-                                    <a href="{{ route('enquiry') }}" class="request blink">
+                                    <a href="{{ route('enquiry_sample', ['report_id' => $report['id']]) }}" class="request blink">
                                         <i class="fas fa-paper-plane mr-5" aria-hidden="true"></i>
                                         <h6>Request Free PDF Sample</h6>
                                     </a>
-
                                 </div>
                                 <div class="row mb-4">
-
-                                    <a href="{{ route('enquiry') }}" class="pre-order">
+                                    <a href="{{ route('enquiry_buying', ['report_id' => $report['id']]) }}" class="pre-order">
                                         <i class="fas fa-envelope mr-5" aria-hidden="true"></i>
                                         <h6>Pre-Order Enquiry</h6>
                                     </a>
-
                                 </div>
                                 <div class="row">
-
-                                    <a href="{{ route('enquiry') }}" class="discount">
+                                    <a href="{{ route('enquiry_discount', ['report_id' => $report['id']]) }}" class="discount">
                                         <i class="fas fa-tags mr-5" aria-hidden="true"></i>
                                         <h6>Check Today's Discount</h6>
                                     </a>
-
                                 </div>
                             </div>
                         </div>
@@ -384,8 +389,6 @@
                                                 <label for="enterprise" style="width: 138px;">Enterprise License
                                                 </label><span>$8000</span>
                                             </div>
-
-
                                         </div>
                                         {{-- buy now button --}}
                                         <div class="report-buy-now text-center p-3">
