@@ -23,7 +23,7 @@ Route::post('/report', [App\Http\Controllers\web\HomeController::class, 'reportS
 Route::get('/industry', [App\Http\Controllers\web\HomeController::class, 'industry'])->name('industry');
 Route::get('/category/{category_slug}', [App\Http\Controllers\web\HomeController::class, 'category'])->name('category');
 
-Route::get('/report', [App\Http\Controllers\web\HomeController::class, 'report'])->name('report');
+Route::get('/report-hub', [App\Http\Controllers\web\HomeController::class, 'report'])->name('report-hub');
 Route::get('/report/{report_slug}', [App\Http\Controllers\web\HomeController::class, 'report_detail'])->name('report_detail');
 Route::get('/enquiry/sample/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_sample'])->name('enquiry_sample');
 Route::get('/enquiry/buying/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_buying'])->name('enquiry_buying');
