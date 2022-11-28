@@ -32,7 +32,8 @@
                     <li><a href="{{ route('privacy') }}"><span>Privacy Policy</span></a></li>
                     <li><a href="{{ route('terms') }}"><span>Terms of Use</span></a></li>
                     <li><a href="{{ route('sitemap') }}"><span>HTML Sitemap</span></a></li>
-                    <li><a href="{{ route('agreement') }}"><span>Purchase &amp; <br> Licensing Agreement</span></a>
+                    <li><a href="{{ route('puchase-license-agreement') }}"><span>Purchase &amp; <br> Licensing
+                                Agreement</span></a>
                     </li>
                 </ul>
             </div>

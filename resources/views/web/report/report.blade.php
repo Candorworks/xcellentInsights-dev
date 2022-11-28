@@ -42,8 +42,8 @@
 
                     {{-- calling the modal when clicked on this button --}}
                     <div class="enquiry-now-report-hub text-center p-4 mt-4" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        <a href="#" class="py-2 px-5" id="enquiry-now">ENQUIRY NOW</a>
+                        data-bs-target="#ModalEnquiry">
+                        <a href="#" id="enquiry-now" class="py-2 px-5">ENQUIRY NOW</a>
                     </div>
 
 
@@ -74,9 +74,111 @@
                             </a>
                         </div>
                     @endforeach
-
+                    @include('web.include.dataNotFound')
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal-container">
+        <div class="modal fade" id="ModalEnquiry" tabindex="-1" aria-labelledby="ModalEnquiryLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 60vw">
+                <div class="modal-content">
+
+                    <div class="modal-body p-0">
+                        <div class="container">
+                            <div class="row form-controller">
+                                <div class="col-lg-6 p-0">
+                                    <div class="modalimagehead">
+                                        <h1 class="modal-title" id="startSellingLabel">Enquiry Now</h1>
+                                    </div>
+                                    <img src="{{ asset('web/images/XI_modal.png') }}" width="100%" height="100%"
+                                        alt="Image Processing" class="modalImage">
+                                </div>
+                                <div class="col-lg-6 p-3">
+                                    <form role="form" id="enquiry-form" method="POST" autocomplete="on"
+                                        action="https://www.xcellentinsights.com/lead/create"
+                                        onsubmit="return validateBot();">
+                                        <input type="hidden" name="_token"
+                                            value="TLc9btQ0HY5Zfgnwj4uxqkiSWeBmjgErJSdXDS6u">
+                                        <div class="form-group pb-3">
+                                            <div class="row pe-3">
+                                                <div class="col-md-6 pe-0">
+                                                    <input type="text" class="form-control shadow-inset" name="fname"
+                                                        placeholder="First name" required="">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" class="form-control shadow-inset" name="lname"
+                                                        placeholder="Last Name" required="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group pb-3 pe-3 ">
+                                            <input type="hidden" name="lead_type" id="lead_type_id" value="">
+                                            <input type="email" name="email" class="form-control shadow-inset"
+                                                placeholder="Enter email" required />
+                                        </div>
+                                        <div class="form-group pb-3 pe-3 ">
+                                            <input type="text" maxlength="12" onkeypress="return isNumber(event)"
+                                                class="form-control shadow-inset" placeholder="Enter number"
+                                                name="number" required>
+                                        </div>
+                                        <div class="form-group pb-3 pe-3 ">
+                                            <input type="text" class="form-control shadow-inset"
+                                                placeholder="Enter job title" name="job_title">
+                                        </div>
+                                        <div class="form-group pb-3 pe-3 ">
+                                            <input type="text" class="form-control shadow-inset"
+                                                placeholder="Enter company name" name="company">
+                                        </div>
+                                        <div class="form-group pb-3 pe-3 ">
+                                            <textarea class="form-control shadow-inset" maxlength="400" rows="3"
+                                                placeholder="Do you have any Specific field of Interest? Please suggest us" name="description"></textarea>
+                                        </div>
+                                        <div class="text-dark pe-3 form-group">
+                                            <span> We ensure/ offer complete secrecy of your personal details <a
+                                                    href="{{ route('privacy') }}"
+                                                    style="color: #002c60; text-decoration: none;" target="__blank">
+                                                    Privacy</a></span>
+                                        </div>
+                                        <div class="row form-group my-2 align-items-center">
+                                            <div class="col-lg-12">
+                                                <p>Are you Human?</p>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="speakWithAnalystValidationTextEnquiry"></label>
+                                            </div>
+                                            <div class="col-lg-4 mt-1 p-0" style="margin-left: -64px; margin-top: -20px;">
+                                                <input type="text"
+                                                    class="textbox form-control shadow-inset w-50 speakWithAnalystValidationEnquiry"
+                                                    name="captchainput" placeholder="?" />
+                                                <div class="text-danger fail" id="validationfail" style="display:none;">
+                                                    Validation
+                                                    failed</div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer pe-3">
+                                            <button type="button"
+                                                class="btn bg-grey mr-15 w-25 white-btn p-2 modalCloseBtn"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit"
+                                                class="speakWithAnalystSubmitBtnEnquiry submitcaptcha1 btn bg-grey w-25 white-btn p-2"
+                                                disabled style="border: none">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    {{-- script for 'are you human validation' --}}
+    <script src="{{ url('/web/js/numericCaptchaEnquiry.js') }}"></script>
 @endsection

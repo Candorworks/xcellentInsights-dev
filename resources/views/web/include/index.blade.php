@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{{ asset('web/images/favicon.png') }}" type="image/x-icon">
     <title>xcellentinsights</title>
 
     @include('web.include.style')
@@ -45,7 +46,7 @@
                             <div class="row form-controller">
                                 <div class="col-lg-6 p-0">
                                     <div class="modalimagehead">
-                                        <h1 class="modal-title" id="startSellingLabel"></h1>
+                                        <h1 class="modal-title" id="startSellingLabel">Get In Touch</h1>
                                     </div>
                                     <img src="{{ asset('web/images/XI_modal.png') }}" width="100%" height="100%"
                                         alt="Image Processing" class="modalImage">
@@ -117,7 +118,7 @@
                                                 class="btn bg-grey mr-15 w-25 white-btn p-2 modalCloseBtn"
                                                 data-bs-dismiss="modal">Close</button>
                                             <button type="submit"
-                                                class="speakWithAnalystSubmitBtnModal submitcaptcha1 btn bg-grey w-25 white-btn p-2"
+                                                class="speakWithAnalystSubmitBtn submitcaptcha1 btn bg-grey w-25 white-btn p-2"
                                                 disabled style="border: none">Submit</button>
                                         </div>
                                     </form>
@@ -130,6 +131,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 </body>

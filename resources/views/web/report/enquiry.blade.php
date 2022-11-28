@@ -163,11 +163,11 @@
                                             </div>
                                             <div class="row align-items-center">
                                                 <div class="col-lg-2">
-                                                    <label class="speakWithAnalystValidationText"></label>
+                                                    <label class="speakWithAnalystValidationTextEnquiry"></label>
                                                 </div>
                                                 <div class="col-lg-4">
                                                     <input type="tel"
-                                                        class="textbox form-control shadow-inset speakWithAnalystValidation"
+                                                        class="textbox form-control shadow-inset speakWithAnalystValidationEnquiry"
                                                         name="captchainput" placeholder="Ans"
                                                         style="margin-left: -20px;" />
                                                     <div class="text-danger fail" style="display: none!important; ">
@@ -179,7 +179,7 @@
                                     <div class="col-lg-12 ">
                                         <div class="submit-btn mt-4 text-center">
                                             <button type="submit" class="cta-btn px-3"
-                                                id="speakWithAnalystSubmitBtn">Submit
+                                                id="speakWithAnalystSubmitBtnEnquiry">Submit
                                             </button>
                                         </div>
                                     </div>
@@ -356,7 +356,9 @@
     </div>
 @section('script')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="{{ url('/web/js/numericaptcha.js') }}"></script>
+
+    {{-- script for 'are you human validation' --}}
+    <script src="{{ url('/web/js/numericCaptchaEnquiry.js') }}"></script>
 
     {{-- clientele --}}
     <script>

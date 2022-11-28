@@ -65,9 +65,9 @@ Route::get('/terms', function () {
 })->name('terms');
 
 // AGREEMENT
-Route::get('/agreement', function () {
-    return view('web.cms.agreement');
-})->name('agreement');
+Route::get('/puchase-license-agreement', function () {
+    return view('web.cms.puchase-license-agreement');
+})->name('puchase-license-agreement');
 
 // SITEMAP
 Route::get('/sitemap', function () {
@@ -78,5 +78,3 @@ Route::get('/sitemap', function () {
 Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');
 })->name('order');
-
-
