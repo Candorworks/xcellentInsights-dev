@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Mail\GetInTouch;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Lead;
+use App\Models\Leadtype;
+
+
 
 class MailController extends Controller
 {
@@ -18,8 +22,6 @@ class MailController extends Controller
         $form_data['Job_Title'] =  $request->get('job_title');
         $form_data['Company'] =  $request->get('company');
         $form_data['Description'] =  $request->get('description');
-
-        // dd(config('mail'));
 
         Mail::to("rutvika.parwal@candorworks.com")->send(new GetInTouch($form_data));
 

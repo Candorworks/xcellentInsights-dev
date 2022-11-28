@@ -47,7 +47,7 @@ Route::get('/news', [App\Http\Controllers\web\HomeController::class, 'news'])->n
 
 
 // Mail routes
-Route::post('getintouch', [App\Http\Controllers\web\MailController::class, 'getInTouch']);
+Route::post('/lead/create', [App\Http\Controllers\web\MailController::class, 'getInTouch'])->name('lead.create');
 
 // PRIVACY
 Route::get('/privacy-policy', function () {
