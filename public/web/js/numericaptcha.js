@@ -21,10 +21,10 @@ function checkInput() {
     var valid = hasInput && input == total;
     $(".fail").toggle(hasInput && !valid);
     if (input == total) {
-        $(".speakWithAnalystSubmitBtn").prop("disabled", false);
+        $(".speakWithAnalystSubmitBtnModal").prop("disabled", false);
         // $('#fail').css('display','none');
     } else {
-        $(".speakWithAnalystSubmitBtn").prop("disabled", true);
+        $(".speakWithAnalystSubmitBtnModal").prop("disabled", true);
         // $('#fail').css('display','block');
     }
 }
