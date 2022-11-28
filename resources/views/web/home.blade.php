@@ -31,7 +31,7 @@
                         </form>
                         <div class="btn-part">
                             <a class="btn get-quote" href="{{ route('contact') }}">Get Quote</a>
-                            <a class="btn view-report ms-md-2" href="{{ route('report') }}">View Reports</a>
+                            <a class="btn view-report ms-md-2" href="{{ route('report-hub') }}">View Reports</a>
                         </div>
                     </div>
                 </div>
@@ -298,7 +298,7 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="browse-all-btn">
-                            <a class="btn" href="{{ route('report') }}">Browse All Reports</a>
+                            <a class="btn" href="{{ route('report-hub') }}">Browse All Reports</a>
                         </div>
                     </div>
                 </div>
@@ -368,7 +368,7 @@
                     </div>
                     <div class="col-lg-2">
                         <div class="browse-all-btn">
-                            <a class="btn" href="{{ route('report') }}">Browse All Reports</a>
+                            <a class="btn" href="{{ route('report-hub') }}">Browse All Reports</a>
                         </div>
                     </div>
                 </div>

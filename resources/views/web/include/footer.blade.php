@@ -18,7 +18,7 @@
                 <ul class="footer-widget-links ps-0">
                     <li><a href="{{ route('home') }}"><span>Home</span></a></li>
                     <li><a href="{{ route('industry') }}"><span>Industry Vertical</span></a></li>
-                    <li><a href="{{ route('report') }}"><span>Report Hub</span></a></li>
+                    <li><a href="{{ route('report-hub') }}"><span>Report Hub</span></a></li>
                     <li><a href="{{ route('partner') }}"><span>Partner With Us</span></a></li>
                     <li><a href="{{ route('about') }}"><span>About Us</span></a></li>
                     <li><a href="{{ route('contact') }}"><span>Contact Us</span></a></li>
