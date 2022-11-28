@@ -2,6 +2,7 @@
 
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
+use app\Http\Controllers\web\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,8 +47,7 @@ Route::get('/news', [App\Http\Controllers\web\HomeController::class, 'news'])->n
 
 
 // Mail routes
-Route::post('/getintouch', [App\Http\Controllers\web\MailController::class, 'getintouch'])->name('getintouch');
-
+Route::post('getintouch', [App\Http\Controllers\web\MailController::class, 'getInTouch']);
 
 // PRIVACY
 Route::get('/privacy-policy', function () {

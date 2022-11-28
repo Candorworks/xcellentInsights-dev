@@ -11,7 +11,7 @@ class GetInTouch extends Mailable
 {
     use Queueable, SerializesModels;
 
-    var $data;
+    public $form_data;
 
     /**
      * Create a new message instance.
@@ -20,7 +20,7 @@ class GetInTouch extends Mailable
      */
     public function __construct($form_data)
     {
-        $this->data = $form_data;
+        $this->form_data = $form_data;
     }
 
     /**
@@ -30,6 +30,8 @@ class GetInTouch extends Mailable
      */
     public function build()
     {
-        return $this->view('email.getintouch');
+        return $this
+        ->subject('Get In Touch')
+        ->view('email.getintouch');
     }
 }
