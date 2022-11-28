@@ -379,11 +379,11 @@
                 autoplayHoverPause: true
             })
         });
-        $('#enquiry-form').on('submit', function() {
-            if ($('#enquiry-form').valid()) {
-                $('#speakWithAnalystSubmitBtn').prop('disabled', true);
-            }
-        });
+        // $('#enquiry-form').on('submit', function() {
+        //     if ($('#enquiry-form').valid()) {
+        //         $('#speakWithAnalystSubmitBtn').prop('disabled', true);
+        //     }
+        // });
     </script>
 
     {{-- customer testimonial carousel --}}

@@ -117,7 +117,7 @@
                                                 class="btn bg-grey mr-15 w-25 white-btn p-2 modalCloseBtn"
                                                 data-bs-dismiss="modal">Close</button>
                                             <button type="submit"
-                                                class="speakWithAnalystSubmitBtn submitcaptcha1 btn bg-grey w-25 white-btn p-2"
+                                                class="speakWithAnalystSubmitBtnModal submitcaptcha1 btn bg-grey w-25 white-btn p-2"
                                                 disabled style="border: none">Submit</button>
                                         </div>
                                     </form>
