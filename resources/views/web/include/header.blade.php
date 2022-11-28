@@ -19,7 +19,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('report*') || Request::is('category*') || Request::is('enquiry*') ? 'active' : '' }}"
-                        href="{{ route('report') }}">Report
+                        href="{{ route('report-hub') }}">Report
                         Hub</a>
                 </li>
                 <li class="nav-item">
