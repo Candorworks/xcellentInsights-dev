@@ -19,7 +19,7 @@ class MailController extends Controller
         $form_data['Company'] =  $request->get('company');
         $form_data['Description'] =  $request->get('description');
 
-        // dd($form_data['Name']);
+        // dd(config('mail'));
 
         Mail::to("rutvika.parwal@candorworks.com")->send(new GetInTouch($form_data));
 

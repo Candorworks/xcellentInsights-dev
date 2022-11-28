@@ -140,7 +140,7 @@ class HomeController extends Controller
         $category_name = $categories->name;
         $reports = Report::where('category_id', $category_id)->where('active', '1')->get();
         $results = Category::all();
-        return view('web.industry.category', compact('categories', 'results', 'reports'));
+        return view('web.report.report', compact('categories', 'results', 'reports'));
     }
 
 
