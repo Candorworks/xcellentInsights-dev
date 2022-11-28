@@ -1767,3 +1767,27 @@ body.modal-open {
 .licence-wrap-content {
    padding: 0rem 1rem;
 }
+
+/*****************************************  Data not found form *********************/
+
+#datanotFoundForm {
+   box-shadow: var(--soft-shadow);
+}
+
+#datanotFoundForm form input,
+#datanotFoundForm form textarea {
+   box-shadow: var(--inset-shadow);
+   background-color: #e6e7ee;
+}
+
+#datanotFoundForm form .card-footer button {
+   box-shadow: var(--soft-shadow);
+   border-radius: 35px;
+   background-color: white;
+   color: #002c60;
+}
+
+#datanotFoundForm form .card-footer button:hover {
+   background-color: #002c60;
+   color: white;
+}

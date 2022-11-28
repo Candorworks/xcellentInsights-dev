@@ -130,16 +130,16 @@ for (i = 0; i < accordionTeam.length; i++) {
 }
 
 // //modal form inner text logic
-var modalTitle = document.querySelector(".modal-title");
+// var modalTitle = document.querySelector(".modal-title");
 
-var getInTouch = document
-    .getElementById("get-in-touch")
-    .addEventListener("click", () => {
-        modalTitle.innerHTML = "Get In Touch";
-    });
+// var getInTouch = document
+//     .getElementById("get-in-touch")
+//     .addEventListener("click", () => {
+//         modalTitle.innerHTML = "Get In Touch";
+//     });
 
-var enquiryNow = document
-    .getElementById("enquiry-now")
-    .addEventListener("click", () => {
-        modalTitle.innerHTML = "Enquiry Now";
-    });
+// var enquiryNow = document
+//     .getElementById("enquiry-now")
+//     .addEventListener("click", () => {
+//         modalTitle.innerHTML = "Enquiry Now";
+//     });
