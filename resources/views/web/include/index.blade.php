@@ -51,11 +51,10 @@
                                         alt="Image Processing" class="modalImage">
                                 </div>
                                 <div class="col-lg-6 p-3">
-                                    <form role="form" id="enquiry-form" method="POST" autocomplete="on"
-                                        action="https://www.xcellentinsights.com/lead/create"
-                                        onsubmit="return validateBot();">
-                                        <input type="hidden" name="_token"
-                                            value="TLc9btQ0HY5Zfgnwj4uxqkiSWeBmjgErJSdXDS6u">
+                                    <form role="form" id="enquiry-form" method="POST" action="{{url('/getintouch')}}" autocomplete="on" onsubmit="return validateBot();">
+                                    @csrf
+                                        <input type="hidden" name="subject" value="Get In Touch">
+
                                         <div class="form-group pb-3">
                                             <div class="row pe-3">
                                                 <div class="col-md-6 pe-0">
