@@ -17,10 +17,9 @@ class LeadTypesSeeder extends Seeder
         DB::table('leadtypes')->truncate();
 
         $leadtypes = array(
-            array("name" => "speak With Us"),
             array("name" => "Get in Touch"),
             array("name" => "Become a Partner"),
-            array("name" => "Enquiry Form"),
+            array("name" => "Enquire Now"),
             array("name" => "Contact Us"),
             array("name" => "Speak with Analyst"),
             array("name" => "Enquiry before Buying"),

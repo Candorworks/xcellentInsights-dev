@@ -52,7 +52,7 @@
                                         alt="Image Processing" class="modalImage">
                                 </div>
                                 <div class="col-lg-6 p-3">
-                                    <form role="form" id="enquiry-form" method="POST" action="{{url('/getintouch')}}" autocomplete="on" onsubmit="return validateBot();">
+                                    <form role="form" id="enquiry-form" method="POST" action="{{ route('lead.create') }}" autocomplete="on" onsubmit="return validateBot();">
                                     @csrf
                                         <input type="hidden" name="subject" value="Get In Touch">
 
@@ -69,7 +69,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group pb-3 pe-3 ">
-                                            <input type="hidden" name="lead_type" id="lead_type_id" value="">
+                                            <input type="hidden" name="lead_type" id="lead_type_id" value="1">
                                             <input type="email" name="email" class="form-control shadow-inset"
                                                 placeholder="Enter email" required />
                                         </div>
