@@ -15,6 +15,13 @@ class MailController extends Controller
 {
     public function getInTouch(Request $request)
     {
+
+        $lead_row = Lead::create($request->all());
+        $lead_row->name=$request->fname.' '.$request->lname;
+        $lead_row->ip = $request->ip();
+        $lead_row->save();
+
+
         $form_data['Subject'] =  $request->get('subject');
         $form_data['Name'] =  $request->get('fname') . ' ' . $request->get('lname');
         $form_data['Email'] =  $request->get('email');

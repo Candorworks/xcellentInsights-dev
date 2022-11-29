@@ -97,11 +97,9 @@
                                         alt="Image Processing" class="modalImage">
                                 </div>
                                 <div class="col-lg-6 p-3">
-                                    <form role="form" id="enquiry-form" method="POST" autocomplete="on"
-                                        action="https://www.xcellentinsights.com/lead/create"
-                                        onsubmit="return validateBot();">
-                                        <input type="hidden" name="_token"
-                                            value="TLc9btQ0HY5Zfgnwj4uxqkiSWeBmjgErJSdXDS6u">
+                                    <form role="form" id="enquiry-form" method="POST" autocomplete="on" action="{{ route('lead.create') }}"  onsubmit="return validateBot();">
+                                    @csrf
+                                        <input type="hidden" name="subject"  value="Enquire Now">
                                         <div class="form-group pb-3">
                                             <div class="row pe-3">
                                                 <div class="col-md-6 pe-0">
@@ -115,7 +113,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group pb-3 pe-3 ">
-                                            <input type="hidden" name="lead_type" id="lead_type_id" value="">
+                                            <input type="hidden" name="lead_type" id="lead_type_id" value="3">
                                             <input type="email" name="email" class="form-control shadow-inset"
                                                 placeholder="Enter email" required />
                                         </div>
