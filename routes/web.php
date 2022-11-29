@@ -78,3 +78,6 @@ Route::get('/sitemap', function () {
 Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');
 })->name('order');
+
+// Thankyou
+Route::get('/thankyou',[LeadController::class,'thankyou'])->name('web.form.thankyou');

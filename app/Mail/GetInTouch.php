@@ -30,15 +30,15 @@ class GetInTouch extends Mailable
      */
     public function build()
     {
-        return $this->view('email.getintouch')
-            ->with([
-                'Subject' => $this->form_data['Subject'],
-                'Name' => $this->form_data['Name'],
-                'Email' => $this->form_data['Email'],
-                'Number' => $this->form_data['Number'],
-                'Job_Title' => $this->form_data['Job_Title'],
-                'Company' => $this->form_data['Company'],
-                'Description' => $this->form_data['Description'],
-            ]);
+        return $this->view('email.getintouch');
+            // ->with([
+            //     'Subject' => $this->form_data['Subject'],
+            //     'Name' => $this->form_data['Name'],
+            //     'Email' => $this->form_data['Email'],
+            //     'Number' => $this->form_data['Number'],
+            //     'Job_Title' => $this->form_data['Job_Title'],
+            //     'Company' => $this->form_data['Company'],
+            //     'Description' => $this->form_data['Description'],
+            // ]);
     }
 }

@@ -18,7 +18,7 @@ class CreateLeadsTable extends Migration
             $table->id();
             $table->integer('lead_type');
             $table->integer('report_id')->nullable();
-            $table->string('name' , 100);
+            $table->string('name' , 100)->nullable();
             $table->string('email' , 100);
             $table->string('website' , 100)->nullable();
             $table->string('country' , 100)->nullable();
