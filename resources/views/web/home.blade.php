@@ -450,7 +450,7 @@
                         {{-- individual vertical --}}
                         @foreach ($results as $result)
                             <div class="col-lg-3 services-card mx-3">
-                                <a href="#">
+                                <a href="{{ route('category', ['category_slug' => $result['slug']]) }}">
                                     <div class="industry_verticle_category">
                                         <div class="row">
                                             <div class="icon-box-verticals">
