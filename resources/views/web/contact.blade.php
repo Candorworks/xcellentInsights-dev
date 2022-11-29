@@ -59,8 +59,9 @@
             <div class="pb-4 get-in-touch-heading">
                 <h2>Get In Touch Today</h2>
             </div>
-            <form id="contact-us-form" class="contact-form" method="post" action="">
+            <form id="contact-us-form" class="contact-form" method="post" action="{{ route('lead.create') }}">
                 @csrf
+                <input type="hidden" name="subject" value="Contact Us">
                 <div class="row mb-3">
                     <div class="col-lg-4">
                         <div class="form-group">
@@ -70,6 +71,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="form-group mb-0">
+                        <input type="hidden" name="lead_type" id="lead_type_id" value="4">
                             <input type="email" class="form-control shadow-inset" name="email" placeholder=" E-mail"
                                 required="">
                         </div>

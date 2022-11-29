@@ -92,14 +92,15 @@
 
                                 {{-- speak with analyst form --}}
                                 <div class="menu-content speak-with-analyst" id="menu5">
-                                    <form id="speak-with-analyst-form" method="post" action="">
+                                    <form id="speak-with-analyst-form" method="post" action="{{ route('lead.create') }}">
                                         @csrf
+                                        <input type="hidden" name="subject" value="Speak with Analyst">
                                         <h3 style="color: #002c60">Speak with Analyst</h3>
                                         <div class="row mb-3 mt-4">
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <input type="hidden" name="lead_type" value="">
-                                                    <input type="hidden" name="report_id" value="">
+                                                    <input type="hidden" name="lead_type" value="5">
+                                                    <input type="hidden" name="report_id" value="{{$report->id}}">
                                                     <div class="row">
                                                         <div class="col-lg-6 pe-0">
                                                             <input type="text" class="form-control shadow-inset"

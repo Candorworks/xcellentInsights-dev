@@ -48,6 +48,7 @@ Route::get('/news', [App\Http\Controllers\web\HomeController::class, 'news'])->n
 
 // Mail routes
 Route::post('/lead/create', [App\Http\Controllers\web\MailController::class, 'getInTouch'])->name('lead.create');
+Route::get('/thankyou',[App\Http\Controllers\web\MailController::class,'thankyou'])->name('web.form.thankyou');
 
 // PRIVACY
 Route::get('/privacy-policy', function () {
@@ -79,7 +80,4 @@ Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');
 })->name('order');
 
-// THANK YOU
-Route::get('/thankyou', function () {
-    return view('web.thankyou');
-})->name('thankyou');
+

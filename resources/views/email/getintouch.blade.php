@@ -21,29 +21,55 @@ th, td {
     <table style="width:100%">
     <tr>
         <th>Name:</th>
-        <td> {{ $Name }}</td>
+        <td>{{$form_data['name']}}</td>
     </tr>
     <tr>
         <th>Email:</th>
-        <td>{{ $Email }}</td>
+        <td>{{$form_data['email']}}</td>
     </tr>
     <tr>
         <th>Number:</th>
-        <td> {{ $Number }}</td>
+        <td>{{$form_data['number']}}</td>
+    </tr>
+    <tr>
+        <th>Lead Type</th>
+        <td>{{ $lead_name}}</td>
+    </tr>
+    <tr>
+        <th>Report Link</th>
+        <td>{{ $form_data['report_id'] != 0 ? @'https://www.xcellentinsights.com/reports/'.$report_slug : ''}}</td>
+    </tr>
+    <tr>
+        <th>Report UniqueID</th>
+        <td>{{ $form_data['report_id'] != 0 ? $report_unique_id : ''}}</td>
+    </tr>
+    <tr>
+        <th>Report Title</th>
+        <td>{{ $form_data['report_id'] != 0 ? $report_title : ''}}</td>
+    </tr>
+    <tr>
+        <th>Website</th>
+        <td>{{$form_data['website']}}</td>
+    </tr>
+    <tr>
+        <th>Country</th>
+        <td>{{$form_data['country']}}</td>
     </tr>
     <tr>
         <th>Description</th>
-        <td>{{ $Description }}</td>
+        <td>{{$form_data['description']}}</td>
     </tr>
     <tr>
         <th>Company</th>
-        <td>{{ $Company }}</td>
+        <td>{{$form_data['company']}}</td>
     </tr>
     <tr>
         <th>Job Title</th>
-        <td>{{ $Job_Title }}</td>
+        <td>{{$form_data['job_title']}}</td>
     </tr>
     </table>
+    <!-- Xcellent Insights Team</p> -->
 </body>
 </html>
+
 

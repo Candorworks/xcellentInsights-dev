@@ -88,13 +88,14 @@
 
                             {{-- free PDF form --}}
                             <div class="free-pdf-form mx-5">
-                                <form id="free-pdf-form" method="post" action="">
+                                <form id="free-pdf-form" method="post" action="{{ route('lead.create') }}">
                                     @csrf
+                                    <input type="hidden" name="subject" value="{{ $heading }}">
                                     <div class="row mb-3 mt-4">
                                         <div class="col-lg-6">
                                             <div class="form-group">
-                                                <input type="hidden" name="lead_type" value="">
-                                                <input type="hidden" name="report_id" value="">
+                                                <input type="hidden" name="lead_type" value="{{$leadtype_id}}">
+                                                <input type="hidden" name="report_id" value="{{ $report->id }}">
                                                 <div class="row">
                                                     <div class="col-lg-6 pe-0">
                                                         <input type="text" class="form-control shadow-inset"
