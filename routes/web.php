@@ -45,6 +45,8 @@ Route::get('/blog/category/{slug}', [App\Http\Controllers\web\HomeController::cl
 
 Route::get('/news', [App\Http\Controllers\web\HomeController::class, 'news'])->name('news');
 
+Route::get('/sitemap', [App\Http\Controllers\web\HomeController::class, 'sitemap'])->name('sitemap');
+
 
 // Mail routes
 Route::post('/lead/create', [App\Http\Controllers\web\MailController::class, 'getInTouch'])->name('lead.create');
@@ -70,10 +72,7 @@ Route::get('/puchase-license-agreement', function () {
     return view('web.cms.puchase-license-agreement');
 })->name('puchase-license-agreement');
 
-// SITEMAP
-Route::get('/sitemap', function () {
-    return view('web.cms.sitemap');
-})->name('sitemap');
+
 
 // ORDER
 Route::get('/how-to-order', function () {
