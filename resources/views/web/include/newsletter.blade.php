@@ -5,9 +5,8 @@
                 <h1 class="text-white fw-bold">Newsletter Subscribe</h1>
             </div>
             <div class="col-lg-6">
-                <form class="newsletter-form">
-                    <input type="email" name="subscribeEmail" id="subscribeEmail" placeholder="Your email address"
-                        required="">
+                <form class="newsletter-form" method="post" action="{{route('subscribe')}}">
+                    <input type="email" name="subscribeEmail" id="subscribeEmail" placeholder="Your email address" required="">
                     <button type="button" onclick="subscribe();">Subscribe</button>
                 </form>
             </div>
@@ -28,9 +27,6 @@
             $.ajax({
                     url: ENDPOINT + "/subscribe",
                     datatype: "json",
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
                     data: {
                         email: subscribeEmail
                     },
@@ -48,11 +44,10 @@
                 .fail(function(jqXHR, ajaxOptions, thrownError) {
                     swal("Oops!", "Something went wrong, please try again!", "error");
                 });
+
         } else {
             swal("Oops!", "please enter valid email address!", "error");
             return;
         }
-
-
     }
 </script>
