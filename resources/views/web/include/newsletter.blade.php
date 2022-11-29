@@ -25,34 +25,34 @@
         var subscribeEmail = $('#subscribeEmail').val();
         var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         if (subscribeEmail.match(mailformat)) {
+            $.ajax({
+                    url: ENDPOINT + "/subscribe",
+                    datatype: "json",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {
+                        email: subscribeEmail
+                    },
+                    type: "post",
+                })
+                .done(function(response) {
+                    if (response.status == "200") {
+                        swal("Newsletter subscribed");
+                        return;
+                    } else {
+                        swal("Newsletter Already subscribed");
+                    }
 
+                })
+                .fail(function(jqXHR, ajaxOptions, thrownError) {
+                    swal("Oops!", "Something went wrong, please try again!", "error");
+                });
         } else {
             swal("Oops!", "please enter valid email address!", "error");
             return;
         }
 
-        $.ajax({
-                url: ENDPOINT + "/subscribe",
-                datatype: "json",
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                data: {
-                    email: subscribeEmail
-                },
-                type: "post",
-            })
-            .done(function(response) {
-                if (response.status == "200") {
-                    swal("Newsletter subscribed");
-                    return;
-                } else {
-                    swal("Newsletter Already subscribed");
-                }
 
-            })
-            .fail(function(jqXHR, ajaxOptions, thrownError) {
-                swal("Oops!", "Something went wrong, you should choose again!", "error");
-            });
     }
 </script>

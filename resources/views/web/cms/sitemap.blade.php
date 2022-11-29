@@ -17,7 +17,7 @@
                         <h5>Industry Vertical</h5>
                     </div>
                     <ul class=" p-0">
-                        <li> <a href="{{ route('report') }}">Report</a>
+                        <li> <a href="{{ route('report-hub') }}">Report</a>
                         </li>
                     </ul>
                 </div>
