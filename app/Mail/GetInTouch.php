@@ -38,7 +38,8 @@ class GetInTouch extends Mailable
      */
     public function build()
     {
-        return $this->view('email.getintouch');
+        return $this->subject($this->lead_name)->view('email.getintouch');
+        // return $this->view('email.getintouch');
             // ->with([
             //     'Subject' => $this->form_data['Subject'],
             //     'Name' => $this->form_data['Name'],

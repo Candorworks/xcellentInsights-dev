@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Lead;
 use App\Models\Leadtype;
+use App\Models\Newsletter;
 use App\Models\Report;
 use Session;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -21,38 +23,65 @@ class MailController extends Controller
         $lead_row = Lead::create($request->all());
         // dd($request->input());
 
-        $lead_row->name= $lead_row->name==null?$request->fname.' '.$request->lname:$request->name;
+        $lead_row->name = $lead_row->name == null ? $request->fname . ' ' . $request->lname : $request->name;
         $lead_row->ip = $request->ip();
         $lead_row->save();
 
-        
 
-        $leadtype = Leadtype::select('id' , 'name')->where('id' , $lead_row->lead_type)->first();
+
+        $leadtype = Leadtype::select('id', 'name')->where('id', $lead_row->lead_type)->first();
         $lead_name = $leadtype->name;
 
-        $report = Report::select('unique_id' , 'title' , 'slug')->where('id' , $lead_row->report_id)->first();
-        $report_title = $report==null?null:$report->title;
-        $report_unique_id = $report==null?null:$report->unique_id;
-        $report_slug = $report==null?null: $report->slug;
+        $report = Report::select('unique_id', 'title', 'slug')->where('id', $lead_row->report_id)->first();
+        $report_title = $report == null ? null : $report->title;
+        $report_unique_id = $report == null ? null : $report->unique_id;
+        $report_slug = $report == null ? null : $report->slug;
 
-        Mail::to("rutvika.parwal@candorworks.com")->send(new GetInTouch($lead_row , $lead_name , $report_title , $report_slug , $report_unique_id));
+        Mail::to("rutvika.parwal@candorworks.com")->send(new GetInTouch($lead_row, $lead_name, $report_title, $report_slug, $report_unique_id));
 
-        return redirect()->route('web.form.thankyou')->with('success','Your Request successfull submitted');
+        return redirect()->route('web.form.thankyou')->with('success', 'Your Request successfull submitted');
     }
 
-    public function thankyou(){
-      
-        if(Session::has('success')){
+    public function thankyou()
+    {
+
+        if (Session::has('success')) {
             return view('web.thankyou');
         }
         return redirect()->route('home');
     }
 
-    public function error(){
-      
-        if(Session::has('error')){
+    public function error()
+    {
+
+        if (Session::has('error')) {
             return view('web.wrong');
         }
         return redirect()->route('home');
+    }
+
+    function subscribe(Request $request)
+    {
+        $email = Newsletter::where('email', $request->subscribeEmail)->where('active', '1')->first();
+
+
+        if ($email != null) {
+            return response()->json(['status' => '422', 'lenght' => 1]);
+        } else {
+            DB::beginTransaction();
+            try {
+                $newsletter = new Newsletter();
+                $newsletter->email = $request->get('subscribeEmail');
+                $newsletter->active = "1";
+                $newsletter->save();
+                DB::commit();
+                return response()->json(['status' => '200', 'lenght' => 0]);
+            } catch (\Throwable $e) {
+                report($e);
+                DB::rollBack();
+                return redirect()->route('home')->withFail('Error');
+            }
+            
+        }
     }
 }
