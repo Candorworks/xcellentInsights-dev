@@ -103,7 +103,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 p-0 partner-with-us-form">
-                    <form id="partner-with-us" class="contact-form" method="post" action="">
+                    <form id="partner-with-us" class="contact-form" method="post" action="{{ route('lead.create') }}">
                         @csrf
                         <div class="row p-4">
                             <div class="col-md-12">
@@ -111,7 +111,7 @@
                                     <div class="col-lg-6 mb-3">
                                         <div class="form-group">
                                             {{-- <label>Name*</label> --}}
-                                            <input type="hidden" name="lead_type" value="">
+                                            <input type="hidden" name="lead_type" value="2">
                                             <!-- <input type="text" class="form-control form-fields" name="name" placeholder="Enter name" /> -->
                                             <div class="row">
                                                 <div class="col-md-6 pe-0">

@@ -1,9 +1,3 @@
-<?php 
-dd($form_data['lead_type']);
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,39 +33,39 @@ th, td {
     </tr>
     <tr>
         <th>Lead Type</th>
-        <td>{{ @$params['data']->leadtype->name}}</td>
+        <td>{{ $lead_name}}</td>
     </tr>
     <tr>
         <th>Report Link</th>
-        <td>{{ $params['data']->report_id != 0 ? @'https://www.xcellentinsights.com/reports/'.$params['data']->report->slug : ''}}</td>
+        <td>{{ $form_data['report_id'] != 0 ? @'https://www.xcellentinsights.com/reports/'.$report_slug : ''}}</td>
     </tr>
     <tr>
         <th>Report UniqueID</th>
-        <td>{{ $params['data']->report_id != 0 ? @$params['data']->report->unique_id : ''}}</td>
+        <td>{{ $form_data['report_id'] != 0 ? $report_unique_id : ''}}</td>
     </tr>
     <tr>
         <th>Report Title</th>
-        <td>{{ $params['data']->report_id != 0 ? @$params['data']->report->title : ''}}</td>
+        <td>{{ $form_data['report_id'] != 0 ? $report_title : ''}}</td>
     </tr>
     <tr>
         <th>Website</th>
-        <td>{{ $params['data']->website}}</td>
+        <td>{{$form_data['website']}}</td>
     </tr>
     <tr>
         <th>Country</th>
-        <td>{{ $params['data']->country}}</td>
+        <td>{{$form_data['country']}}</td>
     </tr>
     <tr>
         <th>Description</th>
-        <td>{{ $params['data']->description}}</td>
+        <td>{{$form_data['description']}}</td>
     </tr>
     <tr>
         <th>Company</th>
-        <td>{{ $params['data']->company}}</td>
+        <td>{{$form_data['company']}}</td>
     </tr>
     <tr>
         <th>Job Title</th>
-        <td>{{ $params['data']->job_title}}</td>
+        <td>{{$form_data['job_title']}}</td>
     </tr>
     </table>
     <!-- Xcellent Insights Team</p> -->
