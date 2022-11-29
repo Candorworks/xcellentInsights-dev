@@ -17,8 +17,9 @@
                         <h5>Industry Vertical</h5>
                     </div>
                     <ul class=" p-0">
-                        <li> <a href="{{ route('report-hub') }}">Report</a>
-                        </li>
+                        @foreach($categories as $category)
+                        <li> <a href="{{ route('category', ['category_slug' => $category['slug']]) }}">{{$category->name}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

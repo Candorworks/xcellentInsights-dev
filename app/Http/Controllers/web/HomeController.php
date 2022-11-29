@@ -260,4 +260,9 @@ class HomeController extends Controller
             return redirect()->back()->withFail('Error Oops somethings wents wrong.');
         }
     }
+
+    public function sitemap(){
+        $categories = Category::all();
+        return view('web.cms.sitemap' , compact('categories'));
+    }
 }
