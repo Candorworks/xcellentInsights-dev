@@ -78,3 +78,8 @@ Route::get('/sitemap', function () {
 Route::get('/how-to-order', function () {
     return view('web.cms.how_to_order');
 })->name('order');
+
+// THANK YOU
+Route::get('/thankyou', function () {
+    return view('web.thankyou');
+})->name('thankyou');
