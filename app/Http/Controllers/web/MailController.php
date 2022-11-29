@@ -62,26 +62,26 @@ class MailController extends Controller
 
     function subscribe(Request $request)
     {
-        $email = Newsletter::where('email', $request->subscribeEmail)->where('active', '1')->first();
+        $email = Newsletter::where('email', $request->email)->where('active', '1')->first();
+        $email_active = $email->active;
+        // dd($email_active);
 
-
-        if ($email != null) {
-            return response()->json(['status' => '422', 'lenght' => 1]);
-        } else {
+        if ($email != null && $email_active == "1") {
+            return response()->json(['status' => '422', 'length' => 1]);
+        }  else {
             DB::beginTransaction();
             try {
                 $newsletter = new Newsletter();
-                $newsletter->email = $request->get('subscribeEmail');
+                $newsletter->email = $request->get('email');
                 $newsletter->active = "1";
                 $newsletter->save();
                 DB::commit();
-                return response()->json(['status' => '200', 'lenght' => 0]);
+                return response()->json(['status' => '200', 'length' => 0]);
             } catch (\Throwable $e) {
                 report($e);
                 DB::rollBack();
                 return redirect()->route('home')->withFail('Error');
             }
-            
         }
     }
 }
