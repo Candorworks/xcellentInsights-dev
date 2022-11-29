@@ -21,7 +21,7 @@ class MailController extends Controller
         $lead_row = Lead::create($request->all());
         // dd($request->input());
 
-        $lead_row->name=$request->fname.' '.$request->lname;
+        $lead_row->name= $lead_row->name==null?$request->fname.' '.$request->lname:$request->name;
         $lead_row->ip = $request->ip();
         $lead_row->save();
 

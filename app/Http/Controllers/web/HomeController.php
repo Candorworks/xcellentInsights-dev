@@ -11,6 +11,7 @@ use App\Models\Job;
 use App\Models\Cms;
 use App\Models\Country;
 use App\Models\Licences_types;
+use App\Models\Leadtype;
 use DB;
 
 class HomeController extends Controller
@@ -161,23 +162,29 @@ class HomeController extends Controller
 
     public function enquiry_sample(Request $request, $report_id){
         $heading = "Request Sample";
+        $leadtype = Leadtype::select('id' ,  'name')->where('name' , $heading)->first();
+        $leadtype_id = $leadtype->id;
         $report = Report::where("id", $report_id)->first();
         $countries = Country::all();
-        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries' , 'leadtype_id'));
     }
 
     public function enquiry_buying(Request $request, $report_id){
         $heading = "Enquiry before Buying";
+        $leadtype = Leadtype::select('id' ,  'name')->where('name' , $heading)->first();
+        $leadtype_id = $leadtype->id;
         $report = Report::where("id", $report_id)->first();
         $countries = Country::all();
-        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries' , 'leadtype_id'));
     }
 
     public function enquiry_discount(Request $request, $report_id){
         $heading = "Check For Discount";
+        $leadtype = Leadtype::select('id' ,  'name')->where('name' , $heading)->first();
+        $leadtype_id = $leadtype->id;
         $report = Report::where("id", $report_id)->first();
         $countries = Country::all();
-        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries'));
+        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries' , 'leadtype_id'));
     }
 
     public function checkout(Request $request, $report_id){
