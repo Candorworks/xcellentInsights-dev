@@ -25,9 +25,9 @@ class CreateLeadsTable extends Migration
             $table->bigInteger('number');
             $table->text('description', 255);
             $table->string('company' , 100);
-            $table->string('job_title' , 100);
-            $table->string('report_no' , 10)->nullable();
-            $table->string('new_publications' , 10)->nullable();
+            $table->string('job_title' , 100)->nullable();
+            $table->string('reports_no' , 255)->nullable();
+            $table->string('new_publications' , 255)->nullable();
             $table->string('ip' , 100)->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
