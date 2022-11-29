@@ -132,7 +132,8 @@
                                         <h6><a href="{{ route('sitemap') }}">HTML Sitemap</a></h6>
                                     </div>
                                     <div class="individual-links">
-                                        <h6><a href="{{ route('agreement') }}">Purchase & Licensing Agreement</a></h6>
+                                        <h6><a href="{{ route('puchase-license-agreement') }}">Purchase & Licensing
+                                                Agreement</a></h6>
                                     </div>
                                 </div>
                             </div>

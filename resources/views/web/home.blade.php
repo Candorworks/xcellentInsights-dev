@@ -524,6 +524,9 @@
     {{-- customer testimonial carousel --}}
     <script>
         $(document).ready(function() {
+
+            $('#search-bar').hide();
+
             $('#testi').owlCarousel({
                 loop: true,
                 items: 2,
@@ -532,12 +535,7 @@
                 autoplayTimeout: 2000,
                 autoplayHoverPause: true
             })
-        });
-    </script>
 
-    {{-- home page counter --}}
-    <script>
-        $(document).ready(function() {
             var counter = $('.rs-count');
             setTimeout(() => {
                 if (counter.length) {
@@ -548,12 +546,6 @@
                 }
             }, 1000);
 
-        });
-    </script>
-
-    {{-- top selling carousel --}}
-    <script>
-        $(document).ready(function() {
             $('#topSellingReport').owlCarousel({
                 items: 3,
                 loop: true,
@@ -570,12 +562,7 @@
                 autoplayTimeout: 2000,
                 autoplayHoverPause: true
             });
-        });
-    </script>
 
-    {{-- clientele --}}
-    <script>
-        $(document).ready(function() {
             $('#client-logo-carousel').owlCarousel({
                 loop: true,
                 items: 5,
@@ -597,10 +584,32 @@
         });
     </script>
 
+    {{-- home page counter --}}
+    <script>
+        $(document).ready(function() {
+
+
+        });
+    </script>
+
+    {{-- top selling carousel --}}
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+
+    {{-- clientele --}}
+    <script>
+        $(document).ready(function() {
+
+        });
+    </script>
+
     {{-- hide search bar on home page --}}
     <script>
         $(document).ready(function() {
-            $('#search-bar').hide();
+
         })
     </script>
 @endsection
