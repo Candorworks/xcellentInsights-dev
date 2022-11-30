@@ -63,10 +63,10 @@ class MailController extends Controller
     function subscribe(Request $request)
     {
         $email = Newsletter::where('email', $request->email)->where('active', '1')->first();
-        $email_active = $email->active;
-        // dd($email_active);
+        // dd($email != null);
 
-        if ($email != null && $email_active == "1") {
+
+        if ($email != null) {
             return response()->json(['status' => '422', 'length' => 1]);
         }  else {
             DB::beginTransaction();
@@ -78,6 +78,7 @@ class MailController extends Controller
                 DB::commit();
                 return response()->json(['status' => '200', 'length' => 0]);
             } catch (\Throwable $e) {
+                dd($e);
                 report($e);
                 DB::rollBack();
                 return redirect()->route('home')->withFail('Error');
