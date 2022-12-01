@@ -37,7 +37,7 @@ class MailController extends Controller
         $report_unique_id = $report == null ? null : $report->unique_id;
         $report_slug = $report == null ? null : $report->slug;
 
-        Mail::to("rutvika.parwal@candorworks.com")->send(new GetInTouch($lead_row, $lead_name, $report_title, $report_slug, $report_unique_id));
+        Mail::to("manoranjan.panigrahi@candorworks.com")->send(new GetInTouch($lead_row, $lead_name, $report_title, $report_slug, $report_unique_id));
 
         return redirect()->route('web.form.thankyou')->with('success', 'Your Request successfull submitted');
     }
@@ -68,7 +68,7 @@ class MailController extends Controller
 
         if ($email != null) {
             return response()->json(['status' => '422', 'length' => 1]);
-        }  else {
+        } else {
             DB::beginTransaction();
             try {
                 $newsletter = new Newsletter();

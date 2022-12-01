@@ -7,7 +7,8 @@
             <div class="col-lg-6">
                 <form class="newsletter-form" onsubmit="subscribe()">
                     @csrf
-                    <input type="email" name="subscribeEmail" id="subscribeEmail" placeholder="Your email address" required="">
+                    <input type="email" name="subscribeEmail" id="subscribeEmail" placeholder="Your email address"
+                        required="">
                     <button type="button" onclick="subscribe()">Subscribe</button>
                 </form>
             </div>

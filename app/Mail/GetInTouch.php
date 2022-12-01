@@ -22,7 +22,7 @@ class GetInTouch extends Mailable
      *
      * @return void
      */
-    public function __construct($form_data , $lead_name ,$report_title , $report_slug , $report_unique_id)
+    public function __construct($form_data, $lead_name, $report_title, $report_slug, $report_unique_id)
     {
         $this->form_data = $form_data;
         $this->lead_name = $lead_name;

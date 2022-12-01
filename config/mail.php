@@ -92,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'rutvika.parwal@candorworks.com'),
-        'name' => env('MAIL_FROM_NAME', 'Rutvika'),
+        'address' => env('MAIL_FROM_ADDRESS', 'manoranjan.panigrahi@candorworks.com'),
+        'name' => env('MAIL_FROM_NAME', 'Manoranjan'),
     ],
 
     /*
