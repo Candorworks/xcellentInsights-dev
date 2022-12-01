@@ -20,47 +20,48 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="openings accordion ps-0" id="accordionPanelsStayOpenExample">
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                                    <button class="accordion-button opening-heading collapsed" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                                        aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                        DM- Executive
-                                    </button>
-                                </h2>
-                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                                    aria-labelledby="panelsStayOpen-headingTwo">
-                                    <div class="accordion-body p-0">
-                                        <div class="opening-desc">
-                                            <div class="row mb-3">
-                                                <div class="col-lg-6 fw-semibold">Location:</div>
-                                                <div class="col-lg-6"></div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-lg-6 fw-semibold">No of position:</div>
-                                                <div class="col-lg-6">
-                                                    <p></p>
+                        @foreach ($results as $result)
+                            <div class="openings accordion ps-0">
+                                <div class="accordion-item ps-0 my-2">
+                                    <h2 class="accordion-header" id="panelsStayOpen-heading">
+                                        <button class="accordion-button opening-heading collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            {{ $result->title }}
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="panelsStayOpen-heading">
+                                        <div class="accordion-body p-0">
+                                            <div class="opening-desc">
+                                                <div class="row mb-3">
+                                                    <div class="col-lg-6 fw-semibold">Location:</div>
+                                                    <div class="col-lg-6">{{ $result->location }}</div>
                                                 </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-lg-6 fw-semibold">Experience required:</div>
-                                                <div class="col-lg-6"></div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-lg-6 fw-semibold">Roles & Responsibilities:</div>
-                                                <div class="col-lg-6"></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-6 fw-semibold">What we are looking for in you:</div>
-                                                <div class="col-lg-6"></div>
+                                                <div class="row mb-3">
+                                                    <div class="col-lg-6 fw-semibold">No of position:</div>
+                                                    <div class="col-lg-6">
+                                                        <p>{{ $result->no_vacancy }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-lg-6 fw-semibold">Experience required:</div>
+                                                    <div class="col-lg-6">{!! $result->experience !!}</div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-lg-6 fw-semibold">Roles & Responsibilities:</div>
+                                                    <div class="col-lg-6">{!! $result->roles !!}</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-6 fw-semibold">What we are looking for in you:</div>
+                                                    <div class="col-lg-6">{!! $result->roles !!}</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -80,8 +81,11 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <select class="form-control input-field-career" name="job_id">
-                                        <option value="">------- Select Opening -----</option>
-                                        <option name="DM-Executive" id="">DM-Executive</option>
+                                        <option value="" selected hidden disabled>------- Select Opening -----
+                                        </option>
+                                        @foreach ($results as $result)
+                                            <option value="{{ $result->id }}">{{ $result->title }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
