@@ -52,6 +52,7 @@ Route::get('/sitemap', [App\Http\Controllers\web\HomeController::class, 'sitemap
 Route::post('/lead/create', [App\Http\Controllers\web\MailController::class, 'getInTouch'])->name('lead.create');
 Route::get('/thankyou',[App\Http\Controllers\web\MailController::class,'thankyou'])->name('web.form.thankyou');
 Route::post('/subscribe',[App\Http\Controllers\web\MailController::class,'subscribe'])->name('subscribe');
+Route::post('/subscribe',[App\Http\Controllers\web\MailController::class,'subscribe'])->name('subscribe');
 
 // PRIVACY
 Route::get('/privacy-policy', function () {
