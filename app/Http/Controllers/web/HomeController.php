@@ -6,12 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Report;
-use App\Models\Blog;
 use App\Models\Job;
 use App\Models\Cms;
-use App\Models\Country;
-use App\Models\Licences_types;
-use App\Models\Leadtype;
 use DB;
 
 class HomeController extends Controller
@@ -113,90 +109,7 @@ class HomeController extends Controller
             return redirect()->back()->withFail('Error Oops somethings wents wrong.');
         }
     }
-
-    // public function categorySearch(Request $request, $category_slug)
-    // {
-    //     try {
-    //         $categories = Category::where("slug", $category_slug)->first();
-    //         $category_id =  $categories->id;
-    //         $reports = Report::Where('title', 'like', '%' . $request->get('categorysearch') . '%')->where('active', '1')->get();
-    //         $category_name = $categories->name;
-    //         $results = Category::all();
-    //         return view('web.industry.category', compact('categories','results', 'reports'));
-    //     } catch (\Exception $e) {
-    //         logger($e->getMessage());
-    //         logger($e->getTraceAsString());
-    //         return redirect()->back()->withFail('Error Oops somethings wents wrong.');
-    //     }
-    // }
-
-    public function industry()
-    {
-        $results = Category::all();
-        return view('web.industry.industry', compact('results'));
-    }
-
-    public function category(Request $request, $category_slug)
-    {
-        $categories = Category::where("slug", $category_slug)->first();
-        $category_id =  $categories->id;
-        $category_name = $categories->name;
-        $reports = Report::where('category_id', $category_id)->where('active', '1')->get();
-        $count = $reports->count();
-        $results = Category::all();
-        return view('web.report.report', compact('categories', 'results', 'reports' , 'count'));
-    }
-
-
-    public function report()
-    {
-        $results = Category::all();
-        $reports = Report::all();
-        $count = $reports->count();
-        return view('web.report.report', compact('results', 'reports' ,'count'));
-    }
-
-    public function report_detail(Request $request, $report_slug)
-    {
-        $report = Report::where("slug", $report_slug)->first();
-        $countries = Country::all();
-        $license = Licences_types::all();
-        return view('web.report.reportDetail', compact('report', 'countries' , 'license'));
-    }
-
-    public function enquiry_sample(Request $request, $report_id){
-        $heading = "Request Sample";
-        $leadtype = Leadtype::select('id' ,  'name')->where('name' , $heading)->first();
-        $leadtype_id = $leadtype->id;
-        $report = Report::where("id", $report_id)->first();
-        $countries = Country::all();
-        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries' , 'leadtype_id'));
-    }
-
-    public function enquiry_buying(Request $request, $report_id){
-        $heading = "Enquiry before Buying";
-        $leadtype = Leadtype::select('id' ,  'name')->where('name' , $heading)->first();
-        $leadtype_id = $leadtype->id;
-        $report = Report::where("id", $report_id)->first();
-        $countries = Country::all();
-        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries' , 'leadtype_id'));
-    }
-
-    public function enquiry_discount(Request $request, $report_id){
-        $heading = "Check For Discount";
-        $leadtype = Leadtype::select('id' ,  'name')->where('name' , $heading)->first();
-        $leadtype_id = $leadtype->id;
-        $report = Report::where("id", $report_id)->first();
-        $countries = Country::all();
-        return view('web.report.enquiry' , compact('heading' , 'report' , 'countries' , 'leadtype_id'));
-    }
-
-    public function checkout(Request $request, $report_id){
-        $report = Report::where("id", $report_id)->first();
-        $countries = Country::all();
-        return view('web.report.checkout' ,compact('report' , 'countries'));
-    }
-
+   
     public function partner()
     {
         return view('web.partner');
@@ -221,48 +134,6 @@ class HomeController extends Controller
     public function contact()
     {
         return view('web.contact');
-    }
-
-    public function blog($categoryName = null)
-    {
-        $results = Blog::where('active', '1')->get();
-        return view('web.cms.blog', compact('results', 'categoryName'));
-    }
-
-    public function blog_details(Request $request, $blog_slug)
-    {
-        $categories = Category::where('active', '1')->get();
-        $results = Blog::orderBy('id', 'desc')->where('active', '1')->where('type', 'Blog')->limit(5)->get();
-        $blog = Blog::where("slug", $blog_slug)->first();
-        return view('web.cms.singleBlog', compact('blog', 'results', 'categories'));
-    }
-
-    public function blogSearch(Request $request, $categoryName = null)
-    {
-        try {
-            $results = Blog::Where('title', 'like', '%' . $request->get('searchtitle') . '%')->where('active', '1')->where('type', 'Blog')->get();
-            return view('web.cms.blog', compact('results', 'categoryName'));
-        } catch (\Exception $e) {
-            logger($e->getMessage());
-            logger($e->getTraceAsString());
-            return redirect()->back()->withFail('Error Oops somethings wents wrong.');
-        }
-    }
-
-    public function blogCategory($category_slug)
-    {
-        try {
-            $category = Category::select('id', 'name')->where('slug', $category_slug)->first();
-            $categoryId = $category->id;
-            $categoryName = $category->name;
-            $results = Blog::where('category_id', $categoryId)->where('active', '1')->where('type', 'blog')->get();
-            return view('web.cms.blog', compact('results', 'categoryName'));
-        } catch (\Exception $e) {
-            // dd($e);
-            logger($e->getMessage());
-            logger($e->getTraceAsString());
-            return redirect()->back()->withFail('Error Oops somethings wents wrong.');
-        }
     }
 
     public function sitemap(){

@@ -2,7 +2,6 @@
 
 use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\web\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,19 +15,9 @@ use app\Http\Controllers\web\MailController;
 */
 
 
-//Web
+//Home COntroller
 Route::get('/', [App\Http\Controllers\web\HomeController::class, 'home'])->name('home');
 Route::post('/report-hub', [App\Http\Controllers\web\HomeController::class, 'reportSearch'])->name('reportSeacrhByTitle');
-
-Route::get('/industry', [App\Http\Controllers\web\HomeController::class, 'industry'])->name('industry');
-Route::get('/category/{category_slug}', [App\Http\Controllers\web\HomeController::class, 'category'])->name('category');
-
-Route::get('/report-hub', [App\Http\Controllers\web\HomeController::class, 'report'])->name('report-hub');
-Route::get('/report/{report_slug}', [App\Http\Controllers\web\HomeController::class, 'report_detail'])->name('report_detail');
-Route::get('/enquiry/sample/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_sample'])->name('enquiry_sample');
-Route::get('/enquiry/buying/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_buying'])->name('enquiry_buying');
-Route::get('/enquiry/discount/{report_id}', [App\Http\Controllers\web\HomeController::class, 'enquiry_discount'])->name('enquiry_discount');
-Route::get('/checkout/{report_id}', [App\Http\Controllers\web\HomeController::class, 'checkout'])->name('checkout');
 
 Route::get('/partner', [App\Http\Controllers\web\HomeController::class, 'partner'])->name('partner');
 
@@ -38,22 +27,40 @@ Route::get('/team', [App\Http\Controllers\web\HomeController::class, 'team'])->n
 
 Route::get('/contact', [App\Http\Controllers\web\HomeController::class, 'contact'])->name('contact');
 
-Route::get('/blog', [App\Http\Controllers\web\HomeController::class, 'blog'])->name('blog');
-Route::get('/blog/{blog_slug}', [App\Http\Controllers\web\HomeController::class, 'blog_details'])->name('blog-details');
-Route::post('/blog', [App\Http\Controllers\web\HomeController::class, 'blogSearch'])->name('blogSeacrhByTitle');
-Route::get('/blog/category/{slug}', [App\Http\Controllers\web\HomeController::class, 'blogCategory'])->name('blogCategory');
-
 Route::get('/news', [App\Http\Controllers\web\HomeController::class, 'news'])->name('news');
 
 Route::get('/sitemap', [App\Http\Controllers\web\HomeController::class, 'sitemap'])->name('sitemap');
 
 
-// Mail routes
+// Category Controller
+Route::get('/industry', [App\Http\Controllers\web\CategoryController::class, 'industry'])->name('industry');
+Route::get('/category/{category_slug}', [App\Http\Controllers\web\CategoryController::class, 'category'])->name('category');
+
+
+// Report Controller
+Route::get('/report-hub', [App\Http\Controllers\web\ReportController::class, 'report'])->name('report-hub');
+Route::get('/report/{report_slug}', [App\Http\Controllers\web\ReportController::class, 'report_detail'])->name('report_detail');
+Route::get('/enquiry/sample/{report_id}', [App\Http\Controllers\web\ReportController::class, 'enquiry_sample'])->name('enquiry_sample');
+Route::get('/enquiry/buying/{report_id}', [App\Http\Controllers\web\ReportController::class, 'enquiry_buying'])->name('enquiry_buying');
+Route::get('/enquiry/discount/{report_id}', [App\Http\Controllers\web\ReportController::class, 'enquiry_discount'])->name('enquiry_discount');
+Route::get('/checkout/{report_id}', [App\Http\Controllers\web\ReportController::class, 'checkout'])->name('checkout');
+
+
+// Blog Controller
+Route::get('/blog', [App\Http\Controllers\web\BlogController::class, 'blog'])->name('blog');
+Route::get('/blog/{blog_slug}', [App\Http\Controllers\web\BlogController::class, 'blog_details'])->name('blog-details');
+Route::post('/blog', [App\Http\Controllers\web\BlogController::class, 'blogSearch'])->name('blogSeacrhByTitle');
+Route::get('/blog/category/{slug}', [App\Http\Controllers\web\BlogController::class, 'blogCategory'])->name('blogCategory');
+
+
+// Mail Controller
 Route::post('/lead/create', [App\Http\Controllers\web\MailController::class, 'getInTouch'])->name('lead.create');
 Route::get('/thankyou',[App\Http\Controllers\web\MailController::class,'thankyou'])->name('web.form.thankyou');
 Route::post('/subscribe',[App\Http\Controllers\web\MailController::class,'subscribe'])->name('subscribe');
 Route::post('/career_mail',[App\Http\Controllers\web\MailController::class,'career_mail'])->name('career_mail');
 
+
+// Normal Routes
 // PRIVACY
 Route::get('/privacy-policy', function () {
     return view('web.cms.privacy_policy');
@@ -73,8 +80,6 @@ Route::get('/terms', function () {
 Route::get('/puchase-license-agreement', function () {
     return view('web.cms.puchase-license-agreement');
 })->name('puchase-license-agreement');
-
-
 
 // ORDER
 Route::get('/how-to-order', function () {
