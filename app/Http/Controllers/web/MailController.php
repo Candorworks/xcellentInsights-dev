@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\web;
 
 use App\Http\Controllers\Controller;
+use App\Mail\CareerMail;
 use App\Mail\GetInTouch;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -37,7 +38,7 @@ class MailController extends Controller
         $report_unique_id = $report == null ? null : $report->unique_id;
         $report_slug = $report == null ? null : $report->slug;
 
-        Mail::to("manoranjan.panigrahi@candorworks.com")->send(new GetInTouch($lead_row, $lead_name, $report_title, $report_slug, $report_unique_id));
+        Mail::to("rutvika.parwal@candorworks.com")->send(new GetInTouch($lead_row, $lead_name, $report_title, $report_slug, $report_unique_id));
 
         return redirect()->route('web.form.thankyou')->with('success', 'Your Request successfull submitted');
     }
@@ -60,7 +61,7 @@ class MailController extends Controller
         return redirect()->route('home');
     }
 
-    function subscribe(Request $request)
+    public function subscribe(Request $request)
     {
         $email = Newsletter::where('email', $request->email)->where('active', '1')->first();
         // dd($email != null);
@@ -84,5 +85,13 @@ class MailController extends Controller
                 return redirect()->route('home')->withFail('Error');
             }
         }
+    }
+
+    public function career_mail(Request $request){
+        // dd($request->all());
+        $career_row = $request->all();
+        Mail::to("rutvika.parwal@candorworks.com")->send(new CareerMail($career_row));
+        Mail::to($request->email)->send(new CareerMail($career_row));
+        return redirect()->route('career');
     }
 }

@@ -75,7 +75,7 @@
                             C.V./Resume at hr@xcellentinsights.com or fill out the below form.
                         </p>
                     </div>
-                    <form action="" class="contact-form" method="post" id="career-form" enctype="multipart/form-data">
+                    <form action="{{route('career_mail')}}" class="contact-form" method="post" id="career-form" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
