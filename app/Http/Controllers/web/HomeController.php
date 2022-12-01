@@ -104,7 +104,9 @@ class HomeController extends Controller
         try {
             $results = Category::all();
             $reports = Report::Where('title', 'like', '%' . $request->get('homepagesearch') . '%')->where('active', '1')->get();
-            return view('web.report.report', compact('results', 'reports', 'categoryName'));
+            $count = $reports->count();
+            // dd($count);
+            return view('web.report.report', compact('results', 'reports', 'categoryName' , 'count'));
         } catch (\Exception $e) {
             logger($e->getMessage());
             logger($e->getTraceAsString());
@@ -140,8 +142,9 @@ class HomeController extends Controller
         $category_id =  $categories->id;
         $category_name = $categories->name;
         $reports = Report::where('category_id', $category_id)->where('active', '1')->get();
+        $count = $reports->count();
         $results = Category::all();
-        return view('web.report.report', compact('categories', 'results', 'reports'));
+        return view('web.report.report', compact('categories', 'results', 'reports' , 'count'));
     }
 
 
@@ -149,7 +152,8 @@ class HomeController extends Controller
     {
         $results = Category::all();
         $reports = Report::all();
-        return view('web.report.report', compact('results', 'reports'));
+        $count = $reports->count();
+        return view('web.report.report', compact('results', 'reports' ,'count'));
     }
 
     public function report_detail(Request $request, $report_slug)
@@ -254,7 +258,7 @@ class HomeController extends Controller
             $results = Blog::where('category_id', $categoryId)->where('active', '1')->where('type', 'blog')->get();
             return view('web.cms.blog', compact('results', 'categoryName'));
         } catch (\Exception $e) {
-            dd($e);
+            // dd($e);
             logger($e->getMessage());
             logger($e->getTraceAsString());
             return redirect()->back()->withFail('Error Oops somethings wents wrong.');
