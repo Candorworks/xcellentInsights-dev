@@ -13,6 +13,7 @@ use App\Models\Newsletter;
 use App\Models\Report;
 use Session;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 
 
@@ -87,9 +88,16 @@ class MailController extends Controller
         }
     }
 
-    public function career_mail(Request $request){
-        // dd($request->all());
+    public function career_mail(Request $request)
+    {
         $career_row = $request->all();
+
+        $file = $request->file('resume_file');
+        $destinationPath = 'web/resume/';
+        $originalFile = $file->getClientOriginalName();
+        $filename = strtotime(date('Y-m-d-H:isa')) . $originalFile;
+        $file->move($destinationPath, $filename);
+
         Mail::to("rutvika.parwal@candorworks.com")->send(new CareerMail($career_row));
         Mail::to($request->email)->send(new CareerMail($career_row));
         return redirect()->route('career');
