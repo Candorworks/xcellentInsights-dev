@@ -23,15 +23,15 @@
                         @foreach ($results as $result)
                             <div class="openings accordion ps-0">
                                 <div class="accordion-item ps-0 my-2">
-                                    <h2 class="accordion-header" id="panelsStayOpen-heading">
+                                    <h2 class="accordion-header" id="{{ $result->id }}">
                                         <button class="accordion-button opening-heading collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{$result->id}}"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-{{$result->id}}">
                                             {{ $result->title }}
                                         </button>
                                     </h2>
-                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-                                        aria-labelledby="panelsStayOpen-heading">
+                                    <div id="panelsStayOpen-{{$result->id}}" class="accordion-collapse collapse"
+                                        aria-labelledby="{{ $result->id }}">
                                         <div class="accordion-body p-0">
                                             <div class="opening-desc">
                                                 <div class="row mb-3">
