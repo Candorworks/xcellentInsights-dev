@@ -30,6 +30,6 @@ class CareerMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("Join Our Team")->view('email.career');
+        return $this->subject("Join Our Team")->view('email.career')->attach('web/resume/' .$this->career_row['resume_file']->getClientOriginalName());
     }
 }

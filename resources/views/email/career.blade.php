@@ -22,6 +22,7 @@
 <body>
 
     <h2>Join Our Team</h2>
+    <p>Resume File as Attachment:</p>
 
     <table style="width:100%">
         <tr>
@@ -43,10 +44,6 @@
         <tr>
             <th>Description</th>
             <td>{{$career_row['msg']}}</td>
-        </tr>
-        <tr>
-            <th>Resume File</th>
-            <td>{{$career_row['resume_file']}}</td>
         </tr>
     </table>
     <!-- Xcellent Insights Team</p> -->
