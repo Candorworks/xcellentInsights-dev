@@ -20,37 +20,6 @@
                         </div>
                     </div>
                     <div class="row">
-                        {{-- @foreach ($results as $result)
-                            <div class="openings pb-3 pe-3 ps-0 pt-0">
-                                <div class="opening-heading">
-                                    <h6 class="mb-0 fw-semibold">{{ $result->title }}</h6>
-                                </div>
-                                <div class="opening-desc">
-                                    <div class="row mb-3">
-                                        <div class="col-lg-6 fw-semibold">Location:</div>
-                                        <div class="col-lg-6">{{ $result->location }}</div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-lg-6 fw-semibold">No of position:</div>
-                                        <div class="col-lg-6">
-                                            <p>{{ $result->no_vacancy }}</p>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-lg-6 fw-semibold">Experience required:</div>
-                                        <div class="col-lg-6">{!! $result->experience !!}</div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <div class="col-lg-6 fw-semibold">Roles & Responsibilities:</div>
-                                        <div class="col-lg-6">{!! $result->roles !!}</div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-6 fw-semibold">What we are looking for in you:</div>
-                                        <div class="col-lg-6">{!! $result->roles !!}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach --}}
                         <div class="openings accordion ps-0" id="accordionPanelsStayOpenExample">
 
                             <div class="accordion-item">
@@ -113,9 +82,6 @@
                                     <select class="form-control input-field-career" name="job_id">
                                         <option value="">------- Select Opening -----</option>
                                         <option name="DM-Executive" id="">DM-Executive</option>
-                                        {{-- @foreach ($jobs as $key => $item)
-                                 <option value="{{$item->id}}" {{old('job_id')== $item->id ? "selected" : ""}}>{{$item->title}}</option>
-                                 @endforeach --}}
                                     </select>
                                 </div>
                             </div>
