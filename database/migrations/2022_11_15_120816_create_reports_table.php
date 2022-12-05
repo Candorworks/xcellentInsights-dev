@@ -36,7 +36,7 @@ class CreateReportsTable extends Migration
             $table->integer('pages');
             $table->longText('description');
             $table->longText('toc');
-            $table->longText('tablefigures');
+            $table->longText('table_figures');
             $table->text('companies');
             $table->text('keywords');
             $table->dateTime('publish', $precision = 0);

@@ -18,7 +18,7 @@ class CreateJobsTable extends Migration
             $table->id();
             $table->string('title' , 255);
             $table->string('location', 255);
-            $table->string('vacancy', 255);
+            $table->string('no_vacancy', 255);
             $table->string('experience', 255);
             $table->text('description', 255);
             $table->text('roles', 255);
