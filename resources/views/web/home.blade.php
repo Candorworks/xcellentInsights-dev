@@ -156,7 +156,7 @@
     </div>
 
     {{-- customer testimonial section --}}
-    <div class="customer-testimonials p-5">
+    {{-- <div class="customer-testimonials p-5">
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-6 pe-5">
@@ -225,6 +225,151 @@
                         </div>
                         <div class="individual-testimonial">
                             <div class="testimonial-content-part">
+                                <p class="testimonial-desc">"I am happy to share my experience with Mona. She was patient
+                                    and
+                                    showed
+                                    a
+                                    better understanding to the details of my query. In fact, she did an excellent job than
+                                    expected.
+                                    We
+                                    carried out a project with her and turned out to be pretty well in terms of gaining the
+                                    benefits"
+                                </p>
+                            </div>
+                            <div class="posted-by">
+                                <div class="user">
+                                    <h6 class="name">~ Product Manager, <span class="designation fw-light">Heavy
+                                            Machinery &
+                                            Equipment</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-4 pt-3">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 report-milestone">
+                            <div class="row">
+                                <h1 class="rs-count mil-20">20 </h1>
+                            </div>
+                            <div class="row">
+                                <p style="letter-spacing: 2px; font-weight: 600">REPORTS</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>
+                                Quality-driven research reports with incisive insights enabling you to make better business
+                                decisions
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-3">
+                        <div class="col-lg-4 verticals-milestone">
+                            <div class="row">
+                                <h1 class="rs-count">100</h1>
+                            </div>
+                            <div class="row">
+                                <p style="letter-spacing: 2px; font-weight: 600">VERTICALS & <br> SUB VERTICALS</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <p>
+                                Be assured about our consulting services as we understand that every client comes with
+                                different needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+
+    <div class=" customer-testimonials p-5">
+        <!-- <div class="heading text-center pb-4">
+             <h3>
+                Customer Testimonial
+             </h3>
+          </div> -->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 pe-5">
+                    <div class="owl-carousel owl-theme" id="testi">
+                        <div class="individual-testimonial">
+                            <div class="testimonial-content-part">
+                                <div class="icon-part">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-desc">"Our organization was interested in learning more about the
+                                    market
+                                    trends
+                                    for
+                                    chemicals domain. We contacted Xcellent Insights and the results did not disappoint. We
+                                    got
+                                    our
+                                    queries resolved with better insights from the market perspective. Besides, their market
+                                    intelligence is amicable and worth relying. We would not hesitate to connect again"</p>
+                            </div>
+                            <div class="posted-by">
+                                <div class="user">
+
+                                    <h6 class="name">~ Vice President, <span class="designation fw-light">
+                                            Food & Beverages Company
+                                        </span></h6>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="individual-testimonial">
+                            <div class="testimonial-content-part">
+                                <div class="icon-part">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-desc">"Xcellent insights has been proactive and diligent with our
+                                    queries.
+                                    Their
+                                    expertise in the market research industry is one that everyone should look for. Their
+                                    end-to-end
+                                    involvement has been instrumental in achieving the key objectives to amplify our
+                                    business
+                                    goals"
+                                </p>
+                            </div>
+                            <div class="posted-by">
+                                <div class="user">
+                                    <h6 class="name">~ Vice President, Marketing, <span class="designation fw-light">
+                                            Leading
+                                            Chemicals &
+                                            Materials Company</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="individual-testimonial">
+                            <div class="testimonial-content-part">
+                                <div class="icon-part">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-desc">"Their service was great and I got all my queries answered in no
+                                    time. I
+                                    got
+                                    a better report full of information I was looking for. It really helped me understand
+                                    the
+                                    market
+                                    scenario and the driving forces"</p>
+                            </div>
+                            <div class="posted-by">
+                                <div class="user">
+                                    <h6 class="name">~ Director of Research & development, <span
+                                            class="designation fw-light">Electronics &
+                                            Semiconductors Company</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="individual-testimonial">
+                            <div class="testimonial-content-part">
+                                <div class="icon-part">
+                                    <i class="fa fa-quote-left"></i>
+                                </div>
                                 <p class="testimonial-desc">"I am happy to share my experience with Mona. She was patient
                                     and
                                     showed
