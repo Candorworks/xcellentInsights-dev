@@ -158,3 +158,72 @@
         </div>
     </div>
 @endsection
+@section('script')
+    <script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+  "@type": "Question",
+  "name": "Which regions are covered in the abc Market report?",
+  "acceptedAnswer": {
+  "@type": "Answer",
+  "text": "The abc Market research report includes specific segments by region (country), i.e. North America, Europe, Asia Pacific, South America, Middle East and Africa"
+  }
+  },{
+  "@type": "Question",
+  "name": "What are the benefits of the abc Market analysis report?",
+  "acceptedAnswer": {
+  "@type": "Answer",
+  "text": "The abc Market report provides global companies with an opportunity to enter new markets, invest in new sectors, analyze consumer reactions, investigate global competition, and ultimately make smart investments."
+  }
+  },{
+  "@type": "Question",
+  "name": "What are the Recent Developments and Latest Happenings in abc Industry?",
+  "acceptedAnswer": {
+  "@type": "Answer",
+  "text": "This report covers the latest market developments in terms of acquisitions, growth strategies, joint ventures and collaborations, new product launches, and more on abc Industry."
+  }
+  },{
+  "@type": "Question",
+  "name": "Can I get customize abc Market report?",
+  "acceptedAnswer": {
+  "@type": "Answer",
+  "text": "We can provide customization on reports prior to the sale. If you need customization, we request you to provide specific details on customization prior to the dispatch. This is because we move fast with your queries as it requires a lot of diligence. There will be additional charges for customization once the report is dispatched to you and will be treated as post-sales query."
+  }
+  },{
+  "@type": "Question",
+  "name": "How can I get the abc Market Sample Report?",
+  "acceptedAnswer": {
+  "@type": "Answer",
+  "text": "Requesting a Sample copy of the report from Xcellent Insights is hassle-free! You can either request it from the report page or call our sales Executive at US: +1 408 627 7717 /UK: +44 208 638 6439 and share/discuss your requirements. Our Team will share the sample copy of the report with you within 12 Working Hours / Shortly."
+  }
+  },{
+  "@type": "Question",
+  "name": "How can I purchase this abc Market report?",
+  "acceptedAnswer": {
+  "@type": "Answer",
+  "text": "Ordering a report from Xcellent Insights is hassle-free! You can select a licence type that suits your requirement and proceed to checkout. It will redirect you to the payment gateway with a list of payment options. Be rest assured that we do not store the payment details. Once we receive the payment, a confirmation email will be sent on your registered mail id with details on the report delivery timeline. You can also get your order placed through our business development executives and they will guide you thoroughly."
+  }
+  },{
+  "@type": "Question",
+  "name": "Why Should You Buy This Report from Xcellent Insights?",
+  "acceptedAnswer": {
+  "@type": "Answer",
+  "text": "• You should buy this report from Xcellent Insights for a better clarity on market scenarios. 
+ • The abc market report has been prepared using a pragmatic approach to suit your needs. 
+ • We have an extensive library of reports that can help you understand the market landscape and make informed decisions about your business. 
+ • Additionally, the reports are written by experienced analysts who have a deep understanding of the market and the latest trends.
+ • Besides, customization is a value-added service if you decide to opt."
+  }
+  },{
+  "@type": "Question",
+  "name": "",
+  "acceptedAnswer": {
+  "@type": "Answer",
+  "text": ""
+  }
+  }]
+ }
+ </script>
+@endsection

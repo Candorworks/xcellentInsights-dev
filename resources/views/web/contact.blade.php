@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="form-group mb-0">
-                        <input type="hidden" name="lead_type" id="lead_type_id" value="4">
+                            <input type="hidden" name="lead_type" id="lead_type_id" value="4">
                             <input type="email" class="form-control shadow-inset" name="email" placeholder=" E-mail"
                                 required="">
                         </div>
@@ -205,4 +205,33 @@
 @section('script')
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script src="{{ url('/web/js/numericaptcha.js') }}"></script>
+    <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement":
+  [
+  {
+  "@type": "ListItem",
+  "position": 1,
+  "item":
+  {
+  "type":"Website",
+  "@id": "/",
+  "name": "Home"
+  }
+  },
+  {
+  "@type": "ListItem",
+  "position": 2,
+  "item":
+  {
+  "type":"WebPage",
+  "@id": "/contact",
+  "name": "Contact Us"
+  }
+  }
+  ]
+  }
+  </script>
 @endsection

@@ -39,6 +39,7 @@
         </div>
     </div>
 
+
     {{-- welcome section --}}
     <div class="welcome-section my-4">
         <div class="container">
@@ -57,38 +58,6 @@
                         benefits them. We emphasize on assisting the clients to enhance their market position and
                         create potential opportunities for their business.
                     </p>
-                    {{-- <div class="row mt-3">
-                        <div class="col-lg-4 report-milestone">
-                            <div class="row">
-                                <h1 class="rs-count mil-20">20</h1>
-                            </div>
-                            <div class="row">
-                                <p style="letter-spacing: 2px; font-weight: 600">REPORTS</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <p>
-                                Quality-driven research reports with incisive insights enabling you to make better business
-                                decisions
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-lg-4 verticals-milestone">
-                            <div class="row">
-                                <h1 class="rs-count">100</h1>
-                            </div>
-                            <div class="row">
-                                <p style="letter-spacing: 2px; font-weight: 600">VERTICALS & SUB VERTICALS</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <p>
-                                Be assured about our consulting services as we understand that every client comes with
-                                different needs.
-                            </p>
-                        </div>
-                    </div> --}}
                 </div>
                 <div class="col-lg-7">
                     <div class="row">
@@ -155,141 +124,13 @@
         </div>
     </div>
 
-    {{-- customer testimonial section --}}
-    {{-- <div class="customer-testimonials p-5">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-6 pe-5">
-                    <div class="owl-carousel owl-theme" id="testi">
-                        <div class="individual-testimonial">
-                            <div class="testimonial-content-part">
-                                <p class="testimonial-desc">"Our organization was interested in learning more about the
-                                    market
-                                    trends
-                                    for
-                                    chemicals domain. We contacted Xcellent Insights and the results did not disappoint. We
-                                    got
-                                    our
-                                    queries resolved with better insights from the market perspective. Besides, their market
-                                    intelligence is amicable and worth relying. We would not hesitate to connect again"</p>
-                            </div>
-                            <div class="posted-by">
-                                <div class="user">
-
-                                    <h6 class="name">~ Vice President, <span class="designation fw-light">
-                                            Food & Beverages Company
-                                        </span></h6>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="individual-testimonial">
-                            <div class="testimonial-content-part">
-                                <p class="testimonial-desc">"Xcellent insights has been proactive and diligent with our
-                                    queries.
-                                    Their
-                                    expertise in the market research industry is one that everyone should look for. Their
-                                    end-to-end
-                                    involvement has been instrumental in achieving the key objectives to amplify our
-                                    business
-                                    goals"
-                                </p>
-                            </div>
-                            <div class="posted-by">
-                                <div class="user">
-                                    <h6 class="name">~ Vice President, Marketing, <span class="designation fw-light">
-                                            Leading
-                                            Chemicals &
-                                            Materials Company</span></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="individual-testimonial">
-                            <div class="testimonial-content-part">
-                                <p class="testimonial-desc">"Their service was great and I got all my queries answered in
-                                    no
-                                    time. I
-                                    got
-                                    a better report full of information I was looking for. It really helped me understand
-                                    the
-                                    market
-                                    scenario and the driving forces"</p>
-                            </div>
-                            <div class="posted-by">
-                                <div class="user">
-                                    <h6 class="name">~ Director of Research & development, <span
-                                            class="designation fw-light">Electronics &
-                                            Semiconductors Company</span></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="individual-testimonial">
-                            <div class="testimonial-content-part">
-                                <p class="testimonial-desc">"I am happy to share my experience with Mona. She was patient
-                                    and
-                                    showed
-                                    a
-                                    better understanding to the details of my query. In fact, she did an excellent job than
-                                    expected.
-                                    We
-                                    carried out a project with her and turned out to be pretty well in terms of gaining the
-                                    benefits"
-                                </p>
-                            </div>
-                            <div class="posted-by">
-                                <div class="user">
-                                    <h6 class="name">~ Product Manager, <span class="designation fw-light">Heavy
-                                            Machinery &
-                                            Equipment</span></h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 ps-4 pt-3">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 report-milestone">
-                            <div class="row">
-                                <h1 class="rs-count mil-20">20 </h1>
-                            </div>
-                            <div class="row">
-                                <p style="letter-spacing: 2px; font-weight: 600">REPORTS</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <p>
-                                Quality-driven research reports with incisive insights enabling you to make better business
-                                decisions
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mt-3">
-                        <div class="col-lg-4 verticals-milestone">
-                            <div class="row">
-                                <h1 class="rs-count">100</h1>
-                            </div>
-                            <div class="row">
-                                <p style="letter-spacing: 2px; font-weight: 600">VERTICALS & <br> SUB VERTICALS</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <p>
-                                Be assured about our consulting services as we understand that every client comes with
-                                different needs.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
 
     <div class=" customer-testimonials p-5">
         <!-- <div class="heading text-center pb-4">
-             <h3>
-                Customer Testimonial
-             </h3>
-          </div> -->
+                                                                                                                                         <h3>
+                                                                                                                                            Customer Testimonial
+                                                                                                                                         </h3>
+                                                                                                                                      </div> -->
         <div class="container">
 
             <div class="row">
@@ -709,18 +550,19 @@
     @yield('script')
     <script src="{{ asset('/web/js/homePageToggle.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
-        integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
-        integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    {{-- customer testimonial carousel --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script>
         $(document).ready(function() {
 
             $('#search-bar').hide();
+
+            // home page counter
+            $('.rs-count').counterUp({
+                delay: 20,
+                time: 1500
+            });
+
 
             // customer testimonial caraousel
             $('#testi').owlCarousel({
@@ -731,18 +573,6 @@
                 autoplayTimeout: 2000,
                 autoplayHoverPause: true
             })
-
-            // home page counter
-            var counter = $('.rs-count');
-            setTimeout(() => {
-                if (counter.length) {
-                    $('.rs-count').counterUp({
-                        delay: 30,
-                        time: 1700
-                    });
-                }
-            }, 1000);
-
 
             // services section caraousel
             $('#topSellingReport').owlCarousel({
@@ -782,5 +612,30 @@
             setTimeout(setSpeed, 0);
         });
     </script>
+    <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name" : "Xcellent Insights LLP",
+  "alternateName" : "Xcellent Insights",
+  "url": "https://www.xcellentinsights.com/",
+  "logo": "https://www.xcellentinsights.com/web/images/logo-white.png",
+  "contactPoint": [{
+  "@type": "ContactPoint",
+  "telephone": "+1 408 627 7717",
+  "contactType": "Customer Support"
+  },
+  ],
+  "potentialAction": {
+  "@type": "SearchAction",
+  "target": "https://www.xcellentinsights.com/report-hub?search",
+  "query-input": "required name=search"
+  },
+  "sameAs" : ["https://www.facebook.com/xcellentinsights",
+  "https://twitter.com/XcellentInsight",
+  "https://www.linkedin.com/company/xcellent-insights"
+  ]
+  }
+  </script>
 @endsection
 @endsection

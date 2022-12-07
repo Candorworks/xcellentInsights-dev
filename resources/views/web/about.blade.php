@@ -202,3 +202,32 @@
         </div>
     </div>
 @endsection
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement":
+  [
+  {
+  "@type": "ListItem",
+  "position": 1,
+  "item":
+  {
+  "type":"Website",
+  "@id": "/",
+  "name": "Home"
+  }
+  },
+  {
+  "@type": "ListItem",
+  "position": 2,
+  "item":
+  {
+  "type":"WebPage",
+  "@id": "/about",
+  "name": "About Us"
+  }
+  }
+  ]
+  }
+  </script>
