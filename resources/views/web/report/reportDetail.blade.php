@@ -100,7 +100,7 @@
                                             <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <input type="hidden" name="lead_type" value="5">
-                                                    <input type="hidden" name="report_id" value="{{$report->id}}">
+                                                    <input type="hidden" name="report_id" value="{{ $report->id }}">
                                                     <div class="row">
                                                         <div class="col-lg-6 pe-0">
                                                             <input type="text" class="form-control shadow-inset"
@@ -343,19 +343,22 @@
                         <div class="report-sidebar p-4">
                             <div class="request-preorder-discount">
                                 <div class="row mb-4">
-                                    <a href="{{ route('enquiry_sample', ['report_id' => $report['id']]) }}" class="request blink">
+                                    <a href="{{ route('enquiry_sample', ['report_id' => $report['id']]) }}"
+                                        class="request blink">
                                         <i class="fas fa-paper-plane mr-5" aria-hidden="true"></i>
                                         <h6>Request Free PDF Sample</h6>
                                     </a>
                                 </div>
                                 <div class="row mb-4">
-                                    <a href="{{ route('enquiry_buying', ['report_id' => $report['id']]) }}" class="pre-order">
+                                    <a href="{{ route('enquiry_buying', ['report_id' => $report['id']]) }}"
+                                        class="pre-order">
                                         <i class="fas fa-envelope mr-5" aria-hidden="true"></i>
                                         <h6>Pre-Order Enquiry</h6>
                                     </a>
                                 </div>
                                 <div class="row">
-                                    <a href="{{ route('enquiry_discount', ['report_id' => $report['id']]) }}" class="discount">
+                                    <a href="{{ route('enquiry_discount', ['report_id' => $report['id']]) }}"
+                                        class="discount">
                                         <i class="fas fa-tags mr-5" aria-hidden="true"></i>
                                         <h6>Check Today's Discount</h6>
                                     </a>
@@ -394,9 +397,9 @@
                                         {{-- buy now button --}}
                                         <div class="report-buy-now text-center p-3">
                                             <button type="submit">
-                                               <a href="{{ route('checkout', ['report_id' => $report['id']]) }}"> 
-                                                <i class="fa fa-shopping-cart me-2" aria-hidden="true"></i>
-                                                Buy Now</a>
+                                                <a href="{{ route('checkout', ['report_id' => $report['id']]) }}">
+                                                    <i class="fa fa-shopping-cart me-2" aria-hidden="true"></i>
+                                                    Buy Now</a>
                                             </button>
                                         </div>
                                     </div>
@@ -561,4 +564,43 @@
             }
         });
     </script>
+    <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement":
+  [
+  {
+  "@type": "ListItem",
+  "position": 1,
+  "item":
+  {
+  "type":"Website",
+  "@id": "/",
+  "name": "Home"
+  }
+  },
+  {
+  "@type": "ListItem",
+  "position": 2,
+  "item":
+  {
+  "type":"WebPage",
+  "@id": "/industry vertical url",
+  "name": "Industry Vertical Name"
+  }
+  },
+  {
+  "@type": "ListItem",
+  "position": 3,
+  "item":
+  {
+  "type":"WebPage",
+  "@id": "/report url",
+  "name": "Report Name/ Meta Title"
+  }
+  }
+  ]
+  }
+ </script>
 @endsection
