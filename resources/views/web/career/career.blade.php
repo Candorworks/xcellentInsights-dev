@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="breadcrums-container py-5"
-        style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(http://localhost/xcellentinsights/public/web/images/breadcrums/contact-us.jpg);">
+        style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url(web/images/breadcrums/contact-us.jpg);">
         <div class="container pt-5">
             <div class="text-center mt-3">
                 <h3 class="breadcrumbs-title  fw-bold text-white">Careers</h3>
@@ -25,12 +25,12 @@
                                 <div class="accordion-item ps-0 my-2">
                                     <h2 class="accordion-header" id="{{ $result->id }}">
                                         <button class="accordion-button opening-heading collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{$result->id}}"
-                                            aria-expanded="false" aria-controls="panelsStayOpen-{{$result->id}}">
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-{{ $result->id }}"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-{{ $result->id }}">
                                             {{ $result->title }}
                                         </button>
                                     </h2>
-                                    <div id="panelsStayOpen-{{$result->id}}" class="accordion-collapse collapse"
+                                    <div id="panelsStayOpen-{{ $result->id }}" class="accordion-collapse collapse"
                                         aria-labelledby="{{ $result->id }}">
                                         <div class="accordion-body p-0">
                                             <div class="opening-desc">
@@ -75,7 +75,8 @@
                             C.V./Resume at hr@xcellentinsights.com or fill out the below form.
                         </p>
                     </div>
-                    <form action="{{route('career_mail')}}" class="contact-form" method="post" id="career-form" enctype="multipart/form-data">
+                    <form action="{{ route('career_mail') }}" class="contact-form" method="post" id="career-form"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
