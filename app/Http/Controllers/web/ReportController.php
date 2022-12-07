@@ -15,10 +15,12 @@ class ReportController extends Controller
 {
     public function report()
     {
+        $seo_id = "/report-hub";
+        $seo_name = "Xcellent Insights Report Hub";
         $results = Category::all();
         $reports = Report::all();
         $count = $reports->count();
-        return view('web.report.report', compact('results', 'reports' ,'count'));
+        return view('web.report.report', compact('results', 'reports' ,'count' , 'seo_id' , 'seo_name'));
     }
 
     public function report_detail(Request $request, $report_slug)

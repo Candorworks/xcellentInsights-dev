@@ -24,6 +24,10 @@ class CategoryController extends Controller
         $reports = Report::where('category_id', $category_id)->where('active', '1')->get();
         $count = $reports->count();
         $results = Category::all();
-        return view('web.report.report', compact('categories', 'results', 'reports' , 'count'));
+
+        $seo_id = "/category/".$categories->slug;
+        $seo_name = $categories->name . " Industry";
+
+        return view('web.report.report', compact('categories', 'results', 'reports' , 'count' , 'seo_id' , 'seo_name'));
     }
 }
