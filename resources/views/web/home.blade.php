@@ -127,10 +127,10 @@
 
     <div class=" customer-testimonials p-5">
         <!-- <div class="heading text-center pb-4">
-                                                                                                                                         <h3>
-                                                                                                                                            Customer Testimonial
-                                                                                                                                         </h3>
-                                                                                                                                      </div> -->
+                                                                                                                                             <h3>
+                                                                                                                                                Customer Testimonial
+                                                                                                                                             </h3>
+                                                                                                                                          </div> -->
         <div class="container">
 
             <div class="row">
