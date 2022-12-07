@@ -28,7 +28,10 @@ class ReportController extends Controller
         $report = Report::where("slug", $report_slug)->first();
         $countries = Country::all();
         $license = Licences_types::all();
-        return view('web.report.reportDetail', compact('report', 'countries' , 'license'));
+
+        $seo_id = "/" . $report->Category->name;
+        // dd($seo_id);
+        return view('web.report.reportDetail', compact('report', 'countries' , 'license' , 'seo_id'));
     }
 
     public function enquiry_sample(Request $request, $report_id){
