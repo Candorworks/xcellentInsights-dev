@@ -99,10 +99,13 @@ class HomeController extends Controller
     {
         try {
             $results = Category::all();
+           
             $reports = Report::Where('title', 'like', '%' . $request->get('homepagesearch') . '%')->where('active', '1')->get();
             $count = $reports->count();
-            // dd($count);
-            return view('web.report.report', compact('results', 'reports', 'categoryName' , 'count'));
+            $seo_id = "/report-hub";
+            $seo_name = "Xcellent Insights Report Hub";
+            
+            return view('web.report.report', compact('results', 'reports', 'categoryName' , 'count' , 'seo_id' , 'seo_name'));
         } catch (\Exception $e) {
             logger($e->getMessage());
             logger($e->getTraceAsString());

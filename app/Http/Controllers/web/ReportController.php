@@ -30,6 +30,7 @@ class ReportController extends Controller
         $license = Licences_types::all();
 
         $seo_id = "/" . $report->Category->name;
+        dd($seo_id);
         // dd($seo_id);
         return view('web.report.reportDetail', compact('report', 'countries' , 'license' , 'seo_id'));
     }
