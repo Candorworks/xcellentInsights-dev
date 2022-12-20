@@ -169,7 +169,7 @@
                                         <td>{!! $item->meta_desc !!}</td>
                                         <td>{!! $item->title !!}</td>
                                         <td>{!! $item->url_title !!}</td>
-                                        <td><a href="{{ route('web.report.single', $item->slug) }}" target="_blank">open link <i class="ti-new-window"></i></a></td>
+                                        <td><a href="{{ route('report_detail', $item->slug) }}" target="_blank">open link <i class="ti-new-window"></i></a></td>
                                         <td>{!! $item->format !!}</td>
                                         <td>{!! $item->single_price !!}</td>
                                         <td>{!! $item->multi_price !!}</td>
