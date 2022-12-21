@@ -27,7 +27,7 @@
 <div class="container">
     <div class="row">
         @foreach($results as $result)
-        <div class="col-12 col-md-6 col-lg-4 my-3">
+        <div class="col-12 col-md-6 col-lg-4 my-3 ">
             <div class="card strategy_box shadow-soft">
                 <div class="card-body" style="height:250px;">
                     <h5 class="blueColor">{{$result->title}}</h5>
@@ -41,7 +41,7 @@
                             <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
                         </div>
                     </div>
-                    <a href="{{ route('press.release.detail', ['slug' => $result['url']]) }}" target="_blank" class="readon shadow-soft mt-3">Read More</a>
+                    <a href="{{ route('press.release.detail', ['slug' => $result['url']]) }}" target="_blank" class="btn rounded-pill readon shadow-soft mt-3">Read More</a>
                 </div>
             </div>
         </div>
