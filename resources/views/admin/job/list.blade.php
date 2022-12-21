@@ -28,7 +28,7 @@
                         <th>Vacancy</th>
                         <th>Experience</th>
                         <th>Roles</th>
-                        <th>Descreption</th>
+                        <th>Description</th>
                         <th>Active</th>
                         <th>Added date</th>
                         <th>Action</th>

@@ -176,6 +176,10 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     ]);
     
    Route::resource('rss',RssController::class);
-   
     
 });
+
+
+Route::get('rss_xml' ,[RssController::class ,'getxml'])->name('rss.getxml');
+Route::get('/press-release' ,[RssController::class ,'press_release'])->name('press-release');
+Route::get('/press-release/{slug}',[RssController::class,'showinfo'])->name('press.release.detail');

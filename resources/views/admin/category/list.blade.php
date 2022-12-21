@@ -48,7 +48,7 @@
                                         <td>{{ $item->vertical ? 'Show' : '-' }}</td>
                                         <td>
                                             @if ($item->thumbnail)
-                                                <img src="{{ env('AWS_S3_PATH') }}{{ $item->thumbnail }}" height="100"
+                                                <img src="{{AWS3($item->thumbnail )}}" height="100"
                                                     width="80">
                                             @else
                                                 no thumbnail
