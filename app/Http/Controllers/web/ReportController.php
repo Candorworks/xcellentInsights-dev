@@ -25,7 +25,7 @@ class ReportController extends Controller
 
     public function report_detail(Request $request, $report_slug)
     {
-        $report = Report::where("slug", $report_slug)->where('active', '1')->first();
+        $report = Report::where("slug", $report_slug)->whereIn('active', ['1', '2'])->first();
         if(is_null($report)) {
             abort(404);
         }
