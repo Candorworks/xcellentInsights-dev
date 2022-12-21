@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Publisher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PublisherController extends Controller
 {
@@ -21,7 +22,12 @@ class PublisherController extends Controller
      */
     public function index()
     {
-        $list=Publisher::all();
+        // $list=Publisher::all();
+        $list=DB::table('publishers as p')
+                ->select('p.id', 'p.name',  'p.sort_name', DB::raw('COUNT(r.id) as reports_count'))
+                ->leftJoin('reports as r', 'p.id', '=', 'r.publisher_id')
+                ->groupBy('p.id')
+                ->get();
         return view('admin.publisher.list2',compact('list'));
     }
 

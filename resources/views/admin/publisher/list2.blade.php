@@ -29,14 +29,14 @@
                   </thead>
                   <tbody>
                     @foreach ($list as $item)
-                    @php
+                    {{-- @php
                         $count = DB::table('reports')->where('publisher_id', $item->id)->count();
-                    @endphp
+                    @endphp --}}
                       <tr>
                         <td>{!! $item->id !!}</td>
                         <td>{!! $item->name!!}</td>
                         <td>{!! $item->sort_name!!}</td>
-                        <td>{{ $count }}</td>
+                      <td>{{ $item->reports_count }}</td>
                         <td>
                           @can('publisher-edit')
                           <a href="{{ route('publisher.edit', $item->id) }}" class="btn btn-outline btn-rounded btn-info">Edit</a>

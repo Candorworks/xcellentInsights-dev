@@ -11,6 +11,7 @@ use Database\Seeders\LicenceTypesSeeder;
 use Database\Seeders\PublisherSeeder;
 use Database\Seeders\RolesSeeder;
 use Database\Seeders\StateSeeder;
+use Database\Seeders\PermissionsSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,6 +31,7 @@ class DatabaseSeeder extends Seeder
             PublisherSeeder::class,
             RolesSeeder::class,
             StateSeeder::class,
+            PermissionsSeeder::class,
         ]);
     }
 }
