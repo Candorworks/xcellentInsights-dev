@@ -1511,10 +1511,6 @@ body.modal-open {
    cursor: pointer;
 }
 
-.card-body {
-   box-shadow: var(--inset-shadow);
-}
-
 .why-choose-us {
    box-shadow: var(--soft-shadow);
 }
@@ -1782,8 +1778,23 @@ body.modal-open {
    transition: all 0.2s ease;
 }
 
-.readon {
-   /* background-color: #002c60; */
-   /* color: #e6e7ee; */
+.readon {   
    color: #002c60;
+}
+
+.strategy_box{
+   margin-bottom: 30px;
+   background-color: #e6e7ee!important;
+   border-color: #d1d9e6;
+   border-radius: 5px;
+   transition: all 0.3s ease;
+}
+
+.readon:hover {
+   background: #263074;
+   color: white;
+}
+
+.strategy_box:hover{
+   box-shadow: var(--inset-shadow);
 }
