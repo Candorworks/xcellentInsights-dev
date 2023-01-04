@@ -86,7 +86,7 @@
         </div>
         <div class="row footer-bottom py-3 ">
             <div class=" col-lg-6 copyright px-0">
-                <p>&copy; Copyright <?php echo date('Y'); ?> Xcellent Insights. All Rights Reserved.</p>
+                <p>&copy;Copyright <?php echo date('Y'); ?> Xcellent Insights. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
