@@ -18,8 +18,10 @@ class ReportController extends Controller
         $seo_id = "/report-hub";
         $seo_name = "Xcellent Insights Report Hub";
         $results = Category::all();
-        $reports = Report::where('active', 1)->get();
+        $reports = Report::where('active', "1")->get();
+        // $reports = Report::all();
         $count = $reports->count();
+        // dd($reports);
         return view('web.report.report', compact('results', 'reports' ,'count' , 'seo_id' , 'seo_name'));
     }
 

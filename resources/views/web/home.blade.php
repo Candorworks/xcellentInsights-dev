@@ -537,6 +537,7 @@
                                 <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}" alt="Image Processing">
                                 <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}" alt="Image Processing">
                                 <img src="{{ asset('web/images/home/client-logos/LG.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Honda (2).png') }}" alt="Image Processing">
                             </div>
                         </div>
                     </div>
