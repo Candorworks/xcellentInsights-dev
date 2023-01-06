@@ -14,9 +14,7 @@
             <div class="row text-center about-us-content-heading ">
                 <h2 style="color: #002c60;">We are a one-stop solution for market research and consulting.</h2>
                 <p class="mb-0">
-                    Our service portfolio include syndicate and customized research reports driven by market intelligence
-                    studies that helps you add value to your business decisions. You can rely on us for custom research and
-                    service, business intelligence, and end-to-end market research solutions.
+                    Our service portfolio includes a wide range of syndicate and custom research reports driven by market intelligence studies that can help you to add value to your business decisions. You can rely on us for custom research and service, business intelligence, and end-to-end market research solutions.
                 </p>
             </div>
             <div class="row about-us-vision justify-content-between align-items-center mb-5">

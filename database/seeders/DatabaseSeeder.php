@@ -3,6 +3,15 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\CategorySeeder;
+use Database\Seeders\CountrySeeder;
+use Database\Seeders\CMSSeeder;
+use Database\Seeders\LeadTypesSeeder;
+use Database\Seeders\LicenceTypesSeeder;
+use Database\Seeders\PublisherSeeder;
+use Database\Seeders\RolesSeeder;
+use Database\Seeders\StateSeeder;
+use Database\Seeders\PermissionsSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +22,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            CategorySeeder::class,
+            CountrySeeder::class,
+            CMSSeeder::class,
+            LeadTypesSeeder::class,
+            LicenceTypesSeeder::class,
+            PublisherSeeder::class,
+            RolesSeeder::class,
+            StateSeeder::class,
+            PermissionsSeeder::class,
+        ]);
     }
 }

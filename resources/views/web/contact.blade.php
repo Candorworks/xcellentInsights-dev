@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="row py-5 ">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="row">
                         <div class="col-lg-3 icon-wrapper">
                             <img src="{{ asset('web/images/contact/icons/1.png') }}" width="60">
@@ -30,19 +30,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="row">
                         <div class="col-lg-3 icon-wrapper">
                             <img src="{{ asset('web/images/contact/icons/2.png') }}" width="60">
                         </div>
                         <div class="col-lg-9 content-part">
                             <h5 class="title">REPORT CONSULTATION</h5>
-                            <p class="desc mb-0">Please let us know if you are looking for consultation prior to purchase.
-                                Please connect with our sales representative for more details.</p>
+                            <p class="desc mb-0">Please let us know if you are looking for a consultation prior to the purchase. Kindly connect with our sales representatives to know more about the report.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="row">
                         <div class="col-lg-3 icon-wrapper">
                             <img src="{{ asset('web/images/contact/icons/3.png') }}" width="60">
@@ -50,6 +49,17 @@
                         <div class="col-lg-9 content-part">
                             <h5 class="title">SAMPLE REPORT</h5>
                             <p class="desc mb-0">You can request a sample of the report you wish to buy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-3 icon-wrapper">
+                            <img src="{{asset('web/images/contact/icons/4.png')}}" width="60" alt="">
+                        </div>
+                        <div class="col-lg-9 content-part">
+                            <h5 class="title">Report Customization</h5>
+                            <p class="desc mb-0">Are you looking for something that we haven’t covered in the report scope? Feel free to contact us and let you know your specific area of interest. Our team will provide you with custom copy of the report based on your exact needs.</p>
                         </div>
                     </div>
                 </div>

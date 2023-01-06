@@ -18,4 +18,10 @@ class Lead extends Model
     function report(){
         return $this->hasOne(Report::class,'id','report_id');
     }
+
+    // static function deleteLeadsByTypesAndIds(array $types, array $ids){
+    //     $leads = new Self;
+    //     $leads->whereIn('')
+    // }
+
 }

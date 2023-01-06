@@ -19,10 +19,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="desc-heading-partner-with-us text-muted">
-                        <h5>Our partnership program allows to you collaborate with us for more business and assists you with
-                            more resources. You can route your client queries through us for you to serve your clients
-                            better. We have a dedicated partner relationship manager to facilitate partner relations and
-                            queries. Welcome to our partnership program!</h5>
+                        <h5>Our partnership program enables you to collaborate with us for more business plans. We are happy to help you to assist you with more resources. We have a dedicated partner relationship manager to facilitate partner relations and queries. We are more than happy to welcome you to our partnership program!</h5>
                     </div>
                 </div>
             </div>
@@ -211,9 +208,7 @@
                         <div class="partner-icon">
                             <img src="{{ asset('web/images/partner/signup.png') }}" alt="">
                         </div>
-                        <p>Partner with us to grow and expand your business reach. If you are a reseller, channel partner or
-                            VAR we would love to talk to you. Drop in your details and our partner relations executive will
-                            connect with you sooner.</p>
+                        <p>Partner with us to expand your business reach. If you are Publisher, channel partner or VAR, we would like to extent a hand. Drop in your details and our partner relations executive will reach out to you at the earliest.</p>
                     </div>
                 </div>
             </div>
