@@ -2,8 +2,8 @@
     <div class="col-lg-2">
         <div class="logo-container">
             <a href="{{ route('home') }}">
-                <img src="{{ asset('web/images/logo-white.png') }}" alt="logo" class="transparent-icon" width="120">
-                <img src="{{ asset('web/images/logo.png') }}" alt="logo" class="normal-icon" width="120">
+                <img src="{{ asset('web/images/Xcellent-Insights-Expand logo-white.svg') }}" alt="logo" class="transparent-icon" width="120">
+                <img src="{{ asset('web/images/Xcellent-Insights-Expand logo.svg') }}" alt="logo" class="normal-icon" width="120">
             </a>
         </div>
     </div>
