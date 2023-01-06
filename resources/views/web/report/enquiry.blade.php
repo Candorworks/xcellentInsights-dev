@@ -67,6 +67,7 @@
                                         <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}" alt="Image Processing">
                                         <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}" alt="Image Processing">
                                         <img src="{{ asset('web/images/home/client-logos/LG.webp') }}" alt="Image Processing">
+                                        <img src="{{ asset('web/images/home/client-logos/Honda (2).png') }}" alt="Image Processing">
                                     </div>
                                 </div>
                             </div>
@@ -240,7 +241,7 @@
                         <div class="card-header client-testimonial-heading text-center">
                             <h4 style="color: #002c60">Our Client's Testimonials</h4>
                         </div>
-                        <div class="m-3 card-body owl-carousel owl-theme" id="testi">
+                        <div class="m-3 card-body owl-carousel owl-theme text-light" id="testi">
                             <div class="individual-testimonial">
                                 <div class="testimonial-content-part">
                                     <div class="icon-part">
