@@ -1584,13 +1584,16 @@ body.modal-open {
 }
 
 .check-report-price .accordion-body .individual-report-price,
-.enquire-before-sidebar .individual-report-price {
+.enquire-before-sidebar .individual-report-price{
    box-shadow: var(--inset-shadow);
    transition: all 0.2s ease;
    padding: 10px;
    margin-bottom: 15px;
    border-radius: 5px;
 }
+#menu6 .accordion-body {
+   box-shadow: var(--inset-shadow);
+   }
 
 .blink {
    color: white;

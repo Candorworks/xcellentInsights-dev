@@ -52,11 +52,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <p>
-                        Our belief is mutual satisfaction as we practice best research methods to satisfy your
-                        queries and proceed ahead with the report purchase. At Excellent Insights, we strive to
-                        offer our clients the best of our services through market research studies that largely
-                        benefits them. We emphasize on assisting the clients to enhance their market position and
-                        create potential opportunities for their business.
+                        Our belief is mutual satisfaction as we practice the best research methodologies to resolve your queries and make the report purchase process hassle free. At Xcellent Insights, we strive to offer best services to our clients and consumers through market research services. We also emphasize the clients to strengthen their market position and create lucrative growth opportunities for their business.
                     </p>
                 </div>
                 <div class="col-lg-7">
@@ -70,8 +66,7 @@
                                 </div>
                                 <div class="col-lg-10 ps-4">
                                     <h5 style="color: #333;"><b>Accessibility</b></h5>
-                                    <p>We offer our clients the best of our service and encourage their participation with
-                                        us in getting them what they want. Client satisfaction is our top priority</p>
+                                    <p>We at Xcellent Insights strive to offer our best services to clients to know more about their needs and expectations.</p>
                                 </div>
                             </div>
                         </div>
@@ -84,9 +79,7 @@
                                 </div>
                                 <div class="col-lg-10 ps-4">
                                     <h5 style="color: #333;"><b>Repository</b></h5>
-                                    <p>Our repository contains a large database of fact-based reports. Not finding what you
-                                        want please get in touch and let us know. We'd be happy to assist you on your
-                                        queries.</p>
+                                    <p>Our repository contains a large database of fact-based reports. If you are not finding the desired information, kindly get in touch with us. We’d be happy to assist you with the queries.</p>
                                 </div>
                             </div>
                         </div>
@@ -114,7 +107,7 @@
                                 </div>
                                 <div class="col-lg-10 ps-4">
                                     <h5 style="color: #333;"><b>Client Satisfaction</b></h5>
-                                    <p>We pledge to provide the best service in the information industry.</p>
+                                    <p>As client satisfaction is our top priority, we pledge to provide best services and true information about every verticals.</p>
                                 </div>
                             </div>
                         </div>

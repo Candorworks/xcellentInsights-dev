@@ -184,12 +184,12 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseOne" aria-expanded="true"
                                                     aria-controls="collapseOne">
-                                                    Which regions are covered in the market report?
+                                                    Which regions are covered in the {{$report->keywords}} market report?
                                                 </button>
                                             </h2>
                                             <div id="collapseOne" class="accordion-collapse collapse "
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">The market research report includes specific
+                                                <div class="accordion-body">The {{$report->keywords}} market research report includes specific
                                                     segments by region (country), i.e.
                                                     North America, Europe, Asia Pacific,
                                                     South America, Middle East and Africa
@@ -201,12 +201,12 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwo" aria-expanded="true"
                                                     aria-controls="collapseTwo">
-                                                    What are the benefits of the market analysis report?
+                                                    What are the benefits of the {{$report->keywords}} market analysis report?
                                                 </button>
                                             </h2>
                                             <div id="collapseTwo" class="accordion-collapse collapse "
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">The market report provides global companies
+                                                <div class="accordion-body">The {{$report->keywords}} market report provides global companies
                                                     with an opportunity to enter new
                                                     markets, invest in new sectors, analyze
                                                     consumer reactions, investigate global competition, and ultimately make
@@ -219,12 +219,12 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseThree" aria-expanded="true"
                                                     aria-controls="collapseThree">
-                                                    What are the Recent Developments and Latest Happenings in Industry?
+                                                    What are the Recent Developments and Latest Happenings in {{$report->keywords}} Industry?
                                                 </button>
                                             </h2>
                                             <div id="collapseThree" class="accordion-collapse collapse "
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">This report covers the latest market
+                                                <div class="accordion-body">{{$report->keywords}} report covers the latest market
                                                     developments in terms of acquisitions,
                                                     growth strategies, joint ventures and
                                                     collaborations, new product launches, and more on industry.
@@ -236,7 +236,7 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseFour" aria-expanded="true"
                                                     aria-controls="collapseFour">
-                                                    Can I get customise market report?
+                                                    Can I get customise {{$report->keywords}} market report?
                                                 </button>
                                             </h2>
                                             <div id="collapseFour" class="accordion-collapse collapse "
@@ -259,7 +259,7 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseFive" aria-expanded="true"
                                                     aria-controls="collapseFive">
-                                                    How can I get the market sample report?
+                                                    How can I get the {{$report->keywords}} market sample report?
                                                 </button>
                                             </h2>
                                             <div id="collapseFive" class="accordion-collapse collapse "
@@ -280,7 +280,7 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseSix" aria-expanded="true"
                                                     aria-controls="collapseSix">
-                                                    How can I purchase this market report?
+                                                    How can I purchase {{$report->keywords}} market report?
                                                 </button>
                                             </h2>
                                             <div id="collapseSix" class="accordion-collapse collapse "
@@ -306,7 +306,7 @@
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseSeven" aria-expanded="true"
                                                     aria-controls="collapseSeven">
-                                                    Why Should You Buy This Report from Xcellent Insights?
+                                                    Why Should You Buy {{$report->keywords}} Report from Xcellent Insights?
                                                 </button>
                                             </h2>
                                             <div id="collapseSeven" class="accordion-collapse collapse "

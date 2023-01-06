@@ -101,8 +101,8 @@
                                                 <button class="btn btn-outline btn-rounded btn-success"
                                                     onclick="return ExportformSubmit();">Export</button>
                                                 
-                                                <button class="btn btn-outline btn-rounded btn-danger"
-                                                    onclick="return formSubmit();">Delete</button>
+                                                <!-- <button class="btn btn-outline btn-rounded btn-danger"
+                                                    onclick="return formSubmit();">Delete</button> -->
                                                
                                             </div>
                                              
