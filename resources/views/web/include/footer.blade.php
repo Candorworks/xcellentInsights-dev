@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="footer-logo my-4">
-                    <img src="{{ asset('web/images/logo-white.png') }}" alt="footer-logo" width="120">
+                    <img src="{{ asset('web/images/Xcellent-Insights-Expand logo-white.svg') }}" alt="footer-logo" width="120">
                 </div>
                 <div class="footer-description my-4">
                     Xcellent Insights is the collaborator for business reports. We engage in data clustering and
