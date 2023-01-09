@@ -1,25 +1,24 @@
 @extends('web.include.index')
 
 @section('content')
-    <div class="breadcrums-container py-5"
-        style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url('{{ asset('web/images/breadcrums/contact-us.jpg') }}');">
-        <div class="container pt-5">
-            <div class="text-center mt-3">
-                <h3 class="breadcrumbs-title fw-bold text-white">
-                    @if (isset($categories))
-                        {{ $categories->name }}
-                    @else
-                        Report Hub
-                    @endif
-                </h3>
-                <p class="mt-4 px-5 text-light text-center">
-                    @if (isset($categories))
-                        {{ $categories->information }}
-                    @endif
-                </p>
-            </div>
+<div class="breadcrums-container py-5" style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url('{{ asset('web/images/breadcrums/contact-us.jpg') }}');">
+    <div class="container pt-5">
+        <div class="text-center mt-3">
+            <h3 class="breadcrumbs-title fw-bold text-white">
+                @if (isset($categories))
+                {{ $categories->name }}
+                @else
+                Report Hub
+                @endif
+            </h3>
+            <p class="mt-4 px-5 text-light text-center">
+                @if (isset($categories))
+                {{ $categories->information }}
+                @endif
+            </p>
         </div>
     </div>
+</div>
 </div>
 <div class="report-hub-container mt-4">
     <div class="container">
@@ -56,7 +55,13 @@
 
 
             </div>
-            @include('web.report.report_div')
+            <div class="col-lg-8">
+                @if ($count == 0)
+                    @include('web.include.dataNotFound')
+                @else
+                    @include('web.report.report_div')
+                @endif
+            </div>
         </div>
     </div>
 </div>
@@ -74,7 +79,7 @@
                                 <div class="modalimagehead">
                                     <h1 class="modal-title" id="startSellingLabel">Enquiry Now</h1>
                                 </div>
-                                <img src="{{ asset('web/images/XI_modal.png') }}" width="100%" height="100%" alt="Image Processing" class="modalImage">
+                                <img src="{{ asset('web/images/XI_modal.webp') }}" width="100%" height="100%" alt="Image Processing" class="modalImage">
                             </div>
                             <div class="col-lg-6 p-3">
                                 <form role="form" id="enquiry-form" method="POST" autocomplete="on" action="{{ route('lead.create') }}" onsubmit="return validateBot();">
@@ -139,8 +144,8 @@
         </div>
     </div>
 
-@endsection
-@section('script')
+    @endsection
+    @section('script')
     {{-- script for 'are you human validation' --}}
     <script src="{{ url('/web/js/numericCaptchaEnquiry.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -152,7 +157,7 @@
 
         var ENDPOINT = "<?php isset($categories) ? route('category', ['category_slug' => $categories->slug]) : route('report-hub'); ?>";
         var page = 1;
-        // infiniteLoadMore(page);
+        infiniteLoadMore(page);
 
         $(window).scroll(function() {
             if ($(window).scrollTop() >= ($(document).height() - $(window).height()) * 0.7) {
@@ -173,18 +178,18 @@
                     }
                 })
                 .done(function(response) {
-                    console.log(response)
+
                     if (response.length == 0) {
-                        
+
                         $('#loading_note').html("We don't have more data to display :(");
                         $('#datanotFoundForm').show();
                         return;
                     }
                     $('#loading_note').hide();
-                    
+
                     $('#datanotFoundForm').hide();
-                    
-                    
+
+
                     $("#myScroll").append(response);
                 })
                 .fail(function(jqXHR, ajaxOptions, thrownError) {
@@ -215,6 +220,6 @@
                     }
                 }
             ]
-        } 
+        }
     </script>
-@endsection
+    @endsection
