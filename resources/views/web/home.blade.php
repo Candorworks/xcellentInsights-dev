@@ -272,7 +272,7 @@
                     <div class="services-wrap active top-selling-reports text-center" divId="card1">
                         <div class="row">
                             <div class="icon-box-services col">
-                                <img class="light" src="{{ asset('web/icons/services1.png') }}" alt="">
+                                <img class="light" src="{{ asset('web/icons/new_services1.png') }}" alt="">
                             </div>
                         </div>
                         <div class="row">
@@ -288,7 +288,7 @@
                     <div class="services-wrap latest-report text-center" divId="card2">
                         <div class="row">
                             <div class="icon-box-services col">
-                                <img class="light" src="{{ asset('web/icons/services2.png') }}" alt="">
+                                <img class="light" src="{{ asset('web/icons/new_services2.png') }}" alt="">
                             </div>
                         </div>
                         <div class="row">
@@ -304,7 +304,7 @@
                     <div class="services-wrap verticals text-center" divId="card3">
                         <div class="row">
                             <div class="icon-box-services col">
-                                <img class="light" src="{{ asset('web/icons/services3.png') }}" alt="">
+                                <img class="light" src="{{ asset('web/icons/new_services3.png') }}" alt="">
                             </div>
                         </div>
                         <div class="row">

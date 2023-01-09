@@ -74,7 +74,7 @@
                                             </div>
                                             <div class="col-lg-4">
                                                 <h6 class="m-0">Publish date:
-                                                    {{ date('M Y', strtotime($result->publish)) }}
+                                                    {{ date('M Y', strtotime($report->publish)) }}
                                                 </h6>
                                             </div>
                                             <div class="col-lg-2">
