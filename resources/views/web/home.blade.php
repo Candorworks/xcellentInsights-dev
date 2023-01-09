@@ -1,6 +1,49 @@
 @extends('web.include.index')
 
 @section('content')
+<<<<<<< HEAD
+    <style>
+        .footer-newsletter {
+            display: block;
+        }
+    </style>
+    <div class="hero-section">
+        <video class="video-fluid" autoplay loop muted style="height: auto; width: 100%; margin-top: -25px;" <source
+            src="{{ asset('web/videos/slide-02.mp4') }}" type="video/mp4">
+        </video>
+        <div class="text-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="title text-white"><span>Industry’s best
+                                reports at your<br>fingertips</span></h1>
+                        <!-- <div class="carousel-caption-2"> -->
+                        <h4 class="text-white my-4">
+                            We've got you covered</h4>
+                        <!-- </div> -->
+                        <form class="subscribe-form mb-4 pe-5" method="post" action="{{ route('reportSeacrhByTitle') }}">
+                            @csrf
+                            <div class="form-group">
+                                <input class="" type="text" autocomplete="off" name="homepagesearch"
+                                    placeholder=" Looking for Reports..." autofocus />
+                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
+                            </div>
+                            <!--  Search -->
+                        </form>
+                        <div class="btn-part">
+                            <a class="btn get-quote" href="{{ route('contact') }}">Get Quote</a>
+                            <a class="btn view-report ms-md-2" href="{{ route('report-hub') }}">View Reports</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{-- welcome section --}}
+    <div class="welcome-section my-4">
+=======
 <style>
     .footer-newsletter {
         display: block;
@@ -10,6 +53,7 @@
     <video class="video-fluid" autoplay loop muted style="height: auto; width: 100%; margin-top: -25px;" <source src="{{ asset('web/videos/slide-02.mp4') }}" type="video/mp4">
     </video>
     <div class="text-section">
+>>>>>>> af127793e1d137934f4eeab96589207489c7df0c
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -33,6 +77,47 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <p>
+                        Our belief is mutual satisfaction as we practice the best research methodologies to resolve your
+                        queries and make the report purchase process hassle free. At Xcellent Insights, we strive to offer
+                        best services to our clients and consumers through market research services. We also emphasize the
+                        clients to strengthen their market position and create lucrative growth opportunities for their
+                        business.
+                    </p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="icon-box">
+                                        <i class="fas fa-hand-holding-usd"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 ps-4">
+                                    <h5 style="color: #333;"><b>Accessibility</b></h5>
+                                    <p>We at Xcellent Insights strive to offer our best services to clients to know more
+                                        about their needs and expectations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="icon-box">
+                                        <i class="fas fa-cog"></i>
+                                    </div>
+                                </div>
+                                <div class="col-lg-10 ps-4">
+                                    <h5 style="color: #333;"><b>Repository</b></h5>
+                                    <p>Our repository contains a large database of fact-based reports. If you are not
+                                        finding the desired information, kindly get in touch with us. We’d be happy to
+                                        assist you with the queries.</p>
+                                </div>
+=======
         </div>
     </div>
 </div>
@@ -65,6 +150,7 @@
                             <div class="col-lg-10 ps-4">
                                 <h5 style="color: #333;"><b>Accessibility</b></h5>
                                 <p>We at Xcellent Insights strive to offer our best services to clients to know more about their needs and expectations.</p>
+>>>>>>> af127793e1d137934f4eeab96589207489c7df0c
                             </div>
                         </div>
                     </div>
@@ -89,6 +175,12 @@
                                 <div class="icon-box">
                                     <i class="fas fa-user-tie"></i>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-lg-10 ps-4">
+                                    <h5 style="color: #333;"><b>Client Satisfaction</b></h5>
+                                    <p>As client satisfaction is our top priority, we pledge to provide best services and
+                                        true information about every verticals.</p>
+=======
                             </div>
                             <div class="col-lg-10 ps-4">
                                 <h5 style="color: #333;"><b>Better Customization</b></h5>
@@ -101,6 +193,7 @@
                             <div class="col-lg-2 mr-2">
                                 <div class="icon-box">
                                     <i class="fas fa-mouse-pointer"></i>
+>>>>>>> af127793e1d137934f4eeab96589207489c7df0c
                                 </div>
                             </div>
                             <div class="col-lg-10 ps-4">
@@ -116,6 +209,15 @@
 </div>
 
 
+<<<<<<< HEAD
+    <div class=" customer-testimonials p-5">
+        <!-- <div class="heading text-center pb-4">
+                                                                                                                                                             <h3>
+                                                                                                                                                                Customer Testimonial
+                                                                                                                                                             </h3>
+                                                                                                                                                          </div> -->
+        <div class="container">
+=======
 <div class=" customer-testimonials p-5">
     <!-- <div class="heading text-center pb-4">
                                                                                                                                                          <h3>
@@ -123,6 +225,7 @@
                                                                                                                                                          </h3>
                                                                                                                                                       </div> -->
     <div class="container">
+>>>>>>> af127793e1d137934f4eeab96589207489c7df0c
 
         <div class="row">
             <div class="col-lg-6 pe-5">
@@ -316,6 +419,33 @@
         {{-- top selling section --}}
         <div class="services-wrap-content top-selling-reports-wrapper mt-5" id="card1">
             <div class="row">
+<<<<<<< HEAD
+                <div class="col">
+                    <div class="card client-logos">
+                        <div class="card-header text-center">
+                            <h4 class="m-0" style="color: #002c60">Our Clientele</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="owl-carousel owl-theme" id="client-logo-carousel">
+                                <img src="{{ asset('web/images/home/client-logos/ABB2.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/BASF.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Bosch.png') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Dow-1.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Emerson.webp') }}"
+                                    alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Fiserv.webp') }}"
+                                    alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Fujitsu2.webp') }}"
+                                    alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Harman.webp') }}"
+                                    alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/HP.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/LG.webp') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Honda (2).png') }}"
+                                    alt="Image Processing">
+=======
                 <div class="col-lg-10">
                     <div class="top-selling-report-title" style="color: #002c60">
                         <span class="">Industry Reports</span>
@@ -372,6 +502,7 @@
                                         </div>
                                     </div>
                                 </div>
+>>>>>>> af127793e1d137934f4eeab96589207489c7df0c
                             </div>
                             @endforeach
                         </div>
