@@ -55,13 +55,18 @@
 
 
             </div>
+           
             <div class="col-lg-8">
                 @if ($count == 0)
                     @include('web.include.dataNotFound')
                 @else
-                    @include('web.report.report_div')
+                <div id="myScroll">
+                    <span id="loading_note">Loading...</span>
+                </div>
                 @endif
             </div>
+
+
         </div>
     </div>
 </div>
@@ -143,83 +148,85 @@
             </div>
         </div>
     </div>
+</div>
 
-    @endsection
-    @section('script')
-    {{-- script for 'are you human validation' --}}
-    <script src="{{ url('/web/js/numericCaptchaEnquiry.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script>
-        $(window).on('load', function() {
-            $('#datanotFoundForm').hide();
-            $('#loading_note').show();
-        })
+@endsection
+@section('script')
+{{-- script for 'are you human validation' --}}
+<script src="{{ url('/web/js/numericCaptchaEnquiry.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $(window).on('load', function() {
+        $('#datanotFoundForm').hide();
+        $('#loading_note').show();
+    })
 
-        var ENDPOINT = "<?php isset($categories) ? route('category', ['category_slug' => $categories->slug]) : route('report-hub'); ?>";
-        var page = 1;
-        infiniteLoadMore(page);
+    var ENDPOINT = "<?php isset($categories) ? route('category', ['category_slug' => $categories->slug]) : route('report-hub'); ?>";
+    var page = 1;
+    infiniteLoadMore(page);
 
-        $(window).scroll(function() {
-            if ($(window).scrollTop() >= ($(document).height() - $(window).height()) * 0.7) {
-                page++;
-                infiniteLoadMore(page);
-            }
-        });
-
-        function infiniteLoadMore(page) {
-            $('#loading_note').show();
-            $.ajax({
-                    url: ENDPOINT + "?page=" + page + "@if(Request::get('search') != '')&search={{Request::get('search')}}@endif",
-                    datatype: "html",
-                    type: "get",
-                    beforeSend: function() {
-                        // $('.auto-load').html("Loading...");
-                        $('#loading_note').show();
-                    }
-                })
-                .done(function(response) {
-
-                    if (response.length == 0) {
-
-                        $('#loading_note').html("We don't have more data to display :(");
-                        $('#datanotFoundForm').show();
-                        return;
-                    }
-                    $('#loading_note').hide();
-
-                    $('#datanotFoundForm').hide();
-
-
-                    $("#myScroll").append(response);
-                })
-                .fail(function(jqXHR, ajaxOptions, thrownError) {
-                    console.log('Server error occured');
-                });
+    $(window).scroll(function() {
+        if ($(window).scrollTop() >= ($(document).height() - $(window).height()) * 0.7) {
+            page++;
+            infiniteLoadMore(page);
         }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                    "@type": "ListItem",
-                    "position": 1,
-                    "item": {
-                        "type": "Website",
-                        "@id": "/",
-                        "name": "Home"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "item": {
-                        "type": "WebPage",
-                        "@id": "{{ $seo_id }}",
-                        "name": "{{ $seo_name }}"
-                    }
+    });
+
+
+    function infiniteLoadMore(page) {
+        $('#loading_note').show();
+        $.ajax({
+                url: ENDPOINT + "?page=" + page + "@if(\Request::get('search') != '')&&search={{\Request::get('search')}}@endif",
+                datatype: "html",
+                type: "get",
+                beforeSend: function() {
+                    $('.auto-load').html("Loading...");
+                    $('#loading_note').show();
                 }
-            ]
-        }
-    </script>
-    @endsection
+            })
+            .done(function(response) {
+
+                console.log(response.length)
+                
+                if (response.length == 0) {
+                    $('#loading_note').html("We don't have more data to display :(");
+                    $('#datanotFoundForm').show();
+                    return;
+                }
+                $('#loading_note').hide();
+
+                $('#datanotFoundForm').hide();
+
+                $("#myScroll").append(response);
+            })
+            .fail(function(jqXHR, ajaxOptions, thrownError) {
+                console.log('Server error occured');
+            });
+    }
+</script>
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "type": "Website",
+                    "@id": "/",
+                    "name": "Home"
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "type": "WebPage",
+                    "@id": "{{ $seo_id }}",
+                    "name": "{{ $seo_name }}"
+                }
+            }
+        ]
+    }
+</script>
+@endsection

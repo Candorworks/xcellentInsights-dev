@@ -1,5 +1,5 @@
 <div class="col-lg-12">
-    <p>We don't have more data to display</p>
+    
     <div class="card" id="datanotFoundForm">
         <div class="card-header">
             <h5 class="mb-0" style="color: #002c60">Not found what are you looking for, Don’t worry kindly fill the
