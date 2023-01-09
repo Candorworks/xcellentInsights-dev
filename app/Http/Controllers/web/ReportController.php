@@ -18,6 +18,7 @@ class ReportController extends Controller
         $seo_id = "/report-hub";
         $seo_name = "Xcellent Insights Report Hub";
         $results = Category::all();
+        
 
         $reports = Report::where('active', '1')->paginate(10);
         $count = 10;
@@ -68,5 +69,30 @@ class ReportController extends Controller
         $report = Report::where("id", $report_id)->first();
         $countries = Country::all();
         return view('web.report.checkout' ,compact('report' , 'countries'));
+    }
+
+    public function showReport(Request $request,$category_slug){
+        $categories=Category::query()
+        ->with('SubCategory')
+        ->get()
+        ->where('parent_id','0')
+        ->where('vertical','1')
+        ->where('active','1')
+        ->sortBy('categories.name')->toArray();
+        // $reports=Report::where([$type=>$id,'active'=>'1'])->get();
+        $select_cat = Category::where('slug',$category_slug)->first();
+
+        dd($select_cat);
+
+        
+        if(isset($request->search)){
+            $results = Report::Where('title', 'like', '%' . $request->search . '%')->where('active','1')->orderBy('id','desc')->paginate(10);
+
+        }else{
+            $results = Report::where(["category_id"=>$select_cat->id,'active'=>'1'])->orderBy('id','desc')->paginate(10);
+        }
+
+
+        return view('web.report.report',compact('categories', 'select_cat'));
     }
 }
