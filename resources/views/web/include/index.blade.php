@@ -49,7 +49,7 @@
                                     <div class="modalimagehead">
                                         <h1 class="modal-title" id="startSellingLabel">Get In Touch</h1>
                                     </div>
-                                    <img src="{{ asset('web/images/XI_modal.png') }}" width="100%" height="100%"
+                                    <img src="{{ asset('web/images/XI_modal.webp') }}" width="100%" height="100%"
                                         alt="Image Processing" class="modalImage">
                                 </div>
                                 <div class="col-lg-6 p-3">
