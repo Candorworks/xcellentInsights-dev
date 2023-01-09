@@ -13,7 +13,7 @@ use DB;
 
 class ReportController extends Controller
 {
-    public function report()
+    public function report(Request $request)
     {
         $seo_id = "/report-hub";
         $seo_name = "Xcellent Insights Report Hub";
@@ -21,7 +21,23 @@ class ReportController extends Controller
         
 
         $reports = Report::where('active', '1')->paginate(10);
-        $count = 10;
+        $count =  $reports->count();
+
+        $articles = '';
+        if ($request->ajax()) {
+            if(isset($request->search)){
+                $reports = Report::select('id', 'slug', 'title', 'description', 'unique_id', 'publish', 'pages', 'single_price')->Where('title', 'like', '%' . $request->search . '%')->where('active','1')->orderBy('id','desc')->paginate(10);
+            }else{
+                $reports = Report::select('id', 'slug', 'title', 'description', 'unique_id', 'publish', 'pages', 'single_price')->where('active','1')->orderBy('id','desc')->paginate(10);
+            }
+            return view('report.report_div' , compact('results', 'reports' ,'count' , 'seo_id' , 'seo_name'));
+
+            if($results->count() == 0){
+                $articles = false;
+            }
+            
+            return $articles;
+        }
         return view('web.report.report', compact('results', 'reports' ,'count' , 'seo_id' , 'seo_name'));
     }
 

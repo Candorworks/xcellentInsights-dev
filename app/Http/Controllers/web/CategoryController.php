@@ -25,6 +25,16 @@ class CategoryController extends Controller
         $count = $reports->count();
         $results = Category::all();
 
+        dd($request->search);
+
+        if(isset($request->search)){
+            $report = Report::Where('title', 'like', '%' . $request->search . '%')->where('active','1')->orderBy('id','desc')->paginate(10);
+            dd($report);
+        }else{
+            $report = Report::where(["category_id"=>$categories->id,'active'=>'1'])->orderBy('id','desc')->paginate(10);
+            dd($report);
+        }
+
         $seo_id = "/category/".$categories->slug;
         $seo_name = $categories->name . " Industry";
 

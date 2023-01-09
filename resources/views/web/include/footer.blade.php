@@ -10,7 +10,7 @@
                     aggregation.
                 </div>
                 <div class="footer-payment my-4">
-                    <img src="{{ asset('web/images/payment-logos.png') }}" alt="payment-logo">
+                    <img src="{{ asset('web/images/payment-logos.webp') }}" alt="payment-logo">
                 </div>
             </div>
             <div class="col-lg-2">
