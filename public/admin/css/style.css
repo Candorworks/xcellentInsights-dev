@@ -447,7 +447,7 @@ label {
 }
 .form-control {
   background-color: #ffffff;
-  border: 1px solid #light;
+  border: 1px solid light;
   border-radius: 0px;
   box-shadow: none;
   color: #565656;
@@ -3126,7 +3126,7 @@ table.focus-on tbody tr.focused td {
   width: 100%;
 }
 .select2-container-multi .select2-choices {
-  border: 1px solid #border  !important;
+  border: 1px solid border  !important;
   box-shadow: none !important;
   background-image: none  !important;
   border-radius: 0px !important;
