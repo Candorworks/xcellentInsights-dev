@@ -5,7 +5,7 @@
         style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url('{{ asset('web/images/breadcrums/contact-us.jpg') }}');">
         <div class="container pt-5">
             <div class="text-center mt-3">
-                <h3 class="breadcrumbs-title  fw-bold text-white">
+                <h3 class="breadcrumbs-title fw-bold text-white">
                     @if (isset($categories))
                         {{ $categories->name }}
                     @else
@@ -58,37 +58,14 @@
 
 
                 </div>
+                @include('web.report.report_div')
+            </div>
+            <div class="row mt-4 justify-content-center">
+                <div class="col-lg-3"></div>
                 <div class="col-lg-8">
-                    @if ($count == 0)
-                        @include('web.include.dataNotFound')
-                    @else
-                        @foreach ($reports as $report)
-                            <div class="individual-report-container p-3 mb-4">
-                                <a href="{{ route('report_detail', ['report_slug' => $report['slug']]) }}">
-                                    <h5>{{ $report->title }}</h5>
-                                    <p>{!! substr($report->meta_desc, 0, 180) !!}</p>
-                                    <div class="report-detail-bar py-2 px-3">
-                                        <div class="row">
-                                            <div class="col-lg-4 ">
-                                                <h6 class="m-0">Report ID: {{ $report->unique_id }}</h6>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <h6 class="m-0">Publish date:
-                                                    {{ date('M Y', strtotime($result->publish)) }}
-                                                </h6>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <h6 class="m-0">Pages: {{ $report->pages }}</h6>
-                                            </div>
-                                            <div class="col-lg-2">
-                                                <h6 class="m-0">$ {{ $report->single_price }}</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        @endforeach
-                    @endif
+                    <div id="myScroll" class="col-lg-12">
+                    </div>
+                    <span id="loading_note">Loading...</span>
                 </div>
             </div>
         </div>
@@ -192,33 +169,82 @@
 
     </div>
 
-    {{-- script for 'are you human validation' --}}
-    <script src="{{ url('/web/js/numericCaptchaEnquiry.js') }}"></script>
 @endsection
 @section('script')
-    <script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                    "type": "Website",
-                    "@id": "/",
-                    "name": "Home"
-                }
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                    "type": "WebPage",
-                    "@id": "{{$seo_id}}",
-                    "name": "{{$seo_name}}"
-                }
+    {{-- script for 'are you human validation' --}}
+    <script src="{{ url('/web/js/numericCaptchaEnquiry.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(window).on('load', function() {
+            $('#datanotFoundForm').hide();
+            $('#loading_note').show();
+        })
+
+        var ENDPOINT = "<?php isset($categories) ? route('category', ['category_slug' => $categories->slug]) : route('report-hub'); ?>";
+        var page = 1;
+        // infiniteLoadMore(page);
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() >= ($(document).height() - $(window).height()) * 0.7) {
+                page++;
+                infiniteLoadMore(page);
             }
-        ]
-    }
-</script>
+        });
+
+        function infiniteLoadMore(page) {
+            $('#loading_note').show();
+            $.ajax({
+                    url: ENDPOINT + "?page=" + page + "@if(Request::get('search') != '')&search={{Request::get('search')}}@endif",
+                    datatype: "html",
+                    type: "get",
+                    beforeSend: function() {
+                        // $('.auto-load').html("Loading...");
+                        $('#loading_note').show();
+                    }
+                })
+                .done(function(response) {
+                    console.log(response)
+                    if (response.length == 0) {
+                        
+                        $('#loading_note').html("We don't have more data to display :(");
+                        $('#datanotFoundForm').show();
+                        return;
+                    }
+                    $('#loading_note').hide();
+                    
+                    $('#datanotFoundForm').hide();
+                    
+                    
+                    $("#myScroll").append(response);
+                })
+                .fail(function(jqXHR, ajaxOptions, thrownError) {
+                    console.log('Server error occured');
+                });
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "type": "Website",
+                        "@id": "/",
+                        "name": "Home"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "type": "WebPage",
+                        "@id": "{{ $seo_id }}",
+                        "name": "{{ $seo_name }}"
+                    }
+                }
+            ]
+        } 
+    </script>
 @endsection

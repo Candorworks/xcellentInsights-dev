@@ -25,7 +25,7 @@
                             <div class="form-group">
                                 <input class="" type="text" autocomplete="off" name="homepagesearch"
                                     placeholder=" Looking for Reports..." autofocus />
-                                <button type="submit"><i class="fas fa-search"></i> </button>
+                                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> </button>
                             </div>
                             <!--  Search -->
                         </form>
@@ -52,7 +52,11 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <p>
-                        Our belief is mutual satisfaction as we practice the best research methodologies to resolve your queries and make the report purchase process hassle free. At Xcellent Insights, we strive to offer best services to our clients and consumers through market research services. We also emphasize the clients to strengthen their market position and create lucrative growth opportunities for their business.
+                        Our belief is mutual satisfaction as we practice the best research methodologies to resolve your
+                        queries and make the report purchase process hassle free. At Xcellent Insights, we strive to offer
+                        best services to our clients and consumers through market research services. We also emphasize the
+                        clients to strengthen their market position and create lucrative growth opportunities for their
+                        business.
                     </p>
                 </div>
                 <div class="col-lg-7">
@@ -66,7 +70,8 @@
                                 </div>
                                 <div class="col-lg-10 ps-4">
                                     <h5 style="color: #333;"><b>Accessibility</b></h5>
-                                    <p>We at Xcellent Insights strive to offer our best services to clients to know more about their needs and expectations.</p>
+                                    <p>We at Xcellent Insights strive to offer our best services to clients to know more
+                                        about their needs and expectations.</p>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +84,9 @@
                                 </div>
                                 <div class="col-lg-10 ps-4">
                                     <h5 style="color: #333;"><b>Repository</b></h5>
-                                    <p>Our repository contains a large database of fact-based reports. If you are not finding the desired information, kindly get in touch with us. We’d be happy to assist you with the queries.</p>
+                                    <p>Our repository contains a large database of fact-based reports. If you are not
+                                        finding the desired information, kindly get in touch with us. We’d be happy to
+                                        assist you with the queries.</p>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +114,8 @@
                                 </div>
                                 <div class="col-lg-10 ps-4">
                                     <h5 style="color: #333;"><b>Client Satisfaction</b></h5>
-                                    <p>As client satisfaction is our top priority, we pledge to provide best services and true information about every verticals.</p>
+                                    <p>As client satisfaction is our top priority, we pledge to provide best services and
+                                        true information about every verticals.</p>
                                 </div>
                             </div>
                         </div>
@@ -120,10 +128,10 @@
 
     <div class=" customer-testimonials p-5">
         <!-- <div class="heading text-center pb-4">
-                                                                                                                                                         <h3>
-                                                                                                                                                            Customer Testimonial
-                                                                                                                                                         </h3>
-                                                                                                                                                      </div> -->
+                                                                                                                                                             <h3>
+                                                                                                                                                                Customer Testimonial
+                                                                                                                                                             </h3>
+                                                                                                                                                          </div> -->
         <div class="container">
 
             <div class="row">
@@ -530,7 +538,8 @@
                                 <img src="{{ asset('web/images/home/client-logos/Intel.webp') }}" alt="Image Processing">
                                 <img src="{{ asset('web/images/home/client-logos/kaneka.png') }}" alt="Image Processing">
                                 <img src="{{ asset('web/images/home/client-logos/LG.webp') }}" alt="Image Processing">
-                                <img src="{{ asset('web/images/home/client-logos/Honda (2).png') }}" alt="Image Processing">
+                                <img src="{{ asset('web/images/home/client-logos/Honda (2).png') }}"
+                                    alt="Image Processing">
                             </div>
                         </div>
                     </div>
