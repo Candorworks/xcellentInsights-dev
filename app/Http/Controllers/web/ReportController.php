@@ -30,9 +30,9 @@ class ReportController extends Controller
             }else{
                 $reports = Report::select('id', 'slug', 'title', 'description', 'unique_id', 'publish', 'pages', 'single_price')->where('active','1')->orderBy('id','desc')->paginate(10);
             }
-            return view('report.report_div' , compact('results', 'reports' ,'count' , 'seo_id' , 'seo_name'));
+            return view('web.report.report_div' , compact('results', 'reports' ,'count' , 'seo_id' , 'seo_name'));
 
-            if($results->count() == 0){
+            if($reports->count() == 0){
                 $articles = false;
             }
             

@@ -24,19 +24,25 @@ class CategoryController extends Controller
         $reports = Report::where('category_id', $category_id)->where('active', '1')->get();
         $count = $reports->count();
         $results = Category::all();
-
-        dd($request->search);
-
-        if(isset($request->search)){
-            $report = Report::Where('title', 'like', '%' . $request->search . '%')->where('active','1')->orderBy('id','desc')->paginate(10);
-            dd($report);
-        }else{
-            $report = Report::where(["category_id"=>$categories->id,'active'=>'1'])->orderBy('id','desc')->paginate(10);
-            dd($report);
-        }
-
         $seo_id = "/category/".$categories->slug;
         $seo_name = $categories->name . " Industry";
+
+        $articles = '';
+        if ($request->ajax()) {
+            if(isset($request->search)){
+                $reports = Report::select('id', 'slug', 'title', 'description', 'unique_id', 'publish', 'pages', 'single_price')->Where('title', 'like', '%' . $request->search . '%')->where('active','1')->orderBy('id','desc')->paginate(10);
+            }else{
+                $reports = Report::select('id', 'slug', 'title', 'description', 'unique_id', 'publish', 'pages', 'single_price')->where('active','1')->orderBy('id','desc')->paginate(10);
+            }
+            return view('web.report.report_div' , compact('results', 'reports' ,'count' , 'seo_id' , 'seo_name'));
+
+            if($reports->count() == 0){
+                $articles = false;
+            }
+            
+            return $articles;
+        }
+      
 
         return view('web.report.report', compact('categories', 'results', 'reports' , 'count' , 'seo_id' , 'seo_name'));
     }
