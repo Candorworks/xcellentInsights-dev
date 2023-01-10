@@ -15,7 +15,7 @@
 
 
 <div class="breadcrums-container py-5"
-    style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url({{AWS3('images/breadcrums/6.jpg')}});">
+    style="background-image: linear-gradient(45deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 65%)),url({{AWS3('images/breadcrums/contact-us.jpg')}});">
     <div class="container pt-5">
         <div class="text-center mt-3">
             <h3 class="breadcrumbs-title text-white">Press Release</h3>
