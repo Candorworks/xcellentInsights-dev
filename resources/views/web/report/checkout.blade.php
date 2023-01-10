@@ -213,7 +213,7 @@
                                 </div>
                                 <div class="we-accept row mt-5 align-items-center pt-3">
                                     <div class="col-lg-4">We Accept</div>
-                                    <div class="col-lg-7"><img src="{{ asset('web/images/payment-logos.png') }}"
+                                    <div class="col-lg-7"><img src="{{ asset('web/images/payment-logos.webp') }}"
                                             alt="payment-logo"></div>
                                 </div>
                             </div>
