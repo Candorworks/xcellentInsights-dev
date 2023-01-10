@@ -19,7 +19,7 @@
             </div>
             <div class="row about-us-vision justify-content-between align-items-center mb-5">
                 <div class="col-lg-6 p-3 about-us-vision-img vision-img-container">
-                    <img class="img-fluid about-us-vision-img" src="{{ asset('web/images/about/about-us.jpg') }}"
+                    <img class="img-fluid about-us-vision-img" src="{{ asset('web/images/about/about-us.webp') }}"
                         alt="">
                 </div>
                 <div class="col-lg-5 text-end">
