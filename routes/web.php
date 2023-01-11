@@ -57,7 +57,14 @@ Route::get('/report/{report_slug}', [App\Http\Controllers\web\ReportController::
 Route::get('/enquiry/sample/{report_id}', [App\Http\Controllers\web\ReportController::class, 'enquiry_sample'])->name('enquiry_sample');
 Route::get('/enquiry/buying/{report_id}', [App\Http\Controllers\web\ReportController::class, 'enquiry_buying'])->name('enquiry_buying');
 Route::get('/enquiry/discount/{report_id}', [App\Http\Controllers\web\ReportController::class, 'enquiry_discount'])->name('enquiry_discount');
+
+Route::post('/checkout/enquiry-email/order-in-cart/{report}',[ReportController::class,'sendEmailForOrderInCartAtCheckout'])->name('web.checkout.orderInCart');
+Route::post('/checkout/enquiry-email/order-confirmed/{report}',[ReportController::class,'sendEmailForOrderConfirmedCartAtCheckout'])->name('web.checkout.orderConfirmed');
 Route::get('/checkout/{report_id}', [App\Http\Controllers\web\ReportController::class, 'checkout'])->name('checkout');
+
+Route::any('/order/{id}/{discount?}',[ReportController::class,'placeOrder'])->name('web.placeOrder');
+Route::any('/order-confirmed/{id}',[ReportController::class,'orderConfirmed'])->name('web.orderConfirmed');
+Route::any('/order-cancelled/{id}',[ReportController::class,'orderCancelled'])->name('web.orderCancelled');
 
 // AJAX //
 Route::get('/ajax/getstates',[CountryController::class,'getStatess'])->name('web.getstates');
