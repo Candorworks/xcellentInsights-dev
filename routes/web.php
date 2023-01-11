@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\RssController;
+use App\Http\Controllers\web\CountryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,7 @@ use App\Http\Controllers\Admin\RssController;
 */
 
 
-//Home COntroller
+//Home Controller
 Route::get('/', [App\Http\Controllers\web\HomeController::class, 'home'])->name('home');
 Route::post('/report-hub', [App\Http\Controllers\web\HomeController::class, 'reportSearch'])->name('reportSeacrhByTitle');
 
@@ -58,6 +59,17 @@ Route::get('/enquiry/buying/{report_id}', [App\Http\Controllers\web\ReportContro
 Route::get('/enquiry/discount/{report_id}', [App\Http\Controllers\web\ReportController::class, 'enquiry_discount'])->name('enquiry_discount');
 Route::get('/checkout/{report_id}', [App\Http\Controllers\web\ReportController::class, 'checkout'])->name('checkout');
 
+// AJAX //
+Route::get('/ajax/getstates',[CountryController::class,'getStatess'])->name('web.getstates');
+
+// payment
+Route::any('/payment/paypal/{id}',[PaymentController::class,'payWithpaypal'])->name('web.payment.paypal');
+Route::get('/payment/ccavenue/{id}',[PaymentController::class,'payWithCcAvenue'])->name('web.payment.ccavenue');
+Route::any('/payment/stripe/{id}',[PaymentController::class,'payWithstripe'])->name('web.payment.stripe');
+Route::any('/stripe/payinit',[PaymentController::class,'stripeinit'])->name('web.stripe.init');
+Route::any('/payment/paypalverify',[PaymentController::class,'paypalVerify'])->name('web.payment.verify');
+Route::any('/payment/stripeverify/{id}',[PaymentController::class,'stripeVerify'])->name('web.stripe.verify');
+Route::post('/payment/ccavenue-confirm',[PaymentController::class, 'ccavenueConfirm'])->name('web.ccavenueConfirm');
 
 // Blog Controller
 Route::get('/blog', [App\Http\Controllers\web\BlogController::class, 'blog'])->name('blog');

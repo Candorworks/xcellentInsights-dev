@@ -59,6 +59,47 @@ class PaymentController extends Controller
         return redirect()->route('web.error')->with('error',' Something went wrong test !!!');
     }
 
+    public function payWithCcAvenue(Request $request, $id) {
+
+        $order=Order::find($id);
+        
+        $report=Report::find($order->report_id);
+        $merchantData = '2'; 
+        $requestParams = [
+            'tid' => (string)$order->id,
+            'merchant_id' => \Config::get('services.ccavenue.client_id'),
+            'order_id' => (string)$order->id,
+            'amount' => (float)number_format((float)$order->final_price, 2, '.', ''),
+            'currency' => 'INR',
+            'redirect_url' => route('web.ccavenueConfirm'),
+            'cancel_url' => route('web.orderCancelled', $order->id),
+            'language' => 'EN'
+        ];
+        $working_key = \Config::get('services.ccavenue.working_key');//Shared by CCAVENUES
+        $access_code = \Config::get('services.ccavenue.access_code');
+        foreach ($requestParams as $key => $value){
+            $merchantData.=$key.'='.$value.'&';
+        }
+
+
+        $encryptedData=Crypt::encrypt($merchantData,$working_key); // Method for encrypting the data.
+
+        ?>
+        <form method="post" name="redirect" action="https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction">
+        <?php
+        echo "<input type=hidden name=encRequest value=$encryptedData>";
+        echo "<input type=hidden name=access_code value=$access_code>";
+
+        ?>
+        </form>
+        <script language='javascript'>document.redirect.submit();</script>
+        <?php
+    }
+
+    function ccavenueConfirm(Request $request){
+        return redirect()->route('web.orderConfirmed',$request->orderNo);
+    }
+
     public function check(Request $request)
     {
         $paymentId = $request->paymentId;

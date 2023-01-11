@@ -74,6 +74,7 @@
                                 </div>
                             </div>
                             <div class="report-content px-4 mt-4">
+                                <img src="{{asset('web/images/region.jpg')}}" alt="graph" width="100%">
                                 <div class="menu-content desc" id="menu1">
                                     <p>{!! $report->description !!}</p>
                                 </div>

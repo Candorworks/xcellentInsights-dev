@@ -63,11 +63,11 @@
                                 <div class="row mb-3">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <select name="country" class="form-control form-select" required>
+                                            <select name="country" class="form-control form-select" onchange="return getStates(this)" required>
                                                 <option value="" disabled="" selected="" hidden="">Select
                                                     country</option>
                                                 @foreach ($countries as $item)
-                                                    <option value="{{ $item->sort_name }}">{{ $item->name }}
+                                                    <option value="{{ $item->name }}">{{ $item->name }}
                                                     </option>
                                                 @endforeach
 
@@ -197,14 +197,21 @@
                             <div class="p-3">
                                 <div class="methods">
                                     <div class="debit-credit">
-                                        <input type="radio" name="card" id="card" checked="default-payment">
-                                        <label for="card" id="debit-credit">Credit / Debit Card <img
+                                        <input type="radio" name="card" id="payment_method_stripe" value="Stripe" checked="default-payment">
+                                        <label for="payment_method_stripe" id="debit-credit">Credit / Debit Card <img
                                                 src="{{ asset('web/images/checkout/credit-card.png') }}" alt=""
                                                 height="21px"></label>
                                     </div>
                                     <div class="bank-transfer mt-3">
-                                        <input type="radio" name="card" id="transfer">
-                                        <label for="transfer" id="bank-transfer">Direct Bank Transfer <img
+                                        <input type="radio" name="card" id="payment_method_bacs" value="Direct Bank Transfer">
+                                        <label for="payment_method_bacs">Direct Bank Transfer <img
+                                                src="{{ asset('web/images/checkout/direct-bank-transfer.png') }}"
+                                                alt="" height="21px"></label>
+
+                                    </div>
+                                    <div class="ccavenue mt-3">
+                                        <input type="radio" name="card" id="payment_method_ccavenue" value="Ccavenue">
+                                        <label for="payment_method_ccavenue">HDFC <img
                                                 src="{{ asset('web/images/checkout/direct-bank-transfer.png') }}"
                                                 alt="" height="21px"></label>
 
@@ -220,20 +227,45 @@
 
                         </div>
                     </div>
-                    <script>
-                        $(".licence-wrap").on("click", function() {
-                            $(".licence-wrap-content").hide();
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".licence-wrap").on("click", function() {
+            $(".licence-wrap-content").hide();
 
-                            var divId = $(this).attr("divId");
+            var divId = $(this).attr("divId");
 
-                            if ($(this).hasClass("active")) {
-                                $(this).removeClass("active");
-                                $("#" + divId).hide();
-                            } else {
-                                $(".licence-wrap").removeClass("active");
-                                $(this).addClass("active");
-                                $("#" + divId).show();
-                            }
-                        });
-                    </script>
-                @endsection
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $("#" + divId).hide();
+            } else {
+                $(".licence-wrap").removeClass("active");
+                $(this).addClass("active");
+                $("#" + divId).show();
+            }
+        });
+
+        function getStates(obj) {
+            // alert(obj.value);
+            var ENDPOINT = "{{ route('web.getstates') }}";
+            $.ajax({
+                    url: ENDPOINT + "?country=" + obj.value,
+                    datatype: "html",
+                    type: "get",
+                    beforeSend: function() {
+                        $('.auto-load').html("Loading...");
+                        $('.auto-load').show();
+                    }
+                })
+                .done(function(response) {
+
+                    $("#states-ids").html(response.states);
+                })
+                .fail(function(jqXHR, ajaxOptions, thrownError) {
+                    console.log('Server error occured');
+                });
+        }
+    </script>
+@endsection
