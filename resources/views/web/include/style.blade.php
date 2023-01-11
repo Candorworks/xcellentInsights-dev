@@ -2,6 +2,9 @@
 
 {{-- JQUERY --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
 
 {{-- BOOTSTRAP 5 --}}
 <!-- <link rel="stylesheet" type="text/css" href="{{ url('/web/css/bootstrap.min.css') }}"> -->
